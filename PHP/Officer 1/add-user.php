@@ -4,6 +4,7 @@
 <?php 
 	//checking if a user is logged in
 	if(!isset($_SESSION['user_id'])){
+		//shdgsdsgd
 		header('Location: index.php');
 	}
  ?>
