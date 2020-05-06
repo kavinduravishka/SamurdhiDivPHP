@@ -1,9 +1,8 @@
- 
-<?php
+ <?php
 
 include './../../lib/vendor/autoload.php';
 
-class pdfExport{
+class off2pdfExport{
 
 	public function exportMFR($data,$year,$month){
 
