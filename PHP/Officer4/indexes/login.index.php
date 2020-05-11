@@ -27,7 +27,7 @@
             extract($user);
 
             switch ($_SESSION['user_name']) {
-                case 'officer5':
+                case 'officer4':
                     header('Location: officer4.index.php');
                     
                     break;
