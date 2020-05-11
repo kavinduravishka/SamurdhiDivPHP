@@ -8,6 +8,6 @@
 
     session_destroy();
 
-    header('Location: login.php?logout=yes')
+    header('Location: login.index.php?logout=yes')
 
 ?>

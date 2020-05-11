@@ -1,13 +1,16 @@
 <?php session_start();?>
-<?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\OOSDProject\inc\connection.php"); ?>
+<?php //require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\OOSDProject\inc\connection.php"); 
+    require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Project\classes\dbh.class.php");
+    
+?>
 <?php
     if(!isset($_SESSION['user_id'])){
-        header('Location: login.php');
+        header('Location: login.index.php');
     }
 
 
     if(isset($_POST['personalfile'])){
-        header('Location: personal-files.php');
+        header('Location: personal-files.index.php');
     }
 
     elseif(isset($_POST['report'])){
@@ -28,12 +31,12 @@
 <body>
     <header>
         <div class= "appname">Samurdhi Division</div>
-        <div class="loggedin">Welcome <?php echo $_SESSION['user_name'];?>!<a href="logout.php">Log Out</a></div>
+        <div class="loggedin">Welcome <?php echo $_SESSION['user_name'];?>!<a href="logout.index.php">Log Out</a></div>
     </header>
 
     <main>
     <div class="officer4_dashboard">
-        <form action="officer4.php" method="post">
+        <form action="officer4.index.php" method="post">
 
             <h1>Officer4 Dashboard</h1>
             <p>
@@ -48,4 +51,3 @@
     </main>
 </body>
 </html>
-<?php mysqli_close($connection); ?>
