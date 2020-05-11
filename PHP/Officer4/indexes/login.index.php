@@ -56,9 +56,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Log In - Samurdhi Division</title>
-    <!--
-    <link rel="stylesheet" href="\myphp\UMProject\css\main.css">
-    -->
+    
+    <link rel="stylesheet" href="\myphp\OOSDProject\css\main.css">
+    
 </head>
 <body>
     <div class="login">
