@@ -1,5 +1,5 @@
 <?php session_start(); ?> 
-<?php require_once('inc/connection_userdb.php'); ?>
+<?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Classes\Officer1.class.php") ?>
 
 <?php 
 	//checking if a user is logged in
@@ -20,32 +20,13 @@
 	//view the user
 	if(isset($_GET['Serial_No'])){
 
-		$Serial_No = mysqli_real_escape_string($connection,$_GET['Serial_No']);
-		$query = "SELECT * FROM detailsofbenificiaries WHERE Serial_No={$Serial_No} LIMIT 1";
-		$result_set = mysqli_query($connection,$query);
 
-		if($result_set){
+		$Serial_No = $_GET['Serial_No'];
 
-			if(mysqli_num_rows($result_set)==1){
-
-				//user found
-				$result = mysqli_fetch_assoc($result_set);
-				$Bank_Zonal = $result['Bank_Zonal'];
-				$GN_Division = $result['GN_Division'];
-				$Address = $result['Address'];
-				$Bank_Account_No = $result['Bank_Account_No'];
-
-			} else{
-
-				//user not found
-				header('Location: users.php?err=user_not_found');
-			}
-
-		} else{
-
-			//query unsuccessful
-			header('Location: users.php?err=query_failed');
-		}
+		$officer1 = new Officer1();
+		$currentDetails = $officer1->getCurrentDetails($Serial_No);
+		extract($currentDetails);
+		
 	}
 
 	//when submit
@@ -74,46 +55,23 @@
 			}
 		}
 
-		//checking if email address already exists
-		// $email = mysqli_real_escape_string($connection,$_POST['email']);
-		// $query = "SELECT * FROM user WHERE email = '{$email}'AND id != {$user_id} LIMIT 1";
-
-		// $result_set  = mysqli_query($connection,$query);
-
-		// if($result_set){
-		// 	if(mysqli_num_rows($result_set)==1){
-		// 		$errors[] = "Email address already exists";
-		// 	}
-		// }
-
-
 		if(empty($errors)){
 
 			//no error found.. adding new record
-			$Bank_Zonal = mysqli_real_escape_string($connection,$_POST['Bank_Zonal']);
-			$GN_Division = mysqli_real_escape_string($connection,$_POST['GN_Division']);
-			$Address = mysqli_real_escape_string($connection,$_POST['Address']);
-			$Bank_Account_No = mysqli_real_escape_string($connection,$_POST['Bank_Account_No']);
+			$Bank_Zonal = $_POST['Bank_Zonal'];
+			$GN_Division = $_POST['GN_Division'];
+			$Address = $_POST['Address'];
+			$Bank_Account_No = $_POST['Bank_Account_No'];
 			
 			// email address is already sanitize
 			// $hashed_password = sha1($password);
 
-			$query = "UPDATE detailsofbenificiaries SET Bank_Zonal='{$Bank_Zonal}', GN_Division='{$GN_Division}', Address='{$Address}', Bank_Account_No='{$Bank_Account_No}' WHERE Serial_No={$Serial_No} LIMIT 1";
-
-			$result = mysqli_query($connection,$query);
-
-			if($result){
-				// query successful.   redurecting t user page
-				header('Location:users.php?user_modified=true');
-			}else{
-				$errors[] = 'Faild to modify the record';
-			}
-
+			$officer1 = new Officer1();
+			$officer1->updateBeneficiary($Bank_Zonal,$GN_Division,$Address,$Bank_Account_No,$errors,$Serial_No);
+			unset($officer1);
 		}
 
-
 	}
-
 
 
  ?>
@@ -122,17 +80,17 @@
 <html>
 <head>
 	<title>Add new User</title>
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="/myphp/CSS/main.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
 </head>
 <body>
-	<?php require_once('inc/header.php') ?>
-	<?php require_once('inc/sidebar.php') ?>
-
-
+	 <?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Includes\header.inc.php"); ?>
+	 <?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Includes\sidebar.inc.php"); ?>
 
 
 	<main>
+
+
 
 		<div class="maincontainer">
 		<h1>Modify Beneficiaries<!-- <span><a href="users.php"> < Back to User List</a></span> --></h1>
@@ -150,16 +108,42 @@
 			}
 
 		 ?>
-		<form action="modify-user.php" method="post" class ="userform">
+		<form action="modify-beneficiary.index.php" method="post" class ="userform">
 			<input type="hidden" name="Serial_No" value="<?php echo $Serial_No ?>">
 			<p>
 				<label>Bank Zonal:</label>
-				<input type="text" name="Bank_Zonal" <?php echo 'value="'.$Bank_Zonal.'"' ?>>
+				<select name="Bank_Zonal" <?php echo 'value="'.$Bank_Zonal.'"' ?>>
+					<option>Yatigaha</option>
+					<option>Badalgama</option>
+					<option>Koongodamulla</option>
+					<option>Katuwelgama</option>
+					<option>Welangana</option>
+					<option>Dunagaha</option>
+					<option>Kotadeniyawa</option>
+					<option>Divulapitiya</option>
+					<option>Walpita</option>
+				</select>
 			</p>
 
 			<p>
 				<label>G.N Division:</label>
-				<input type="text" name="GN_Division" <?php echo 'value="'.$GN_Division.'"' ?>>
+				<select name="GN_Division" <?php echo 'value="'.$G.N.Division.'"' ?>>
+					<option>41-Paranahalpe</option>
+					<option>41A-Paranahalpe</option>
+					<option>42-Halpe</option>
+					<option>42A-Nariyamulla</option>
+					<option>42B-Gurullagama</option>
+					<option>43-Pahala-Kithulwala</option>
+					<option>43A-Ihala-Kithulwala</option>
+					<option>43B-Uthuru-Kithulwala</option>
+					<option>44-Waththemulla</option>
+					<option>44A-Ihala-Kithulgala</option>
+					<option>44B-Pahala-Kithulgala</option>
+					<option>45-Kuligedara</option>
+					<option>46-Pahala-Madithiyawala</option>
+					<option>46A-Pahala-Madithiyawala</option>
+					<option>47-Hangawaththa</option>
+				</select>
 			</p>
 			<p>
 				<label>Address:</label>

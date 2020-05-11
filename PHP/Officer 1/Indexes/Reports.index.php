@@ -3,18 +3,15 @@
 <html>
 <head>
 	<title>Reports</title>
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="/myphp/CSS/main.css">
 	<link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
     />
 </head>
 <body>
-
-	<?php require_once('inc/header.php') ?>
-  <?php require_once('inc/sidebar.php') ?>
-
-
+    <?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Includes\header.inc.php"); ?>
+     <?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Includes\sidebar.inc.php"); ?>
  	
     <main>
     	<div class="maincontainer">

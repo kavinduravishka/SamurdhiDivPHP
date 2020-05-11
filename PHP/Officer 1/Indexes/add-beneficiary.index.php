@@ -1,11 +1,10 @@
 <?php session_start(); ?> 
-<?php require_once('inc/connection_userdb.php'); ?>
+<?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Classes\Officer1.class.php") ?>
 
 <?php 
 	//checking if a user is logged in
 	if(!isset($_SESSION['user_id'])){
-		//shdgsdsgd
-		header('Location: index.php');
+		header('Location: home-officer1.index.php');
 	}
  ?>
 <!-- form validation -->
@@ -57,49 +56,12 @@
 			}
 		}
 
-		//checking if NIC already exists
-		// $email = mysqli_real_escape_string($connection,$_POST['NIC']);
-		// $query = "SELECT * FROM detailsofbenificiariess WHERE NIC = '{$NIC}' LIMIT 1";
-
-		// $result_set  = mysqli_query($connection,$query);
-
-		// if($result_set){
-		// 	if(mysqli_num_rows($result_set)==1){
-		// 		$errors[] = "NIC already exists";
-		// 	}
-		// }
-
-
 		if(empty($errors)){
 			//no error found.. adding new record
-			$Divisional_Secretariat = mysqli_real_escape_string($connection,$_POST['Divisional_Secretariat']);
-			$Bank_Zonal = mysqli_real_escape_string($connection,$_POST['Bank_Zonal']);
-			$GN_Division = mysqli_real_escape_string($connection,$_POST['GN_Division']);
-			$GN_Code_Mapping = mysqli_real_escape_string($connection,$_POST['GN_Code_Mapping']);
-			$Householder_Name = mysqli_real_escape_string($connection,$_POST['Householder_Name']);
-			$Address = mysqli_real_escape_string($connection,$_POST['Address']);
-			$NIC = mysqli_real_escape_string($connection,$_POST['NIC']);
-			$No_of_Family_Members = $_POST['No_of_Family_Members'];
-			$Bank_Account_No = mysqli_real_escape_string($connection,$_POST['Bank_Account_No']);
-			$Relief_Account = $_POST['Relief_Account'];
-			$Starting_Year = mysqli_real_escape_string($connection,$_POST['Starting_Year']);
 			
-			// email address is already sanitize
-
-			// $hashed_password = sha1($password);
-
-			$query = "INSERT INTO detailsofbenificiaries (Divisional_Secretariat,Bank_Zonal,GN_Division,GN_Code_Mapping,Householder_Name, Address,NIC,Noof_Family_Members,Bank_Account_No,Relief_Account,Starting_Year,is_deleted) VALUES ('{$Divisional_Secretariat}','{$Bank_Zonal}','{$GN_Division}','{$GN_Code_Mapping}','{$Householder_Name}','{$Address}','{$NIC}',{$No_of_Family_Members},'{$Bank_Account_No}',{$Relief_Account},'{$Starting_Year}',0)";
-
+			$officer1 = new Officer1();
+			$officer1->addBeneficiary($Divisional_Secretariat,$Bank_Zonal,$GN_Division,$GN_Code_Mapping,$Householder_Name,$Address,$NIC,$No_of_Family_Members,$Bank_Account_No,$Relief_Account,$Starting_Year,$errors);
 			
-			$result = mysqli_query($connection,$query);
-
-			if($result){
-				// query successful.   redurecting t user page
-				header('Location:users.php?use_added=true');
-			}else{
-				$errors[] = 'Faild to add new record';
-			}
-
 		}
 
 
@@ -112,12 +74,12 @@
 <html>
 <head>
 	<title>Add new User</title>
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="/myphp/CSS/main.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
 </head>
 <body>
-	<?php require_once('inc/header.php') ?>
-	<?php require_once('inc/sidebar.php') ?>
+	  <?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Includes\header.inc.php"); ?>
+	 <?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Includes\sidebar.inc.php"); ?>
 
 
 	<main>
@@ -137,7 +99,7 @@
 			}
 
 		 ?>
-		<form action="add-user.php" method="post" class ="userform">
+		<form action="add-beneficiary.index.php" method="post" class ="userform">
 			<p>
 				<label>	Divisional Secretariat:</label>
 				<input type="text" name="Divisional_Secretariat" <?php echo 'value="'.$Divisional_Secretariat.'"' ?>>
@@ -223,4 +185,3 @@
 </body>
 </html>
 
-<?php mysqli_close($connection); ?>

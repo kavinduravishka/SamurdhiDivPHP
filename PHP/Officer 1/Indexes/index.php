@@ -1,6 +1,7 @@
 <?php session_start(); ?> 
 
- <?php require_once('inc/connection_userdb.php'); ?>
+ 
+ <?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Includes\connection_userdb.php"); ?>
 
 <?php 
 	// check for form submission
@@ -37,7 +38,7 @@
 					$_SESSION['user_id'] = $user['id'];
 					$_SESSION['first_name'] = $user['first_name'];
 					// redirect to users.php
-					header('Location: users.php');
+					header('Location: home-officer1.index.php');
 				}else {
 					//user name and password invalid
 					$errors[] = 'Invalild Username / Password';
@@ -61,7 +62,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Log In - User Management System</title>
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="/myphp/css/main.css">
 </head>
 <body class="loginPage">
  	<div class="login">
