@@ -26,7 +26,7 @@
 
     <meta charset="UTF-8">
     <title>Officer4 - Samurdhi Division</title>
-    <link rel="stylesheet" href="\myphp\Project\css\main.css">
+    <link rel="stylesheet" href="\SamurdhiDivPHP\css\main_dk.css">
 </head>
 <body>
     <header>

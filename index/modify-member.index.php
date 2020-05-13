@@ -157,7 +157,7 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Project\classes\staff-m
         <div class="appname">Samurdhi Division</div>
         <div class="loggedin">Welcome <?php echo $_SESSION['user_name']; ?>! <a href="logout.index.php">Log Out</a></div>
 
-        <link rel="stylesheet" href="\myphp\Project\css\main.css">
+        <link rel="stylesheet" href="\SamurdhiDivPHP\css\main_dk.css">
 
     </header>
 

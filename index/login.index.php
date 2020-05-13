@@ -1,7 +1,7 @@
 <?php session_start();?>
 <?php //require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\OOSDProject\inc\connection.php");
-    require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Project\classes\dbh.class.php");
-    require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Project\classes\login.class.php");
+    require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\classes\dbh.class.php");
+    require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\classes\login.class.php");
 ?>
 <?php
     if(isset($_POST['submit'])){
@@ -85,7 +85,7 @@
     <meta charset="UTF-8">
     <title>Log In - Samurdhi Division</title>
     
-    <link rel="stylesheet" href="\myphp\Project\css\main.css">
+    <link rel="stylesheet" href="\SamurdhiDivPHP\css\main_dk.css">
     
 </head>
 <body>
