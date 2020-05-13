@@ -1,7 +1,7 @@
 <?php 
 	echo "<div class=\"sidebar\">
       <center>
-        <img src=\"\myphp\Images\bbb.jpg\" alt=\"\" class=\"profile-image\" />
+        <img src=\"\SamurdhiDivPHP\images\bbb.jpg\" alt=\"\" class=\"profile-image\" />
         <h4>Yasindu</h4>
       </center>
       <a href=\"home-officer1.index.php\"><i class=\"fas fa-desktop\"></i><span>Dashboard</span></a>

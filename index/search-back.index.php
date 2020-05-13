@@ -1,5 +1,5 @@
 <?php session_start(); ?> 
-<?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Classes\Officer1.class.php") ?>
+<?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\classes\Officer1.class.php") ?>
 
 <?php 
 	if(isset(($_GET['q']))){

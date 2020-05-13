@@ -1,11 +1,11 @@
 <?php session_start(); ?> 
-<?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Classes\Officer1.class.php") ?>
+<?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\classes\Officer1.class.php") ?>
 
 <?php 
 	//checking if a user is logged in
-	if(!isset($_SESSION['user_id'])){
-		header('Location: home-officer1.index.php');
-	}
+	// if(!isset($_SESSION['user_id'])){
+	// 	header('Location: home-officer1.index.php');
+	// }
  ?>
 <!-- form validation -->
 <?php 
@@ -74,12 +74,12 @@
 <html>
 <head>
 	<title>Add new User</title>
-	<link rel="stylesheet" type="text/css" href="/myphp/CSS/main.css">
+	<link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/css/main.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
 </head>
 <body>
-	  <?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Includes\header.inc.php"); ?>
-	 <?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Includes\sidebar.inc.php"); ?>
+	  <?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\include\header.inc.php"); ?>
+	 <?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\include\sidebar.inc.php"); ?>
 
 
 	<main>
