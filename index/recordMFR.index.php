@@ -276,7 +276,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"අනි
             </div>
             <span class="form-sub-label-container " style="vertical-align:top">
               <input type="text" class="form-textbox validate[required, limitDate, validateLiteDate]" id="lite_mode_5" size="12" data-maxlength="12" maxLength="12" data-age="" value="" required="" data-format="yyyymmdd" data-seperator="-" placeholder="yyyy-mm-dd" autoComplete="off" aria-labelledby="label_5" />
-              <img class=" newDefaultTheme-dateIcon icon-liteMode" alt="Pick a Date" id="input_5_pick" src="https://cdn.jotfor.ms/images/calendar.png" style="vertical-align:middle;margin-left:5px" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v1" />
+              <img class=" newDefaultTheme-dateIcon icon-liteMode" alt="Pick a Date" id="input_5_pick" src="../images/calendar.png" style="vertical-align:middle;margin-left:5px" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v1" />
               <label class="form-sub-label" for="lite_mode_5" id="sublabel_5_litemode" style="min-height:13px" aria-hidden="false">  </label>
             </span>
           </div>
@@ -346,7 +346,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"අනි
             </div>
             <span class="form-sub-label-container " style="vertical-align:top">
               <input type="text" class="form-textbox validate[required, limitDate, validateLiteDate]" id="lite_mode_8" size="12" data-maxlength="12" maxLength="12" data-age="" value="" required="" data-format="yyyymmdd" data-seperator="-" placeholder="yyyy-mm-dd" autoComplete="off" aria-labelledby="label_8 sublabel_8_litemode" />
-              <img class=" newDefaultTheme-dateIcon icon-liteMode" alt="Pick a Date" id="input_8_pick" src="https://cdn.jotfor.ms/images/calendar.png" style="vertical-align:middle;margin-left:5px" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v1" />
+              <img class=" newDefaultTheme-dateIcon icon-liteMode" alt="Pick a Date" id="input_8_pick" src="../images/calendar.png" style="vertical-align:middle;margin-left:5px" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v1" />
               <label class="form-sub-label" for="lite_mode_8" id="sublabel_8_litemode" style="min-height:13px" aria-hidden="false"> Date </label>
             </span>
           </div>

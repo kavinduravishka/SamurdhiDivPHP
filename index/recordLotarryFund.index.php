@@ -284,7 +284,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"ලොත
             </div>
             <span class="form-sub-label-container " style="vertical-align:top">
               <input type="text" class="form-textbox validate[required, limitDate, validateLiteDate]" id="lite_mode_6" size="12" data-maxlength="12" maxLength="12" data-age="" value="" required="" data-format="yyyymmdd" data-seperator="-" placeholder="yyyy-mm-dd" autoComplete="off" aria-labelledby="label_6 sublabel_6_litemode" />
-              <img class=" newDefaultTheme-dateIcon icon-liteMode" alt="Pick a Date" id="input_6_pick" src="https://cdn.jotfor.ms/images/calendar.png" style="vertical-align:middle;margin-left:5px" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v1" />
+              <img class=" newDefaultTheme-dateIcon icon-liteMode" alt="Pick a Date" id="input_6_pick" src="../images/calendar.png" style="vertical-align:middle;margin-left:5px" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v1" />
               <label class="form-sub-label" for="lite_mode_6" id="sublabel_6_litemode" style="min-height:13px" aria-hidden="false"> Date </label>
             </span>
           </div>
