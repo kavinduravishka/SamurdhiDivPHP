@@ -1,22 +1,23 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en-US"  class="supernova"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="alternate" type="application/json+oembed" href="https://www.jotform.com/oembed/?format=json&amp;url=https%3A%2F%2Fform.jotform.com%2F201318017540039" title="oEmbed Form">
-<link rel="alternate" type="text/xml+oembed" href="https://www.jotform.com/oembed/?format=xml&amp;url=https%3A%2F%2Fform.jotform.com%2F201318017540039" title="oEmbed Form">
 <meta property="og:title" content="අනිවාර්ය ඉතිරි කිරීම් - Mandatory savings" >
 <meta property="og:url" content="https://form.jotform.com/201318017540039" >
 <meta property="og:description" content="Please click the link to complete this form.">
 <meta name="slack-app-id" content="AHNMASS8M">
-<link rel="shortcut icon" href="https://cdn.jotfor.ms/favicon.ico">
-<link rel="canonical" href="https://form.jotform.com/201318017540039" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1" />
 <meta name="HandheldFriendly" content="true" />
 <title>අනිවාර්ය ඉතිරි කිරීම් - Mandatory savings</title>
-<link href="https://cdn.jotfor.ms/static/formCss.css?3.3.17705" rel="stylesheet" type="text/css" />
-<link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/nova.css?3.3.17705" />
-<link type="text/css" media="print" rel="stylesheet" href="https://cdn.jotfor.ms/css/printForm.css?3.3.17705" />
-<link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/themes/CSS/566a91c2977cdfcd478b4567.css?"/>
-<link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/payment/styles.css?3.3.17705" />
+
+<link rel="shortcut icon" href="https://cdn.jotfor.ms/favicon.ico">
+
+<link rel="stylesheet" type="text/css" href="../css/formCss.css"/>
+<link type="text/css" rel="stylesheet" href="../css/nova.css" />
+<link type="text/css" media="print" rel="stylesheet" href="../css/printForm.css" />
+<link type="text/css" rel="stylesheet" href="../css/566a91c2977cdfcd478b4567.css"/>
+<link type="text/css" rel="stylesheet" href="../css/styles.css" />
+
+
 <style type="text/css">
     .form-label-left{
         width:150px;
@@ -171,9 +172,11 @@
     /* Injected CSS Code */
 </style>
 
-<link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/buttons/form-submit-button-simple_blue.css?3.3.17705"/>
-<script src="https://cdn.jotfor.ms/static/prototype.forms.js" type="text/javascript"></script>
-<script src="https://cdn.jotfor.ms/static/jotform.forms.js?3.3.17705" type="text/javascript"></script>
+
+<script src="../js/prototype.forms.js" type="text/javascript"></script>
+<script src="../js/jotform.forms.js" type="text/javascript"></script>
+<link type="text/css" rel="stylesheet" href="../css/form-submit-button-simple_blue.css"/>
+
 <script type="text/javascript">
 	JotForm.init(function(){
 	JotForm.newDefaultTheme = false;

@@ -1,22 +1,26 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en-US"  class="supernova"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="alternate" type="application/json+oembed" href="https://www.jotform.com/oembed/?format=json&amp;url=https%3A%2F%2Fform.jotform.com%2F201314312993045" title="oEmbed Form">
-<link rel="alternate" type="text/xml+oembed" href="https://www.jotform.com/oembed/?format=xml&amp;url=https%3A%2F%2Fform.jotform.com%2F201314312993045" title="oEmbed Form">
 <meta property="og:title" content="ප්‍රජාමූල සංවිධාන - Community Based Organizations " >
 <meta property="og:url" content="https://form.jotform.com/201314312993045" >
 <meta property="og:description" content="Please click the link to complete this form.">
 <meta name="slack-app-id" content="AHNMASS8M">
-<!---<link rel="shortcut icon" href="https://cdn.jotfor.ms/favicon.ico"> --->
-<link rel="canonical" href="https://form.jotform.com/201314312993045" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1" />
 <meta name="HandheldFriendly" content="true" />
 <title>Register or Renew Community Based Organizations </title>
-<link href="https://cdn.jotfor.ms/static/formCss.css?3.3.17705" rel="stylesheet" type="text/css" />
-<link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/nova.css?3.3.17705" />
-<link type="text/css" media="print" rel="stylesheet" href="https://cdn.jotfor.ms/css/printForm.css?3.3.17705" />
-<link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/themes/CSS/566a91c2977cdfcd478b4567.css?themeRevisionID=5dca5ac9a5e86d17235d90c1"/>
-<link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/payment/styles.css?3.3.17705" />
+
+
+
+
+<link rel="shortcut icon" href="https://cdn.jotfor.ms/favicon.ico"> 
+
+<link rel="stylesheet" type="text/css" href="../css/formCss.css"/>
+<link type="text/css" rel="stylesheet" href="../css/nova.css" />
+<link type="text/css" media="print" rel="stylesheet" href="../css/printForm.css" />
+<link type="text/css" rel="stylesheet" href="../css/566a91c2977cdfcd478b4567.css"/>
+<link type="text/css" rel="stylesheet" href="../css/styles.css" />
+
+
 <style type="text/css">
 @import (css) '@{buttonFontLink}';
 
@@ -172,12 +176,16 @@
     /* Injected CSS Code */
 </style>
 
-<link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/buttons/form-submit-button-simple_blue.css?3.3.17705"/>
-<script src="https://cdn.jotfor.ms/js/vendor/jquery-1.8.0.min.js?v=3.3.17705" type="text/javascript"></script>
-<script src="https://cdn.jotfor.ms/js/vendor/maskedinput.min.js?v=3.3.17705" type="text/javascript"></script>
-<script src="https://cdn.jotfor.ms/js/vendor/jquery.maskedinput.min.js?v=3.3.17705" type="text/javascript"></script>
-<script src="https://cdn.jotfor.ms/static/prototype.forms.js" type="text/javascript"></script>
-<script src="https://cdn.jotfor.ms/static/jotform.forms.js?3.3.17705" type="text/javascript"></script>
+
+
+<script src="../js/jquery-1.8.0.min.js" type="text/javascript"></script>
+<script src="../js/maskedinput.min.js" type="text/javascript"></script>
+<script src="../js/jquery.maskedinput.min.js" type="text/javascript"></script>
+
+<script src="../js/prototype.forms.js" type="text/javascript"></script>
+<script src="../js/jotform.forms.js" type="text/javascript"></script>
+<link type="text/css" rel="stylesheet" href="../css/form-submit-button-simple_blue.css"/>
+
 <script type="text/javascript">
 	JotForm.init(function(){
 if (window.JotForm && JotForm.accessible) $('input_15').setAttribute('tabindex',0);
@@ -390,7 +398,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"ප්‍
             <table class="table">
               <thead>
                 <tr>
-                  <th width="60"><label class="form-label form-label-top form-label-auto" id="id_20" for="input_20">අනු අංකය</label></th>
+                  <th width="60" style="text-align:center"><label class="form-label form-label-top form-label-auto" id="id_20" for="input_20">අනු අංකය</label></th>
                   <th width="100"><label class="form-label form-label-top form-label-auto" id="id_20" for="input_20"> සමිතියේ තනතුර</label></th>
                   <th><label class="form-label form-label-top form-label-auto" id="id_20" for="input_20"> මුලකුරු සමග නම</label></th>
                   <th><label class="form-label form-label-top form-label-auto" id="id_20" for="input_20"> ලිපිනය</label></th>
