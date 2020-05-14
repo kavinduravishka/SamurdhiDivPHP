@@ -20,7 +20,7 @@
 					$user_list .= "<td>{$beneficiary['NIC']}</td>";
 					$user_list .= "<td>{$beneficiary['Noof_Family_Members']}</td>";
 					$user_list .= "<td>{$beneficiary['Bank_Account_No']}</td>";
-					$user_list .= "<td>{$beneficiary['Relief_Account']}</td>";
+					$user_list .= "<td>{$beneficiary['Relief_Amount']}</td>";
 					$user_list .= "<td>{$beneficiary['Starting_Year']}</td>";
 					$user_list .= "<td><a href=\"modify-beneficiary.index.php?Serial_No={$beneficiary['Serial_No']}\">Edit</a></td>";
 					$user_list .= "<td><a href=\"delete-beneficiary.index.php?Serial_No={$beneficiary['Serial_No']}\" onclick=\"return confirm('Are you sure?');\">Delete</a></td>";
