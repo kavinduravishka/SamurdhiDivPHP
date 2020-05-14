@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 13, 2020 at 10:19 PM
+-- Generation Time: May 14, 2020 at 07:42 PM
 -- Server version: 8.0.20
 -- PHP Version: 7.2.24-0ubuntu0.18.04.4
 
@@ -32,7 +32,8 @@ CREATE TABLE `CBOMemberDetailes` (
   `Address` text NOT NULL,
   `Post` enum('Presidet','Vice president','Secratary','Vice secratary','Treasurer','Internal auditor','Member') NOT NULL,
   `Telephone` varchar(12) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `NIC` varchar(15) NOT NULL
+  `NIC` varchar(15) NOT NULL,
+  `Expired` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
@@ -58,7 +59,9 @@ CREATE TABLE `CommunityBasedOrganizations` (
   `BankName` text NOT NULL,
   `AccountNo` text NOT NULL,
   `AccountOpenDate` date DEFAULT NULL,
-  `Balance` decimal(10,0) NOT NULL
+  `Balance` decimal(10,0) NOT NULL,
+  `RenewedDate` date NOT NULL,
+  `Expired` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
@@ -120,7 +123,8 @@ CREATE TABLE `MandatoryFundRequests` (
   `BenefName` text NOT NULL,
   `AcceptedBy` text NOT NULL,
   `AppDate` date NOT NULL,
-  `AppBank` text NOT NULL
+  `AppBank` text NOT NULL,
+  `Deleted` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
@@ -172,7 +176,51 @@ CREATE TABLE `SipdoraScholarship` (
   `School` text NOT NULL,
   `Address` text NOT NULL,
   `Bank` text NOT NULL,
-  `SisurakaAcNo` varchar(10) NOT NULL
+  `SisurakaAcNo` varchar(10) NOT NULL,
+  `Deleted` tinyint(1) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `SSFAppFamMem`
+--
+
+CREATE TABLE `SSFAppFamMem` (
+  `OwnershipNo` varchar(40) NOT NULL,
+  `Name` text NOT NULL,
+  `Gender` enum('Male','Female','Other') NOT NULL,
+  `MaritialState` tinyint(1) NOT NULL,
+  `BDay` date NOT NULL,
+  `Age` int NOT NULL,
+  `RelToBenif` varchar(30) NOT NULL,
+  `NIC` varchar(15) NOT NULL,
+  `Profession` varchar(30) NOT NULL,
+  `Deleted` tinyint(1) NOT NULL DEFAULT '0',
+  `Dead` tinyint(1) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `SSFundApplicants`
+--
+
+CREATE TABLE `SSFundApplicants` (
+  `SerialNo` int NOT NULL,
+  `District` varchar(10) NOT NULL DEFAULT 'Gampaha',
+  `DivSec` varchar(20) NOT NULL DEFAULT 'Divulapitiya',
+  `Zone` text NOT NULL,
+  `ForceNo` int NOT NULL,
+  `Village` text NOT NULL,
+  `GNDomain` text NOT NULL,
+  `SSOwnershipNo` text NOT NULL,
+  `Name` text NOT NULL,
+  `Address` text NOT NULL,
+  `Successer` text NOT NULL,
+  `HomeNo` text NOT NULL,
+  `Banned` tinyint(1) NOT NULL DEFAULT '0',
+  `Deleted` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
@@ -189,7 +237,8 @@ CREATE TABLE `SSFundPayments` (
   `Amount` decimal(10,0) NOT NULL,
   `NameAssured` text,
   `GNDiv` text,
-  `Reason` enum('Death','Birth','Marrige','Hospitalization','Scholarship') NOT NULL
+  `Reason` enum('Death','Birth','Marrige','Hospitalization','Scholarship') NOT NULL,
+  `Expired` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
@@ -262,6 +311,12 @@ ALTER TABLE `SipdoraScholarship`
   ADD UNIQUE KEY `SerialNo` (`SerialNo`);
 
 --
+-- Indexes for table `SSFundApplicants`
+--
+ALTER TABLE `SSFundApplicants`
+  ADD UNIQUE KEY `SerialNo` (`SerialNo`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -285,6 +340,11 @@ ALTER TABLE `personalfile`
 -- AUTO_INCREMENT for table `SipdoraScholarship`
 --
 ALTER TABLE `SipdoraScholarship`
+  MODIFY `SerialNo` int NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `SSFundApplicants`
+--
+ALTER TABLE `SSFundApplicants`
   MODIFY `SerialNo` int NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `user`
