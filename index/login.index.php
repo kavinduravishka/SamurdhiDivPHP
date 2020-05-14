@@ -29,8 +29,9 @@
             switch ($_SESSION['user_name']) {
                 case 'officer4':
                     header('Location: officer4.index.php');
-                    
                     break;
+                case 'officer1' :
+                    header('Location: home-officer1.index.php');
                 
                 default:
                     $errors[]='Invalid UserName/ Password';
