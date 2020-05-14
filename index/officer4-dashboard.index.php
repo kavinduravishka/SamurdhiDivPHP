@@ -23,33 +23,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Personal File Modifications</title>
+    <title>Officer4-dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/main_dk.css">
     
     
 </head>
 <body>
-    <header>
-        <div class="appname">Samurdhi Division</div>
-        <div class="loggedin">Welcome <?php echo $_SESSION['user_name']; ?>! <a href="logout.index.php">Log Out</a></div>
-
-        <link rel="stylesheet" href="\SamurdhiDivPHP\css\main_dk.css">
-    </header>
-
-
-    <main>
-        <h1>Personal File Details<span><a href="add-member.index.php"> + Add New</a></span></h1>
-
-        <!--<p id="backDashboard">
-            <input type="submit" name="back" value="< Back to Dashboard">                          
-        </p>-->
-
-        <p id="backDashboard">
-                <label for="">&nbsp;</label>
-                <button type="submit" name="submit">< Back to Dashboard</button>
-                          
-        </p>
-
-        <table class="personalfile_list">
+    
+    <?php require_once("../include/header.inc.php"); ?>
+	<?php require_once("../include/sidebar_officer4.inc.php"); ?>
+	
+	
+	<main >
+		<div class="maincontainer" >
+		<h1>Personal Files</h1>
+		<table class="personalfile_list">
 
             <tr>
                 <th>NIC Number</th>
@@ -67,6 +59,6 @@
             <?php echo $personalfile_list ?>
         
         </table>
-    </main>
+	</main>
 </body>
 </html>

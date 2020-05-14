@@ -1,7 +1,13 @@
 <?php session_start();?>
-<?php //require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\OOSDProject\inc\connection.php");
-    require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\classes\dbh.class.php");
-    require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\classes\login.class.php");
+<?php //include '../includes/autoload.inc.php';
+
+    require_once("../classes/dbh.class.php");
+    require_once("../classes/login.class.php");
+
+
+    //require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\OOSDProject\inc\connection.php");
+    //require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/classes/dbh.class.php");
+    //require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/classes/login.class.php");
 ?>
 <?php
     if(isset($_POST['submit'])){

@@ -146,8 +146,8 @@ main h1 span{
     
     font-size: 15px;
     width: 130%;
-    margin-left: -15%;
-    margin-right: 15%;
+    margin-left: 70px;
+    
     border-collapse:collapse;    
 }
 
@@ -209,3 +209,94 @@ main h1 span{
 div.errmsg{
     color: red;
 }
+
+
+/*sidebar*/
+.sidebar {
+    background: #2f323a;
+    margin-top: 50px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    transition: 0.5s;
+    transition-property: left;
+  }
+  .sidebar .profile-image {
+    width: 100px;
+    margin-top: 40px;
+    height: 100px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+  }
+  .sidebar h4 {
+    color: #ccc;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  .sidebar a {
+    color: #fff;
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: 0.1s;
+    transition-property: background;
+  }
+  .sidebar a:hover {
+    background: #19b3d3;
+  }
+  
+  .sidebar i {
+    padding-right: 10px;
+  }
+  
+  label #sidebar_btn {
+   z-index: 1;
+      color: #eee;
+      padding-left: 45px;
+      cursor: pointer;
+      font-size: 20px;
+      /* margin: 5px 0; */
+      transition: 0.1s;
+      transition-property: color;
+  }
+  
+  label #sidebar_btn:hover {
+    color: #19b3d3;
+  }
+  
+  #check:checked ~ .sidebar {
+    left: -190px;
+  }
+  
+  #check:checked ~ .sidebar a span {
+    display: none;
+  }
+  #check:checked ~ .sidebar a {
+    font-size: 20px;
+    margin-left: 170px;
+    width: 80px;
+  }
+  
+  main {
+      margin-top: 70px;
+    margin-left: 230px;
+    background: url(b.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    transition: 0.5s;
+      
+  }
+  
+  #check:checked ~ main {
+    margin-left: 60px;
+  }
+  
+  #check {
+    display: none;
+  }
