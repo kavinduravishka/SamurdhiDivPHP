@@ -35,15 +35,14 @@
 
 		public function add($Divisional_Secretariat,$Bank_Zonal,$GN_Division,$GN_Code_Mapping,$Householder_Name,$Address,$NIC,$No_of_Family_Members,$Bank_Account_No,$Relief_Account,$Starting_Year,$errors){
 
-			$sql =  "INSERT INTO detailsofbenificiaries (Divisional_Secretariat,Bank_Zonal,GN_Division,GN_Code_Mapping,Householder_Name, Address,NIC,Noof_Family_Members,Bank_Account_No,Relief_Account,Starting_Year,is_deleted) VALUES ('{$Divisional_Secretariat}','{$Bank_Zonal}','{$GN_Division}','{$GN_Code_Mapping}','{$Householder_Name}','{$Address}','{$NIC}',{$No_of_Family_Members},'{$Bank_Account_No}',{$Relief_Account},'{$Starting_Year}',0)";
+			$sql =  "INSERT INTO detailsofbenificiaries (Divisional_Secretariat,Bank_Zonal,GN_Division,GN_Code_Mapping,Householder_Name, Address,NIC,Noof_Family_Members,Bank_Account_No,Relief_Amount,Starting_Year,is_deleted) VALUES ('{$Divisional_Secretariat}','{$Bank_Zonal}','{$GN_Division}','{$GN_Code_Mapping}','{$Householder_Name}','{$Address}','{$NIC}',{$No_of_Family_Members},'{$Bank_Account_No}',{$Relief_Account},'{$Starting_Year}',0)";
 			$stmt = $this->connect()->query($sql);
 			// $stmt->execute();
 			if($stmt){
 				header('Location:home-officer1.index.php?beneficiary_added=true');
-			}else{
-				$errors[] = 'Faild to add new record';
 			}
 		}
+
 
 
 
@@ -108,7 +107,7 @@
 		public function search($q){
 			$sql = "SELECT * FROM detailsofbenificiaries WHERE is_deleted = 0 AND Householder_Name='{$q}'";
 			$stmt = $this->connect()->query($sql);
-			$b_list = '<table class = "masterlist"><tr><th>Serial No</th><th>Divisional Secretariat</th><th>Bank Zonal</th><th>G.N Division</th><th>G.N_Code Mapping</th><th>Householder Name</th><th>Address</th><th>NIC</th><th>No.of Family Members</th><th>BankAccount No</th><th>Relief Account</th><th>Starting Year</th></tr>';
+			$b_list = '<table class = "masterlist"><tr><th>Serial No</th><th>Divisional Secretariat</th><th>Bank Zonal</th><th>G.N Division</th><th>G.N_Code Mapping</th><th>Householder Name</th><th>Address</th><th>NIC</th><th>No.of Family Members</th><th>BankAccount No</th><th>Relief Amount</th><th>Starting Year</th></tr>';
 			if($stmt){
 				while($row = $stmt->fetch()){
 					$b_list .= "<tr>";
@@ -122,7 +121,7 @@
 					$b_list .= "<td>{$user['NIC']}</td>";
 					$b_list .= "<td>{$user['Noof_Family_Members']}</td>";
 					$b_list .= "<td>{$user['Bank_Account_No']}</td>";
-					$b_list .= "<td>{$user['Relief_Account']}</td>";
+					$b_list .= "<td>{$user['Relief_Amount']}</td>";
 					$b_list .= "<td>{$user['Starting_Year']}</td>";
 					$b_list .= "</tr>";
 				}

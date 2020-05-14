@@ -61,6 +61,9 @@
 			
 			$officer1 = new Officer1();
 			$officer1->addBeneficiary($Divisional_Secretariat,$Bank_Zonal,$GN_Division,$GN_Code_Mapping,$Householder_Name,$Address,$NIC,$No_of_Family_Members,$Bank_Account_No,$Relief_Account,$Starting_Year,$errors);
+
+			$errors[] = 'Faild to add new record';
+			
 			
 		}
 
@@ -84,7 +87,7 @@
 
 	<main>
 		<div class="maincontainer">
-		<h1>Add new User</h1>
+		<h1>Add New Beneficiary</h1>
 
 		<?php 
 
