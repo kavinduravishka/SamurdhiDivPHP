@@ -1,10 +1,14 @@
 <?php 
+session_start();
 	echo "<div class=\"sidebar\">
       <center>
         <img src=\"..\images\user.jpg\" alt=\"\" class=\"profile-image\" />
-        <h4>Officer 2</h4>
+        <h4>".$_SESSION['USERNAME']."</h4>
       </center>
-      <a href=\"home-officer1.index.php\"><i class=\"fas fa-desktop\"></i><span>Dashboard</span></a>
+
+
+      <a href=\"". $_SESSION['dashboard'] ."\"><i class=\"fas fa-desktop\"></i><span>Dashboard</span></a>
+
       <a href=\"add-beneficiary.index.php\"><i class=\"fas fa-cogs\"></i><span>Add New</span></a>
       <a href=\"Reports.index.php\"><i class=\"fas fa-th\"></i><span>Reports</span></a>
       <a href=\"search.index.php\"><i class=\"fas fa-search\"></i><span>Find</span></a>
