@@ -149,21 +149,18 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Project\classes\staff-m
 <head>
     <meta charset="UTF-8">
     <title>Modify Personal-file</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+    <link rel="stylesheet" href="../css/main_dk.css">
     
     
 </head>
 <body>
-    <header>
-        <div class="appname">Samurdhi Division</div>
-        <div class="loggedin">Welcome <?php echo $_SESSION['user_name']; ?>! <a href="logout.index.php">Log Out</a></div>
-
-        <link rel="stylesheet" href="\SamurdhiDivPHP\css\main_dk.css">
-
-    </header>
+    <?php require_once("../include/header.inc.php"); ?>
+	<?php require_once("../include/sidebar_officer4.inc.php"); ?>
 
 
     <main>
-        <h1>View / Modify Personal-file<span><a href="personal-files.index.php"> Back to Personal-file List</a></span></h1>
+        <h1>View / Modify Personal-file</h1>
         
         <?php 
             if(!empty($errors)){

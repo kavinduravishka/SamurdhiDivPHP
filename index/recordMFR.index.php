@@ -1,5 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en-US"  class="supernova"><head>
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta property="og:title" content="අනිවාර්ය සහනාධාර දීමනා - Mandatory Fund Request " >
 <meta property="og:url" content="https://form.jotform.com/201317236946051" >
@@ -7,6 +8,7 @@
 <meta name="slack-app-id" content="AHNMASS8M">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1" />
 <meta name="HandheldFriendly" content="true" />
+
 <title>අනිවාර්ය සහනාධාර දීමනා - Mandatory Fund Request </title>
 
 <link rel="shortcut icon" href="https://cdn.jotfor.ms/favicon.ico">
@@ -16,6 +18,12 @@
 <link type="text/css" media="print" rel="stylesheet" href="../css/printForm.css" />
 <link type="text/css" rel="stylesheet" href="../css/566a91c2977cdfcd478b4567.css"/>
 <link type="text/css" rel="stylesheet" href="../css/styles.css" />
+
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
 
 
 <style type="text/css">
@@ -215,8 +223,17 @@ if (window.JotForm && JotForm.accessible) $('input_9').setAttribute('tabindex',0
 JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"අනිවාර්ය සහනාධාර දීමනා - Mandatory Fund Request ","type":"control_head"},{"name":"submit2","qid":"2","text":"ඇතුලත් කරන්න","type":"control_button"},{"description":"","name":"SerialNo","qid":"3","subLabel":"","text":"Serial No","type":"control_textbox"},{"description":"","name":"GNDomain","qid":"4","subLabel":"","text":"ග්‍රාම නිලධාරී වසම","type":"control_textbox"},{"description":"","name":"Date","qid":"5","text":"දිනය","type":"control_datetime"},{"description":"","name":"BenefName","qid":"6","subLabel":"","text":"ප්‍රතිලාභියාගේ නම","type":"control_textbox"},{"description":"","name":"AcceptedBy","qid":"7","subLabel":"","text":"අනුමත කලේ","type":"control_textbox"},{"description":"","name":"AppDate","qid":"8","text":"අනුමත කල දිනය","type":"control_datetime"},{"description":"","name":"AppBank","qid":"9","subLabel":"","text":"අනුමත වූ බැංකුව","type":"control_textbox"}]);}, 20); 
 </script>
 </head>
+
+
+
 <body>
-<form class="jotform-form" action="https://submit.jotform.com/submit/201317236946051/" method="post" name="form_201317236946051" id="201317236946051" accept-charset="utf-8" autocomplete="on">
+
+
+  <?php require_once("../include/header.inc.php"); ?>
+  <?php require_once("../include/sidebar2.inc.php"); ?>
+
+<main>
+<form class="jotform-form maincontainer" action="https://submit.jotform.com/submit/201317236946051/" method="post" name="form_201317236946051" id="201317236946051" accept-charset="utf-8" autocomplete="on">
   <input type="hidden" name="formID" value="201317236946051" />
   <input type="hidden" id="JWTContainer" value="" />
   <input type="hidden" id="cardinalOrderNumber" value="" />
@@ -242,7 +259,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"අනි
           </span>
         </label>
         <div id="cid_3" class="form-input-wide jf-required">
-          <input type="text" id="input_3" name="q3_SerialNo" data-type="input-textbox" class="form-textbox validate[required]" size="20" value="" data-component="textbox" aria-labelledby="label_3" required="" />
+          <input type="text" id="input_3" name="SerialNo" data-type="input-textbox" class="form-textbox validate[required]" size="20" value="" data-component="textbox" aria-labelledby="label_3" required="" />
         </div>
       </li>
       <li class="form-line jf-required" data-type="control_datetime" id="id_5">
@@ -256,21 +273,21 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"අනි
           <div data-wrapper-react="true">
             <div style="display:none">
               <span class="form-sub-label-container " style="vertical-align:top">
-                <input type="tel" class="form-textbox validate[required, limitDate]" id="year_5" name="q5_Date[year]" size="4" data-maxlength="4" data-age="" maxLength="4" value="" required="" autoComplete="off" aria-labelledby="label_5 sublabel_5_year" />
+                <input type="tel" class="form-textbox validate[required, limitDate]" id="year_5" name="Date[year]" size="4" data-maxlength="4" data-age="" maxLength="4" value="" required="" autoComplete="off" aria-labelledby="label_5 sublabel_5_year" />
                 <span class="date-separate" aria-hidden="true">
                    -
                 </span>
                 <label class="form-sub-label" for="year_5" id="sublabel_5_year" style="min-height:13px" aria-hidden="false"> Year </label>
               </span>
               <span class="form-sub-label-container " style="vertical-align:top">
-                <input type="tel" class="form-textbox validate[required, limitDate]" id="month_5" name="q5_Date[month]" size="2" data-maxlength="2" maxLength="2" value="" required="" autoComplete="off" aria-labelledby="label_5 sublabel_5_month" />
+                <input type="tel" class="form-textbox validate[required, limitDate]" id="month_5" name="Date[month]" size="2" data-maxlength="2" maxLength="2" value="" required="" autoComplete="off" aria-labelledby="label_5 sublabel_5_month" />
                 <span class="date-separate" aria-hidden="true">
                    -
                 </span>
                 <label class="form-sub-label" for="month_5" id="sublabel_5_month" style="min-height:13px" aria-hidden="false"> Month </label>
               </span>
               <span class="form-sub-label-container " style="vertical-align:top">
-                <input type="tel" class="form-textbox validate[required, limitDate]" id="day_5" name="q5_Date[day]" size="2" data-maxlength="2" maxLength="2" value="" required="" autoComplete="off" aria-labelledby="label_5 sublabel_5_day" />
+                <input type="tel" class="form-textbox validate[required, limitDate]" id="day_5" name="Date[day]" size="2" data-maxlength="2" maxLength="2" value="" required="" autoComplete="off" aria-labelledby="label_5 sublabel_5_day" />
                 <label class="form-sub-label" for="day_5" id="sublabel_5_day" style="min-height:13px" aria-hidden="false"> Day </label>
               </span>
             </div>
@@ -290,7 +307,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"අනි
           </span>
         </label>
         <div id="cid_4" class="form-input-wide jf-required">
-          <input type="text" id="input_4" name="q4_GNDomain" data-type="input-textbox" class="form-textbox validate[required]" size="20" value="" data-component="textbox" aria-labelledby="label_4" required="" />
+          <input type="text" id="input_4" name="GNDomain" data-type="input-textbox" class="form-textbox validate[required]" size="20" value="" data-component="textbox" aria-labelledby="label_4" required="" />
         </div>
       </li>
       <li class="form-line jf-required" data-type="control_textbox" id="id_6">
@@ -301,7 +318,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"අනි
           </span>
         </label>
         <div id="cid_6" class="form-input-wide jf-required">
-          <input type="text" id="input_6" name="q6_BenefName" data-type="input-textbox" class="form-textbox validate[required]" size="40" value="" data-component="textbox" aria-labelledby="label_6" required="" />
+          <input type="text" id="input_6" name="BenefName" data-type="input-textbox" class="form-textbox validate[required]" size="40" value="" data-component="textbox" aria-labelledby="label_6" required="" />
         </div>
       </li>
       <li class="form-line jf-required" data-type="control_textbox" id="id_7">
@@ -312,7 +329,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"අනි
           </span>
         </label>
         <div id="cid_7" class="form-input-wide jf-required">
-          <input type="text" id="input_7" name="q7_AcceptedBy" data-type="input-textbox" class="form-textbox validate[required]" size="40" value="" data-component="textbox" aria-labelledby="label_7" required="" />
+          <input type="text" id="input_7" name="AcceptedBy" data-type="input-textbox" class="form-textbox validate[required]" size="40" value="" data-component="textbox" aria-labelledby="label_7" required="" />
         </div>
       </li>
       <li class="form-line jf-required" data-type="control_datetime" id="id_8">
@@ -326,21 +343,21 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"අනි
           <div data-wrapper-react="true">
             <div style="display:none">
               <span class="form-sub-label-container " style="vertical-align:top">
-                <input type="tel" class="form-textbox validate[required, limitDate]" id="year_8" name="q8_AppDate[year]" size="4" data-maxlength="4" data-age="" maxLength="4" value="" required="" autoComplete="off" aria-labelledby="label_8 sublabel_8_year" />
+                <input type="tel" class="form-textbox validate[required, limitDate]" id="year_8" name="AppDate[year]" size="4" data-maxlength="4" data-age="" maxLength="4" value="" required="" autoComplete="off" aria-labelledby="label_8 sublabel_8_year" />
                 <span class="date-separate" aria-hidden="true">
                    -
                 </span>
                 <label class="form-sub-label" for="year_8" id="sublabel_8_year" style="min-height:13px" aria-hidden="false"> Year </label>
               </span>
               <span class="form-sub-label-container " style="vertical-align:top">
-                <input type="tel" class="form-textbox validate[required, limitDate]" id="month_8" name="q8_AppDate[month]" size="2" data-maxlength="2" maxLength="2" value="" required="" autoComplete="off" aria-labelledby="label_8 sublabel_8_month" />
+                <input type="tel" class="form-textbox validate[required, limitDate]" id="month_8" name="AppDate[month]" size="2" data-maxlength="2" maxLength="2" value="" required="" autoComplete="off" aria-labelledby="label_8 sublabel_8_month" />
                 <span class="date-separate" aria-hidden="true">
                    -
                 </span>
                 <label class="form-sub-label" for="month_8" id="sublabel_8_month" style="min-height:13px" aria-hidden="false"> Month </label>
               </span>
               <span class="form-sub-label-container " style="vertical-align:top">
-                <input type="tel" class="form-textbox validate[required, limitDate]" id="day_8" name="q8_AppDate[day]" size="2" data-maxlength="2" maxLength="2" value="" required="" autoComplete="off" aria-labelledby="label_8 sublabel_8_day" />
+                <input type="tel" class="form-textbox validate[required, limitDate]" id="day_8" name="AppDate[day]" size="2" data-maxlength="2" maxLength="2" value="" required="" autoComplete="off" aria-labelledby="label_8 sublabel_8_day" />
                 <label class="form-sub-label" for="day_8" id="sublabel_8_day" style="min-height:13px" aria-hidden="false"> Day </label>
               </span>
             </div>
@@ -360,7 +377,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"අනි
           </span>
         </label>
         <div id="cid_9" class="form-input-wide jf-required">
-          <input type="text" id="input_9" name="q9_AppBank" data-type="input-textbox" class="form-textbox validate[required]" size="20" value="" data-component="textbox" aria-labelledby="label_9" required="" />
+          <input type="text" id="input_9" name="AppBank" data-type="input-textbox" class="form-textbox validate[required]" size="20" value="" data-component="textbox" aria-labelledby="label_9" required="" />
         </div>
       </li>
       <li class="form-line" data-type="control_button" id="id_2">
@@ -388,9 +405,11 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"අනි
   <script type="text/javascript">
   document.getElementById("si" + "mple" + "_spc").value = "201317236946051-201317236946051";
   </script>
-  <div class="formFooter-heightMask">
-  </div>
   
-</form></body>
+</form>
+
+</main>
+
+</body>
 </html>
 <script type="text/javascript">JotForm.ownerView=true;</script>
