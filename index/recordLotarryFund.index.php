@@ -233,7 +233,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"ලොත
           </span>
         </label>
         <div id="cid_3" class="form-input-wide jf-required">
-          <input type="text" id="input_3" name="q3_NIC" data-type="input-textbox" class="form-textbox validate[required]" size="20" value="" data-component="textbox" aria-labelledby="label_3" required="" />
+          <input type="text" id="input_3" name="NIC" data-type="input-textbox" class="form-textbox validate[required]" size="20" value="" data-component="textbox" aria-labelledby="label_3" required="" />
         </div>
       </li>
       <li class="form-line jf-required" data-type="control_textbox" id="id_4">
@@ -244,13 +244,13 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"ලොත
           </span>
         </label>
         <div id="cid_4" class="form-input-wide jf-required">
-          <input type="text" id="input_4" name="q4_Name" data-type="input-textbox" class="form-textbox validate[required]" size="40" value="" data-component="textbox" aria-labelledby="label_4" required="" />
+          <input type="text" id="input_4" name="Name" data-type="input-textbox" class="form-textbox validate[required]" size="40" value="" data-component="textbox" aria-labelledby="label_4" required="" />
         </div>
       </li>
       <li class="form-line" data-type="control_textarea" id="id_7">
         <label class="form-label form-label-top form-label-auto" id="label_7" for="input_7"> ලිපිනය </label>
         <div id="cid_7" class="form-input-wide">
-          <textarea id="input_7" class="form-textarea" name="q7_Adderess" cols="40" rows="6" data-component="textarea" aria-labelledby="label_7"></textarea>
+          <textarea id="input_7" class="form-textarea" name="Adderess" cols="40" rows="6" data-component="textarea" aria-labelledby="label_7"></textarea>
         </div>
       </li>
       <li class="form-line jf-required" data-type="control_datetime" id="id_6">
@@ -264,21 +264,21 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"ලොත
           <div data-wrapper-react="true">
             <div style="display:none">
               <span class="form-sub-label-container " style="vertical-align:top">
-                <input type="tel" class="form-textbox validate[required, limitDate]" id="year_6" name="q6_Date[year]" size="4" data-maxlength="4" data-age="" maxLength="4" value="" required="" autoComplete="off" aria-labelledby="label_6 sublabel_6_year" />
+                <input type="tel" class="form-textbox validate[required, limitDate]" id="year_6" name="Date[year]" size="4" data-maxlength="4" data-age="" maxLength="4" value="" required="" autoComplete="off" aria-labelledby="label_6 sublabel_6_year" />
                 <span class="date-separate" aria-hidden="true">
                    -
                 </span>
                 <label class="form-sub-label" for="year_6" id="sublabel_6_year" style="min-height:13px" aria-hidden="false"> Year </label>
               </span>
               <span class="form-sub-label-container " style="vertical-align:top">
-                <input type="tel" class="form-textbox validate[required, limitDate]" id="month_6" name="q6_Date[month]" size="2" data-maxlength="2" maxLength="2" value="" required="" autoComplete="off" aria-labelledby="label_6 sublabel_6_month" />
+                <input type="tel" class="form-textbox validate[required, limitDate]" id="month_6" name="Date[month]" size="2" data-maxlength="2" maxLength="2" value="" required="" autoComplete="off" aria-labelledby="label_6 sublabel_6_month" />
                 <span class="date-separate" aria-hidden="true">
                    -
                 </span>
                 <label class="form-sub-label" for="month_6" id="sublabel_6_month" style="min-height:13px" aria-hidden="false"> Month </label>
               </span>
               <span class="form-sub-label-container " style="vertical-align:top">
-                <input type="tel" class="form-textbox validate[required, limitDate]" id="day_6" name="q6_Date[day]" size="2" data-maxlength="2" maxLength="2" value="" required="" autoComplete="off" aria-labelledby="label_6 sublabel_6_day" />
+                <input type="tel" class="form-textbox validate[required, limitDate]" id="day_6" name="Date[day]" size="2" data-maxlength="2" maxLength="2" value="" required="" autoComplete="off" aria-labelledby="label_6 sublabel_6_day" />
                 <label class="form-sub-label" for="day_6" id="sublabel_6_day" style="min-height:13px" aria-hidden="false"> Day </label>
               </span>
             </div>

@@ -27,8 +27,30 @@
             extract($user);
 
             switch ($_SESSION['user_name']) {
+                
+
+                case 'officer1':
+                    header('Location: officer1.index.php');
+                    
+                    break;
+
+                case 'officer2':
+                    header('Location: officer2.index.php');
+                    
+                    break;
+
+                case 'officer3':
+                    header('Location: officer3.index.php');
+                    
+                    break;
+
                 case 'officer4':
                     header('Location: officer4.index.php');
+                    
+                    break;
+
+                case 'officer5':
+                    header('Location: officer5.index.php');
                     
                     break;
                 

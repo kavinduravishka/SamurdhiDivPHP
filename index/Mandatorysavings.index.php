@@ -1,5 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en-US"  class="supernova"><head>
+
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta property="og:title" content="අනිවාර්ය ඉතිරි කිරීම් - Mandatory savings" >
 <meta property="og:url" content="https://form.jotform.com/201318017540039" >
@@ -7,16 +9,18 @@
 <meta name="slack-app-id" content="AHNMASS8M">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1" />
 <meta name="HandheldFriendly" content="true" />
-<title>අනිවාර්ය ඉතිරි කිරීම් - Mandatory savings</title>
 
 <link rel="shortcut icon" href="https://cdn.jotfor.ms/favicon.ico">
+
+
+
+<title>අනිවාර්ය ඉතිරි කිරීම් - Mandatory savings</title>
 
 <link rel="stylesheet" type="text/css" href="../css/formCss.css"/>
 <link type="text/css" rel="stylesheet" href="../css/nova.css" />
 <link type="text/css" media="print" rel="stylesheet" href="../css/printForm.css" />
 <link type="text/css" rel="stylesheet" href="../css/566a91c2977cdfcd478b4567.css"/>
 <link type="text/css" rel="stylesheet" href="../css/styles.css" />
-
 
 <style type="text/css">
     .form-label-left{
@@ -172,10 +176,9 @@
     /* Injected CSS Code */
 </style>
 
-
+<link type="text/css" rel="stylesheet" href="../css/form-submit-button-simple_blue.css"/>
 <script src="../js/prototype.forms.js" type="text/javascript"></script>
 <script src="../js/jotform.forms.js" type="text/javascript"></script>
-<link type="text/css" rel="stylesheet" href="../css/form-submit-button-simple_blue.css"/>
 
 <script type="text/javascript">
 	JotForm.init(function(){
@@ -186,9 +189,9 @@
     /*INIT-END*/
 	});
 
-   JotForm.prepareCalculationsOnTheFly([null,{"name":"input1","qid":"1","text":"අනිවාර්ය ඉතිරි කිරීම් - Mandatory savings","type":"control_head"},{"name":"submit2","qid":"2","text":"වාර්තාව සකසන්න","type":"control_button"},{"name":"yyyy3","qid":"3","text":"yyyy වසරේ mm වන මස වාර්තාව","type":"control_head"}]);
+   JotForm.prepareCalculationsOnTheFly([null,{"name":"input1","qid":"1","text":"අනිවාර්ය ඉතිරි කිරීම් - Mandatory savings","type":"control_head"},{"name":"Generate","qid":"2","text":"වාර්තාව සකසන්න","type":"control_button"},{"name":"yyyy3","qid":"3","text":"yyyy වසරේ mm වන මස වාර්තාව","type":"control_head"}]);
    setTimeout(function() {
-JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"අනිවාර්ය ඉතිරි කිරීම් - Mandatory savings","type":"control_head"},{"name":"submit2","qid":"2","text":"වාර්තාව සකසන්න","type":"control_button"},{"name":"yyyy3","qid":"3","text":"yyyy වසරේ mm වන මස වාර්තාව","type":"control_head"}]);}, 20); 
+JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"අනිවාර්ය ඉතිරි කිරීම් - Mandatory savings","type":"control_head"},{"name":"Generate","qid":"2","text":"වාර්තාව සකසන්න","type":"control_button"},{"name":"yyyy3","qid":"3","text":"yyyy වසරේ mm වන මස වාර්තාව","type":"control_head"}]);}, 20); 
 </script>
 </head>
 <body>
@@ -244,8 +247,6 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"අනි
   <script type="text/javascript">
   document.getElementById("si" + "mple" + "_spc").value = "201318017540039-201318017540039";
   </script>
-  <div class="formFooter-heightMask">
-  </div>
   
 </form></body>
 </html>
