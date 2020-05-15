@@ -19,6 +19,12 @@
 <link type="text/css" rel="stylesheet" href="../css/566a91c2977cdfcd478b4567.css"/>
 <link type="text/css" rel="stylesheet" href="../css/styles.css" />
 
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+
 
 <style type="text/css">
     .form-label-left{
@@ -217,8 +223,17 @@ if (window.JotForm && JotForm.accessible) $('input_9').setAttribute('tabindex',0
 JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"අනිවාර්ය සහනාධාර දීමනා - Mandatory Fund Request ","type":"control_head"},{"name":"submit2","qid":"2","text":"ඇතුලත් කරන්න","type":"control_button"},{"description":"","name":"SerialNo","qid":"3","subLabel":"","text":"Serial No","type":"control_textbox"},{"description":"","name":"GNDomain","qid":"4","subLabel":"","text":"ග්‍රාම නිලධාරී වසම","type":"control_textbox"},{"description":"","name":"Date","qid":"5","text":"දිනය","type":"control_datetime"},{"description":"","name":"BenefName","qid":"6","subLabel":"","text":"ප්‍රතිලාභියාගේ නම","type":"control_textbox"},{"description":"","name":"AcceptedBy","qid":"7","subLabel":"","text":"අනුමත කලේ","type":"control_textbox"},{"description":"","name":"AppDate","qid":"8","text":"අනුමත කල දිනය","type":"control_datetime"},{"description":"","name":"AppBank","qid":"9","subLabel":"","text":"අනුමත වූ බැංකුව","type":"control_textbox"}]);}, 20); 
 </script>
 </head>
+
+
+
 <body>
-<form class="jotform-form" action="https://submit.jotform.com/submit/201317236946051/" method="post" name="form_201317236946051" id="201317236946051" accept-charset="utf-8" autocomplete="on">
+
+
+  <?php require_once("../include/header.inc.php"); ?>
+  <?php require_once("../include/sidebar2.inc.php"); ?>
+
+<main>
+<form class="jotform-form maincontainer" action="https://submit.jotform.com/submit/201317236946051/" method="post" name="form_201317236946051" id="201317236946051" accept-charset="utf-8" autocomplete="on">
   <input type="hidden" name="formID" value="201317236946051" />
   <input type="hidden" id="JWTContainer" value="" />
   <input type="hidden" id="cardinalOrderNumber" value="" />
@@ -391,6 +406,10 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"අනි
   document.getElementById("si" + "mple" + "_spc").value = "201317236946051-201317236946051";
   </script>
   
-</form></body>
+</form>
+
+</main>
+
+</body>
 </html>
 <script type="text/javascript">JotForm.ownerView=true;</script>
