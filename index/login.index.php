@@ -34,7 +34,6 @@
 
             switch ($_SESSION['user_name']) {
                 
-
                 case 'officer1' :
                     header('Location: home-officer1.index.php');
                     
