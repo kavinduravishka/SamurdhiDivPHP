@@ -6,8 +6,6 @@
  	private $pwd = "us3rDo3s3ntli3";
 	private $dbName = "SamurdhiDivision";
 
-
-
  	protected function connect(){
  		$dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbName;
  		$pdo = new PDO($dsn,$this->user,$this->pwd);

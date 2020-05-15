@@ -1,12 +1,11 @@
 <?php 
-	session_start();
-	$_SESSION = array();
-	if(isset($_COOKIE[session_name()])){
-		setcookie(session_name(),'',time()-86400,'/');
-	}
+    require_once("../classes/dbh.class.php");
+    require_once("../classes/login.class.php");
+?>
 
-	session_destroy();
-	header('Location: login.index.php?logout=yes');
+<?php 
+	$user_login=new Login();
+	$user=$user_login->logOut();
 
  ?>
 

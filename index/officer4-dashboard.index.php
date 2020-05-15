@@ -1,11 +1,7 @@
 <?php session_start(); ?>
-<?php //require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\OOSDProject\inc\connection.php"); 
-        // require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Project\classes\dbh.class.php");
-        // require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Project\classes\officer4.class.php");
-
+<?php 
         require_once("../classes/dbh.class.php");
         require_once("../classes/officer4.class.php");
-
 ?>
 
 
@@ -13,12 +9,9 @@
     // if(!isset($_SESSION['user_id'])){
     //     header('Location: login.php');
     // }
-    if(isset($_POST['submit'])){
-         header('Location: officer4.php');
-    }
-
     $user=new Officer4();
     $personalfile_list=$user->loadPersonalFiles();
+    unset($user);
 
 ?>
 

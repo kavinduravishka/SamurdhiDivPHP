@@ -1,18 +1,9 @@
 <?php session_start(); ?>
-<?php //include 'autoload.inc.php'; 
-
-
-    // require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Project\classes\dbh.class.php");
-    // require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Project\classes\staff-member.class.php");
-    // require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Project\classes\staff-member-in.class.php");
-    // require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Project\classes\staff-member-out.class.php");
-
+<?php 
     require_once("../classes/dbh.class.php");
     require_once("../classes/staff-member.class.php");
     require_once("../classes/staff-member-in.class.php");
     require_once("../classes/staff-member-out.class.php");
-
-
 ?>
 <?php 
 
@@ -22,7 +13,7 @@
 
     
     
-    // $errors=array();
+    $errors=array();
 
     $nic_number='';
     $name='';
@@ -46,77 +37,40 @@
         $w_op_number=$_POST['w_op_number'];
         $member_type=$_POST['member_type'];
 
-        switch ($member_type) {
-            case 'in':
-                $sMemberIn=new StaffMemberIn($nic_number,$name,$designation,$service,$date_appointed,$date_of_birth,$date_of_pension,$w_op_number);
-                $sMemberIn->addMember();
-                header ('Location: officer4-dashboard.index.php?in_member_added=true');
-                break;
-            case 'out':
-                $sMemberOut=new StaffMemberOut($nic_number,$name,$designation,$service,$date_appointed,$date_of_birth,$date_of_pension,$w_op_number);
-                $sMemberOut->addMember();
-                header ('Location: officer4-dashboard.index.php?out_member_added=true');
-                break;
-            
-            default:
-                echo "Error!";
-                break;
+        $req_fields=array('nic_number','name','designation','service','date_appointed','date_of_birth','date_of_pension','w_op_number');
+
+        foreach ($req_fields as $field){
+            if(empty(trim($_POST[$field]))){
+                $errors[]=$field .' is required';
+            }
         }
 
+        $max_len_fields=array('name'=>100,'designation'=>100,'service'=>50,'w_op_number'=>7);
 
+        foreach ($max_len_fields as $field=>$max_len){
+            if(strlen(trim($_POST[$field]))>$max_len){
+                $errors[]=$field .' must be less than ' .$max_len .'characters';
+            }
+        }
 
-        // $req_fields=array('nic_number','name','designation','service','date_appointed','date_of_birth','date_of_pension','w_op_number');
-
-        // foreach ($req_fields as $field){
-        //     if(empty(trim($_POST[$field]))){
-        //         $errors[]=$field .' is required';
-        //     }
-        // }
-
-        // $max_len_fields=array('name'=>100,'designation'=>100,'service'=>50,'w_op_number'=>7);
-
-        // foreach ($max_len_fields as $field=>$max_len){
-        //     if(strlen(trim($_POST[$field]))>$max_len){
-        //         $errors[]=$field .' must be less than ' .$max_len .'characters';
-        //     }
-        // }
-
-
-        // $nic_number=mysqli_real_escape_string($connection,$_POST['nic_number']);
-        // $query="SELECT * FROM personalfile WHERE nic_number='{$nic_number}' LIMIT 1";
-        // $result_set=mysqli_query($connection,$query);
-        // if($result_set){
-        //     if(mysqli_num_rows($result_set)==1){
-        //         $errors[]='This personal-file entry is already exist .';
-        //     }
-        // }
-
-        // if(empty($errors)){
-        //     $nic_number=mysqli_real_escape_string($connection,$_POST['nic_number']);
-        //     $name=mysqli_real_escape_string($connection,$_POST['name']);
-        //     $designation=mysqli_real_escape_string($connection,$_POST['designation']);
-        //     $service=mysqli_real_escape_string($connection,$_POST['service']);
-        //     $date_appointed=mysqli_real_escape_string($connection,$_POST['date_appointed']);
-        //     $date_of_birth=mysqli_real_escape_string($connection,$_POST['date_of_birth']);
-        //     $date_of_pension=mysqli_real_escape_string($connection,$_POST['date_of_pension']);
-        //     $w_op_number=mysqli_real_escape_string($connection,$_POST['w_op_number']);
-            
-           
-
-        //     $query="INSERT INTO personalfile(nic_number, name , designation , service ,date_appointed ,date_of_birth ,date_of_pension ,w_op_number, is_deleted ) ";
-        //     $query .="VALUES ('{$nic_number}','{$name}','{$designation}','{$service}','{$date_appointed}','{$date_of_birth}','{$date_of_pension}',{$w_op_number},0 )";
-
-        //     $result=mysqli_query($connection,$query);
-        //     if ($result){
-        //         header ('Location: personal-files.php?member_added=true');
-        //     }
-        //     else{
-        //         $errors[]='Failed to add the new entry.';
-        //     }
-            
-        // }
-
-
+        if(empty($errors)){
+            switch ($member_type) {
+                case 'in':
+                    $sMemberIn=new StaffMemberIn($nic_number,$name,$designation,$service,$date_appointed,$date_of_birth,$date_of_pension,$w_op_number);
+                    $sMemberIn->addMember();
+                    
+                    break;
+                case 'out':
+                    $sMemberOut=new StaffMemberOut($nic_number,$name,$designation,$service,$date_appointed,$date_of_birth,$date_of_pension,$w_op_number);
+                    $sMemberOut->addMember();
+                    
+                    break;
+                
+                default:
+                     $errors[]='Failed to add the new entry.';
+                    break;
+            }
+        }
     }
 ?>
 
