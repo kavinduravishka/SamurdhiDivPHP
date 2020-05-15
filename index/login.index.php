@@ -1,7 +1,13 @@
 <?php session_start();?>
-<?php //require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\OOSDProject\inc\connection.php");
-    require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\classes\dbh.class.php");
-    require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\classes\login.class.php");
+<?php //include '../includes/autoload.inc.php';
+
+    require_once("../classes/dbh.class.php");
+    require_once("../classes/login.class.php");
+
+
+    //require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\OOSDProject\inc\connection.php");
+    //require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/classes/dbh.class.php");
+    //require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/classes/login.class.php");
 ?>
 <?php
     if(isset($_POST['submit'])){
@@ -29,8 +35,8 @@
             switch ($_SESSION['user_name']) {
                 
 
-                case 'officer1':
-                    header('Location: officer1.index.php');
+                case 'officer1' :
+                    header('Location: home-officer1.index.php');
                     
                     break;
 
@@ -45,14 +51,16 @@
                     break;
 
                 case 'officer4':
-                    header('Location: officer4.index.php');
-                    
+                    header('Location: officer4-dashboard.index.php');
                     break;
+
 
                 case 'officer5':
                     header('Location: officer5.index.php');
                     
-                    break;
+
+                
+
                 
                 default:
                     $errors[]='Invalid UserName/ Password';
