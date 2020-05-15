@@ -1,7 +1,10 @@
 <?php session_start(); ?>
 <?php //require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\OOSDProject\inc\connection.php"); 
-        require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Project\classes\dbh.class.php");
-        require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Project\classes\officer4.class.php");
+        // require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Project\classes\dbh.class.php");
+        // require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Project\classes\officer4.class.php");
+
+        require_once("../classes/dbh.class.php");
+        require_once("../classes/officer4.class.php");
 
 ?>
 

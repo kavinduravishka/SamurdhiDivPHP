@@ -2,10 +2,15 @@
 <?php //include 'autoload.inc.php'; 
 
 
-    require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Project\classes\dbh.class.php");
-    require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Project\classes\staff-member.class.php");
-    require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Project\classes\staff-member-in.class.php");
-    require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Project\classes\staff-member-out.class.php");
+    // require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Project\classes\dbh.class.php");
+    // require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Project\classes\staff-member.class.php");
+    // require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Project\classes\staff-member-in.class.php");
+    // require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\myphp\Project\classes\staff-member-out.class.php");
+
+    require_once("../classes/dbh.class.php");
+    require_once("../classes/staff-member.class.php");
+    require_once("../classes/staff-member-in.class.php");
+    require_once("../classes/staff-member-out.class.php");
 
 
 ?>
@@ -45,12 +50,12 @@
             case 'in':
                 $sMemberIn=new StaffMemberIn($nic_number,$name,$designation,$service,$date_appointed,$date_of_birth,$date_of_pension,$w_op_number);
                 $sMemberIn->addMember();
-                header ('Location: personal-files.php?in_member_added=true');
+                header ('Location: officer4-dashboard.index.php?in_member_added=true');
                 break;
             case 'out':
                 $sMemberOut=new StaffMemberOut($nic_number,$name,$designation,$service,$date_appointed,$date_of_birth,$date_of_pension,$w_op_number);
                 $sMemberOut->addMember();
-                header ('Location: personal-files.php?out_member_added=true');
+                header ('Location: officer4-dashboard.index.php?out_member_added=true');
                 break;
             
             default:
