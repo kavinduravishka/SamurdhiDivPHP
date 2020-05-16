@@ -3,7 +3,7 @@ session_start();
 	echo "<div class=\"sidebar\">
       <center>
         <img src=\"..\images\user.jpg\" alt=\"\" class=\"profile-image\" />
-        <h4>".$_SESSION['USERNAME']."</h4>
+        <h4>".$_SESSION['user_name']."</h4>
       </center>
 
 
