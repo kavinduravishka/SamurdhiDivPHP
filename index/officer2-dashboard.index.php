@@ -41,19 +41,19 @@
 
 			<div class="linkdev">
 			<div class="adev">
-				<a href="test.php" >අනිවාර්ය ඉතිරි කිරීම්</a>
+				<a href="MFRBoard.index.php" >අනිවාර්ය ඉතිරි කිරීම්</a>
 			</div>
 			</div>
 
 			<div class="linkdev">
 			<div class="adev">
-				<a href="test.php" >ප්‍රජාමූල සංවිධාන</a>
+				<a href="CBOBoard.index.php" >ප්‍රජාමූල සංවිධාන</a>
 			</div>
 			</div>
 
 			<div class="linkdev">
 			<div class="adev">
-				<a href="test.php" >ලොතරැයි අරමුදල</a>
+				<a href="LFBoard.index.php" >ලොතරැයි අරමුදල</a>
 			</div>
 			</div>
 

@@ -40,7 +40,7 @@
 
 			<div class="linkdev">
 			<div class="adev">
-				<a href="test.php" >ලොතරැයි දිනුම් ඇදීමක් ඇතුලත් කිරීම</a>
+				<a href="recordLotarryFund.index.php" >ලොතරැයි දිනුම් ඇදීමක් ඇතුලත් කිරීම</a>
 			</div>
 			</div>
 

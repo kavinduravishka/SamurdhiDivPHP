@@ -40,13 +40,13 @@
 
 			<div class="linkdev">
 			<div class="adev">
-				<a href="test.php" >සමාජ ආරක්ෂණ අරමුදල</a>
+				<a href="SSFBoard.index.php" >සමාජ ආරක්ෂණ අරමුදල</a>
 			</div>
 			</div>
 
 			<div class="linkdev">
 			<div class="adev">
-				<a href="test.php" >සිප්දොර ශිෂ්‍යත්ව අරමුදල</a>
+				<a href="ScholarBoard.index.php" >සිප්දොර ශිෂ්‍යත්ව අරමුදල</a>
 			</div>
 			</div>
 

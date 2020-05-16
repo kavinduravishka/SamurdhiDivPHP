@@ -40,13 +40,13 @@
 
 			<div class="linkdev">
 			<div class="adev">
-				<a href="test.php" >නව සංවිධානයක් ලියාපදිංචිය</a>
+				<a href="CBORegistration.index.php" >නව සංවිධානයක් ලියාපදිංචිය</a>
 			</div>
 			</div>
 
 			<div class="linkdev">
 			<div class="adev">
-				<a href="test.php" >ලියාපදිංචිය අලුත් කිරීම</a>
+				<a href="CBORegistration.index.php" >ලියාපදිංචිය අලුත් කිරීම</a>
 			</div>
 			</div>
 

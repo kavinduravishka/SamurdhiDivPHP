@@ -40,7 +40,7 @@
 
 			<div class="linkdev">
 			<div class="adev">
-				<a href="test.php" >ප්‍රතිලාභියෙකු එකතු කිරීම</a>
+				<a href="SSFApplication.index.php" >ප්‍රතිලාභියෙකු එකතු කිරීම</a>
 			</div>
 			</div>
 
@@ -64,7 +64,7 @@
 
 			<div class="linkdev">
 			<div class="adev">
-				<a href="test.php" >සහනාධාර ගෙවීම</a>
+				<a href="SSFPayments.index.php" >සහනාධාර ගෙවීම</a>
 			</div>
 			</div>
 

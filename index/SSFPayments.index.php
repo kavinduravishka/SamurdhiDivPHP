@@ -206,7 +206,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"සමෘ
 <body>
 <form class="jotform-form" action="test.php" method="post" name="form_201346043322037" id="201346043322037" accept-charset="utf-8" autocomplete="on">
   
-  
+   
   <div role="main" class="form-all">
     <ul class="form-section page-section">
       <li id="cid_1" class="form-input-wide" data-type="control_head">

@@ -514,7 +514,6 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"ප්‍
   <script>
   JotForm.poweredByText = "Powered by JotForm";
   </script>
-  <input type="hidden" id="simple_spc" name="simple_spc" value="201314312993045" />
   <script type="text/javascript">
   document.getElementById("si" + "mple" + "_spc").value = "201314312993045-201314312993045";
   </script>

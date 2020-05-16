@@ -40,7 +40,7 @@
 
 			<div class="linkdev">
 			<div class="adev">
-				<a href="test.php" >අරමුදල් ගෙවීමක් එක් කිරීම</a>
+				<a href="recordMFR.index.php" >අරමුදල් ගෙවීමක් එක් කිරීම</a>
 			</div>
 			</div>
 

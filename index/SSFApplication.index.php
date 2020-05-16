@@ -205,10 +205,8 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"සමෘ
 </script>
 </head>
 <body>
-<form class="jotform-form" action="https://submit.jotform.com/submit/201341846566053/" method="post" name="form_201341846566053" id="201341846566053" accept-charset="utf-8" autocomplete="on">
-  <input type="hidden" name="formID" value="201341846566053" />
-  <input type="hidden" id="JWTContainer" value="" />
-  <input type="hidden" id="cardinalOrderNumber" value="" />
+<form class="jotform-form" action="test.php" method="post" name="form_201341846566053" id="201341846566053" accept-charset="utf-8" autocomplete="on">
+  
   <div role="main" class="form-all">
     <ul class="form-section page-section">
       <li id="cid_1" class="form-input-wide" data-type="control_head">
@@ -355,7 +353,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"සමෘ
   <script>
   JotForm.poweredByText = "Powered by JotForm";
   </script>
-  <input type="hidden" id="simple_spc" name="simple_spc" value="201341846566053" />
+  
   <script type="text/javascript">
   document.getElementById("si" + "mple" + "_spc").value = "201341846566053-201341846566053";
   </script>

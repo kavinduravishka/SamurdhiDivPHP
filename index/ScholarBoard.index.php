@@ -40,7 +40,7 @@
 
 			<div class="linkdev">
 			<div class="adev">
-				<a href="test.php" >ශිෂ්‍යත්වලාභියෙකු එකතු කිරීම</a>
+				<a href="Scholarships.index.php" >ශිෂ්‍යත්වලාභියෙකු එකතු කිරීම</a>
 			</div>
 			</div>
 
