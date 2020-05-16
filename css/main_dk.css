@@ -139,30 +139,19 @@ main {
     
 }
 
-main h1{
-    margin-bottom: 20px;
-    font-size: 30px;
 
-}
 
 main h1 span{
     font-size: 20px;
 }
 
-#backDashboard [type="submit"]
-{
-    border: none;
-    outline: none;
-    height: 35px;
-    width: 215px;
-    color:#fff;
-    font-size: 16px;
-    background: rgb(0, 2, 6);
-    cursor: pointer;
-    border-radius: 10px;
-    margin-left: -15%;
+
+.search{
+    width: 1000px;   
+    height: 40px;
     
 }
+
 
 .personalfile_list{
     
@@ -177,16 +166,17 @@ main h1 span{
 }
 
 
-.personalfile_list th{
-    background: #aaa;
-    text-align: center;     
-}
+
 
 .personalfile_list th, .personalfile_list td{
     
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;    
+}
+.personalfile_list th{
+    background: #aaa;
+    text-align: center;     
 }
 
 .personalfile_list td:hover 
