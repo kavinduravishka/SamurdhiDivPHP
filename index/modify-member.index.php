@@ -91,11 +91,16 @@
     <title>Modify Personal-file</title>
     
     <link rel="stylesheet" href="../css/main_dk.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles/navbar.css" >
     
     
 </head>
 <body>
     <?php require_once("../include/header.inc.php"); ?>
+    <?php 
+    	$navpaths=array("Dashboard"=>"officer4-dashboard.index.php");
+		require_once("../include/navbar.inc.php");
+	?>
 	
 
 
