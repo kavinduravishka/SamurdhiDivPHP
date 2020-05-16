@@ -19,6 +19,7 @@
 	<title>Users</title>
 	<link rel="shortcut icon" href="../images/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	 <link rel="stylesheet" type="text/css" href="../css/styles/navbar.css" >
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
 <body>
@@ -26,6 +27,10 @@
 	 <?php //require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\include\sidebar.inc.php"); ?>
 
 	 <?php require_once("../include/header.inc.php"); ?>
+	 <?php 
+    	$navpaths=array("Dashboard"=>"officer1-dashboard.index.php");
+		require_once("../include/navbar.inc.php");
+	?>
 	
 	<center>
 		<main>

@@ -78,12 +78,17 @@
 <head>
 	<title>Add new User</title>
 	<link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/css/main.css">
+	<link rel="stylesheet" type="text/css" href="../css/styles/navbar.css" >
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
 </head>
 <body>
 	  
 	 <?php require_once("../include/header.inc.php"); ?>
-
+	  <?php 
+    	$navpaths=array("Dashboard"=>"officer1-dashboard.index.php");
+		require_once("../include/navbar.inc.php");
+	?>
+	
 
 	<main>
 		<div class="maincontainer">
