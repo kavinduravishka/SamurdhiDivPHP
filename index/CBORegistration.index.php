@@ -11,8 +11,7 @@
 
 
 <link rel="shortcut icon" href="../images/favicon.ico">
-<link rel="stylesheet" type="text/css" href="../css/main.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="../css/main_dk.css">
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1" />
@@ -239,10 +238,10 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"ප්‍
 <body>
 
    <?php require_once("../include/header.inc.php"); ?>
-   <?php require_once("../include/sidebar2.inc.php"); ?>
 
 
-<form class="jotform-form  maincontainer" action="test.php" method="post" name="form_201314312993045" id="201314312993045" accept-charset="utf-8" autocomplete="on">
+
+<form class="jotform-form " action="test.php" method="post" name="form_201314312993045" id="201314312993045" accept-charset="utf-8" autocomplete="on">
   
   
   <div role="main" class="form-all ">

@@ -70,7 +70,7 @@ body {
   top: 0px;
   width: 876px;
   border-radius: 10px;
-  background-color: rgba(61, 63, 31, 0.6);
+  background-color: rgba(0, 0, 50, 0.6);
   /*background-image: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0.0) 100%);*/
   left: 20px;
   padding: 0px 31px;
@@ -86,7 +86,7 @@ body {
 .maindev {
   position: absolute;
   height: auto;
-  top: 56px;
+  top: 80px;
   border-radius: 10px;
   width: 976px;
   background-color: rgba(255, 255, 255, 0.2);

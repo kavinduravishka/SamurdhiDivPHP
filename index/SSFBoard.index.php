@@ -3,7 +3,7 @@
 	<title>Dashboard</title>
 
 	<link rel="shortcut icon" href="../images/favicon.ico">
-	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<link rel="stylesheet" type="text/css" href="../css/main_dk.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" >
 
 	<link rel="stylesheet" type="text/css" href="../css/officer23dash.css" >
@@ -13,7 +13,6 @@
 
 <body>
 	<?php require_once("../include/header.inc.php"); ?>
-	<?php require_once("../include/sidebar2.inc.php"); ?>
 
 	<?php
 

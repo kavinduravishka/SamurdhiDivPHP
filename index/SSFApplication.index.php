@@ -8,7 +8,7 @@
 <meta name="slack-app-id" content="AHNMASS8M">
 
 <link rel="shortcut icon" href="../images/favicon.ico">
-<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" type="text/css" href="../css/main_dk.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1" />
@@ -209,7 +209,6 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"සමෘ
 <body>
 
 <?php require_once("../include/header.inc.php"); ?>
-   <?php require_once("../include/sidebar2.inc.php"); ?>
   
 <form class="jotform-form maincontainer" action="test.php" method="post" name="form_201341846566053" id="201341846566053" accept-charset="utf-8" autocomplete="on">
   

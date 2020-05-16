@@ -7,7 +7,7 @@
 <title>අනිවාර්ය සහනාධාර දීමනා - Mandatory Fund Request </title>
 
 <link rel="shortcut icon" href="../images/favicon.ico">
-<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" type="text/css" href="../css/main_dk.css">
 
 
 <link rel="stylesheet" type="text/css" href="../css/formCss.css"/>
@@ -224,10 +224,11 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"අනි
 
   <?php require_once("../include/header.inc.php"); ?>
   
+  
 
 <main>
   
-<form class="jotform-form maincontainer" action="test.php" method="post" name="form_201317236946051" id="201317236946051" accept-charset="utf-8" autocomplete="on">
+<form class="jotform-form" action="test.php" method="post" name="form_201317236946051" id="201317236946051" accept-charset="utf-8" autocomplete="on">
   
 
   <div role="main" class="form-all">
