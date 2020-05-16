@@ -1,3 +1,5 @@
+<?php session_start();?>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en-US"  class="supernova"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -12,6 +14,7 @@
 
 <link rel="shortcut icon" href="../images/favicon.ico">
 <link rel="stylesheet" type="text/css" href="../css/main_dk.css">
+<link rel="stylesheet" type="text/css" href="../css/styles/navbar.css">
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1" />
@@ -48,6 +51,8 @@
         color:#555 !important;
         font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, sans-serif;
         font-size:14px;
+        position: relative;
+        top:50px;
     }
 </style>
 
@@ -239,7 +244,11 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"ප්‍
 
    <?php require_once("../include/header.inc.php"); ?>
 
-
+   <?php
+    $navpaths=array("Dashboard"=>"officer2-dashboard.index.php",
+                    "ප්‍රජාමූල සංවිධාන"=>"CBOBoard.index.php");
+    require_once("../include/navbar.inc.php");
+    ?>
 
 <form class="jotform-form " action="test.php" method="post" name="form_201314312993045" id="201314312993045" accept-charset="utf-8" autocomplete="on">
   

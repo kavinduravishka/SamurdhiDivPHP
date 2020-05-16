@@ -15,6 +15,7 @@
 <link type="text/css" media="print" rel="stylesheet" href="../css/printForm.css" />
 <link type="text/css" rel="stylesheet" href="../css/566a91c2977cdfcd478b4567.css"/>
 <link type="text/css" rel="stylesheet" href="../css/styles.css" />
+<link rel="stylesheet" type="text/css" href="../css/styles/navbar.css">
 
 
 
@@ -43,6 +44,8 @@
         color:#555 !important;
         font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, sans-serif;
         font-size:14px;
+        position: relative;
+        top:0px;
     }
 </style>
 
@@ -224,7 +227,11 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"අනි
 
   <?php require_once("../include/header.inc.php"); ?>
   
-  
+  <?php
+    $navpaths=array("Dashboard"=>"officer2-dashboard.index.php",
+                    "අනිවාර්ය ඉතිරි කිරීම්"=>"MFRBoard.index.php");
+    require_once("../include/navbar.inc.php");
+    ?>
 
 <main>
   

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <html>
 <head>
 	<title>Dashboard</title>
@@ -26,13 +27,6 @@
 		?>
 
 
-	<?php
-
-		session_start();
-
-		
-
-		?>
 
 	<main >
 

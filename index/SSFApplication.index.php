@@ -1,3 +1,5 @@
+<?php session_start();?>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en-US"  class="supernova"><head>
 
@@ -21,6 +23,7 @@
 <link type="text/css" media="print" rel="stylesheet" href="../css/printForm.css" />
 <link type="text/css" rel="stylesheet" href="../css/566a91c2977cdfcd478b4567.css"/>
 <link type="text/css" rel="stylesheet" href="../css/styles.css" />
+<link type="text/css" rel="stylesheet" href="../css/styles/navbar.css" />
 
 
 <style type="text/css">
@@ -47,6 +50,8 @@
         color:#555 !important;
         font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, sans-serif;
         font-size:14px;
+        position: relative;
+        top:50px;
     }
 </style>
 
@@ -209,6 +214,12 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"සමෘ
 <body>
 
 <?php require_once("../include/header.inc.php"); ?>
+
+<?php
+    $navpaths=array("Dashboard"=>"officer3-dashboard.index.php",
+                    "සමාජ ආරක්ෂණ අරමුදල"=>"SSFBoard.index.php");
+    require_once("../include/navbar.inc.php");
+  ?>
   
 <form class="jotform-form maincontainer" action="test.php" method="post" name="form_201341846566053" id="201341846566053" accept-charset="utf-8" autocomplete="on">
   

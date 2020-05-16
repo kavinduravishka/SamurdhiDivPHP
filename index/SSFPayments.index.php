@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en-US"  class="supernova"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -11,7 +12,7 @@
 
 <link rel="shortcut icon" href="../images/favicon.ico">
 <link rel="stylesheet" type="text/css" href="../css/main_dk.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="../css/styles/navbar.css" >
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1" />
@@ -40,12 +41,14 @@
     }
 
     .form-all{
+        position:relative;
         margin:0px auto;
         padding-top:0px;
         width:1090px;
         color:#555 !important;
         font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, sans-serif;
         font-size:14px;
+        top:50px;
     }
 </style>
 
@@ -211,6 +214,12 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"සමෘ
 <body>
 
     <?php require_once("../include/header.inc.php"); ?>
+
+  <?php
+    $navpaths=array("Dashboard"=>"officer3-dashboard.index.php",
+                    "සමාජ ආරක්ෂණ අරමුදල"=>"SSFBoard.index.php");
+    require_once("../include/navbar.inc.php");
+  ?>
 
 <form class="jotform-form maincontainer" action="test.php" method="post" name="form_201346043322037" id="201346043322037" accept-charset="utf-8" autocomplete="on">
   

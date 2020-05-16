@@ -1,3 +1,5 @@
+<?php session_start();?>
+
 <html>
 <head>
 	<title>Dashboard</title>
@@ -8,6 +10,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" >
 
 	<link rel="stylesheet" type="text/css" href="../css/officer23dash.css" >
+	<link rel="stylesheet" type="text/css" href="../css/styles.css">
+	<link rel="stylesheet" type="text/css" href="../css/styles/navbar.css">
 
 
 </head>
@@ -16,12 +20,9 @@
 	<?php require_once("../include/header.inc.php"); ?>
 
 	<?php
-
-		session_start();
-
-		
-
-		?>
+    $navpaths=array("Dashboard"=>"officer3-dashboard.index.php");
+    require_once("../include/navbar.inc.php");
+  	?>
 
 	<main >
 		<div class="maincontainer maindev" >
