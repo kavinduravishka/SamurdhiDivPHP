@@ -16,7 +16,7 @@
     <?php require_once("../include/header.inc.php"); ?>
 	
 	
-	<main >
+	<main class="officer1-dashboard">
 		<div class="maincontainer maindev" >
 			<div class="tbldev">
 			<table >

@@ -189,15 +189,29 @@ label #sidebar_btn {
   margin-left: 170px;
   width: 80px;
 } */
-main {
+
+.officer1-dashboard {
   margin-top: 70px;
-  margin-left: 30px;
+  margin-left: 230px;
   background: url(b.jpg) no-repeat;
   background-position: center;
   background-size: cover;
   height: 100vh;
   transition: 0.5s;
 }
+
+
+main {
+  margin-top: 70px;
+  margin-left: 40px;
+  background: url(b.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  transition: 0.5s;
+}
+
+
 
 /* #check:checked ~ main {
   margin-left: 60px;
