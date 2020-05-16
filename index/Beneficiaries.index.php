@@ -26,7 +26,6 @@
 	 <?php //require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\include\sidebar.inc.php"); ?>
 
 	 <?php require_once("../include/header.inc.php"); ?>
-	 
 	
 	<center>
 		<main>
@@ -35,7 +34,7 @@
 		<h1>Beneficiaries  <span><a href="Beneficiaries.index.php">Refresh</a></span></h1>
 		<div class="search">
 			<form action="Beneficiaries.index.php" method="get">
-				<p><input type="text" name = "search" id="" placeholder="Type Full Name and Press Enter" value="<?php echo $search; ?>"></p>
+				<p><input type="text" name = "search" id="" placeholder="Type Full Name  or NIC and Press Enter" value="<?php echo $search; ?>"></p>
 			</form>
 		</div>
 		<table class="masterlist">

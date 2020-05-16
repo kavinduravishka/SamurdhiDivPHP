@@ -45,7 +45,7 @@
 
 			<div class="linkdev">
                 <div class="adev">
-                    <a href="modify-beneficiary.index.php" >Reports</a>
+                    <a href="Reports.index.php" >Reports</a>
                 </div>
 			</div>
 

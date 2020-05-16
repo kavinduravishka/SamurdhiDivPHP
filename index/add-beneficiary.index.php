@@ -2,7 +2,7 @@
 <?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\classes\Officer1.class.php") ?>
 
 <?php 
-	checking if a user is logged in
+	// checking if a user is logged in
 	if(!isset($_SESSION['user_name'])){
 		header('Location: officer1-dashboard.index.php');
 	}
