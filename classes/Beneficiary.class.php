@@ -104,30 +104,32 @@
 		}
 
 
-		public function search($q){
-			$sql = "SELECT * FROM detailsofbenificiaries WHERE is_deleted = 0 AND Householder_Name='{$q}'";
+		public function search($search){
+			$sql = "SELECT * FROM detailsofbenificiaries WHERE  (Householder_Name LIKE '%{$search}%' OR NIC LIKE '%{$search}%') AND is_deleted = 0 ";
 			$stmt = $this->connect()->query($sql);
-			$b_list = '<table class = "masterlist"><tr><th>Serial No</th><th>Divisional Secretariat</th><th>Bank Zonal</th><th>G.N Division</th><th>G.N_Code Mapping</th><th>Householder Name</th><th>Address</th><th>NIC</th><th>No.of Family Members</th><th>BankAccount No</th><th>Relief Amount</th><th>Starting Year</th></tr>';
+			$b_list = "";
 			if($stmt){
 				while($row = $stmt->fetch()){
 					$b_list .= "<tr>";
-					$b_list .= "<td>{$user['Serial_No']}</td>";
-					$b_list .= "<td>{$user['Divisional_Secretariat']}</td>";
-					$b_list .= "<td>{$user['Bank_Zonal']}</td>";
-					$b_list .= "<td>{$user['GN_Division']}</td>";
-					$b_list .= "<td>{$user['GN_Code_Mapping']}</td>";
-					$b_list .= "<td>{$user['Householder_Name']}</td>";
-					$b_list .= "<td>{$user['Address']}</td>";
-					$b_list .= "<td>{$user['NIC']}</td>";
-					$b_list .= "<td>{$user['Noof_Family_Members']}</td>";
-					$b_list .= "<td>{$user['Bank_Account_No']}</td>";
-					$b_list .= "<td>{$user['Relief_Amount']}</td>";
-					$b_list .= "<td>{$user['Starting_Year']}</td>";
+					$b_list .= "<td>{$row['Serial_No']}</td>";
+					$b_list .= "<td>{$row['Divisional_Secretariat']}</td>";
+					$b_list .= "<td>{$row['Bank_Zonal']}</td>";
+					$b_list .= "<td>{$row['GN_Division']}</td>";
+					$b_list .= "<td>{$row['GN_Code_Mapping']}</td>";
+					$b_list .= "<td>{$row['Householder_Name']}</td>";
+					$b_list .= "<td>{$row['Address']}</td>";
+					$b_list .= "<td>{$row['NIC']}</td>";
+					$b_list .= "<td>{$row['Noof_Family_Members']}</td>";
+					$b_list .= "<td>{$row['Bank_Account_No']}</td>";
+					$b_list .= "<td>{$row['Relief_Amount']}</td>";
+					$b_list .= "<td>{$row['Starting_Year']}</td>";
+					$b_list .= "<td><a href=\"modify-beneficiary.index.php?Serial_No={$row['Serial_No']}\">Edit</a></td>";
+					$b_list .= "<td><a href=\"delete-beneficiary.index.php?Serial_No={$row['Serial_No']}\" onclick=\"return confirm('Are you sure?');\">Delete</a></td>";
 					$b_list .= "</tr>";
 				}
-				$b_list .= '</table>';
+				// $b_list .= '</table>';
 			}else{
-				$b_list = "query failed!!";
+				$b_list = "<tr></tr>";
 			}
 
 			echo $b_list;

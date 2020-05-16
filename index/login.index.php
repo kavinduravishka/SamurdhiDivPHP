@@ -29,8 +29,8 @@
             switch ($_SESSION['user_name']) {
                 
                 case 'officer1' :
-                    header('Location: home-officer1.index.php');
-                    $_SESSION['dashboard']='home-officer1.index.php';
+                    header('Location: officer1-dashboard.index.php');
+                    $_SESSION['dashboard']='officer1-dashboard.index.php';
                     //$_SESSION['user_name']='officer1';
                     
                     break;

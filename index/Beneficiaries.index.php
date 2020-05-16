@@ -3,9 +3,15 @@
 
 
 <?php 
-	// if(!isset($_SESSION['user_id'])){
-	// 	header('Location: index.php');
-	// }
+	if(!isset($_SESSION['user_name'])){
+		header('Location: login.index.php');
+	}
+
+	$search = '';
+	if(isset($_GET['search'])){
+		$search = $_GET['search'];
+	}
+
  ?>
 <!DOCTYPE html>
 <html>
@@ -20,20 +26,37 @@
 	 <?php //require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\include\sidebar.inc.php"); ?>
 
 	 <?php require_once("../include/header.inc.php"); ?>
-	 <?php require_once("../include/sidebar2.inc.php"); ?>
+	 
 	
-	
-	<main >
+	<center>
+		<main>
 		<div class="maincontainer" >
-		<h1>Beneficiaries </h1>
+		
+		<h1>Beneficiaries  <span><a href="Beneficiaries.index.php">Refresh</a></span></h1>
+		<div class="search">
+			<form action="Beneficiaries.index.php" method="get">
+				<p><input type="text" name = "search" id="" placeholder="Type Full Name and Press Enter" value="<?php echo $search; ?>"></p>
+			</form>
+		</div>
 		<table class="masterlist">
 			<tr><th>Serial No</th><th>Divisional Secretariat</th><th>Bank Zonal</th><th>G.N Division</th><th>G.N_Code Mapping</th><th>Householder Name</th><th>Address</th><th>NIC</th><th>No.of Family Members</th><th>BankAccount No</th><th>Relief Amount</th><th>Starting Year</th><th>Edit</th><th>Delete</th></tr>
-			<?php 
-				$officer1 = new officer1();
-				$officer1->showBeneficiaries();
-				unset($officer1);
+			<?php
+			$officer1 = new officer1();
+			if(isset($_GET['search'])){
+				 $search = $_GET['search'];
+				 $officer1->searchBeneficiary($search);
+			}else{
+				 $officer1->showBeneficiaries();
+			}
+			unset($officer1);
+				
+				
 			 ?>
 		</table>
 	</main>
+	</center>
+	
+	
+	
 </body>
 </html>

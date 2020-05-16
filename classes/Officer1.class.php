@@ -35,9 +35,9 @@
 			$this->beneficiary->update($Bank_Zonal,$GN_Division,$Address,$Bank_Account_No,$errors,$Serial_No);
 		}
 
-		public function searchBeneficiary($q){
+		public function searchBeneficiary($search){
 			$this->beneficiary = new Beneficiary();
-			$this->beneficiary->search($q);
+			$this->beneficiary->search($search);
 			
 		}
 
