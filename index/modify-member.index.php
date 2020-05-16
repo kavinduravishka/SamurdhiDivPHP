@@ -29,7 +29,19 @@
 
         $member_id=$_GET['member_id'];        
         $req_member=StaffMember::getMember($member_id);
-        extract($req_member); 
+        extract($req_member);
+        switch ($member_type) {
+            case 'in':
+                $member_type="Inside Officer";
+                break;
+            case 'out':
+                $member_type="Field Officer";
+                break;
+            
+            default:
+                # code...
+                break;
+        }
     }
     // else{
     //     header('Location: officer4-dashboard.index.php?err=query_failed');
@@ -47,6 +59,18 @@
         $date_of_pension=$_POST['date_of_pension'];
         $w_op_number=$_POST['w_op_number'];
         $member_type=$_POST['member_type'];
+        switch ($member_type) {
+            case 'Inside Officer':
+                $member_type="in";
+                break;
+            case 'Field Officer':
+                $member_type="out";
+                break;
+            
+            default:
+                # code...
+                break;
+        }
 
         $req_fields=array('nic_number','name','designation','service','date_appointed','date_of_birth','date_of_pension','w_op_number');
 
@@ -157,7 +181,7 @@
 
             <p>
                 <label for="">Type of the member:</label>
-                <input type="text" name="member_type" <?php echo 'value="' .$member_type.'"';?> >                
+                <input type="text" name="member_type" <?php echo 'value="' .$member_type.'"';?> readonly >                
             </p>
             
             
