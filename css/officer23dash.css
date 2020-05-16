@@ -1,12 +1,12 @@
 body {
-  background-image: url('../images/green3.jpg');
+  background-image: url('../images/1.jpg');
   background-size:     cover;                      /* <------ */
   /*background-repeat:   no-repeat;*/
   background-position: center center;
 }
 
 .bodynorepeat {
-  background-image: url('../images/green4.jpeg');
+  background-image: url('../images/1.jpeg');
   background-size:     cover;                      /* <------ */
   background-repeat:   no-repeat;
   background-position: center center;
