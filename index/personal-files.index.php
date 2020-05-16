@@ -10,7 +10,15 @@
     //     header('Location: login.php');
     // }
     $user=new Officer4();
-    $personalfile_list=$user->loadPersonalFiles();
+    $search='';
+    if (isset($_GET['search'])){
+        
+        $personalfile_list=$user->searchEntry($_GET['search']);
+
+    }
+    else{
+        $personalfile_list=$user->loadPersonalFiles();
+    }
     unset($user);
 
 ?>
@@ -27,31 +35,41 @@
 </head>
 <body>
     
-    <?php require_once("../include/header.inc.php"); ?>
+    <?php require_once("../include/header.inc.php"); ?>   
 	
 	
-	<center><main >
-		<div class="maincontainer" >
-		<h1>Personal Files</h1>
-		<table class="personalfile_list">
+	<main >
+    <h1>Personal Files<span><a href="personal-files.index.php">| Refresh</a> </span></h1>
 
-            <tr>
-                <th>NIC Number</th>
-                <th>Name</th>
-                <th>Designation</th>
-                <th>Service</th>
-                <th>Date of Appointment</th>
-                <th>Date of Birth</th>
-                <th>Date of Pension</th>
-                <th>No. of W & OP</th>
-                <th>Edit</th>
-                <th>Delete</th>
-            </tr>
+    <div class="search">
+        <form action="personal-files.index.php" method="get">
+            <p>
+            <input type="text" name="search" id="" placeholder="Type NIC or Name and Press Enter" value="<?php echo $search?>" autofocus required>
+            </p>
+        </form>
+    </div>
 
-            <?php echo $personalfile_list ?>
-        
-        </table>
-    </center></main>
+    <div class="maincontainer" >		
+            <center><table class="personalfile_list">
+
+                <tr>
+                    <th>NIC Number</th>
+                    <th>Name</th>
+                    <th>Designation</th>
+                    <th>Service</th>
+                    <th>Date of Appointment</th>
+                    <th>Date of Birth</th>
+                    <th>Date of Pension</th>
+                    <th>No. of W & OP</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+
+                <?php echo $personalfile_list ?>
+            
+            </center></table>
+    </div>
+    </main>
     
     
 </body>

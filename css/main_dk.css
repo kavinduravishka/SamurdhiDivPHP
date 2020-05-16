@@ -125,6 +125,7 @@ main {
   transition: 0.5s;
 }
 
+<<<<<<< HEAD
 main h1 {
   margin-bottom: 20px;
   font-size: 30px;
@@ -146,6 +147,9 @@ main h1 span {
   border-radius: 10px;
   margin-left: -15%;
 }
+=======
+
+>>>>>>> b3e220bd02f5fa06b2502a89aee940350240b8d5
 
 .personalfile_list {
   width: 130%;
@@ -156,6 +160,7 @@ main h1 span {
   width: 90%;
 }
 
+<<<<<<< HEAD
 .personalfile_list th {
   background: #aaa;
   text-align: center;
@@ -166,22 +171,50 @@ main h1 span {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
+=======
+
+.search{
+    width: 1000px;   
+    height: 40px;
+    
+}
+
+
+.personalfile_list{
+    
+    
+    width: 130%;
+    margin-left: -50%;  
+    margin-right: -30%;   
+    border-collapse:collapse;  
+    font-family: arial, sans-serif;
+    width:90%;
+      
+>>>>>>> b3e220bd02f5fa06b2502a89aee940350240b8d5
 }
 
 .personalfile_list td:hover {
   background-color: #f5f5f5;
 }
 
+<<<<<<< HEAD
 .memberform label {
   width: 20%;
   float: left;
   padding: 1px;
   margin-left: 70px;
 }
+=======
+
+>>>>>>> b3e220bd02f5fa06b2502a89aee940350240b8d5
 
 .memberform input {
   width: 45%;
   padding: 3px;
+}
+.personalfile_list th{
+    background: #aaa;
+    text-align: center;     
 }
 
 .memberform input[type="date"] {

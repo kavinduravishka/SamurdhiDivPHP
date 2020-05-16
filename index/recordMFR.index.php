@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en-US"  class="supernova"><head>
 
@@ -7,7 +8,7 @@
 
 <link rel="shortcut icon" href="../images/favicon.ico">
 <link rel="stylesheet" type="text/css" href="../css/main.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
 
 <link rel="stylesheet" type="text/css" href="../css/formCss.css"/>
 <link type="text/css" rel="stylesheet" href="../css/nova.css" />
@@ -222,7 +223,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"අනි
 
 
   <?php require_once("../include/header.inc.php"); ?>
-  <?php require_once("../include/sidebar2.inc.php"); ?>
+  
 
 <main>
   
