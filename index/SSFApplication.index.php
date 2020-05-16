@@ -7,7 +7,9 @@
 <meta property="og:description" content="Please click the link to complete this form.">
 <meta name="slack-app-id" content="AHNMASS8M">
 
-<link rel="shortcut icon" href="https://cdn.jotfor.ms/favicon.ico">
+<link rel="shortcut icon" href="../images/favicon.ico">
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1" />
 <meta name="HandheldFriendly" content="true" />
@@ -205,7 +207,11 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"සමෘ
 </script>
 </head>
 <body>
-<form class="jotform-form" action="test.php" method="post" name="form_201341846566053" id="201341846566053" accept-charset="utf-8" autocomplete="on">
+
+<?php require_once("../include/header.inc.php"); ?>
+   <?php require_once("../include/sidebar2.inc.php"); ?>
+  
+<form class="jotform-form maincontainer" action="test.php" method="post" name="form_201341846566053" id="201341846566053" accept-charset="utf-8" autocomplete="on">
   
   <div role="main" class="form-all">
     <ul class="form-section page-section">

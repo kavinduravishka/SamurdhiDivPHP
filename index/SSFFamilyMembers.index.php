@@ -1,14 +1,22 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en-US"  class="supernova"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="alternate" type="application/json+oembed" href="https://www.jotform.com/oembed/?format=json&amp;url=https%3A%2F%2Fform.jotform.com%2F201347028442044" title="oEmbed Form">
-<link rel="alternate" type="text/xml+oembed" href="https://www.jotform.com/oembed/?format=xml&amp;url=https%3A%2F%2Fform.jotform.com%2F201347028442044" title="oEmbed Form">
+
+
+
+
 <meta property="og:title" content="සමෘද්ධි සමාජ ආරක්ෂණ අරමුදල - Samurdhi Social Security Fund" >
 <meta property="og:url" content="https://form.jotform.com/201347028442044" >
 <meta property="og:description" content="Please click the link to complete this form.">
 <meta name="slack-app-id" content="AHNMASS8M">
-<link rel="shortcut icon" href="https://cdn.jotfor.ms/favicon.ico">
-<link rel="canonical" href="https://form.jotform.com/201347028442044" />
+
+
+<link rel="shortcut icon" href="../images/favicon.ico">
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1" />
 <meta name="HandheldFriendly" content="true" />
 <title>සමෘද්ධි සමාජ ආරක්ෂණ අරමුදල - Samurdhi Social Security Fund</title>
@@ -204,7 +212,12 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"සමෘ
 </script>
 </head>
 <body>
-<form class="jotform-form" action="test.php" method="post" name="form_201347028442044" id="201347028442044" accept-charset="utf-8" autocomplete="on">
+
+
+<?php require_once("../include/header.inc.php"); ?>
+   <?php require_once("../include/sidebar2.inc.php"); ?>
+
+<form class="jotform-form maincontainer" action="test.php" method="post" name="form_201347028442044" id="201347028442044" accept-charset="utf-8" autocomplete="on">
   
 
   <div role="main" class="form-all">

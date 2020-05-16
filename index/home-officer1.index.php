@@ -11,18 +11,16 @@
 <html>
 <head>
 	<title>Users</title>
+	<link rel="shortcut icon" href="../images/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
-	<link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-    />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
 <body>
 	 <?php //require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\include\header.inc.php"); ?>
 	 <?php //require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\include\sidebar.inc.php"); ?>
 
 	 <?php require_once("../include/header.inc.php"); ?>
-	 <?php require_once("../include/sidebar.inc.php"); ?>
+	 <?php require_once("../include/sidebar2.inc.php"); ?>
 	
 	
 	<main >

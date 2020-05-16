@@ -1,19 +1,16 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en-US"  class="supernova"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta property="og:title" content="ලොතරැයි දිනුම් ඇදීම - Lottary Fund" >
-<meta property="og:url" content="https://form.jotform.com/201318004789050" >
-<meta property="og:description" content="Please click the link to complete this form.">
-<meta name="slack-app-id" content="AHNMASS8M">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1" />
+
+ />
 <meta name="HandheldFriendly" content="true" />
-<title>ලොතරැයි දිනුම් ඇදීම - Lottary Fund</title>
+<title>ලොතරැයි දිනුම් ඇදීම - Lottary Draw</title>
 
 
 
 
-<link rel="shortcut icon" href="https://cdn.jotfor.ms/favicon.ico">
-
+<link rel="shortcut icon" href="../images/favicon.ico">
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
 <link rel="stylesheet" type="text/css" href="../css/formCss.css"/>
 <link type="text/css" rel="stylesheet" href="../css/nova.css" />
@@ -207,8 +204,11 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"ලොත
 </script>
 </head>
 <body>
+
+  <?php require_once("../include/header.inc.php"); ?>
+  <?php require_once("../include/sidebar2.inc.php"); ?>
   
-<form class="jotform-form" action="test.php" method="post" name="form_201318004789050" id="201318004789050" accept-charset="utf-8" autocomplete="on">
+<form class="jotform-form maincontainer" action="test.php" method="post" name="form_201318004789050" id="201318004789050" accept-charset="utf-8" autocomplete="on">
   
   <div role="main" class="form-all">
     <ul class="form-section page-section">
@@ -216,7 +216,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"ලොත
         <div class="form-header-group  header-large">
           <div class="header-text httal htvam">
             <h1 id="header_1" class="form-header" data-component="header">
-              ලොතරැයි දිනුම් ඇදීම - Lottary Fund
+              ලොතරැයි දිනුම් ඇදීම - Lottary Draw
             </h1>
             <div id="subHeader_1" class="form-subHeader">
               ඉල්ලීමක් එකතු කිරීම - Record new request
@@ -249,7 +249,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"ලොත
       <li class="form-line" data-type="control_textarea" id="id_7">
         <label class="form-label form-label-top form-label-auto" id="label_7" for="input_7"> ලිපිනය </label>
         <div id="cid_7" class="form-input-wide">
-          <textarea id="input_7" class="form-textarea" name="Adderess" cols="40" rows="6" data-component="textarea" aria-labelledby="label_7"></textarea>
+          <textarea id="input_7" class="form-textarea" name="Address" cols="40" rows="6" data-component="textarea" aria-labelledby="label_7"></textarea>
         </div>
       </li>
       <li class="form-line jf-required" data-type="control_datetime" id="id_6">

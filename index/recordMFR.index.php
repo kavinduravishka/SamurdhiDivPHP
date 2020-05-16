@@ -1,17 +1,13 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en-US"  class="supernova"><head>
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta property="og:title" content="අනිවාර්ය සහනාධාර දීමනා - Mandatory Fund Request " >
-<meta property="og:url" content="https://form.jotform.com/201317236946051" >
-<meta property="og:description" content="Please click the link to complete this form.">
-<meta name="slack-app-id" content="AHNMASS8M">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1" />
-<meta name="HandheldFriendly" content="true" />
+
 
 <title>අනිවාර්ය සහනාධාර දීමනා - Mandatory Fund Request </title>
 
-<link rel="shortcut icon" href="https://cdn.jotfor.ms/favicon.ico">
+<link rel="shortcut icon" href="../images/favicon.ico">
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
 <link rel="stylesheet" type="text/css" href="../css/formCss.css"/>
 <link type="text/css" rel="stylesheet" href="../css/nova.css" />
@@ -19,11 +15,7 @@
 <link type="text/css" rel="stylesheet" href="../css/566a91c2977cdfcd478b4567.css"/>
 <link type="text/css" rel="stylesheet" href="../css/styles.css" />
 
-<link rel="stylesheet" type="text/css" href="../css/main.css">
-  <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-    />
+
 
 
 <style type="text/css">
@@ -233,6 +225,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"අනි
   <?php require_once("../include/sidebar2.inc.php"); ?>
 
 <main>
+  
 <form class="jotform-form maincontainer" action="test.php" method="post" name="form_201317236946051" id="201317236946051" accept-charset="utf-8" autocomplete="on">
   
 

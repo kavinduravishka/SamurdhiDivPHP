@@ -10,7 +10,7 @@
 <meta property="og:description" content="Please click the link to complete this form.">
 <meta name="slack-app-id" content="AHNMASS8M">
 
-<link rel="shortcut icon" href="https://cdn.jotfor.ms/favicon.ico">
+
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1" />
@@ -23,7 +23,9 @@
 <link type="text/css" media="print" rel="stylesheet" href="../css/printForm.css" />
 <link type="text/css" rel="stylesheet" href="../css/566a91c2977cdfcd478b4567.css"/>
 <link type="text/css" rel="stylesheet" href="../css/styles.css" />
-
+<link rel="shortcut icon" href="../images/favicon.ico">
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
 <style type="text/css">
     .form-label-left{
@@ -204,7 +206,12 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"ශිෂ
 </script>
 </head>
 <body>
-<form class="jotform-form" action="test.php" method="post" name="form_201327611245041" id="201327611245041" accept-charset="utf-8" autocomplete="on">
+
+<?php require_once("../include/header.inc.php"); ?>
+   <?php require_once("../include/sidebar2.inc.php"); ?>
+
+  
+<form class="jotform-form maincontainer" action="test.php" method="post" name="form_201327611245041" id="201327611245041" accept-charset="utf-8" autocomplete="on">
   
 
   <div role="main" class="form-all">
