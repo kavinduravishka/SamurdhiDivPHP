@@ -10,7 +10,9 @@
 <meta property="og:description" content="Please click the link to complete this form.">
 <meta name="slack-app-id" content="AHNMASS8M">
 
-
+<link rel="shortcut icon" href="../images/favicon.ico">
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1" />
@@ -23,9 +25,7 @@
 <link type="text/css" media="print" rel="stylesheet" href="../css/printForm.css" />
 <link type="text/css" rel="stylesheet" href="../css/566a91c2977cdfcd478b4567.css"/>
 <link type="text/css" rel="stylesheet" href="../css/styles.css" />
-<link rel="shortcut icon" href="../images/favicon.ico">
-<link rel="stylesheet" type="text/css" href="../css/main.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
 
 <style type="text/css">
     .form-label-left{

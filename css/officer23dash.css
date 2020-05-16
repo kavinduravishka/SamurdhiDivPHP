@@ -5,6 +5,38 @@ body {
   background-position: center center;
 }
 
+.bodynorepeat {
+  background-image: url('../images/green4.jpeg');
+  background-size:     cover;                      /* <------ */
+  background-repeat:   no-repeat;
+  background-position: center center;
+}
+
+.whitelogin{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    height: 550px;
+    padding: 40px 40px;
+    box-sizing: border-box;
+    background: rgba(255,255,255,.7);
+    border-radius: 10px;
+    transform: translate(-50%,-50%);
+}
+
+.whitelogin input[type="text"],
+.whitelogin input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #000;
+    background: transparent;
+    height: 40px;
+    color: #000;
+    font-size: 16px;
+
+}
+
 .linkdev {
       position:relative;
       height: 72px;
@@ -64,4 +96,19 @@ body {
       /*left: 20px;*/
       padding: 50px 0px;
 }
+
+
+.logindev {
+      position:absolute;
+      height: 500px;
+      top: 56px;
+      border-radius: 10px;
+      width: 500px;
+      background-color: rgba(255, 255, 255, 0.2);
+      /*background-image: -webkit-linear-gradient(0deg, rgba(138, 220, 250, 0.86) 0%, rgba(255, 255, 255, 0.1) 100%);*/
+      /*left: 20px;*/
+      padding: 50px 0px;
+}
+
+
 

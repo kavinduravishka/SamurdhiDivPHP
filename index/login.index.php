@@ -77,14 +77,18 @@
     <meta charset="UTF-8">
     <title>Log In - Samurdhi Division</title>
     
-    <link rel="stylesheet" href="\SamurdhiDivPHP\css\main_dk.css">
+    <link rel="stylesheet" href="..\css\main_dk.css">
+    <link rel="stylesheet" href="..\css\officer23dash.css">
     
 </head>
-<body>
-    <div class="login">
+<body class="bodynorepeat">
+    <div class="whitelogin">
 
         <form action="login.index.php" method="post">
-            
+            <center><dev>
+                <div>
+                    <img src="../images/sbt.png" height=100 width=100></img>
+                </div>
                 <legend><h1>Log In</h1></legend>
 
                 <?php 
@@ -113,6 +117,8 @@
 
                 
                 <input type="submit" name="submit" value="Log In">
+
+            </dev></center>
             
         </form>
     </div>
