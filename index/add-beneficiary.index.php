@@ -1,5 +1,5 @@
 <?php session_start(); ?> 
-<?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\classes\Officer1.class.php") ?>
+<?php require_once("../classes/Officer1.class.php") ?>
 
 <?php 
 	// checking if a user is logged in
@@ -81,8 +81,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
 </head>
 <body>
-	  <?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\include\header.inc.php"); ?>
-	 
+	  
+	 <?php require_once("../include/header.inc.php"); ?>
 
 
 	<main>

@@ -39,7 +39,7 @@
 			$stmt = $this->connect()->query($sql);
 			// $stmt->execute();
 			if($stmt){
-				header('Location:home-officer1.index.php?beneficiary_added=true');
+				header('Location:Beneficiaries.index.php?beneficiary_added=true');
 			}
 		}
 
@@ -53,9 +53,9 @@
 			// $stmt->execute();
 			if($stmt){
 				//user deleted
-				header('Location:home-officer1.index.php?msg=beneficiary_deleted');
+				header('Location:Beneficiaries.index.php?msg=beneficiary_deleted');
 			}else{
-				header('Location:home-officer1.index.php?err=delete_failed');
+				header('Location:Beneficiaries.index.php?err=delete_failed');
 			}
 		}
 
@@ -96,7 +96,7 @@
 			$stmt = $this->connect()->query($sql);
 			// $stmt->execute();
 			if($stmt){
-				header('Location:home-officer1.index.php?user_modified=true');
+				header('Location:Beneficiaries.index.php?user_modified=true');
 			}else{
 				$errors[] = 'Faild to modify the record';
 			}
