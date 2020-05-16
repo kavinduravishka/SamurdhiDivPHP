@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <title>Officer1-dashboard</title>
     <link rel="stylesheet" type="text/css" href="../css/officer23dash.css" >
-    <link rel="stylesheet" href="../css/main_dk.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
     
     
 </head>
