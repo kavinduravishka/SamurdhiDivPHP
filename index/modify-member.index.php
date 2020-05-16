@@ -89,14 +89,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Modify Personal-file</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+    
     <link rel="stylesheet" href="../css/main_dk.css">
     
     
 </head>
 <body>
     <?php require_once("../include/header.inc.php"); ?>
-	<?php require_once("../include/sidebar_officer4.inc.php"); ?>
+	
 
 
     <main>

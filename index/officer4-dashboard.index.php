@@ -1,26 +1,12 @@
 <?php session_start(); ?>
-<?php 
-        require_once("../classes/dbh.class.php");
-        require_once("../classes/officer4.class.php");
-?>
 
-
-<?php 
-    // if(!isset($_SESSION['user_id'])){
-    //     header('Location: login.php');
-    // }
-    $user=new Officer4();
-    $personalfile_list=$user->loadPersonalFiles();
-    unset($user);
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Officer4-dashboard</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/officer23dash.css" >
     <link rel="stylesheet" href="../css/main_dk.css">
     
     
@@ -28,30 +14,47 @@
 <body>
     
     <?php require_once("../include/header.inc.php"); ?>
-	<?php require_once("../include/sidebar_officer4.inc.php"); ?>
 	
 	
 	<main >
-		<div class="maincontainer" >
-		<h1>Personal Files</h1>
-		<table class="personalfile_list">
+		<div class="maincontainer maindev" >
+			
 
-            <tr>
-                <th>NIC Number</th>
-                <th>Name</th>
-                <th>Designation</th>
-                <th>Service</th>
-                <th>Date of Appointment</th>
-                <th>Date of Birth</th>
-                <th>Date of Pension</th>
-                <th>No. of W & OP</th>
-                <th>Edit</th>
-                <th>Delete</th>
-            </tr>
+			<div class="tbldev">
+			<table >
+				<tr>
+					<th>
+						<img src="../images/sbt.png" height=100 width=100></img>
+					</th>
+					<th width="700px">
+						Dashboard
+					</th>
+				</tr>
+			</table>
+			</div>
 
-            <?php echo $personalfile_list ?>
-        
-        </table>
+			<div class="linkdev">
+                <div class="adev">
+                    <a href="personal-files.index.php" >Personal-files Log</a>
+                </div>
+			</div>
+
+			<div class="linkdev">
+                <div class="adev">
+                    <a href="add-member.index.php" >Add New Personal-file</a>
+                </div>
+			</div>
+
+			<div class="linkdev">
+                <div class="adev">
+                    <a href="modify-member.index.php" >Modify Personal-file</a>
+                </div>
+			</div>
+
+
+		</div>
 	</main>
+    
+    
 </body>
 </html>
