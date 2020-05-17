@@ -1,33 +1,34 @@
 <?php session_start();?>
 
-<?php require_once("../include/islogged.inc.php");
-    checklogged("officer2");
+<?php// require_once("../include/islogged.inc.php");
+    //checklogged("officer2");
  ?>
 
-
+<?php $_SESSION["RegNo"]='123456CBO321';?>
 
 <?php 
 
+  require_once("../classes/cbo.class.php");
   
 
 if(!isset($_SESSION["RegNo"]) || $_SESSION["RegNo"]==''){
     echo "<h1>You can't perform this action without compleating previous steps</h1>";
     exit;
-}else{
-    $RegNo=$_SESSION['RegNo'];
-    //unset($_SESSION['RegNo']);
+}else{//if($_SESSION['init_task']=='0'){
+
+  //echo "<h1>pushed into database</h1>";
+
+  $RegNo=$_SESSION['RegNo'];
 
 
-  require_once("../classes/cbo.class.php");
-
-  //$RegNo='';
+  
   $Post='';
   $Name='';
   $Address='';
   $Telephone='';
   $NIC='';
 
-  //$RegNo=$_SESSION['RegNo'];
+
   $Post=$_POST['Post'];
   $Name=$_POST['Name'];
   $Address=$_POST['Address'];
@@ -37,20 +38,22 @@ if(!isset($_SESSION["RegNo"]) || $_SESSION["RegNo"]==''){
   $CBOmember= new CBOrg();
 
   $CBOmember->setCBOMember($RegNo, $Name, $Address, $Post, $Telephone, $NIC);
-
+  //exit;
 
   if(isset($_POST['Next'])){
-      //$_SESSION['RegNo']=$RegNo;
       header('Location: CBOComityMembers.index.php');
     exit;
   }
   elseif(isset($_POST['Finish'])){
       unset($_SESSION['RegNo']);
+      unset($_SESSION['init_task']);
       header('Location: CBOBoard.index.php');
     exit;
   }
 
-}
+}//elseif($_SESSION['init_task']=='1'){
+//  $_SESSION['init_task']='0';
+//}
 
 ?>
 

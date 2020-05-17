@@ -1,8 +1,8 @@
 <?php session_start(); ?>
 
 
-<?php require_once("../include/islogged.inc.php");
-    checklogged("officer2");
+<?php// require_once("../include/islogged.inc.php");
+//    checklogged("officer2");
  ?>
  
 <html>
