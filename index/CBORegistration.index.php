@@ -50,6 +50,7 @@ if(isset($_POST['Next'])){
     $CBOrganization->setCBO($RegNo, $Name, $Address, $Telephone, $EMail,$Village, $GNDomain, $Zone, $NoOfMemPrev, $NoOfMemNew, $AnnualMeetingDate, $BankName, $AccountNo, $AccountOpenDate, $Balance);
 
     $_SESSION['RegNo']=$RegNo;
+    $_SESSION['init_task']='1';
 
     header('Location: CBOComityMembers.index.php');
     exit;
