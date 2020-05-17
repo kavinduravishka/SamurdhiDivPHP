@@ -5,6 +5,45 @@
     checklogged("officer2");
  ?>
 
+<?php
+
+ if($_SESSION['init_task']=='0'){
+
+
+//if(isset($_POST['submit'])){
+
+  require_once("../classes/lottaryfund.class.php");
+
+  $LFund = new LOF();
+
+
+  $NIC='';
+  $Name='';
+  $Address='';
+  $Date='';
+  
+
+  $NIC=$_POST['NIC'];
+  $Name=$_POST['Name'];
+  $Address=$_POST['Address'];
+  $Date=$_POST['Date'];
+
+  $LFund->setLFRecord($NIC, $Name, $Address, $Date);
+
+  header('Location :LFBoard.index.php');
+  exit;
+  
+//}
+}elseif($_SESSION['init_task']=='1'){
+  $_SESSION['init_task']='0';
+}
+
+?>
+
+
+
+
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en-US"  class="supernova"><head>
 
@@ -223,7 +262,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"ලොත
     require_once("../include/navbar.inc.php");
     ?>
   
-<form class="jotform-form maincontainer" action="test.php" method="post" name="form_201318004789050" id="201318004789050" accept-charset="utf-8" autocomplete="on">
+<form class="jotform-form maincontainer" action="recordLotarryFund.index.php" method="post" name="form_201318004789050" id="201318004789050" accept-charset="utf-8" autocomplete="on">
   
   <div role="main" class="form-all">
     <ul class="form-section page-section">
@@ -307,7 +346,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"ලොත
       <li class="form-line" data-type="control_button" id="id_2">
         <div id="cid_2" class="form-input-wide">
           <div style="margin-left:156px" data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField">
-            <button id="input_2" type="submit" class="form-submit-button form-submit-button-simple_blue submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">
+            <button id="input_2" type="submit" class="form-submit-button form-submit-button-simple_blue submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="" name="submit">
               ඇතුලත් කරන්න
             </button>
           </div>

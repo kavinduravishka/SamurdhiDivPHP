@@ -12,4 +12,9 @@ class LOF extends Dbh{
 		$stmt->execute([$NIC, $Name, $Address, $sDate]);
 	}
 
+
+	public function  checkOldRecord($NIC){
+		$sql = "SELECT COUNT(*) from LottaryFundRecord WHERE NIC=".$NIC.""	}
+
+
 }

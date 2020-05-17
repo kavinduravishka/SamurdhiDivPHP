@@ -45,7 +45,7 @@
 
 			<div class="linkdev">
 			<div class="adev">
-				<a href="recordLotarryFund.index.php" >ලොතරැයි දිනුම් ඇදීමක් ඇතුලත් කිරීම</a>
+				<a href="recordLotarryFund.index.php" ><?php $_SESSION['init_task']='1';?>ලොතරැයි දිනුම් ඇදීමක් ඇතුලත් කිරීම</a>
 			</div>
 			</div>
 

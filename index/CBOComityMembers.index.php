@@ -40,7 +40,7 @@ if(!isset($_SESSION["RegNo"]) || $_SESSION["RegNo"]==''){
   //exit;
 
   if(isset($_POST['Next'])){
-      //$_SESSION['RegNo']=$RegNo;
+
       header('Location: CBOComityMembers.index.php');
     exit;
   }
