@@ -31,13 +31,14 @@
                 case 'officer1' :
                     header('Location: officer1-dashboard.index.php');
                     $_SESSION['dashboard']='officer1-dashboard.index.php';
-                    //$_SESSION['user_name']='officer1';
+                    $_SESSION['logged_in']='1';
                     
                     break;
 
                 case 'officer2':
                     header('Location: officer2-dashboard.index.php');
                     $_SESSION['dashboard']='officer2-dashboard.index.php';
+                    $_SESSION['logged_in']='1';
                     //$_SESSION['user_name']='officer2';
                     
                     break;
@@ -45,6 +46,7 @@
                 case 'officer3':
                     header('Location: officer3-dashboard.index.php');
                     $_SESSION['dashboard']='officer3-dashboard.index.php';
+                    $_SESSION['logged_in']='1';
                     //$_SESSION['user_name']='officer3';
                     
                     break;
@@ -52,12 +54,14 @@
                 case 'officer4':
                     header('Location: officer4-dashboard.index.php');
                     $_SESSION['dashboard']='officer4-dashboard.index.php';
+                    $_SESSION['logged_in']='1';
                     //$_SESSION['user_name']='officer4';
                     break;
 
                 case 'officer5':
                     header('Location: officer5.index.php');
                     $_SESSION['dashboard']='officer5.index.php';
+                    $_SESSION['logged_in']='1';
                     //$_SESSION['user_name']='officer5';
                 
                 default:

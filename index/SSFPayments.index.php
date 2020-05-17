@@ -1,4 +1,11 @@
 <?php session_start();?>
+
+
+<?php require_once("../include/islogged.inc.php");
+    checklogged("officer3");
+ ?>
+
+ 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en-US"  class="supernova"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

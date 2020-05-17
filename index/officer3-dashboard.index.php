@@ -1,4 +1,10 @@
 <?php session_start(); ?>
+
+
+<?php require_once("../include/islogged.inc.php");
+    checklogged("officer3");
+ ?>
+
 <html>
 <head>
 	<title>Dashboard</title>

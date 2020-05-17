@@ -200,7 +200,6 @@ label #sidebar_btn {
   transition: 0.5s;
 }
 
-
 main {
   margin-top: 70px;
   margin-left: 40px;
@@ -210,8 +209,6 @@ main {
   height: 100vh;
   transition: 0.5s;
 }
-
-
 
 /* #check:checked ~ main {
   margin-left: 60px;

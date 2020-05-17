@@ -25,7 +25,7 @@
 
 		$officer1 = new Officer1();
 		$currentDetails = $officer1->getCurrentDetails($Serial_No);
-		// extract($currentDetails);
+		extract($currentDetails);
 		
 	}
 

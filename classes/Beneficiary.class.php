@@ -78,13 +78,12 @@
 			$Address = '';
 			$Bank_Account_No = '';
 
-			foreach ($details as $detail) {
-				$Bank_Zonal = $detail['Bank_Zonal'];
-				$GN_Division = $detail['GN_Division'];
-				$Address = $detail['Address'];
-				$Bank_Account_No = $detail['Bank_Account_No'];
-			}
-
+			
+			$Bank_Zonal = $details[0]['Bank_Zonal'];
+			$GN_Division = $details[0]['GN_Division'];
+			$Address = $details[0]['Address'];
+			$Bank_Account_No = $details[0]['Bank_Account_No'];
+			
 			return compact('Bank_Zonal','GN_Division','Address','Bank_Account_No');
 
 		}
