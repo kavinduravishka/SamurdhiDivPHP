@@ -1,27 +1,26 @@
 <?php session_start();?>
 
-<?php// require_once("../include/islogged.inc.php");
-    //checklogged("officer2");
+<?php require_once("../include/islogged.inc.php");
+    checklogged("officer2");
  ?>
 
-<?php $_SESSION["RegNo"]='123456CBO321';?>
+
 
 <?php 
 
-  require_once("../classes/cbo.class.php");
   
 
 if(!isset($_SESSION["RegNo"]) || $_SESSION["RegNo"]==''){
     echo "<h1>You can't perform this action without compleating previous steps</h1>";
     exit;
-}else{//if($_SESSION['init_task']=='0'){
-
-  //echo "<h1>pushed into database</h1>";
+}elseif($_SESSION['init_task']=='0'){
 
   $RegNo=$_SESSION['RegNo'];
 
 
-  
+  require_once("../classes/cbo.class.php");
+
+
   $Post='';
   $Name='';
   $Address='';
@@ -41,6 +40,7 @@ if(!isset($_SESSION["RegNo"]) || $_SESSION["RegNo"]==''){
   //exit;
 
   if(isset($_POST['Next'])){
+      //$_SESSION['RegNo']=$RegNo;
       header('Location: CBOComityMembers.index.php');
     exit;
   }
@@ -51,9 +51,9 @@ if(!isset($_SESSION["RegNo"]) || $_SESSION["RegNo"]==''){
     exit;
   }
 
-}//elseif($_SESSION['init_task']=='1'){
-//  $_SESSION['init_task']='0';
-//}
+}elseif($_SESSION['init_task']=='1'){
+  $_SESSION['init_task']='0';
+}
 
 ?>
 
