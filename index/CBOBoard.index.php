@@ -1,4 +1,10 @@
 <?php session_start(); ?>
+
+
+<?php require_once("../include/islogged.inc.php");
+    checklogged("officer2");
+ ?>
+ 
 <html>
 <head>
 	<title>Dashboard</title>
@@ -48,12 +54,14 @@
 
 			<div class="linkdev">
 			<div class="adev">
+				<?php $_SESSION['init_task']='1';?>
 				<a href="CBORegistration.index.php" >නව සංවිධානයක් ලියාපදිංචිය</a>
 			</div>
 			</div>
 
 			<div class="linkdev">
 			<div class="adev">
+				<?php $_SESSION['init_task']='1';?>
 				<a href="CBORegistration.index.php" >ලියාපදිංචිය අලුත් කිරීම</a>
 			</div>
 			</div>

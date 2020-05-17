@@ -4,14 +4,55 @@
     checklogged("officer2");
  ?>
 
-<?php /*
-  if(!isset($_POST["RegNo"]) || $_POST["RegNo"]==''){
+
+
+<?php 
+
+  
+
+if(!isset($_SESSION["RegNo"]) || $_SESSION["RegNo"]==''){
     echo "<h1>You can't perform this action without compleating previous steps</h1>";
     exit;
-  }
-*/
-  ?>
+}else{
+    $RegNo=$_SESSION['RegNo'];
+    //unset($_SESSION['RegNo']);
 
+
+  require_once("../classes/cbo.class.php");
+
+  //$RegNo='';
+  $Post='';
+  $Name='';
+  $Address='';
+  $Telephone='';
+  $NIC='';
+
+  //$RegNo=$_SESSION['RegNo'];
+  $Post=$_POST['Post'];
+  $Name=$_POST['Name'];
+  $Address=$_POST['Address'];
+  $Telephone=$_POST['Telephone'];
+  $NIC=$_POST['NIC'];
+
+  $CBOmember= new CBOrg();
+
+  $CBOmember->setCBOMember($RegNo, $Name, $Address, $Post, $Telephone, $NIC);
+
+
+  if(isset($_POST['Next'])){
+      //$_SESSION['RegNo']=$RegNo;
+      header('Location: CBOComityMembers.index.php');
+    exit;
+  }
+  elseif(isset($_POST['Finish'])){
+      unset($_SESSION['RegNo']);
+      header('Location: CBOBoard.index.php');
+    exit;
+  }
+
+}
+
+?>
 
 
 
@@ -241,7 +282,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"ප්‍
     ?>
   
 
-<form class="jotform-form maincontainer" action="test.php" method="post" name="form_201345930885055" id="201345930885055" accept-charset="utf-8" autocomplete="on">
+<form class="jotform-form maincontainer" action="CBOComityMembers.index.php" method="post" name="form_201345930885055" id="201345930885055" accept-charset="utf-8" autocomplete="on">
 
 
   <div role="main" class="form-all">
@@ -274,13 +315,13 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"ප්‍
         <div id="cid_4" class="form-input-wide jf-required">
           <select class="form-dropdown validate[required]" id="input_4" name="Post" style="width:150px" data-component="dropdown" required="" aria-labelledby="label_4">
             <option value="">  </option>
-            <option value="සභාපති"> සභාපති </option>
-            <option value="ලේකම්"> ලේකම් </option>
-            <option value="උප සභාපති"> උප සභාපති </option>
-            <option value="උප ලේකම්"> උප ලේකම් </option>
-            <option value="භාන්ඩාගාරික"> භාන්ඩාගාරික </option>
-            <option value="අභ්‍යන්තර විගණක"> අභ්‍යන්තර විගණක </option>
-            <option value="සාමාජික   "> සාමාජික </option>
+            <option value="President"> සභාපති </option>
+            <option value="Secratary"> ලේකම් </option>
+            <option value="Vice president"> උප සභාපති </option>
+            <option value="Vice secratary"> උප ලේකම් </option>
+            <option value="Treasurer"> භාන්ඩාගාරික </option>
+            <option value="Internal auditor"> අභ්‍යන්තර විගණක </option>
+            <option value="Member"> සාමාජික </option>
           </select>
         </div>
       </li>
@@ -326,7 +367,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"ප්‍
       <li class="form-line form-line-column form-col-1" data-type="control_button" id="id_9">
         <div id="cid_9" class="form-input-wide">
           <div style="margin-left:156px" data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField">
-            <button id="input_9" type="submit" class="form-submit-button form-submit-button-black_blue submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">
+            <button id="input_9" type="submit" class="form-submit-button form-submit-button-black_blue submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="" name="Next">
               තවත් අයෙක් එකතු කරන්න
             </button>
           </div>
@@ -335,7 +376,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"ප්‍
       <li class="form-line form-line-column form-col-2" data-type="control_button" id="id_2">
         <div id="cid_2" class="form-input-wide">
           <div style="margin-left:156px" data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField">
-            <button id="input_2" type="submit" class="form-submit-button form-submit-button-simple_blue submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">
+            <button id="input_2" type="submit" class="form-submit-button form-submit-button-simple_blue submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="" name="Finish">
               අවසන් කරන්න
             </button>
           </div>
@@ -345,7 +386,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"ප්‍
       </li>
       <li style="display:none">
         Should be Empty:
-        <input type="text" name="website" value="" />
+        
       </li>
     </ul>
   </div>

@@ -1,5 +1,69 @@
 <?php session_start();?>
 
+
+<?php require_once("../include/islogged.inc.php");
+    checklogged("officer2");
+ ?>
+
+<?php
+
+if(isset($_POST['Next'])){
+
+    require_once("../classes/cbo.class.php");
+    require_once("../include/yfa.inc.php");
+
+    $RegNo='';
+    $Name='';
+    $Address='';
+    $Telephone='';
+    $EMail='';
+    $Village='';
+    $GNDomain='';
+    $Zone='';
+    $NoOfMemPrev='';
+    $NoOfMemNew='';
+    $AnnualMeetingDate='';
+    $BankName='';
+    $AccountNo='';
+    $AccountOpenDate='';
+    $Balance='';
+
+    $RegNo=$_POST['RegNo'];
+    $Name=$_POST['Name'];
+    $Address=$_POST['Address'];
+    $Telephone=$_POST['Telephone'];
+    $EMail=$_POST['EMail'];
+    $Village=$_POST['Village'];
+    $GNDomain=$_POST['GNDomain'];
+    $Zone=$_POST['Zone'];
+    $NoOfMemPrev=$_POST['NoOfMemPrev'];
+    $NoOfMemNew=$_POST['NoOfMemNew'];
+    $AnnualMeetingDate=yfa($_POST['AnnualMeetingDate']);
+    $BankName=$_POST['BankName'];
+    $AccountNo=$_POST['AccountNo'];
+    $AccountOpenDate=yfa($_POST['AccountOpenDate']);
+    $Balance=$_POST['Balance'];
+
+
+    $CBOrganization= new CBOrg();
+
+    $CBOrganization->setCBO($RegNo, $Name, $Address, $Telephone, $EMail,$Village, $GNDomain, $Zone, $NoOfMemPrev, $NoOfMemNew, $AnnualMeetingDate, $BankName, $AccountNo, $AccountOpenDate, $Balance);
+
+    $_SESSION['RegNo']=$RegNo;
+
+    header('Location: CBOComityMembers.index.php');
+    exit;
+}
+
+?>
+
+<?php /*======================================================================================
+==============================================================================================
+==============================================================================================
+==============================================================================================
+==============================================================================================
+=========================================================================================*/ ?>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en-US"  class="supernova"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -250,7 +314,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"ප්‍
     require_once("../include/navbar.inc.php");
     ?>
 
-<form class="jotform-form " action="test.php" method="post" name="form_201314312993045" id="201314312993045" accept-charset="utf-8" autocomplete="on">
+<form class="jotform-form " action="CBORegistration.index.php" method="post" name="form_201314312993045" id="201314312993045" accept-charset="utf-8" autocomplete="on">
   
   
   <div role="main" class="form-all ">
@@ -514,7 +578,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"ප්‍
       <li class="form-line form-line-column form-col-1" data-type="control_button" id="id_31">
         <div id="cid_31" class="form-input-wide">
           <div style="margin-left:156px" data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField">
-            <button id="input_31" type="submit" class="form-submit-button form-submit-button-black_blue submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">
+            <button id="input_31" type="submit" class="form-submit-button form-submit-button-black_blue submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="" name="Next">
               මීලඟ
             </button>
           </div>
