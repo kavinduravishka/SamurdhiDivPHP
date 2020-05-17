@@ -45,11 +45,11 @@
                 </div>
 			</div>
 
-			<div class="linkdev">
+			<!--<div class="linkdev">
                 <div class="adev">
                     <a href="modify-member.index.php" >Modify Personal-file</a>
                 </div>
-			</div>
+			</div>-->
 
 			<div class="linkdev">
                 <div class="adev">
