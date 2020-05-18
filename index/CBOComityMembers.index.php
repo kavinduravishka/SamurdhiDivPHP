@@ -13,7 +13,7 @@
 if(!isset($_SESSION["RegNo"]) || $_SESSION["RegNo"]==''){
     echo "<h1>You can't perform this action without compleating previous steps</h1>";
     exit;
-}elseif($_SESSION['init_task']=='0'){
+}else{
 
   $RegNo=$_SESSION['RegNo'];
 
@@ -39,20 +39,17 @@ if(!isset($_SESSION["RegNo"]) || $_SESSION["RegNo"]==''){
   $CBOmember->setCBOMember($RegNo, $Name, $Address, $Post, $Telephone, $NIC);
   //exit;
 
-  if(isset($_POST['Next'])){
+    if(isset($_POST['SubmitNext'])){
 
-      header('Location: CBOComityMembers.index.php');
+        header('Location: CBOComityMembers.index.php');
+        exit;
+    }
+    elseif(isset($_POST['SubmitFinish'])){
+        unset($_SESSION['RegNo']);
+        header('Location: CBOBoard.index.php');
     exit;
-  }
-  elseif(isset($_POST['Finish'])){
-      unset($_SESSION['RegNo']);
-      unset($_SESSION['init_task']);
-      header('Location: CBOBoard.index.php');
-    exit;
-  }
+    }
 
-}elseif($_SESSION['init_task']=='1'){
-  $_SESSION['init_task']='0';
 }
 
 ?>
@@ -370,7 +367,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"ප්‍
       <li class="form-line form-line-column form-col-1" data-type="control_button" id="id_9">
         <div id="cid_9" class="form-input-wide">
           <div style="margin-left:156px" data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField">
-            <button id="input_9" type="submit" class="form-submit-button form-submit-button-black_blue submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="" name="Next">
+            <button id="input_9" type="submit" class="form-submit-button form-submit-button-black_blue submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="" name="SubmitNext">
               තවත් අයෙක් එකතු කරන්න
             </button>
           </div>
@@ -379,7 +376,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"ප්‍
       <li class="form-line form-line-column form-col-2" data-type="control_button" id="id_2">
         <div id="cid_2" class="form-input-wide">
           <div style="margin-left:156px" data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField">
-            <button id="input_2" type="submit" class="form-submit-button form-submit-button-simple_blue submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="" name="Finish">
+            <button id="input_2" type="submit" class="form-submit-button form-submit-button-simple_blue submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="" name="SubmitFinish">
               අවසන් කරන්න
             </button>
           </div>

@@ -7,10 +7,8 @@
 
 <?php
 
- if($_SESSION['init_task']=='0'){
 
-
-//if(isset($_POST['submit'])){
+if(isset($_POST['submit'])){
 
   require_once("../classes/lottaryfund.class.php");
 
@@ -28,14 +26,16 @@
   $Address=$_POST['Address'];
   $Date=$_POST['Date'];
 
-  $LFund->setLFRecord($NIC, $Name, $Address, $Date);
-
-  header('Location :LFBoard.index.php');
-  exit;
+    if($LFund->checkifAlready($NIC)==0){
+        $LFund->setLFRecord($NIC, $Name, $Address, $Date);
+        header('Location: LFBoard.index.php');
+        exit;
+    }else{
+        echo "<h1>this data is already in the database</h1>";
+        exit;
+    }
   
-//}
-}elseif($_SESSION['init_task']=='1'){
-  $_SESSION['init_task']='0';
+
 }
 
 ?>
@@ -47,7 +47,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en-US"  class="supernova"><head>
 
- />
+
 <meta name="HandheldFriendly" content="true" />
 <title>ලොතරැයි දිනුම් ඇදීම - Lottary Draw</title>
 
