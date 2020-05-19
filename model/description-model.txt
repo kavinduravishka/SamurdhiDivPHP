@@ -1,0 +1,6 @@
+files that connects to the database;
+database queries only.
+    class Dbh{}  : dbh.class.php > the database connection
+
+    * save class files as "___DB.class.php" inside relavent officerDB folder
+        Ex: queries of a beneficiary inside 'officer1DB' = "beneficiaryDB.class.php"
