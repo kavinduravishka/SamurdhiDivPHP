@@ -3,7 +3,7 @@
 
 <?php require_once("../include/islogged.inc.php");
     checklogged("officer2");
- ?>
+?>
 
 <?php
 
@@ -45,10 +45,10 @@ if(isset($_POST['submit'])){
 
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="en-US"  class="supernova"><head>
+<html l><head>
 
 
-<meta name="HandheldFriendly" content="true" />
+
 <title>ලොතරැයි දිනුම් ඇදීම - Lottary Draw</title>
 
 

@@ -8,6 +8,11 @@
 
 <?php 
 
+  $Post='';
+  $Name='';
+  $Address='';
+  $Telephone='';
+  $NIC='';
   
 
 if(!isset($_SESSION["RegNo"]) || $_SESSION["RegNo"]==''){
@@ -19,14 +24,6 @@ if(!isset($_SESSION["RegNo"]) || $_SESSION["RegNo"]==''){
 
 
   require_once("../classes/cbo.class.php");
-
-
-  $Post='';
-  $Name='';
-  $Address='';
-  $Telephone='';
-  $NIC='';
-
 
   $Post=$_POST['Post'];
   $Name=$_POST['Name'];

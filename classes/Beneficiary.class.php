@@ -1,4 +1,4 @@
-<?php include 'Dbh.class.php'; ?>
+<?php include 'dbh.class.php'; ?>
 <?php
 	class Beneficiary extends Dbh{
 

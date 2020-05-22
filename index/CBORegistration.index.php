@@ -7,11 +7,6 @@
 
 <?php
 
-if(isset($_POST['Next'])){
-
-    require_once("../classes/cbo.class.php");
-    require_once("../include/yfa.inc.php");
-
     $RegNo='';
     $Name='';
     $Address='';
@@ -27,6 +22,12 @@ if(isset($_POST['Next'])){
     $AccountNo='';
     $AccountOpenDate='';
     $Balance='';
+
+if(isset($_POST['Next'])){
+
+    require_once("../classes/cbo.class.php");
+    require_once("../include/yfa.inc.php");
+
 
     $RegNo=$_POST['RegNo'];
     $Name=$_POST['Name'];
