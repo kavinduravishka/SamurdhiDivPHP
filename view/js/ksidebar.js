@@ -1,4 +1,4 @@
-<script>
+
 let closed = 1;
 
 var ancs = document.getElementsByClassName("anc");
@@ -65,5 +65,5 @@ function selectback(idname) {
 	}
 }
 
-</script>
+
     

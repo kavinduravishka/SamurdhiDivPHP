@@ -25,6 +25,10 @@ body {
   transition: 0.3s;
 }
 
+.sidebar .anc {
+  visibility: hidden;
+}
+
 .sidebar a:hover {
   color: #f1f1f1;
 }
