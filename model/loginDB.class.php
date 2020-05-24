@@ -1,10 +1,11 @@
 <?php
 
-class Login extends Dbh{
+//require_once("../model/dbh.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\model\dbh.class.php");
 
-    public function verifyUser($username,$pwd){
+class LoginDB extends Dbh{
 
-        $hashed_password = sha1($pwd);
+    public function verifyUser($username,$hashed_password){
 
         $_SESSION['user_id']='';
         $_SESSION['user_name']='';
@@ -45,14 +46,5 @@ class Login extends Dbh{
         }
     }
 
-    public function logOut(){
-        session_start();
-        $_SESSION = array();
-        if(isset($_COOKIE[session_name()])){
-            setcookie(session_name(),'',time()-86400,'/');
-        }
-
-        session_destroy();
-        header('Location: login.index.php?logout=yes');
-    }
+    
 }
