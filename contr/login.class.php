@@ -1,7 +1,7 @@
 <?php
 
 //require_once("../model/loginDB.class.php");
-require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\model\loginDB.class.php");
+require_once(__DIR__."/../model/loginDB.class.php");
 
 class Login {
 
