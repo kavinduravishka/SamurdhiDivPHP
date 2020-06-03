@@ -8,7 +8,7 @@ var ancs = document.getElementsByClassName("anc");
 
 function openNav() {
   	document.getElementById("mySidebar").style.width = "250px";
-  	document.getElementById("main").style.marginLeft = "250px";
+  	document.getElementById("maincontainer").style.marginLeft = "250px";
     
   	var ancs = document.getElementsByClassName("anc");
 	for (var i = 0; i < ancs.length; i++) {
@@ -18,7 +18,7 @@ function openNav() {
 
 function closeNav() {
   	document.getElementById("mySidebar").style.width = "50px";
-  	document.getElementById("main").style.marginLeft= "50px";
+  	document.getElementById("maincontainer").style.marginLeft= "50px";
   
   	var ancs = document.getElementsByClassName("anc");
 	for (var i = 0; i < ancs.length; i++) {
@@ -30,7 +30,7 @@ function closeNav() {
 function closeNav2() {
   	document.getElementById("mySidebar2layer").style.width = "0px";
     document.getElementById("mySidebar2layer").style.left = "0px";
-    document.getElementById("main").style.marginLeft= "250px";
+    document.getElementById("maincontainer").style.marginLeft= "250px";
   
 }
 
@@ -41,7 +41,7 @@ function transNav() {
     }else if (closed==0){
     	  closeNav();
         closeNav2();
-        document.getElementById("main").style.marginLeft= "50px";
+        document.getElementById("maincontainer").style.marginLeft= "50px";
         closed=1;
     }
 }
@@ -49,7 +49,7 @@ function transNav() {
 function openNav2() {
   	document.getElementById("mySidebar2layer").style.width = "250px";
     document.getElementById("mySidebar2layer").style.left = "250px";
-  	document.getElementById("main").style.marginLeft = "500px";
+  	document.getElementById("maincontainer").style.marginLeft = "500px";
     	
 }
 

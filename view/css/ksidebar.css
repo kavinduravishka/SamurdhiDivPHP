@@ -1,4 +1,4 @@
-<style>
+
 body {
   font-family: "Lato", sans-serif;
 }
@@ -80,7 +80,7 @@ body {
   background-color: #444;
 }
 
-#main {
+#maincontainer {
   transition: margin-left .5s;
   padding: 16px;
   margin-left: 50px;
@@ -93,5 +93,5 @@ body {
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
 }
-</style>   
+
  

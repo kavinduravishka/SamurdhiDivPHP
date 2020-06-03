@@ -1,0 +1,17 @@
+.navdev {
+
+position:relative;
+padding:10px 10px;
+background-color: rgba(109, 104, 102, 0.767);
+/*margin:-3px;*/
+display: inline;
+top:60px;
+/*border-radius:10px;*/
+
+}
+
+.navdev a {
+  /*font-size: 32px;*/
+  text-decoration: none;
+  color:black;
+}
