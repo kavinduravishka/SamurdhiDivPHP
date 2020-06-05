@@ -10,9 +10,7 @@
     <title>Officer4-dashboard</title>
     
     <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/main_dk.css">
-    <!--
-    <link rel="stylesheet" type="text/css" href="../css/styles/navbar.css" >
-    -->
+    <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/ksidebar.css" >
     
 </head>
 <body>
@@ -20,6 +18,7 @@
     <?php 
     //require_once("../view/includes/header.inc.php"); 
     require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/header.inc.php");
+    require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/officer4Inc/officer4_sidebar.inc.php");
     ?> 
 
     <?php 

@@ -1,5 +1,7 @@
-<?php //include("../view/includes/loginInc.php")
-include_once("../view/includes/loginInc.php");
+<?php 
+//include("../view/includes/loginInc.php")
+//include_once("../view/includes/loginInc.php");
+include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/loginInc.php");
 ?>
 
 
@@ -10,7 +12,7 @@ include_once("../view/includes/loginInc.php");
     <meta charset="UTF-8">
     <title>Log In - Samurdhi Division</title>
     
-    <link rel="stylesheet" href="../view/css/main_dk.css">
+    <link rel="stylesheet" href="/SamurdhiDivPHP/view/css/main_dk.css">
     
     
 </head>
