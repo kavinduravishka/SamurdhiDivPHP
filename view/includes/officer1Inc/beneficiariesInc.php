@@ -7,6 +7,8 @@
 
 <?php
 
+	$search = '';
+
 	$officer1 = new Officer1();
 		if(isset($_GET['search'])){
 			$search = $_GET['search'];

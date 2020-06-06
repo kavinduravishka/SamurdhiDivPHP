@@ -10,18 +10,15 @@
 <head>
 	<title>Users</title>
 	<link rel="shortcut icon" href="../images/favicon.ico">
-	<link rel="stylesheet" type="text/css" href="../css/main.css">
-	 <link rel="stylesheet" type="text/css" href="../css/styles/navbar.css" >
+	<link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/main.css">
+	 <!-- <link rel="stylesheet" type="text/css" href="/css/styles/navbar.css" > -->
+	 <!-- <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/ksidebar.css" > -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
 <body>
-	 <?php //require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\include\header.inc.php"); ?>
-	 <?php //require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\include\sidebar.inc.php"); ?>
+	 <?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/header.inc.php"); ?>
+	 <?php //require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/include/sidebar.inc.php"); ?>
 
-	 <?php 
-        //require_once("../view/includes/header.inc.php"); 
-        require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/header.inc.php");
-    ?> 
 	 <?php 
     	// $navpaths=array("Dashboard"=>"officer1-dashboard.index.php");
 		// require_once("../include/navbar.inc.php");
@@ -31,9 +28,9 @@
 		<main>
 		<div class="maincontainer" >
 		
-		<h1>Beneficiaries  <span><a href="Beneficiaries.index.php">Refresh</a></span></h1>
+		<h1>Beneficiaries  <span><a href="beneficiariesView.php">Refresh</a></span></h1>
 		<div class="search">
-			<form action="Beneficiaries.index.php" method="get">
+			<form action="beneficiariesView.php" method="get">
 				<p><input type="text" name = "search" id="" placeholder="Type Full Name  or NIC and Press Enter" value="<?php echo $search; ?>"></p>
 			</form>
 		</div>
