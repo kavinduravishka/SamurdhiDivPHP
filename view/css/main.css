@@ -119,8 +119,7 @@ form.userform button {
   margin: 0 10px 0 10px;
 }
 
-/*sidebar*/
-/* .sidebar {
+.sidebar {
   background: #2f323a;
   margin-top: 50px;
   position: fixed;
@@ -168,12 +167,12 @@ label #sidebar_btn {
   padding-left: 45px;
   cursor: pointer;
   font-size: 20px;
-  /* margin: 5px 0; */
-/* transition: 0.1s;
+  margin: 5px 0;
+  transition: 0.1s;
   transition-property: color;
-} */
+}
 
-/* label #sidebar_btn:hover {
+label #sidebar_btn:hover {
   color: #19b3d3;
 }
 
@@ -188,7 +187,7 @@ label #sidebar_btn {
   font-size: 20px;
   margin-left: 170px;
   width: 80px;
-} */
+}
 
 .officer1-dashboard {
   margin-top: 70px;
@@ -210,13 +209,13 @@ main {
   transition: 0.5s;
 }
 
-/* #check:checked ~ main {
+#check:checked ~ main {
   margin-left: 60px;
 }
 
 #check {
   display: none;
-} */
-/* .maincontainer {
+}
+.maincontainer {
   margin-left: 10px;
-} */
+}
