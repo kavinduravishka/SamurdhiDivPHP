@@ -66,18 +66,13 @@ class StaffMember{
     }
 
     public function updateMember($member_id){
-        $sql="UPDATE personalfile SET nic_number=?,name=?,designation=?,service=?,date_appointed=?,date_of_birth=?,date_of_pension=?,w_op_number=? WHERE member_id=?";
-        $stmt=$this->connect()->prepare($sql);
-        $stmt->execute([$this->nic_number, $this->name , $this->designation , $this->service ,$this->date_appointed ,$this->date_of_birth ,$this->date_of_pension ,$this->w_op_number,$member_id]);
-        header ('Location: officer4-dashboard.index.php?member_modified=true');
+        (new StaffMemberDB())->updateMember($this->nic_number, $this->name , $this->designation , $this->service ,$this->date_appointed ,$this->date_of_birth ,$this->date_of_pension ,$this->w_op_number, $this->member_type,$member_id);
+        header('Location: http://localhost/SamurdhiDivPHP/view/officer4View/personal-filesView.php?member_modified=true');
 
     }
 
     public static function removeMember($member_id){
-        $sql="UPDATE personalfile SET is_deleted=? WHERE member_id=?";
-        $db_con=new Dbh();
-        $stmt=$db_con->connect()->prepare($sql);
-        $stmt->execute(['1',$member_id]);
+        (new StaffMemberDB())->removeMember($member_id);
 
     }
     

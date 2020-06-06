@@ -20,8 +20,8 @@ class Officer4DB extends Dbh{
             $personalfile_list.="<td>{$row['date_of_birth']}</td>";
             $personalfile_list.="<td>{$row['date_of_pension']}</td>";
             $personalfile_list.="<td>{$row['w_op_number']}</td>";
-            $personalfile_list.="<td><a href=\"modify-member.index.php?member_id={$row['member_id']}\">Edit</a></td>";
-            $personalfile_list.="<td><a href=\"delete-member.index.php?member_id={$row['member_id']}\" onclick=\"return confirm('Are you sure?');\">Delete</a></td>";
+            $personalfile_list.="<td><a href=\"modify-memberView.php?member_id={$row['member_id']}\">Edit</a></td>";
+            $personalfile_list.="<td><a href=\"delete-memberInc.php?member_id={$row['member_id']}\" onclick=\"return confirm('Are you sure?');\">Delete</a></td>";
             $personalfile_list.="</tr>";
         }
         return $personalfile_list;        
@@ -45,8 +45,8 @@ class Officer4DB extends Dbh{
             $personalfile_list.="<td>{$member['date_of_birth']}</td>";
             $personalfile_list.="<td>{$member['date_of_pension']}</td>";
             $personalfile_list.="<td>{$member['w_op_number']}</td>";
-            $personalfile_list.="<td><a href=\"modify-member.index.php?member_id={$member['member_id']}\">Edit</a></td>";
-            $personalfile_list.="<td><a href=\"delete-member.index.php?member_id={$member['member_id']}\" onclick=\"return confirm('Are you sure?');\">Delete</a></td>";
+            $personalfile_list.="<td><a href=\"modify-memberView.php?member_id={$member['member_id']}\">Edit</a></td>";
+            $personalfile_list.="<td><a href=\"delete-memberInc.php?member_id={$member['member_id']}\" onclick=\"return confirm('Are you sure?');\">Delete</a></td>";
             $personalfile_list.="</tr>";
         }
         return $personalfile_list;        
