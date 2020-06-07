@@ -9,6 +9,7 @@
     
     <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/main_dk.css">
     <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/ksidebar.css" >
+    <script type="text/javascript" src="/SamurdhiDivPHP/view/js/ksidebar.js"></script>
     
     
 </head>
