@@ -1,28 +1,24 @@
 <?php   
-        include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/officer4Inc/add-memberInc.php");
+        include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/officer4Inc/appreciation-letterInc.php");
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Add New Personal-file</title>
+    <title>Appreciation Letter</title>
     
     <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/main_dk.css">
-    <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/ksidebar.css" >
-    <script type="text/javascript" src="/SamurdhiDivPHP/view/js/ksidebar.js"></script>
-    
-    
+        
 </head>
 <body>
     <?php 
     require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/header.inc.php");
-    require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/officer4Inc/officer4_sidebar.inc.php");
     ?> 
 	
 
     <main>
-        <h1>Add New Personal-File</h1>
+        <h1>Appreciation Letter</h1>
         
         <?php 
             if(!empty($errors)){
