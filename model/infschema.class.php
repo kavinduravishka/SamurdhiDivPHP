@@ -35,8 +35,8 @@ class DBInfo extends Dbh{
 	private $confile = fopen("config/tablestoread.conf", "r") or die("Unable to open file!");
 
 
-	private $fieldconf = fopen("config/promptfields.conf", "w");
-	private $searchconf = fopen("config/searchfields.conf", "w");
+	private $fieldconf = fopen("../view/formgenengine/config/promptfields.conf", "w");
+	private $searchconf = fopen("../view/formgenengine/config/searchfields.conf", "w");
 
 	private $contowrite="<config>\n";
 
@@ -50,7 +50,9 @@ class DBInfo extends Dbh{
 		$stmt = $this->connect()->prepare($sql);
 
 		while ($row = $stmt->fetch()) {
-			$dline.="<field name=\"{$row}\"type= required= default=0 ></field>\n";
+			$dline.=<<<EOD
+			<field name="{$row}" type="text" required="0" default="" ></field>\n
+EOD;
 		}
 
 		$dline.="</table>\n";

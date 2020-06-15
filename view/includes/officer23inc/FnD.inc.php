@@ -25,7 +25,7 @@ table;
 
 	public function in_form($name,$id,$action,$inside){
 		$division = <<<form
-						<form class="jotform-form" action="{$action}" method="post" name="{$name}"
+						<form class="kform" action="{$action}" method="post" name="{$name}"
 						id="{$id}" autocomplete="on">
 							{$inside}
 						</form>
