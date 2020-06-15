@@ -18,6 +18,15 @@ class Officer4 {
         
         return $personalfile_list;        
     }
+
+    public function addLetterRecord($name,$date,$particulars,$punishment,$ref){
+
+    }
+
+    public function findNIC($name){
+        
+    }
+
     
 
 }
