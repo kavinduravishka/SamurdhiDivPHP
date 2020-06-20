@@ -32,26 +32,40 @@ require_once("dbh.class.php");
 
 class DBInfo extends Dbh{
 
-	private $confile = fopen("config/tablestoread.conf", "r") or die("Unable to open file!");
+	private $confile = null;
 
 
-	private $fieldconf = fopen("../view/formgenengine/config/promptfields.conf", "w");
-	private $searchconf = fopen("../view/formgenengine/config/searchfields.conf", "w");
+	private $fieldconf = null;
+	private $searchconf = null;
 
 	private $contowrite="<config>\n";
 
+	private function detectType($dbtype):string {
+		if($dbtype=="int" || $dbtype=="tinyint" || $dbtype=="double" || $dbtype=="decimal"){
+			return "number";
+		}else if(){
 
+		}
+	}
 
 	private function readinfoschema($tblname){
 
 		$dline="<table name={$tblname}>\n";
 
-		$sql ="SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'SamurdhiDivision' AND TABLE_NAME = '{$tblname}'";
-		$stmt = $this->connect()->prepare($sql);
+		$sql ="SELECT COLUMN_NAME , DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'SamurdhiDivision' AND TABLE_NAME = '{$tblname}'";
 
+		try{
+			$stmt = $this->connect()->query($sql);
+		}catch(Exception $e){
+			returnError($stmt);
+		}
+		
 		while ($row = $stmt->fetch()) {
+			
+			$fieldname=vsprintf("%-25s","\"".$row['COLUMN_NAME']."\"");
+
 			$dline.=<<<EOD
-			<field name="{$row}" type="text" required="0" default="" ></field>\n
+	<field name={$fieldname} {$row['DATA_TYPE']}\ttype="text" required="0" default="" ></field>\n
 EOD;
 		}
 
@@ -64,8 +78,16 @@ EOD;
 
 
 	public function genconfile(){
-		$data = fread($this->confile,filesize("webdictionary.txt"));
-		fclose($confile);
+
+		$this->confile = fopen("config/tablestoread.conf", "r") or die("Unable to open file!");
+
+
+		$this->fieldconf = fopen("../view/formgenengine/config/promptfields.conf", "w");
+		$this->searchconf = fopen("../view/formgenengine/config/searchfields.conf", "w");
+
+
+		$data = fread($this->confile,filesize("config/tablestoread.conf"));
+		fclose($this->confile);
 
 		$dataarr=explode("\n", $data);
 
@@ -77,11 +99,13 @@ EOD;
 
 		$this->contowrite.="</config>";
 
-		fwrite($fieldconf, $contowrite);
-		fwrite($searchconf, $contowrite);
+		echo $this->contowrite;
 
-		fclose($fieldconf);
-		fclose($searchconf);
+		fwrite($this->fieldconf, $this->contowrite);
+		fwrite($this->searchconf, $this->contowrite);
+
+		fclose($this->fieldconf);
+		fclose($this->searchconf);
 	}
 
 
