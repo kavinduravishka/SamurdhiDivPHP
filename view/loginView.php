@@ -19,7 +19,7 @@ include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/
 <body class=loginpage>
     <div class="login">
 
-        <form action="loginView.php" method="post">
+        <form action="/SamurdhiDivPHP/view/loginView.php" method="post">
             
                 
                 <legend><h1>Log In</h1></legend>

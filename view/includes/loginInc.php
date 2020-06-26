@@ -31,7 +31,7 @@
             switch ($_SESSION['user_name']) {
                 
                 case 'officer1' :
-                    header('Location: officer1-dashboard.index.php');
+                    header('Location: http://localhost/SamurdhiDivPHP/view/officer1View/beneficiariesView.php');
                     $_SESSION['dashboard']='officer1-dashboard.index.php';
                     $_SESSION['logged_in']='1';
                     
