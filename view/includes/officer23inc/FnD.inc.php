@@ -25,11 +25,12 @@ table;
 
 	public function in_form($name,$id,$action,$inside){
 		$division = <<<form
-						<form class="jotform-form" action="{$action}" method="post" name="{$name}"
+						<form class="kform" action="{$action}" method="post" name="{$name}"
 						id="{$id}" autocomplete="on">
 							{$inside}
 						</form>
 form;
+		return $division;
 	}
 
 
@@ -233,5 +234,64 @@ EOD;
 		return $division;
 	}
 
+
+
+
+
+
+//    _________    ___.           .__  __ __________   __                 _  _      _  _      _  _   
+//   /   _____/__ _\_ |__   _____ |__|/  |\______   \_/  |_  ____      __| || |____| || |____| || |__
+//   \_____  \|  |  \ __ \ /     \|  \   __\    |  _/\   __\/    \     \   __   /\   __   /\   __   /
+//   /        \  |  / \_\ \  Y Y  \  ||  | |    |   \ |  | |   |  \     |  ||  |  |  ||  |  |  ||  | 
+//  /_______  /____/|___  /__|_|  /__||__| |______  / |__| |___|  /    /_  ~~  _\/_  ~~  _\/_  ~~  _\
+//          \/          \/      \/                \/            \/       |_||_|    |_||_|    |_||_|  
+
+
+
+	public function btnSub(){
+		$division = <<<EOD
+						<tr>
+							<td class="btndiv">
+						        <input type="submit" value="Submit">
+						    </td>
+
+						    <td>
+						          
+						    </td>
+						</tr>
+EOD;
+		return $division;
+	}
+
+
+	public function btnFinNext(){
+		$division = <<<EOD
+						<tr>
+							<td class="btndiv">
+						        <input type="submit" value="Finish">
+						    </td>
+
+						    <td class="btndiv">
+						        <input type="submit" value="Next">
+						    </td>
+						</tr>
+EOD;
+		return $division;
+	}
+
+	public function btnFind(){
+		$division = <<<EOD
+						<tr>
+							<td class="btndiv">
+						        <input type="submit" value="Find">
+						    </td>
+
+						    <td>
+						          
+						    </td>
+						</tr>
+EOD;
+		return $division;
+	}
 
 }
