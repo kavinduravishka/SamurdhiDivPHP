@@ -1,12 +1,12 @@
 <?php   
-        include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/officer4Inc/add-memberInc.php");
+        include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/officer5Inc/add-incrementInc.php");
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Add New Personal-file</title>
+    <title>Add Salary Increment</title>
     
     <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/main_dk.css">
     <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/ksidebar.css" >
@@ -22,7 +22,7 @@
 	
 
     <main>
-        <h1>Add New Personal-File</h1>
+        <h1>Add Salary Increment</h1>
         
         <?php 
             if(!empty($errors)){
@@ -36,7 +36,9 @@
             }
         ?>
 
-        <form action="add-memberView.php" method="post" class="memberform" >
+        <form action="add-incrementView.php" method="post" class="memberform" >
+
+            <input type="hidden" name="nic_number" value="<?php echo $nic_number; ?>">
             <p>
                 <label for="">NIC Number:</label>
                 <input type="text" name="nic_number" <?php echo 'value="' .$nic_number.'"';?>>            
@@ -46,43 +48,22 @@
                 <input type="text" name="name" <?php echo 'value="' .$name.'"';?> >            
             </p>
             <p>
-                <label for="">Designation:</label>
-                <input type="text" name="designation" <?php echo 'value="' .$designation.'"';?> >            
-            </p>
-            <p>
-                <label for="">Service:</label>
-                <input type="text" name="service" <?php echo 'value="' .$service.'"';?> >            
-            </p>
-            <p>
                 <label for="">Date of Appointment:</label>
                 <input type="date" name="date_appointed" <?php echo 'value="' .$date_appointed.'"';?> >            
             </p>
             <p>
-                <label for="">Date of Birth:</label>
-                <input type="date" name="date_of_birth" <?php echo 'value="' .$date_of_birth.'"';?> >            
-            </p>
-            <p>
-                <label for="">Date of Pension:</label>
-                <input type="date" name="date_of_pension" <?php echo 'value="' .$date_of_pension.'"';?> >            
-            </p>
-            <p>
-                <label for="">Initial Salary:</label>
+                <label for="">Current Salary:</label>
                 <input type="int" name="salary" <?php echo 'value="' .$salary.'"';?> >            
             </p>
             <p>
-                <label for="">No. of W & OP:</label>
-                <input type="text" name="w_op_number" <?php echo 'value="' .$w_op_number.'"';?> >            
+                <label for="">Last Increment Value:</label>
+                <input type="int" name="last_increment" <?php echo 'value="' .$last_increment.'"';?> >            
+            </p>
+            <p>
+                <label for="">New Increment Value:</label>
+                <input type="int" name="increment" <?php echo 'value="' .$increment.'"';?> >            
             </p>
 
-            <p>
-                <label for="">Type of the member:</label>
-                <select name=member_type>
-                    <option value="in">Inside Officer</option>
-                    <option value="out">Field Officer</option>
-                </select>
-            </p>           
-            
-            
             <p>
                 <label for="">&nbsp;</label>
                 <button type="submit" name="submit">Save</button>

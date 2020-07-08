@@ -1,11 +1,11 @@
 <?php
 
-session_start();
+//session_start();
 
 //require_once("../model/loginDB.class.php");
 require_once(__DIR__."/../model/loginDB.class.php");
 
-require_once(__DIR__."/officerBase/officerBase.class.php";)
+//require_once(__DIR__."/officerBase/officerBase.class.php");
 
 class Login {
 

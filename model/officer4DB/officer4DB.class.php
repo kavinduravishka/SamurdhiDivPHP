@@ -52,5 +52,23 @@ class Officer4DB extends Dbh{
         return $personalfile_list;        
     }
     
+    public function findNIC($name){
+        $NIC='';
+        $sql="SELECT * FROM personalfile WHERE (nic_number LIKE '%{$search}%' OR name LIKE '%{$search}%' ) AND is_deleted=0 ORDER BY date_appointed";
+        $stmt=$this->connect()->query($sql); 
+        $members=$stmt->fetchAll();
+
+        foreach($members as $member){           
+            $NIC.="{$member['nic_number']}";            
+        }
+        return $NIC;         
+    }
+
+    public function addLetterRecord($nic,$name,$date,$particulars,$punishment,$ref){
+        $sql="INSERT INTO appreciationletter(nic,name,date,particulars,punishment,ref) VALUES (?,?,?,?,?,?)";
+        $stmt=$this->connect()->prepare($sql);
+        $stmt->execute([$nic,$name,$date,$particulars,$punishment,$ref]);        
+    }
+
 
 }

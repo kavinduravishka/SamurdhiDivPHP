@@ -12,10 +12,11 @@ class StaffMember{
     protected $date_of_birth;
     protected $date_of_pension;
     protected $w_op_number;
+    protected $salary;
     protected $member_type;
     protected $is_deleted;
 
-    public function __construct($nic_number,$name,$designation,$service,$date_appointed,$date_of_birth,$date_of_pension,$w_op_number,$member_type){
+    public function __construct($nic_number,$name,$designation,$service,$date_appointed,$date_of_birth,$date_of_pension,$w_op_number,$salary,$member_type){
         $this->nic_number=$nic_number;
         $this->name=$name;
         $this->designation=$designation;
@@ -24,6 +25,7 @@ class StaffMember{
         $this->date_of_birth=$date_of_birth;
         $this->date_of_pension=$date_of_pension;
         $this->w_op_number=$w_op_number;
+        $this->salary=$salary;
         $this->member_type=$member_type;
         $this->is_deleted=0;  
     }
@@ -61,6 +63,7 @@ class StaffMember{
     
     public function addMember(){
         (new StaffMemberDB())->addMember($this->nic_number, $this->name , $this->designation , $this->service ,$this->date_appointed ,$this->date_of_birth ,$this->date_of_pension ,$this->w_op_number, $this->member_type);
+        (new StaffMemberDB())->addSalaryRecord($this->nic_number, $this->name ,$this->date_appointed ,$this->salary);
         header('Location: http://localhost/SamurdhiDivPHP/view/officer4View/personal-filesView.php?member_added=true');
 
     }
