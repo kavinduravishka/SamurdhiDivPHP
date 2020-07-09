@@ -66,10 +66,6 @@
                 <input type="date" name="date_of_pension" <?php echo 'value="' .$date_of_pension.'"';?> >            
             </p>
             <p>
-                <label for="">Initial Salary:</label>
-                <input type="int" name="salary" <?php echo 'value="' .$salary.'"';?> >            
-            </p>
-            <p>
                 <label for="">No. of W & OP:</label>
                 <input type="text" name="w_op_number" <?php echo 'value="' .$w_op_number.'"';?> >            
             </p>

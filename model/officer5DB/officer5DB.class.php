@@ -31,7 +31,15 @@ class Officer5DB extends Dbh{
         
 
     }
+    
+    public function addSalaryRecord($nic_number, $name ,$date_appointed ,$salary){
+        $sql="INSERT INTO salarydetails(nic_number, name ,date_appointed ,salary ) VALUES (?,?,?,?)";
+        $stmt=$this->connect()->prepare($sql);
+        $stmt->execute([$nic_number, $name , $date_appointed ,$salary]);
+        
+    }
 
+    
     public static function getSalaryRecord($nic_number){
         $sql="SELECT * FROM salarydetails WHERE nic_number=?";
         $db_con=new Dbh();

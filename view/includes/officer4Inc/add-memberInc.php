@@ -17,7 +17,6 @@
     $date_appointed='';
     $date_of_birth='';
     $date_of_pension='';
-    $salary='';
     $w_op_number='';
 
 
@@ -31,10 +30,9 @@
         $date_of_birth=$_POST['date_of_birth'];
         $date_of_pension=$_POST['date_of_pension'];
         $w_op_number=$_POST['w_op_number'];
-        $salary=$_POST['salary'];
         $member_type=$_POST['member_type'];
 
-        $req_fields=array('nic_number','name','designation','service','date_appointed','date_of_birth','date_of_pension','salary','w_op_number');
+        $req_fields=array('nic_number','name','designation','service','date_appointed','date_of_birth','date_of_pension','w_op_number');
 
         foreach ($req_fields as $field){
             if(empty(trim($_POST[$field]))){
@@ -51,7 +49,7 @@
         }
 
         if(empty($errors)){
-            $sMember=new StaffMember($nic_number,$name,$designation,$service,$date_appointed,$date_of_birth,$date_of_pension,$w_op_number,$salary,$member_type);
+            $sMember=new StaffMember($nic_number,$name,$designation,$service,$date_appointed,$date_of_birth,$date_of_pension,$w_op_number,$member_type);
             $sMember->addMember();
         }
         else{
