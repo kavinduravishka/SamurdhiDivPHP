@@ -23,8 +23,8 @@ class Officer2 {
         $this->CBO->MemWrite($data);
     }
 
-    public function LottaryFundWrite($data){
-
+    public function LottaryFundWrite($data,$NIC){
+        $this->LottaryFund->FundWrite($data,$NIC);
     }
     
     public function MFreleaseWrite($data){
