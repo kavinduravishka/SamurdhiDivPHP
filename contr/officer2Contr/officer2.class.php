@@ -8,30 +8,43 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer2
 
 class Officer2 {
 
-    public function  __construct(){
+    private function  __construct(){}
 
-        $this->CBO=new CBO();
-        $this->LottaryFund=new LottaryFund();
-        $this->MandatoryFund=new MandatoryFund();
+
+    public static function getInstance()
+    {
+        if (self::$instance == null)
+        {
+        self::$instance = new Officer2();
+        }
+    
+        return self::$instance;
     }
 
     public function CBOorgWrite($data){
-        $this->CBO->OrgWrite($data);
+        $cbo=CBO::getInstance();
+        $cbo->OrgWrite($data);
     }
 
     public function CBOmemWrite($data){
-        $this->CBO->MemWrite($data);
+        $cbo=CBO::getInstance();
+        $cbo->MemWrite($data);
+        //$this->CBO->MemWrite($data);
     }
 
     public function LottaryFundWrite($data,$NIC){
-        $this->LottaryFund->FundWrite($data,$NIC);
+        $lfund=LottaryFund::getInstance();
+        $lfund->FundWrite($data,$NIC);
+        //$this->LottaryFund->FundWrite($data,$NIC);
     }
     
     public function MFreleaseWrite($data){
-
+        $manfun=MandatoryFund::getInstance();
+        $manfun->ReleaseWrite($data);
     }
 
     public function MFrequestWrite($data){
-
+        $manfun=MandatoryFund::getInstance();
+        $manfun->RequestWrite($data);
     }
 }

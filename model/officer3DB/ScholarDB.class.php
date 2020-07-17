@@ -1,7 +1,11 @@
 <?php
-require_once("../dbh.class.php");
+require_once("../dbbase.class.php");
 	
-class ScholarDB extends Dbh{
+class ScholarDB extends Dbbase{
+
+	public function write(){
+		
+	}
 	
 }
 

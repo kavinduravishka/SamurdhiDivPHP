@@ -1,9 +1,9 @@
 <?php
-require_once("../dbh.class.php");
+require_once("../dbbase.class.php");
 	
-class CBOorgDB extends Dbh{
+class CBOorgDB extends Dbbase{
 	
-	public function setCBO($RegNo, $Name, $Address, $Telephone, $EMail,$Village, $GNDomain, $Zone, $DivisionalSec, $DistrictSec, $NoOfMemPrev, $NoOfMemNew, $AnnualMeetingDate, $BankName, $AccountNo, $AccountOpenDate, $Balance){
+	public function write($RegNo, $Name, $Address, $Telephone, $EMail,$Village, $GNDomain, $Zone, $DivisionalSec, $DistrictSec, $NoOfMemPrev, $NoOfMemNew, $AnnualMeetingDate, $BankName, $AccountNo, $AccountOpenDate, $Balance){
 
 		//$DivisionalSec="Divulapitiya";
 		//$DivSecNo="09";
