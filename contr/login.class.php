@@ -9,6 +9,20 @@ require_once(__DIR__."/../model/loginDB.class.php");
 
 class Login {
 
+    private static $instance = null;
+
+    private function __construct(){}
+
+    public static function getInstance()
+    {
+        if (self::$instance == null)
+        {
+        self::$instance = new Login();
+        }
+    
+        return self::$instance;
+    }
+
     public function verifyUser($username,$pwd){
 
         $hashed_password = sha1($pwd);
@@ -28,4 +42,9 @@ class Login {
         session_destroy();
         header('Location: http://localhost/SamurdhiDivPHP/view/loginView.php?logout=yes');
     }
+
+    
+  
+  
+  
 }

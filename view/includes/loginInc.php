@@ -24,7 +24,7 @@
             $user_name=$_POST['user_name'];
             $pwd=$_POST['password'];
 
-            $user_login=new Login();
+            $user_login=Login::getInstance();
             $user=$user_login->verifyUser($user_name,$pwd);
             extract($user);
 

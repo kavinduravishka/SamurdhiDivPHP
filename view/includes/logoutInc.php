@@ -5,7 +5,7 @@
 ?>
 
 <?php 
-	$user_login=new Login();
+	$user_login=Login::getInstance();
 	$user_login->logOut();
 
  ?>
