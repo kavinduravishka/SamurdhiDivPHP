@@ -1,10 +1,12 @@
 <?php  require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/officer1DB/reportDB.class.php"); ?>
-<?php  //require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/ireport.php"); ?>
-<?php require_once(__DIR__."/../ireport.php");?>
+<?php  //require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/ireport.php"); 
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/reportContr/ireport.php");?>
 
 <?php
 
 class BCReport implements Report {
+
+   public function printReport($data){}
 
 public function createBCRYatigaha(){
 
@@ -223,6 +225,11 @@ public function createBCRYatigaha(){
 
   }
  
+
+  // public function printReport($data){
+  //   $adaptee->printReport($data);
+
+  // }
 }
 
 
