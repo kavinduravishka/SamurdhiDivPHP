@@ -51,7 +51,6 @@ header {
   left: 0;
   right: 0;
   top: 0;
-  z-index: 999;
 }
 header .appname {
   float: left;
@@ -71,7 +70,7 @@ header .loggedin a {
 
 main {
   width: 1000px;
-  margin: 10px auto;
+  margin: 30px auto;
 }
 main h1 {
   margin-bottom: 20px;
@@ -119,6 +118,7 @@ form.userform button {
   margin: 0 10px 0 10px;
 }
 
+/*sidebar*/
 .sidebar {
   background: #2f323a;
   margin-top: 50px;
@@ -167,7 +167,7 @@ label #sidebar_btn {
   padding-left: 45px;
   cursor: pointer;
   font-size: 20px;
-  margin: 5px 0;
+  /* margin: 5px 0; */
   transition: 0.1s;
   transition-property: color;
 }
@@ -189,19 +189,9 @@ label #sidebar_btn:hover {
   width: 80px;
 }
 
-.officer1-dashboard {
-  margin-top: 70px;
-  margin-left: 230px;
-  background: url(b.jpg) no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
-  transition: 0.5s;
-}
-
 main {
   margin-top: 70px;
-  margin-left: 40px;
+  margin-left: 230px;
   background: url(b.jpg) no-repeat;
   background-position: center;
   background-size: cover;
@@ -217,5 +207,5 @@ main {
   display: none;
 }
 .maincontainer {
-  margin-left: 10px;
+  margin-left: 70px;
 }

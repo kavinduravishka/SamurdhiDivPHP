@@ -1,4 +1,4 @@
-<?php session_start();?>
+<?php //session_start();?>
 <?php 
    
     //require_once("../contr/login.class.php");
@@ -32,8 +32,8 @@
                 
                 case 'officer1' :
                     header('Location: http://localhost/SamurdhiDivPHP/view/officer1View/beneficiariesView.php');
-                    $_SESSION['dashboard']='officer1-dashboard.index.php';
-                    $_SESSION['logged_in']='1';
+                    // $_SESSION['dashboard']='officer1-dashboard.index.php';
+                    // $_SESSION['logged_in']='1';
                     
                     break;
 

@@ -3,12 +3,10 @@
 ?>
 
 
-
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Users</title>
+	<title>Samurdhi Division</title>
 	<link rel="shortcut icon" href="../images/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/main.css">
 	 <!-- <link rel="stylesheet" type="text/css" href="/css/styles/navbar.css" > -->
@@ -17,39 +15,30 @@
 </head>
 <body>
 	 <?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/header.inc.php"); ?>
-	 <?php //require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/include/sidebar.inc.php"); ?>
+	 <?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/include/sidebar.inc.php"); ?>
 
-	 <?php 
-    	// $navpaths=array("Dashboard"=>"officer1-dashboard.index.php");
-		// require_once("../include/navbar.inc.php");
-	?>
 	
-	<center>
+	
 		<main>
 		<div class="maincontainer" >
+		<center><h1>Beneficiaries  <span ><a href="beneficiariesView.php" style="text-decoration: none;">Refresh</a></span></h1></center>
 		
-		<h1>Beneficiaries  <span><a href="beneficiariesView.php">Refresh</a></span></h1>
+		<center>
 		<div class="search">
 			<form action="beneficiariesView.php" method="get">
 				<p><input type="text" name = "search" id="" placeholder="Type Full Name  or NIC and Press Enter" value="<?php echo $search; ?>"></p>
 			</form>
 		</div>
+		</center>
 		<table class="masterlist">
 			<tr><th>Serial No</th><th>Divisional Secretariat</th><th>Bank Zonal</th><th>G.N Division</th><th>G.N_Code Mapping</th><th>Householder Name</th><th>Address</th><th>NIC</th><th>No.of Family Members</th><th>BankAccount No</th><th>Relief Amount</th><th>Starting Year</th><th>Edit</th><th>Delete</th></tr>
 			<?php
-			// $officer1 = new officer1();
-			// if(isset($_GET['search'])){
-			// 	 $search = $_GET['search'];
-			// 	 $officer1->searchBeneficiary($search);
-			// }else{
-			// 	 $officer1->showBeneficiaries();
-			// }
-			// unset($officer1);
 				echo $beneficiaryList;
 			 ?>
 		</table>
+		</div>
 	</main>
-	</center>
+	
 	
 	
 	
