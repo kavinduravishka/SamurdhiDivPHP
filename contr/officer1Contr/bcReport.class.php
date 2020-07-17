@@ -226,10 +226,11 @@ public function createBCRYatigaha(){
   }
  
 
-  // public function printReport($data){
-  //   $adaptee->printReport($data);
+  public function printReport($data){
+  
+  $adaptee->printReport($data);
 
-  // }
+  }
 }
 
 
