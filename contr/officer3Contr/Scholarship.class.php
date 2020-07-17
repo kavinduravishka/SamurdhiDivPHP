@@ -1,8 +1,12 @@
 <?php
 
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\model\officer3DB\ScholarDB.class.php");
+
 class Scholarship{
 
-	private function __construct(){}
+	private function __construct(){
+		$this->scholar=new ScholarDB();
+	}
 
 	public static function getInstance()
     {
@@ -14,6 +18,14 @@ class Scholarship{
         return self::$instance;
     }
 
+
+
+    public function ScholarWrite($data){
+    	$this->scholar->write($data);
+    }
+
 }
+
+
 
 ?>

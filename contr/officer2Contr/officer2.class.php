@@ -38,9 +38,9 @@ class Officer2 {
         //$this->LottaryFund->FundWrite($data,$NIC);
     }
     
-    public function MFreleaseWrite($data){
+    public function MFreleaseReport(){
         $manfun=MandatoryFund::getInstance();
-        $manfun->ReleaseWrite($data);
+        $manfun->ReleaseReport();
     }
 
     public function MFrequestWrite($data){

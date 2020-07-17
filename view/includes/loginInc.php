@@ -39,7 +39,7 @@
 
                 case 'officer2':
                     header('Location: officer2-dashboard.index.php');
-                    $_SESSION['dashboard']='officer2-dashboard.index.php';
+                    $_SESSION['dashboard']='officer2-dashboardView.php';
                     $_SESSION['logged_in']='1';
                     //$_SESSION['user_name']='officer2';
                     
@@ -47,7 +47,7 @@
 
                 case 'officer3':
                     header('Location: officer3-dashboard.index.php');
-                    $_SESSION['dashboard']='officer3-dashboard.index.php';
+                    $_SESSION['dashboard']='officer3-dashboardView.php';
                     $_SESSION['logged_in']='1';
                     //$_SESSION['user_name']='officer3';
                     

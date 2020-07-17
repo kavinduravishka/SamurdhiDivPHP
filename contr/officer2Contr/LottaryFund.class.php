@@ -19,7 +19,7 @@ class LottaryFund{
     }
 
 	public function FundSearch($NIC){
-		$this->LFRec->search($NIC);
+		$this->LFRec->find($NIC);
 	}
 
 	public function FundWrite($data){
