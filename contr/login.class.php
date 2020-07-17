@@ -5,7 +5,11 @@
 //require_once("../model/loginDB.class.php");
 require_once(__DIR__."/../model/loginDB.class.php");
 
+<<<<<<< HEAD
+require_once(__DIR__."/officerBase/officerBase.class.php");
+=======
 //require_once(__DIR__."/officerBase/officerBase.class.php");
+>>>>>>> 54e99f518c6b974d5dd5e5048ee8d0f442b074f9
 
 class Login {
 

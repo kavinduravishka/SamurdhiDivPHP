@@ -16,7 +16,7 @@
 	$NIC='';
 	$No_of_Family_Members='';
 	$Bank_Account_No='';
-	$Relief_Account='';
+	$Relief_Ammount='';
 	$Starting_Year='';
 
 
@@ -32,12 +32,12 @@
 		$NIC = $_POST['NIC'];
 		$No_of_Family_Members = $_POST['No_of_Family_Members'];
 		$Bank_Account_No = $_POST['Bank_Account_No'];
-		$Relief_Account = $_POST['Relief_Account'];
+		$Relief_Ammount = $_POST['Relief_Ammount'];
 		$Starting_Year = $_POST['Starting_Year'];
 
 
 		//checking requiured fields
-		$req_field = array('Divisional_Secretariat','Bank_Zonal','GN_Division','GN_Code_Mapping','Householder_Name', 'Address','NIC','No_of_Family_Members','Bank_Account_No','Relief_Account','Starting_Year');
+		$req_field = array('Divisional_Secretariat','Bank_Zonal','GN_Division','GN_Code_Mapping','Householder_Name', 'Address','NIC','No_of_Family_Members','Bank_Account_No','Relief_Ammount','Starting_Year');
 		foreach ($req_field as $field) {
 			if(empty(trim($_POST[$field]))){
 				$errors[] = $field . " is required";
@@ -45,7 +45,7 @@
 		}
 
 		//checking max length
-		$max_len_field = array('Divisional_Secretariat'=> 100,'Bank_Zonal'=> 100,'GN_Division'=>100,'GN_Code_Mapping'=>100,'Householder_Name'=>100, 'Address'=>100,'NIC'=>15,'No_of_Family_Members'=>30,'Bank_Account_No'=>50,'Relief_Account'=>200);
+		$max_len_field = array('Divisional_Secretariat'=> 100,'Bank_Zonal'=> 100,'GN_Division'=>100,'GN_Code_Mapping'=>100,'Householder_Name'=>100, 'Address'=>100,'NIC'=>15,'No_of_Family_Members'=>30,'Bank_Account_No'=>50,'Relief_Ammount'=>200);
 		foreach ($max_len_field as $field => $max_len) {
 			if(strlen(trim($_POST[$field]))>$max_len){
 				$errors[] = $field . ' must be less than ' . $max_len . 'characters';
@@ -56,7 +56,7 @@
 			//no error found.. adding new record
 			
 			$officer1 = new Officer1();
-			$officer1->addBeneficiary($Divisional_Secretariat,$Bank_Zonal,$GN_Division,$GN_Code_Mapping,$Householder_Name,$Address,$NIC,$No_of_Family_Members,$Bank_Account_No,$Relief_Account,$Starting_Year);
+			$officer1->addBeneficiary($Divisional_Secretariat,$Bank_Zonal,$GN_Division,$GN_Code_Mapping,$Householder_Name,$Address,$NIC,$No_of_Family_Members,$Bank_Account_No,$Relief_Ammount,$Starting_Year);
 
 		}else{
             $errors[] = 'Faild to add new record';	
