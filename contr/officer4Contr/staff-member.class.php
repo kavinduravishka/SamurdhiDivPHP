@@ -61,6 +61,7 @@ class StaffMember{
     
     public function addMember(){
         (new StaffMemberDB())->addMember($this->nic_number, $this->name , $this->designation , $this->service ,$this->date_appointed ,$this->date_of_birth ,$this->date_of_pension ,$this->w_op_number, $this->member_type);
+        //(new StaffMemberDB())->addSalaryRecord($this->nic_number, $this->name ,$this->date_appointed ,$this->salary);
         header('Location: http://localhost/SamurdhiDivPHP/view/officer4View/personal-filesView.php?member_added=true');
 
     }

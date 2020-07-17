@@ -6,7 +6,6 @@ abstract class officerBase{
 
 	private $sessionData = new SData();
 
-
 }
 
 ?>

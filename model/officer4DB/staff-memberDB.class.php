@@ -24,6 +24,7 @@ class StaffMemberDB extends Dbh{
         
     }
 
+
     public function updateMember($nic_number, $name , $designation , $service ,$date_appointed ,$date_of_birth ,$date_of_pension ,$w_op_number, $member_type,$member_id){
         $sql="UPDATE personalfile SET nic_number=?,name=?,designation=?,service=?,date_appointed=?,date_of_birth=?,date_of_pension=?,w_op_number=?, member_type=? WHERE member_id=?";
         $stmt=$this->connect()->prepare($sql);

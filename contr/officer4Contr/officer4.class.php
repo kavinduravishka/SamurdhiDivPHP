@@ -20,11 +20,14 @@ class Officer4 {
     }
 
     public function addLetterRecord($name,$date,$particulars,$punishment,$ref){
-
+        $nic=$this->findNIC($name);
+        (new Officer4DB())->addLetterRecord($nic,$name,$date,$particulars,$punishment,$ref);
+        header('Location: http://localhost/SamurdhiDivPHP/view/officer4View/personal-filesView.php?letter_record_added=true');
     }
 
     public function findNIC($name){
-        
+        $NIC=(new Officer4DB())->findNIC($name);
+        return $NIC;        
     }
 
     

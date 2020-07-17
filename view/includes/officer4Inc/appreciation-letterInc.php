@@ -31,8 +31,8 @@ if(isset($_POST['submit'])){
     }
 
     if(empty($errors)){
-        $sMember=new StaffMember($nic_number,$name,$designation,$service,$date_appointed,$date_of_birth,$date_of_pension,$w_op_number,$member_type);
-        $sMember->addMember();
+        $user=new Officer4();
+        $user->addLetterRecord($name,$date,$particulars,$punishment,$ref);
     }
     else{
         $errors[]='Failed to add the new entry.';
