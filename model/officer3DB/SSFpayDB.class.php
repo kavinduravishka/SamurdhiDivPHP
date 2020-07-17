@@ -1,7 +1,12 @@
 <?php
-require_once("../dbh.class.php");
+require_once("../dbbase.class.php");
 
-class SSFpayDB extends Dbh{
+class SSFpayDB extends Dbbase{
+
+	public function write(){
+		
+	}
+	
 	
 }
 
