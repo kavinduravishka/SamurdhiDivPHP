@@ -1,8 +1,8 @@
 <?php session_start(); ?>
 
 
-<?php require_once("../include/islogged.inc.php");
-    checklogged("officer3");
+<?php //require_once("../include/islogged.inc.php");
+    //checklogged("officer3");
  ?>
 
 <html>
@@ -18,7 +18,9 @@
 </head>
 
 <body>
-	<?php require_once("../include/header.inc.php"); ?>
+	<?php //require_once("../include/header.inc.php"); 
+	require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/header.inc.php");
+	?>
 
 
 	<main >
