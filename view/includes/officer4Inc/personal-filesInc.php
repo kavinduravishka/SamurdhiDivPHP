@@ -11,7 +11,7 @@
     //     header('Location: login.php');
     // }
 
-    $user=new Officer4();
+    $user=Officer4::getInstance();
     $search='';
     if (isset($_GET['search'])){
         

@@ -31,7 +31,7 @@ if(isset($_POST['submit'])){
     }
 
     if(empty($errors)){
-        $user=new Officer4();
+        $user=Officer4::getInstance();
         $user->addLetterRecord($name,$date,$particulars,$punishment,$ref);
     }
     else{
