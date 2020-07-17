@@ -61,7 +61,7 @@
 			// email address is already sanitize
 			// $hashed_password = sha1($password);
 
-			$officer1 = new Officer1();
+			$officer1 = Officer1::getInstance();
 			$officer1->updateBeneficiary($Bank_Zonal,$GN_Division,$Address,$Bank_Account_No,$errors,$Serial_No);
 			// unset($officer1);
 		}

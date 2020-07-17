@@ -16,7 +16,7 @@
 
 		$Serial_No = $_GET['Serial_No'];
 
-		$officer1 = new Officer1();
+		$officer1 = Officer1::getInstance();
 		$officer1->deleteBeneficiary($Serial_No);
 	} else {
 		header('Location: http://localhost/SamurdhiDivPHP/view/officer1View/beneficiariesView.php');
