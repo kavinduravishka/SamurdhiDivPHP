@@ -8,7 +8,7 @@
 
 	$search = '';
 
-	$officer1 = new Officer1();
+	$officer1 = Officer1::getInstance();
 		if(isset($_GET['search'])){
 			$search = $_GET['search'];
 			$beneficiaryList = $officer1->searchBeneficiary($search);

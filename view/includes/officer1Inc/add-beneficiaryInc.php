@@ -55,7 +55,7 @@
 		if(empty($errors)){
 			//no error found.. adding new record
 			
-			$officer1 = new Officer1();
+			$officer1 = Officer1::getInstance();
 			$officer1->addBeneficiary($Divisional_Secretariat,$Bank_Zonal,$GN_Division,$GN_Code_Mapping,$Householder_Name,$Address,$NIC,$No_of_Family_Members,$Bank_Account_No,$Relief_Ammount,$Starting_Year);
 
 		}else{

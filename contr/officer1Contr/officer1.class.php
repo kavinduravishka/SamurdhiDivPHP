@@ -8,8 +8,24 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\model\officer1
     
     class Officer1{
 
+		private static $instance = null;
+  
+
+  		private function __construct(){}
+ 
+ 
+        public static function getInstance()
+       {
+       		if (self::$instance == null)
+    		{
+      			self::$instance = new Officer1();
+    		}
+ 
+    		return self::$instance;
+  		}
+
         public function loadBeneficiaries(){
-            $beneficiaries = (new Officer1DB())->loadBeneficiaries();
+            $beneficiaries = (Officer1DB::getInstance())->loadBeneficiaries();
             $user_list = "";
 			foreach ($beneficiaries as $beneficiary) {
 				$user_list .= "<tr>";
@@ -33,7 +49,7 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\model\officer1
         }
 
         public function searchBeneficiary($search){
-            $beneficiaries = (new Officer1DB())->searchBeneficiary($search);
+            $beneficiaries = (Officer1DB::getInstance())->searchBeneficiary($search);
             $b_list = "";
 				foreach($beneficiaries as $row){
 					$b_list .= "<tr>";
@@ -60,15 +76,15 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\model\officer1
         
 
         public function addBeneficiary($Divisional_Secretariat,$Bank_Zonal,$GN_Division,$GN_Code_Mapping,$Householder_Name,$Address,$NIC,$No_of_Family_Members,$Bank_Account_No,$Relief_Account,$Starting_Year){
-            (new Officer1DB())->addBeneficiary($Divisional_Secretariat,$Bank_Zonal,$GN_Division,$GN_Code_Mapping,$Householder_Name,$Address,$NIC,$No_of_Family_Members,$Bank_Account_No,$Relief_Account,$Starting_Year,$errors);
+            (Officer1DB::getInstance())->addBeneficiary($Divisional_Secretariat,$Bank_Zonal,$GN_Division,$GN_Code_Mapping,$Householder_Name,$Address,$NIC,$No_of_Family_Members,$Bank_Account_No,$Relief_Account,$Starting_Year,$errors);
         }
 
         public function updateBeneficiary($Bank_Zonal,$GN_Division,$Address,$Bank_Account_No,$errors,$Serial_No){
-            (new Officer1DB())->updateBeneficiary($Bank_Zonal,$GN_Division,$Address,$Bank_Account_No,$errors,$Serial_No);
+            (Officer1DB::getInstance())->updateBeneficiary($Bank_Zonal,$GN_Division,$Address,$Bank_Account_No,$errors,$Serial_No);
         }
 
         public function deleteBeneficiary($Serial_No){
-            (new Officer1DB())->deleteBeneficiary($Serial_No);
+            (Officer1DB::getInstance())->deleteBeneficiary($Serial_No);
         }
     }
 

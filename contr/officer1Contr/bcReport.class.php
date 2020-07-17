@@ -1,8 +1,10 @@
 <?php  require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/officer1DB/reportDB.class.php"); ?>
+<?php  //require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/ireport.php"); ?>
+<?php require_once(__DIR__."/../ireport.php");?>
 
 <?php
 
-class Report{
+class BCReport implements Report {
 
 public function createBCRYatigaha(){
 
