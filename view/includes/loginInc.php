@@ -39,7 +39,7 @@
 
                 case 'officer2':
                     //header('Location: '.realpath($_SERVER["DOCUMENT_ROOT"].'/SamurdhiDivPHP/view/officer2view/officer2-dashboard.index.php'));
-                    header('Location: http://localhost/SamurdhiDivPHP/view/officer2view/officer2-dashboard.index.php');
+                    header('Location: http://localhost/SamurdhiDivPHP/view/officer2view/officer2-dashboardView.php');
                     //$_SESSION['dashboard']='officer2-dashboardView.php';
                     //$_SESSION['logged_in']='1';
                     //$_SESSION['user_name']='officer2';
@@ -48,7 +48,7 @@
 
                 case 'officer3':
                     //header('Location: '.realpath($_SERVER["DOCUMENT_ROOT"].'/SamurdhiDivPHP/view/officer3view/officer3-dashboard.index.php'));
-                    header('Location: http://localhost/SamurdhiDivPHP/view/officer3view/officer3-dashboard.index.php');
+                    header('Location: http://localhost/SamurdhiDivPHP/view/officer3view/officer3-dashboardView.php');
                     //$_SESSION['dashboard']='officer3-dashboardView.php';
                     //$_SESSION['logged_in']='1';
                     //$_SESSION['user_name']='officer3';
