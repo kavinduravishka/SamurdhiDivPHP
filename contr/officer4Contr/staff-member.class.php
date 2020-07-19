@@ -41,7 +41,7 @@ class StaffMember{
         $w_op_number='';
         $member_type='';
 
-        $members=(new StaffMemberDB())->getMember($member_id);
+        $members=(StaffMemberDB::getInstance())->getMember($member_id);
 
         foreach($members as $member){
             $nic_number=$member['nic_number'];
@@ -60,20 +60,20 @@ class StaffMember{
 
     
     public function addMember(){
-        (new StaffMemberDB())->addMember($this->nic_number, $this->name , $this->designation , $this->service ,$this->date_appointed ,$this->date_of_birth ,$this->date_of_pension ,$this->w_op_number, $this->member_type);
+        (StaffMemberDB::getInstance())->addMember($this->nic_number, $this->name , $this->designation , $this->service ,$this->date_appointed ,$this->date_of_birth ,$this->date_of_pension ,$this->w_op_number, $this->member_type);
         //(new StaffMemberDB())->addSalaryRecord($this->nic_number, $this->name ,$this->date_appointed ,$this->salary);
         header('Location: http://localhost/SamurdhiDivPHP/view/officer4View/personal-filesView.php?member_added=true');
 
     }
 
     public function updateMember($member_id){
-        (new StaffMemberDB())->updateMember($this->nic_number, $this->name , $this->designation , $this->service ,$this->date_appointed ,$this->date_of_birth ,$this->date_of_pension ,$this->w_op_number, $this->member_type,$member_id);
+        (StaffMemberDB::getInstance())->updateMember($this->nic_number, $this->name , $this->designation , $this->service ,$this->date_appointed ,$this->date_of_birth ,$this->date_of_pension ,$this->w_op_number, $this->member_type,$member_id);
         header('Location: http://localhost/SamurdhiDivPHP/view/officer4View/personal-filesView.php?member_modified=true');
 
     }
 
     public static function removeMember($member_id){
-        (new StaffMemberDB())->removeMember($member_id);
+        (StaffMemberDB::getInstance())->removeMember($member_id);
 
     }
     

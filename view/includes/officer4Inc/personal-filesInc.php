@@ -21,6 +21,6 @@
     else{
         $personalfile_list=$user->loadPersonalFiles();
     }
-    unset($user);
+    
 
 ?>

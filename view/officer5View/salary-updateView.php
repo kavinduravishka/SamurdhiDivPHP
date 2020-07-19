@@ -34,7 +34,7 @@
     <div class="search">
         <form action="salary-updateView.php" method="get">
             <p>
-            <input type="text" name="search" id="" placeholder="Type NIC or Name and Press Enter" value="<?php echo $search?>" autofocus required>
+            <input type="text" name="search" id="" placeholder="Type Emp No or Name and Press Enter" value="<?php echo $search?>" autofocus required>
             </p>
         </form>
     </div>
@@ -43,11 +43,11 @@
             <center><table class="personalfile_list">
 
                 <tr>
-                    <th>NIC Number</th>
+                    <th>Emp No</th>
                     <th>Name</th>
-                    <th>Date of Appointment</th>
-                    <th>Salary</th>
-                    <th>Add Increment</th>
+                    <th>Designation</th>
+                    <th>Modify</th>
+                    <th>Delete</th>
                 </tr>
 
                 <?php echo $salary_record ?>

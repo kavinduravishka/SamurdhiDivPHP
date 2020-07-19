@@ -1,4 +1,4 @@
-<?php session_start();?>
+<?php //session_start();?>
 <?php 
    
     //require_once("../contr/login.class.php");
@@ -7,6 +7,7 @@
 ?>
 <?php
     if(isset($_POST['submit'])){
+        session_start();
 
         
         $errors=array();
@@ -63,9 +64,9 @@
                     break;
 
                 case 'officer5':
-                    header('Location: officer5.index.php');
-                    $_SESSION['dashboard']='officer5.index.php';
-                    $_SESSION['logged_in']='1';
+                    header('Location: http://localhost/SamurdhiDivPHP/view/officer5View/salary-updateView.php');
+                    //$_SESSION['dashboard']='officer5.index.php';
+                    //$_SESSION['logged_in']='1';
                     //$_SESSION['user_name']='officer5';
                 
                 default:
