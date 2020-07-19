@@ -226,6 +226,20 @@ main h1 span {
     border-radius: 10px;
 }
 
+#cal{
+    height: 30px;
+    width: 100px;
+}
+
+#nums{
+    width: 20%;
+}
+
+#sub_lbl{
+    margin-left: 20px;
+    margin-right: -20px;
+}
+
 .memberform button:hover
 {
     background: #838377;

@@ -5,6 +5,18 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\model\dbh.clas
 
 class StaffMemberDB extends Dbh{
 
+    private static $instance = null;
+
+    private function __construct(){}
+
+    public static function getInstance(){
+        if (self::$instance == null){
+        self::$instance = new StaffMemberDB();
+        }
+    
+        return self::$instance;
+    }
+
     public static function getMember($member_id){
         $member_id=(int)$member_id;
         $sql="SELECT * FROM personalfile WHERE member_id=?";

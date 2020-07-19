@@ -11,7 +11,7 @@
     //     header('Location: login.php');
     // }
 
-    $user=new Officer5();
+    $user=Officer5::getInstance();
     $search='';
     if (isset($_GET['search'])){
         
@@ -19,8 +19,8 @@
 
     }
     else{
-        $salary_record=null;
+        $salary_record=$user->loadSalaryFiles();
     }
-    unset($user);
+    
 
 ?>
