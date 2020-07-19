@@ -39,7 +39,7 @@
         <form action="add-salaryprofileView.php" method="post" class="memberform" >
 
             
-        <p>
+            <p>
                 <label for="">Emp No:</label>
                 <input type="text" name="emp_no" id="nums" <?php echo 'value="' .$emp_no.'"';?>>            
             </p>
@@ -50,6 +50,19 @@
             <p>
                 <label for="">Designation:</label>
                 <input type="text" name="designation" <?php echo 'value="' .$designation.'"';?> >            
+            </p>
+            <p>
+                <label for="">Bank of the account:</label>
+                <select name="bank" >
+                    <option value="boc">Bank Of Ceylon(BOC)</option>
+                    <option value="nsb">National Savings Bank(NSB)</option>
+                    <option value="peoples">Peoples Bank</option>
+                </select>
+                      
+            </p>
+            <p>
+                <label for="">Bank Account Number:</label>
+                <input type="text" name="acc_no" id="nums" <?php echo 'value="' .$acc_no.'"';?> >            
             </p>
             <p><b>Earnings</b></p>
             <p>

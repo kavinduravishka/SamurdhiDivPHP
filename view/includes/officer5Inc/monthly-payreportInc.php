@@ -10,6 +10,8 @@
     
     $errors=array();
 
+    $month='';
+    $description='';
     $emp_no='';
     $name='';
     $designation='';
@@ -19,6 +21,7 @@
     $interim_allo='';
     $language_allo='';
     $living_cost='';
+    $gross_pay='';
     $w_op='';
     $agrahara='';
     $stamp='';
@@ -33,6 +36,7 @@
         $emp_no=$_GET['emp_no'];        
         $req_profile=Officer5::getSalaryProfile($emp_no);
         extract($req_profile);
+        
         
         
     }
@@ -51,15 +55,19 @@
         $interim_allo=$_POST['interim_allo'];
         $language_allo=$_POST['language_allo'];
         $living_cost=$_POST['living_cost'];
+        $gross_pay=$_POST['gross_pay'];
         $w_op=$_POST['w_op'];
         $agrahara=$_POST['agrahara'];
         $stamp=$_POST['stamp'];
         $union=$_POST['union'];
         $other_loan=$_POST['other_loan'];
         $special_advance=$_POST['special_advance'];
-        //$net_pay=$_POST['name'];
+        $net_pay=$_POST['net_pay'];
 
-        $req_fields=array('emp_no','name','designation','bank','acc_no','basic_salary','interim_allo','language_allo','living_cost','w_op','agrahara','stamp','union','other_loan','special_advance');
+        $month=$_POST['month'];
+        $description=$_POST['description'];
+
+        $req_fields=array('month','description');
 
         foreach ($req_fields as $field){
             if(empty(trim($_POST[$field]))){
@@ -69,10 +77,10 @@
       
         if(empty($errors)){
             $officer= Officer5::getInstance();
-            $officer->modifySalaryProfile($emp_no, $name,$designation,$bank,$acc_no,$basic_salary,$interim_allo,$language_allo,$living_cost,$w_op,$agrahara,$stamp,$union,$other_loan,$special_advance);
+            $officer->savePayReportRequest($emp_no, $name,$month,$description);
         }
         else{
-            $errors[]='Failed to modify the entry.';
+            $errors[]='Failed to add the entry.';
         }            
              
             

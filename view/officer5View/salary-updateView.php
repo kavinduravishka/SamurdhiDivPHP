@@ -48,6 +48,7 @@
                     <th>Designation</th>
                     <th>Modify</th>
                     <th>Delete</th>
+                    <th>PayReport</th>
                 </tr>
 
                 <?php echo $salary_record ?>

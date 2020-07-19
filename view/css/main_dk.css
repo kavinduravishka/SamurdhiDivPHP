@@ -226,18 +226,29 @@ main h1 span {
     border-radius: 10px;
 }
 
+.memberform select{
+    width: 21%;
+    padding: 3px;
+}
+
 #cal{
     height: 30px;
     width: 100px;
 }
 
 #nums{
-    width: 20%;
+    width: 10%;
+}
+
+#enums{
+    width: 10%;
+    margin-left: 149px;
 }
 
 #sub_lbl{
     margin-left: 20px;
-    margin-right: -20px;
+    margin-right: 5px;
+    width: 30%;
 }
 
 .memberform button:hover

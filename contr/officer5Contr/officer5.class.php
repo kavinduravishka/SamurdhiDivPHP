@@ -17,9 +17,9 @@ class Officer5 {
         return self::$instance;
     }
 
-    public function addSalaryProfile($emp_no, $name,$designation,$basic_salary,$interim_allo,$language_allo,$living_cost,$w_op,$agrahara,$stamp,$union,$other_loan,$special_advance){
+    public function addSalaryProfile($emp_no, $name,$designation,$bank,$acc_no,$basic_salary,$interim_allo,$language_allo,$living_cost,$w_op,$agrahara,$stamp,$union,$other_loan,$special_advance){
         $net_pay=$basic_salary+$interim_allo+$living_cost+$language_allo-$w_op-$agrahara-$stamp-$union-$other_loan-$special_advance;
-        (Officer5DB::getInstance())->addSalaryProfile($emp_no, $name,$designation,$basic_salary,$interim_allo,$language_allo,$living_cost,$w_op,$agrahara,$stamp,$union,$other_loan,$special_advance,$net_pay);
+        (Officer5DB::getInstance())->addSalaryProfile($emp_no, $name,$designation,$bank,$acc_no,$basic_salary,$interim_allo,$language_allo,$living_cost,$w_op,$agrahara,$stamp,$union,$other_loan,$special_advance,$net_pay);
         header('Location: http://localhost/SamurdhiDivPHP/view/officer5View/salary-updateView.php?salary_profile_added=true');
 
     }
@@ -49,6 +49,8 @@ class Officer5 {
         //$emp_no=int($emp_no);
         $name='';
         $designation='';
+        $bank='';
+        $acc_no='';
         $basic_salary='';
         $interim_allo='';
         $language_allo='';
@@ -68,26 +70,30 @@ class Officer5 {
             $emp_no=$member['emp_no'];
             $name=$member['name'];
             $designation=$member['designation'];
+            $bank=$member['bank'];
+            $acc_no=$member['acc_no'];
             $basic_salary=$member['basic_salary'];
             $interim_allo=$member['interim_allo'];
             $language_allo=$member['language_allo'];
             $living_cost=$member['living_cost'];
+            $gross_pay=$basic_salary+$interim_allo+$language_allo+$living_cost;
             $w_op=$member['w_op'];
             $agrahara=$member['agrahara'];
             $stamp=$member['stamp_value'];
             $union=$member['union_value'];
             $other_loan=$member['other_loan'];
             $special_advance=$member['special_advance'];
-            $net_pay=$member['net_pay'];            
+            $net_pay=$member['net_pay'];
+                        
         }
 
-        return compact('emp_no', 'name','designation','basic_salary','interim_allo','language_allo','living_cost','w_op','agrahara','stamp','union','other_loan','special_advance','net_pay');
+        return compact('emp_no', 'name','designation','bank','acc_no','basic_salary','interim_allo','language_allo','living_cost','gross_pay','w_op','agrahara','stamp','union','other_loan','special_advance','net_pay');
         
     }
 
-    public function modifySalaryProfile($emp_no, $name,$designation,$basic_salary,$interim_allo,$language_allo,$living_cost,$w_op,$agrahara,$stamp,$union,$other_loan,$special_advance){
+    public function modifySalaryProfile($emp_no, $name,$designation,$bank,$acc_no,$basic_salary,$interim_allo,$language_allo,$living_cost,$w_op,$agrahara,$stamp,$union,$other_loan,$special_advance){
         $net_pay=$basic_salary+$interim_allo+$living_cost+$language_allo-$w_op-$agrahara-$stamp-$union-$other_loan-$special_advance;
-        (Officer5DB::getInstance())->modifySalaryProfile($emp_no, $name,$designation,$basic_salary,$interim_allo,$language_allo,$living_cost,$w_op,$agrahara,$stamp,$union,$other_loan,$special_advance,$net_pay);
+        (Officer5DB::getInstance())->modifySalaryProfile($emp_no, $name,$designation,$bank,$acc_no,$basic_salary,$interim_allo,$language_allo,$living_cost,$w_op,$agrahara,$stamp,$union,$other_loan,$special_advance,$net_pay);
         header('Location: http://localhost/SamurdhiDivPHP/view/officer5View/salary-updateView.php?salary_profile_modified=true');
     }
 

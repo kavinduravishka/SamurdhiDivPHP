@@ -22,7 +22,7 @@
 	
 
     <main>
-        <h1>Add Salary Profile</h1>
+        <h1>Modify Salary Profile</h1>
         
         <?php 
             if(!empty($errors)){
@@ -50,6 +50,31 @@
             <p>
                 <label for="">Designation:</label>
                 <input type="text" name="designation" <?php echo 'value="' .$designation.'"';?> >            
+            </p>
+
+            <script>
+            function setSelectedIndex(s, valsearch){
+                for (i = 0; i< s.options.length; i++){ 
+                    if (s.options[i].value == valsearch){
+                        s.options[i].selected = true;
+                        break;
+                    }
+                }
+                return;
+            }
+            setSelectedIndex(document.getElementById("bank"),$bank);
+            </script>
+            <p>
+                <label for="">Bank of the account:</label>
+                <select id="bank" name="bank" >
+                    <option value="boc">Bank Of Ceylon(BOC)</option>
+                    <option value="nsb">National Savings Bank(NSB)</option>
+                    <option value="peoples">Peoples Bank</option>
+                </select>            
+            </p>
+            <p>
+                <label for="">Bank Account Number:</label>
+                <input type="text" name="acc_no" id="nums" <?php echo 'value="' .$acc_no.'"';?> >            
             </p>
             <p><b>Earnings</b></p>
             <p>

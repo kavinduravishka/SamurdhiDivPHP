@@ -31,6 +31,7 @@ class Officer5DB extends Dbh{
             $salary_record.="<td>{$member['designation']}</td>";
             $salary_record.="<td><a href=\"modify-salaryprofileView.php?emp_no={$member['emp_no']}\">Modify</a></td>";
             $salary_record.="<td><a href=\"delete-salaryprofileInc.php?emp_no={$member['emp_no']}\" onclick=\"return confirm('Are you sure?');\">Delete</a></td>";
+            $salary_record.="<td><a href=\"monthly-payreportView.php?emp_no={$member['emp_no']}\">PayReport</a></td>";
             $salary_record.="</tr>";
         }
         return $salary_record;        
@@ -48,6 +49,7 @@ class Officer5DB extends Dbh{
             $salaryprofile_list.="<td>{$row['designation']}</td>";
             $salaryprofile_list.="<td><a href=\"modify-salaryprofileView.php?emp_no={$row['emp_no']}\">Modify</a></td>";
             $salaryprofile_list.="<td><a href=\"delete-salaryprofileInc.php?emp_no={$row['emp_no']}\" onclick=\"return confirm('Are you sure?');\">Delete</a></td>";
+            $salaryprofile_list.="<td><a href=\"monthly-payreportView.php?emp_no={$row['emp_no']}\">PayReport</a></td>";
             $salaryprofile_list.="</tr>";
         }
         return $salaryprofile_list;        
@@ -61,10 +63,10 @@ class Officer5DB extends Dbh{
 
     }
     
-    public function addSalaryProfile($emp_no, $name,$designation,$basic_salary,$interim_allo,$language_allo,$living_cost,$w_op,$agrahara,$stamp,$union,$other_loan,$special_advance,$net_pay){
-        $sql="INSERT INTO salarydetails(emp_no, name,designation,basic_salary,interim_allo,language_allo,living_cost,w_op,agrahara,stamp_value,union_value,other_loan,special_advance,net_pay,is_deleted ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+    public function addSalaryProfile($emp_no, $name,$designation,$bank,$acc_no,$basic_salary,$interim_allo,$language_allo,$living_cost,$w_op,$agrahara,$stamp,$union,$other_loan,$special_advance,$net_pay){
+        $sql="INSERT INTO salarydetails(emp_no, name,designation,bank,acc_no,basic_salary,interim_allo,language_allo,living_cost,w_op,agrahara,stamp_value,union_value,other_loan,special_advance,net_pay,is_deleted ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         $stmt=$this->connect()->prepare($sql);
-        $stmt->execute([$emp_no, $name,$designation,$basic_salary,$interim_allo,$language_allo,$living_cost,$w_op,$agrahara,$stamp,$union,$other_loan,$special_advance,$net_pay,0]);
+        $stmt->execute([$emp_no, $name,$designation,$bank,$acc_no,$basic_salary,$interim_allo,$language_allo,$living_cost,$w_op,$agrahara,$stamp,$union,$other_loan,$special_advance,$net_pay,0]);
         
     }
 
@@ -79,10 +81,10 @@ class Officer5DB extends Dbh{
         return $members;
     }
 
-    public function modifySalaryProfile($emp_no, $name,$designation,$basic_salary,$interim_allo,$language_allo,$living_cost,$w_op,$agrahara,$stamp,$union,$other_loan,$special_advance,$net_pay){
-        $sql="UPDATE salarydetails SET name=?,designation=?,basic_salary=?,interim_allo=?,language_allo=?,living_cost=?,w_op=?,agrahara=?,stamp_value=?,union_value=?,other_loan=?,special_advance=?,net_pay=? WHERE emp_no=?";
+    public function modifySalaryProfile($emp_no, $name,$designation,$bank,$acc_no,$basic_salary,$interim_allo,$language_allo,$living_cost,$w_op,$agrahara,$stamp,$union,$other_loan,$special_advance,$net_pay){
+        $sql="UPDATE salarydetails SET name=?,designation=?,bank=?,acc_no=?,basic_salary=?,interim_allo=?,language_allo=?,living_cost=?,w_op=?,agrahara=?,stamp_value=?,union_value=?,other_loan=?,special_advance=?,net_pay=? WHERE emp_no=?";
         $stmt=$this->connect()->prepare($sql);
-        $stmt->execute([$name,$designation,$basic_salary,$interim_allo,$language_allo,$living_cost,$w_op,$agrahara,$stamp,$union,$other_loan,$special_advance,$net_pay,$emp_no]);
+        $stmt->execute([$name,$designation,$bank,$acc_no,$basic_salary,$interim_allo,$language_allo,$living_cost,$w_op,$agrahara,$stamp,$union,$other_loan,$special_advance,$net_pay,$emp_no]);
     }
     
     public static function removeSalaryProfile($emp_no){

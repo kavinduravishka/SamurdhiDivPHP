@@ -13,6 +13,8 @@
     $emp_no='';
     $name='';
     $designation='';
+    $bank='';
+    $acc_no='';
     $basic_salary='';
     $interim_allo='';
     $language_allo='';
@@ -26,9 +28,6 @@
     $net_pay='';
 
     if(isset($_POST['calculate'])){
-        $emp_no=$_POST['emp_no'];
-        $name=$_POST['name'];
-        $designation=$_POST['designation'];
         $basic_salary=$_POST['basic_salary'];
         $interim_allo=$_POST['interim_allo'];
         $language_allo=$_POST['language_allo'];
@@ -64,6 +63,8 @@
         $emp_no=$_POST['emp_no'];
         $name=$_POST['name'];
         $designation=$_POST['designation'];
+        $bank=$_POST['bank'];
+        $acc_no=$_POST['acc_no'];
         $basic_salary=$_POST['basic_salary'];
         $interim_allo=$_POST['interim_allo'];
         $language_allo=$_POST['language_allo'];
@@ -76,7 +77,7 @@
         $special_advance=$_POST['special_advance'];
         //$net_pay=$_POST['name'];
 
-        $req_fields=array('emp_no','name','designation','basic_salary','interim_allo','language_allo','living_cost','w_op','agrahara','stamp','union','other_loan','special_advance');
+        $req_fields=array('emp_no','name','designation','bank','acc_no','basic_salary','interim_allo','language_allo','living_cost','w_op','agrahara','stamp','union','other_loan','special_advance');
 
         foreach ($req_fields as $field){
             if(empty(trim($_POST[$field]))){
@@ -86,7 +87,7 @@
 
         if(empty($errors)){
             $officer= Officer5::getInstance();
-            $officer->addSalaryProfile($emp_no, $name,$designation,$basic_salary,$interim_allo,$language_allo,$living_cost,$w_op,$agrahara,$stamp,$union,$other_loan,$special_advance);
+            $officer->addSalaryProfile($emp_no, $name,$designation,$bank,$acc_no,$basic_salary,$interim_allo,$language_allo,$living_cost,$w_op,$agrahara,$stamp,$union,$other_loan,$special_advance);
         }
         else{
             $errors[]='Failed to add the new entry.';
