@@ -15,7 +15,7 @@ public function printReport($data){
 
 public function viewReport(){
 
-  $users = (new ReportDB())->getZonalDetails('41-Paranahalpe','Badalgama');
+  $users = (new ReportDB())->getGNDetails('41-Paranahalpe','Badalgama');
   $count_list = "";
   $t_420=0;$t_1320=0;$t_1220=0;$t_2120=0;$t_3020=0;
   $count_list .= "<tr><td>1</td><td>41 බ/පරණහල්පේ </td>";
@@ -32,7 +32,7 @@ public function viewReport(){
 
 
   
-    $users = (new ReportDB())->getZonalDetails('41A-Paranahalpe','Badalgama');
+    $users = (new ReportDB())->getGNDetails('41A-Paranahalpe','Badalgama');
   $count_list .= "<tr><td>2</td><td>41A නැ/පරණහල්පේ </td>";
   $ben_420=0;$ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
     foreach($users as $user){
@@ -45,7 +45,7 @@ public function viewReport(){
     $total2 = $ben_420+$ben_1320+$ben_1220+$ben_2120+$ben_3020;
     $count_list .= "<td>{$ben_420}</td><td>{$ben_1320}</td><td>{$ben_1220}</td><td>{$ben_2120}</td><td>{$ben_3020}</td><td>{$total2}</td></tr>";
 
-  $users = (new ReportDB())->getZonalDetails('42-Halpe','Badalgama');
+  $users = (new ReportDB())->getGNDetails('42-Halpe','Badalgama');
   $count_list .= "<tr><td>3</td><td>42 හල්පේ </td>";
   $ben_420=0;$ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
     foreach($users as $user){
@@ -59,7 +59,7 @@ public function viewReport(){
     $count_list .= "<td>{$ben_420}</td><td>{$ben_1320}</td><td>{$ben_1220}</td><td>{$ben_2120}</td><td>{$ben_3020}</td><td>{$total3}</td></tr>";
 
     
-  $users = (new ReportDB())->getZonalDetails('42A-Nariyamulla','Badalgama');
+  $users = (new ReportDB())->getGNDetails('42A-Nariyamulla','Badalgama');
   $count_list .= "<tr><td>4</td><td>42A නරියමුල්ල </td>";
   $ben_420=0;$ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
     foreach($users as $user){
@@ -73,7 +73,7 @@ public function viewReport(){
     $count_list .= "<td>{$ben_420}</td><td>{$ben_1320}</td><td>{$ben_1220}</td><td>{$ben_2120}</td><td>{$ben_3020}</td><td>{$total4}</td></tr>";
 
 
-    $users = (new ReportDB())->getZonalDetails('42B-Gurullagama','Badalgama');
+    $users = (new ReportDB())->getGNDetails('42B-Gurullagama','Badalgama');
   $count_list .= "<tr><td>5</td><td>42B ගුරුගල්ලගම</td>";
   $ben_420=0;$ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
     foreach($users as $user){
@@ -86,7 +86,7 @@ public function viewReport(){
     $total5 = $ben_420+$ben_1320+$ben_1220+$ben_2120+$ben_3020;
     $count_list .= "<td>{$ben_420}</td><td>{$ben_1320}</td><td>{$ben_1220}</td><td>{$ben_2120}</td><td>{$ben_3020}</td><td>{$total5}</td></tr>";
 
-    $users = (new ReportDB())->getZonalDetails('43-Pahala-Kithulwala','Badalgama');
+    $users = (new ReportDB())->getGNDetails('43-Pahala-Kithulwala','Badalgama');
   $count_list .= "<tr><td>6</td><td>43 පහල කිතුල්වල </td>";
   $ben_420=0;$ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
     foreach($users as $user){
@@ -99,7 +99,7 @@ public function viewReport(){
     $total6 = $ben_420+$ben_1320+$ben_1220+$ben_2120+$ben_3020;
     $count_list .= "<td>{$ben_420}</td><td>{$ben_1320}</td><td>{$ben_1220}</td><td>{$ben_2120}</td><td>{$ben_3020}</td><td>{$total6}</td></tr>";
 
-    $users = (new ReportDB())->getZonalDetails('43A-Ihala-Kithulwala','Badalgama');
+    $users = (new ReportDB())->getGNDetails('43A-Ihala-Kithulwala','Badalgama');
   $count_list .= "<tr><td>7</td><td>43A ඉහල කිතුල්වල </td>";
   $ben_420=0;$ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
     foreach($users as $user){
@@ -112,7 +112,7 @@ public function viewReport(){
     $total7 = $ben_420+$ben_1320+$ben_1220+$ben_2120+$ben_3020;
     $count_list .= "<td>{$ben_420}</td><td>{$ben_1320}</td><td>{$ben_1220}</td><td>{$ben_2120}</td><td>{$ben_3020}</td><td>{$total7}</td></tr>";
 
-    $users = (new ReportDB())->getZonalDetails('43B-Uthuru-Kithulwala','Badalgama');
+    $users = (new ReportDB())->getGNDetails('43B-Uthuru-Kithulwala','Badalgama');
   $count_list .= "<tr><td>8</td><td>43B උතුරු කිතුල්වල</td>";
   $ben_420=0;$ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
     foreach($users as $user){
@@ -125,7 +125,7 @@ public function viewReport(){
     $total8 = $ben_420+$ben_1320+$ben_1220+$ben_2120+$ben_3020;
     $count_list .= "<td>{$ben_420}</td><td>{$ben_1320}</td><td>{$ben_1220}</td><td>{$ben_2120}</td><td>{$ben_3020}</td><td>{$total8}</td></tr>";
 
-    $users = (new ReportDB())->getZonalDetails('44-Waththemulla','Badalgama');
+    $users = (new ReportDB())->getGNDetails('44-Waththemulla','Badalgama');
   $count_list .= "<tr><td>9</td><td>44 වත්තෙමුල්ල </td>";
   $ben_420=0;$ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
     foreach($users as $user){
@@ -139,7 +139,7 @@ public function viewReport(){
     $count_list .= "<td>{$ben_420}</td><td>{$ben_1320}</td><td>{$ben_1220}</td><td>{$ben_2120}</td><td>{$ben_3020}</td><td>{$total9}</td></tr>";
 
 
-    $users = (new ReportDB())->getZonalDetails('44A-Ihala-Kithulgala','Badalgama');
+    $users = (new ReportDB())->getGNDetails('44A-Ihala-Kithulgala','Badalgama');
   $count_list .= "<tr><td>10</td><td>44A ඉහල කලුඅග්ගල </td>";
   $ben_420=0;$ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
     foreach($users as $user){
@@ -153,7 +153,7 @@ public function viewReport(){
     $count_list .= "<td>{$ben_420}</td><td>{$ben_1320}</td><td>{$ben_1220}</td><td>{$ben_2120}</td><td>{$ben_3020}</td><td>{$total10}</td></tr>";
 
 
-    $users = (new ReportDB())->getZonalDetails('44B-Pahala-Kithulgala','Badalgama');
+    $users = (new ReportDB())->getGNDetails('44B-Pahala-Kithulgala','Badalgama');
   $count_list .= "<tr><td>11</td><td>44B පහල කලුඅග්ගල </td>";
   $ben_420=0;$ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
     foreach($users as $user){
@@ -167,7 +167,7 @@ public function viewReport(){
     $count_list .= "<td>{$ben_420}</td><td>{$ben_1320}</td><td>{$ben_1220}</td><td>{$ben_2120}</td><td>{$ben_3020}</td><td>{$total11}</td></tr>";
 
 
-     $users = (new ReportDB())->getZonalDetails('45-Kuligedara','Badalgama');
+     $users = (new ReportDB())->getGNDetails('45-Kuligedara','Badalgama');
   $count_list .= "<tr><td>12</td><td>45 කුලී ගෙදර </td>";
   $ben_420=0;$ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
     foreach($users as $user){
@@ -181,7 +181,7 @@ public function viewReport(){
     $count_list .= "<td>{$ben_420}</td><td>{$ben_1320}</td><td>{$ben_1220}</td><td>{$ben_2120}</td><td>{$ben_3020}</td><td>{$total12}</td></tr>";
 
 
-    $users = (new ReportDB())->getZonalDetails('46-Pahala-Madithiyawala','Badalgama');
+    $users = (new ReportDB())->getGNDetails('46-Pahala-Madithiyawala','Badalgama');
   $count_list .= "<tr><td>13</td><td>46 පහල මඩිතියවල </td>";
   $ben_420=0;$ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
     foreach($users as $user){
@@ -195,7 +195,7 @@ public function viewReport(){
     $count_list .= "<td>{$ben_420}</td><td>{$ben_1320}</td><td>{$ben_1220}</td><td>{$ben_2120}</td><td>{$ben_3020}</td><td>{$total13}</td></tr>";
 
 
-     $users = (new ReportDB())->getZonalDetails('46A-Pahala-Madithiyawala','Badalgama');
+     $users = (new ReportDB())->getGNDetails('46A-Pahala-Madithiyawala','Badalgama');
   $count_list .= "<tr><td>14</td><td>46A පහල මඩිතියවල</td>";
   $ben_420=0;$ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
     foreach($users as $user){
@@ -209,7 +209,7 @@ public function viewReport(){
     $count_list .= "<td>{$ben_420}</td><td>{$ben_1320}</td><td>{$ben_1220}</td><td>{$ben_2120}</td><td>{$ben_3020}</td><td>{$total14}</td></tr>";
 
 
-      $users = (new ReportDB())->getZonalDetails('47-Hangawaththa','Badalgama');
+      $users = (new ReportDB())->getGNDetails('47-Hangawaththa','Badalgama');
   $count_list .= "<tr><td>15</td><td>47 හඟවත්ත </td>";
   $ben_420=0;$ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
     foreach($users as $user){

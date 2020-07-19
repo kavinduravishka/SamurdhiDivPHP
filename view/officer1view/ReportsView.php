@@ -28,6 +28,8 @@
 				<li><a href="Benficiary-Count-ReportView-Kotadeniyawa.php?type=7"><span>Benificiary Count Report - Kotadeniyawa</span></a></li>
 				<li><a href="Benficiary-Count-ReportView-Walpita.php?type=8"><span>Benificiary Count Report - Walpita</span></a></li>
 				<li><a href="Benficiary-Count-ReportView-Welangana.php?type=9"><span>Benificiary Count Report - Welangana</span></a></li>
+				<li><a href="All-Beneficiary-Count-ReportView.php?type=10"><span>All Benificiary Count Report</span></a></li>
+				<li><a href="Subsidy-Allowance-ReportView.php?type=11"><span>Subsidy Allowance Report</span></a></li>
     		</ul>
     	</div>
     </main>s

@@ -63,9 +63,11 @@ header .loggedin a {
 }
 
 .logout_btn {
+  background-color: #2d78da;
   text-decoration: none;
   font-weight: 20px;
-  color: #0066ff;
+  color: white;
+  padding: 5px 10px;
 }
 
 main {
@@ -130,18 +132,18 @@ form.userform button {
   transition: 0.5s;
   transition-property: left;
 }
-.sidebar .profile-image {
+/* .sidebar .profile-image {
   width: 100px;
   margin-top: 40px;
   height: 100px;
   border-radius: 100px;
   margin-bottom: 10px;
-}
-.sidebar h4 {
+} */
+/* .sidebar h4 {
   color: #ccc;
   margin-top: 0;
   margin-bottom: 20px;
-}
+} */
 .sidebar a {
   color: #fff;
   display: block;

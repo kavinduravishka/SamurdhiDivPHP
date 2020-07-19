@@ -12,6 +12,7 @@
 	 <!-- <link rel="stylesheet" type="text/css" href="/css/styles/navbar.css" > -->
 	 <!-- <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/ksidebar.css" > -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	
 </head>
 <body>
 	 <?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/header.inc.php"); ?>
@@ -21,13 +22,14 @@
 	
 		<main>
 		<div class="maincontainer" >
-		<center><h1>Beneficiaries  <span ><a href="beneficiariesView.php" style="text-decoration: none;">Refresh</a></span></h1></center>
+		<center><h1>Beneficiaries &nbsp; <span ><a href="beneficiariesView.php" style="text-decoration: none;"><i class="fas fa-sync-alt"></i></a></span></h1></center>
 		
 		<center>
-		<div class="search">
+		<div class="search-container" style='padding-bottom:20px;'>
 			<form action="beneficiariesView.php" method="get">
-				<p><input type="text" name = "search" id="" placeholder="Type Full Name  or NIC and Press Enter" value="<?php echo $search; ?>"></p>
+				<input type="text" name = "search" id="" placeholder="Type Full Name  or NIC and Press Enter" value="<?php echo $search; ?>">			
 			</form>
+			
 		</div>
 		</center>
 		<table class="masterlist">
@@ -39,7 +41,23 @@
 		</div>
 	</main>
 	
-	
+	<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+</script>
 	
 	
 </body>
