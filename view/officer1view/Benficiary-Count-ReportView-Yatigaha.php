@@ -1,5 +1,5 @@
 <?php 
-    include_once(realpath($_SERVER['DOCUMENT_ROOT'])."/SamurdhiDivPHP/view/includes/officer1Inc/Benficiary-Count-ReportInc-Yatigaha.php");
+    include_once(realpath($_SERVER['DOCUMENT_ROOT'])."/SamurdhiDivPHP/view/includes/officer1Inc/Benficiary-Count-ReportInc.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,51 +13,6 @@
     />
 
     <script>
-window.onload = function () {
-	
-var chart = new CanvasJS.Chart("chartContainer", {
-	animationEnabled: true,
-	
-	title:{
-		text:"Bank Zonal - Yatigaha"
-	},
-	axisX:{
-		interval: 1
-	},
-	axisY2:{
-		interlacedColor: "rgba(1,77,101,.2)",
-		gridColor: "rgba(1,77,101,.1)",
-		title: "Number of Beneficiaries"
-	},
-	data: [{
-		type: "bar",
-		name: "companies",
-		axisYType: "secondary",
-		color: "#014D65",
-		dataPoints: [
-			{ y: <?php echo $total1;?>, label: "41-Paranahalpe" },
-			{ y: <?php echo $total2;?>,  label: "41A-Paranahalpe" },
-			{ y: <?php echo $total3;?>, label: "42-Halpe" },
-			{ y: <?php echo $total4;?>,  label: "42A-Nariyamulla" },
-			{ y: <?php echo $total5;?>,  label: "42A-Nariyamulla" },
-			{ y: <?php echo $total6;?>,   label: "42A-Nariyamulla" },
-			{ y: <?php echo $total7;?>,  label: "43A-Ihala-Kithulwala" },
-			{ y: <?php echo $total8;?>,  label: "43B-Uthuru-Kithulwala" },
-			{ y: <?php echo $total9;?>,  label: "44-Waththemulla" },
-			{ y: <?php echo $total10;?>,  label: "44A-Ihala-Kithulgala" },
-			{ y: <?php echo $total11;?>,  label: "44B-Pahala-Kithulgala" },
-			{ y: <?php echo $total12;?>,  label: "45-Kuligedara" },
-			{ y: <?php echo $total13;?>,  label: "46-Pahala-Madithiyawala" },
-			{ y: <?php echo $total14;?>,  label: "46A-Pahala-Madithiyawala" },
-			{ y: <?php echo $total15;?>,  label: "47-Hangawaththa" },
-		]
-	}]
-});
-chart.render();
-
-}
-
-
 
 </script>
 </head>
@@ -67,15 +22,17 @@ chart.render();
     <main>
       <div class="maincontainer">
       <table class="masterlist">
-          <h2><span>Benificiary Count Report</span></h2>
-          <h3><?php echo date("y/m/d"); ?></h3>
-          <h4>District: Gampaha</h4>
-          <caption><h3>Bank Zonal - Yatigaha</h3></caption>
+		  <center><h2><span><u>සමුර්ධි සහනාධාර දීමනා බැංකු උපරිම වාර්තාව </u></span></h2></center>
+		  <br><br>
+          <h3><?php echo date("y/m/d") ; ?> (සහනාධාර මුදල් බැර කිරීම සඳහා)</h3>
+          <h4>දිස්ත්‍රික්කය :- ගම්පහ </h4>
+		  <h3>ප්‍රාදේශීය ලේකම් කාර්යාලය - දිව්ලපිටිය </h3>
+          <caption><h3>සමුර්ධි ප්‍රජාමූල බැංකුවේ නම :- යටිගහ </h3></caption>
           <tr>
-            <th rowspan="2">Index Nnumber</th>
-            <th rowspan="2">GN Divison</th>
-            <th colspan="5">Beneficiaries</th>
-            <th rowspan="2">Total</th>
+            <th rowspan="2">අනු අංකය </th>
+            <th rowspan="2">වසමේ නම </th>
+            <th colspan="5">අදාල දීමනා වර්ගයට අයත් ප්‍රතිලබීන් ගණන </th>
+            <th rowspan="2">මුළු ප්‍රතිලාභීන් ගණන</th>
           </tr>
           <tr>
             <td style="background-color: #848382; color:white;">420</td>
@@ -86,10 +43,15 @@ chart.render();
           </tr>
           <tr><?php echo $count_list; ?></tr>
           </table>
-          <br><br><br><br><br>
-          <div id="chartContainer" style="height: 350px; width: 100%;"></div>
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-<br><br><br><br>
+		  
+          <br><br><br>
+
+ 
+		<form action="Benficiary-Count-ReportView-Yatigaha.php" method="post">
+			<center><button class="submit pdf-button" name="submit">Make PDF</button></center>
+		</form>
+    <br><br><br><br>
+         
     </main>
       </div>
       
