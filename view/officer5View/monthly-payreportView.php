@@ -40,7 +40,7 @@
 
             <input type="hidden" name="emp_no" value="<?php echo $emp_no; ?>">
             <p>
-                <center><input type="text" name="name" id="nums" <?php echo 'value="20""' .$month.'"';?> >  මාසයේ වැටුප් විස්තරය</center>
+            <center><input type="text" name="name" id="nums" <?php echo 'value="' .$month.'"';?> >  මාසයේ වැටුප් විස්තරය</center>
             </p>
             <p>
                 <label for="">නම/Name:</label>
@@ -49,6 +49,10 @@
             <p>
                 <label for="">තනතුර/Designation :</label>
                 <input type="text" name="designation" <?php echo 'value="' .$designation.'"';?>readonly >            
+            </p>
+            <p>
+                <label for="">Description :</label>
+                <input type="text" name="description" <?php echo 'value="' .$description.'"';?> >            
             </p>
             <p><b>වැටුප/Earnings</b></p>
             <p>

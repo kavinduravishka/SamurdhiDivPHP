@@ -1,6 +1,7 @@
 <?php session_start(); ?>
 <?php 
     require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer5Contr\officer5.class.php");
+    //require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer5Contr\officer5.class.php");
 ?>
 <?php 
 
@@ -15,8 +16,6 @@
     $emp_no='';
     $name='';
     $designation='';
-    $bank='';
-    $acc_no='';
     $basic_salary='';
     $interim_allo='';
     $language_allo='';
@@ -49,8 +48,6 @@
         $emp_no=$_POST['emp_no'];
         $name=$_POST['name'];
         $designation=$_POST['designation'];
-        $bank=$_POST['bank'];
-        $acc_no=$_POST['acc_no'];
         $basic_salary=$_POST['basic_salary'];
         $interim_allo=$_POST['interim_allo'];
         $language_allo=$_POST['language_allo'];
@@ -76,11 +73,11 @@
         }
       
         if(empty($errors)){
-            $officer= Officer5::getInstance();
-            $officer->savePayReportRequest($emp_no, $name,$month,$description);
+            
+            $report->printReport($report_data);
         }
         else{
-            $errors[]='Failed to add the entry.';
+            $errors[]='Failed to print the report.';
         }            
              
             
