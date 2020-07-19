@@ -38,31 +38,19 @@
                     break;
 
                 case 'officer2':
-<<<<<<< HEAD
                     //header('Location: '.realpath($_SERVER["DOCUMENT_ROOT"].'/SamurdhiDivPHP/view/officer2view/officer2-dashboard.index.php'));
                     header('Location: http://localhost/SamurdhiDivPHP/view/officer2view/officer2-dashboardView.php');
                     //$_SESSION['dashboard']='officer2-dashboardView.php';
                     //$_SESSION['logged_in']='1';
-=======
-                    header('Location: '.realpath($_SERVER["DOCUMENT_ROOT"].'/SamurdhiDivPHP/view/officer2view/officer2-dashboard.index.php'));
-                    $_SESSION['dashboard']='officer2-dashboardView.php';
-                    $_SESSION['logged_in']='1';
->>>>>>> 0fcb985c7a36f6a787c2db57c67baf95d959f775
                     //$_SESSION['user_name']='officer2';
                     
                     break;
 
                 case 'officer3':
-<<<<<<< HEAD
                     //header('Location: '.realpath($_SERVER["DOCUMENT_ROOT"].'/SamurdhiDivPHP/view/officer3view/officer3-dashboard.index.php'));
                     header('Location: http://localhost/SamurdhiDivPHP/view/officer3view/officer3-dashboardView.php');
                     //$_SESSION['dashboard']='officer3-dashboardView.php';
                     //$_SESSION['logged_in']='1';
-=======
-                    header('Location: '.realpath($_SERVER["DOCUMENT_ROOT"].'/SamurdhiDivPHP/view/officer3view/officer3-dashboard.index.php'));
-                    $_SESSION['dashboard']='officer3-dashboardView.php';
-                    $_SESSION['logged_in']='1';
->>>>>>> 0fcb985c7a36f6a787c2db57c67baf95d959f775
                     //$_SESSION['user_name']='officer3';
                     
                     break;

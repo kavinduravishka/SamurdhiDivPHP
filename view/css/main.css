@@ -209,3 +209,8 @@ main {
 .maincontainer {
   margin-left: 70px;
 }
+
+.pdf-button {
+  height: 35px;
+  width: 150px;
+}
