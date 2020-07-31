@@ -16,8 +16,9 @@
 
     if(isset($_GET['emp_no'])){
 
-        $emp_no=$_GET['emp_no'];        
-        $report_data=(new PayReport())->viewReport();
+        $emp_no=$_GET['emp_no'];
+        $report=new PayReport();        
+        $report_data=$report->viewReport();
         
         
         
@@ -28,8 +29,9 @@
 
     if(isset($_POST['submit'])){
 
-        $report_data=(new PayReport())->viewReport();
-        (new PayReport())->printReport($report_data);
+        $report=new PayReport();        
+        $report_data=$report->viewReport();
+        $report->printReport($report_data);
 
     }
 ?>
