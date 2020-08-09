@@ -40,8 +40,10 @@ class SocialSF{
         $this->ssfpay->write($data);
     }
 
-    public function fundReport(){
+    public function fundReport($data){
+        $fetchedData = $this->ssfundrep->find($data);
 
+        return $fetchedData;
     }
     
 }
