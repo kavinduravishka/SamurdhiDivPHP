@@ -7,7 +7,12 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\model\officer3
 
 class SocialSF{
 
-	private function __construct(){}
+    private static $instance = null;
+
+	private function __construct(){
+        
+    }
+
 
 	public static function getInstance()
     {
@@ -22,5 +27,5 @@ class SocialSF{
 
     public function 
 }
-
+ 
 ?>
