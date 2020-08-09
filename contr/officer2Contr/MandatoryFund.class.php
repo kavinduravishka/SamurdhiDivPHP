@@ -51,6 +51,8 @@ class MandatoryFund{
             );
 
 
+
+
         foreach ($arrBig as $name => $detailes) {
 
             $bankName=$name;
@@ -105,6 +107,10 @@ class MandatoryFund{
         return $arrBig;
     	//$this->MFRelease->find($data);
     }
+
+
+
+
 
 
 

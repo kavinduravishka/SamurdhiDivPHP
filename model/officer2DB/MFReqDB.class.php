@@ -1,5 +1,5 @@
 <?php
-require_once("../dbh.class.php");
+require_once("../dbbase.class.php");
 	
 class MFReqDB extends Dbbase{
 	
