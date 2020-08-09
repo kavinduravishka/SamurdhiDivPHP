@@ -5,14 +5,18 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\model\officer2
 
 class MandatoryFund{
 
-
+    private static $instance=null;
+    
 	private function __construct(){
 		$this->MFRelease  = new MFRelREP();
         $this->MFRequest  = new MFReqDB();
 	}
 
+//==============   Singleton   =====================
 	public static function getInstance()
     {
+        
+
         if (self::$instance == null)
         {
         self::$instance = new MandatoryFund();
@@ -20,6 +24,9 @@ class MandatoryFund{
     
         return self::$instance;
     }
+
+//==================================================
+
 
     public function ReleaseReport($data){
     	$this->MFRelease->write($data);
@@ -29,4 +36,5 @@ class MandatoryFund{
     	$this->MFRequest->write($data);
     }
 }
+
 ?>

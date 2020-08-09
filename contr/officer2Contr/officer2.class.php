@@ -8,18 +8,24 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer2
 
 class Officer2 {
 
-    private function  __construct(){}
+    private static $instance=null;
+
+    private function  __construct(){}           //
+                                                //
+                                                //
+    public static function getInstance()        // Singleton
+    {                                           //
+        if (self::$instance == null)            //
+        {                                       //
+            self::$instance = new Officer2();   //
+        }                                       //
+                                                //
+        return self::$instance;                 //
+    }                                           //
 
 
-    public static function getInstance()
-    {
-        if (self::$instance == null)
-        {
-        self::$instance = new Officer2();
-        }
-    
-        return self::$instance;
-    }
+
+
 
     public function CBOorgWrite($data){
         $cbo=CBO::getInstance();

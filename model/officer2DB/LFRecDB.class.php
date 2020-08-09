@@ -1,20 +1,30 @@
 <?php
 require_once("../dbh.class.php");
 	
-class LFRecDB extends Dbh{
+class LFRecDB extends Dbbase{
 	
-	public function  write($NIC, $Name, $Address, $Date){
-		$sql = "INSERT INTO LottaryFundRecord(NIC, Name, Address, Date) values (?,?,?,?)";
-		$stmt = $this->connect()->prepare($sql);
-		$stmt->execute([$NIC, $Name, $Address, $Date]);
+	public function  write($data){
+		$message="This person has won a lottary before";
+		if($this->getCount($data['NIC'])==0){
+
+			$sql = "INSERT INTO LottaryFundRecord(NIC, Name, Address, Date) values (?,?,?,?)";
+			$stmt = $this->connect()->prepare($sql);
+			$stmt->execute([ $data['NIC'], $data['Name'], $data['Address'], $data['Date'] ]);
+
+		}else{
+			echo "<script>alert('$message');</script>";
+		}
 	}
 
-	public function search($NIC){
-		$sql = "SELECT COUNT(NIC) FROM LottaryFundRecord WHERE NIC = ?";
+	private function getCount($NIC){
+
+		$sql = "SELECT COUNT(NIC) AS prevcount FROM LottaryFundRecord WHERE NIC = ?";
 		$stmt = $this->connect()->prepare($sql);
+
 		$stmt->execute([$NIC]);
+
 		$previousRecords = $stmt->fetch();
-		return $previousRecords;
+		return $previousRecords['prevcount'];
 	}
 
 }
