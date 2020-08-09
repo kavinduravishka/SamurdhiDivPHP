@@ -28,34 +28,34 @@ class MandatoryFund{
 
 
     public function ReleaseReport(){
-        $arrBig = array();
 
-        $arrYatigaha = array();
-        $arrBadalgama = array();
-        $arrKongodamulla = array();
-        $arrKatuwellegama = array();
-        $arrWelangana = array();
-        $arrDunagaha = array();
-        $arrKotadeniyawa = array();
-        $arrDivulapitiya = array();
-        $arrWalpita = array();
+        $ra3500 = array("3500","3020");
+        $ra2500 = array("2500","2120");
+        $ra1500 = array("1500","1320","1220");
+        $ra420  = array("420");
+
+
+        $arrBig = array();
 
         $bank = '';
 
         array_push($arrBig,
-                "Yatigaha"=>$arrYatigaha,
-                "Badalgama"=>$arrBadalgama,
-                "Kongodamulla"=>$arrKongodamulla,
-                "Katuwellegama"=>$arrKatuwellegama,
-                "Welangana"=>$arrWelangana,
-                "Dunagaha"=>$arrDunagaha,
-                "Kotadeniyawa"=>$arrKotadeniyawa,
-                "Divulapitiya"=>$arrDivulapitiya,
-                "Walpita"=>$arrWalpita);
+                "Yatigaha"=>array(),
+                "Badalgama"=>array(),
+                "Kongodamulla"=>array(),
+                "Katuwellegama"=>array(),
+                "Welangana"=>array(),
+                "Dunagaha"=>array(),
+                "Kotadeniyawa"=>array(),
+                "Divulapitiya"=>array(),
+                "Walpita"=>array()
+            );
 
 
     	$this->MFRelease->find($data);
     }
+
+
 
     public function RequestWrite($data){
     	$this->MFRequest->write($data);

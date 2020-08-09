@@ -11,9 +11,11 @@ class MFRelREP extends Dbbase{
 
 		$stmt = $this->connect()->prepare($sql);
 
-		//$bank = 'Yatigaha';
+		$stmt->execute([ $data['Relief_Amount'], $data['Bank_Zonal'] ]);
 
-		//fill later
+		$fetchedData = $stmt->fetchAll();
+
+		return $fetchedData;
 
 		
 
