@@ -6,7 +6,7 @@ class ScholarDB extends Dbbase{
 
 	public function write($data){
 
-		$sql = "INSERT INTO (NIC, Name, Gender, Ethnicity,  Guardian,  SpeciallyAbled,  Stream,  School,  Address,  Bank, SisurakaAcNo, PeriodID) values (?,?,?,?,?,?,?,?,?,?,?,?)";
+		$sql = "INSERT INTO SipdoraScholarship(NIC, Name, Gender, Ethnicity,  Guardian,  SpeciallyAbled,  Stream,  School,  Address,  Bank, SisurakaAcNo, PeriodID) values (?,?,?,?,?,?,?,?,?,?,?,?)";
 		$stmt = $this->connect()->prepare($sql);
 		$stmt->execute([
 			$data['NIC'], 

@@ -25,5 +25,25 @@ class Officer3{
     	$scholar->ScholarWrite($data);
     }
 
+    public function SSFappWrite($data){
+        $socialsf=SocialSF::getInstance();
+        $socialsf->appWrite($data);
+    }
+
+    public function SSFfamWrite($data){
+        $socialsf=SocialSF::getInstance();
+        $socialsf->famWrite($data);
+    }
+
+    public function SSFpayWrite($data){
+        $socialsf=SocialSF::getInstance();
+        $socialsf->payWrite($data);
+    }
+
+    public function SSFundReport($data){
+        $socialsf=SocialSF::getInstance();
+        $socialsf->fundReport($data);
+    }
+
 }
 ?>

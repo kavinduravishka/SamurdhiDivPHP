@@ -10,7 +10,10 @@ class SocialSF{
     private static $instance = null;
 
 	private function __construct(){
-        
+        $this->ssfapp = new SSFappDB();
+        $this->ssffam = new SSFfamDB();
+        $this->ssfpay = new SSFpayDB();
+        $this->ssfundrep = new SSFundREP();
     }
 
 
@@ -25,7 +28,22 @@ class SocialSF{
     }
 
 
-    public function 
+    public function appWrite($data){
+        $this->ssfapp->write($data);
+    }
+
+    public function famWrite($data){
+        $this->ssffam->write($data);
+    }
+
+    public function payWrite($data){
+        $this->ssfpay->write($data);
+    }
+
+    public function fundReport(){
+
+    }
+    
 }
  
 ?>

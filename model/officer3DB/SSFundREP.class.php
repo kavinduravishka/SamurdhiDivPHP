@@ -3,7 +3,7 @@ require_once("../dbbase.class.php");
 
 class SSFundREP extends Dbbase{
 	
-	public function write(){
+	public function find($data){
 		
 	}
 	
