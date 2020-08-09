@@ -37,7 +37,6 @@ class MandatoryFund{
 
         $arrBig = array();
 
-        $bank = '';
 
         array_push($arrBig,
                 "Yatigaha"=>array(),
@@ -52,7 +51,59 @@ class MandatoryFund{
             );
 
 
-    	$this->MFRelease->find($data);
+        foreach ($arrBig as $name => $detailes) {
+
+            $bankName=$name;
+
+            $count3500=0;
+            $count2500=0;
+            $count1500=0;
+            $count420=0;
+
+            $data = array();
+
+            $data['Bank_Zonal'] = $bankName;
+
+
+            
+            foreach ($ra3500 as $key=>$relAmount) {
+                $data['Relief_Amount'] = $relAmount;
+                $count = $this->MFRelease->find($data);
+                $count3500 += $count['count'];
+            }
+            $arrBig[$bankName]['3500'] = $count3500;
+
+
+
+            foreach ($ra2500 as $relAmount) {
+                $data['Relief_Amount'] = $relAmount;
+                $count = $this->MFRelease->find($data);
+                $count2500 += $count['count'];
+            }
+            $arrBig[$bankName]['2500'] = $count2500;
+
+
+
+            foreach ($ra1500 as $relAmount) {
+                $data['Relief_Amount'] = $relAmount;
+                $count = $this->MFRelease->find($data);
+                $count1500 += $count['count'];
+            }
+            $arrBig[$bankName]['1500'] = $count1500;
+
+
+
+            foreach ($ra420 as $relAmount) {
+                $data['Relief_Amount'] = $relAmount;
+                $count = $this->MFRelease->find($data);
+                $count420 += $count['count'];
+            }
+            $arrBig[$bankName]['420'] = $count420;
+            
+        }
+
+        return $arrBig;
+    	//$this->MFRelease->find($data);
     }
 
 

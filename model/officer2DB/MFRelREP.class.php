@@ -7,7 +7,7 @@ class MFRelREP extends Dbbase{
 
 		
 
-		$sql = "SELECT COUNT(*) FROM detailsofbenificiaries WHERE Relief_Amount = ? and Bank_Zonal = ? and is_deleted = 0";
+		$sql = "SELECT COUNT(*) as count FROM detailsofbenificiaries WHERE Relief_Amount = ? and Bank_Zonal = ? and is_deleted = 0";
 
 		$stmt = $this->connect()->prepare($sql);
 
