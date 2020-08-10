@@ -1,12 +1,12 @@
 <?php
 
-
-
 require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer2Contr\CBO.class.php");
 require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer2Contr\LottaryFund.class.php");
-require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer2Contr\MandatoryFund.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\\reportContr\off23reportfactory.class.php");
 
 class Officer2 {
+
+    private $reportfactory = new off23report();
 
     private static $instance=null;
 
@@ -22,9 +22,6 @@ class Officer2 {
                                                 //
         return self::$instance;                 //
     }                                           //
-
-
-
 
 
     public function CBOorgWrite($data){
@@ -44,13 +41,25 @@ class Officer2 {
         //$this->LottaryFund->FundWrite($data,$NIC);
     }
     
-    public function MFreleaseReport(){
-        $manfun=MandatoryFund::getInstance();
-        $manfun->ReleaseReport();
-    }
-
     public function MFrequestWrite($data){
         $manfun=MandatoryFund::getInstance();
         $manfun->RequestWrite($data);
+    }
+
+
+    //=================   REPORTS   ==================
+
+    private function MFreleaseReport(){
+        $manfun=MandatoryFund::getInstance();
+        $fetcheddata = $manfun->ReleaseReport();
+        return $fetcheddata;
+    }
+
+    public function printMFreleaseReport(){
+
+    }
+
+    public function viewMFreleasReport(){
+
     }
 }

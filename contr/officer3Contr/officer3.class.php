@@ -2,11 +2,14 @@
 
 require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer3Contr\SocialSF.class.php");
 require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer3Contr\Scholarship.class.php");
-
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\\reportContr\off23reportfactory.class.php");
 
 class Officer3{
 
+    private $reportfactory = new off23report();
 
+    private static $instance=null;
+    
 	private function __construct(){}
 
 
@@ -40,10 +43,21 @@ class Officer3{
         $socialsf->payWrite($data);
     }
 
+
+    //=================   REPORTS   ==================
+
     public function SSFundReport($data){
         $socialsf=SocialSF::getInstance();
-        $socialsf->fundReport($data);
+        $fetcheddata=$socialsf->fundReport($data);
+        return $fetcheddata;
     }
 
+    public function  printSSFundReport(){
+
+    }
+
+    public function viewSSFundReport(){
+
+    }
 }
 ?>
