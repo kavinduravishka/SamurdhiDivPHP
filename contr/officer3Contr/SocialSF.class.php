@@ -7,7 +7,15 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\model\officer3
 
 class SocialSF{
 
-	private function __construct(){}
+    private static $instance = null;
+
+	private function __construct(){
+        $this->ssfapp = new SSFappDB();
+        $this->ssffam = new SSFfamDB();
+        $this->ssfpay = new SSFpayDB();
+        $this->ssfundrep = new SSFundREP();
+    }
+
 
 	public static function getInstance()
     {
@@ -20,7 +28,24 @@ class SocialSF{
     }
 
 
-    public function 
-}
+    public function appWrite($data){
+        $this->ssfapp->write($data);
+    }
 
+    public function famWrite($data){
+        $this->ssffam->write($data);
+    }
+
+    public function payWrite($data){
+        $this->ssfpay->write($data);
+    }
+
+    public function fundReport($data){
+        $fetchedData = $this->ssfundrep->find($data);
+
+        return $fetchedData;
+    }
+    
+}
+ 
 ?>

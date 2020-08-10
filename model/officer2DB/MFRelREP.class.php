@@ -1,45 +1,17 @@
 <?php
-require_once("../dbh.class.php");
+require_once("../dbbase.class.php");
 	
-class MFRelREP extends Dbh{
+class MFRelREP extends Dbbase{
 
-	public function getMFRDetailes(){
+	public function find($data){
 
-		$arrBig = array();
-
-		$arrYatigaha = array();
-		$arrBadalgama = array();
-		$arrKongodamulla = array();
-		$arrKatuwellegama = array();
-		$arrWelangana = array();
-		$arrDunagaha = array();
-		$arrKotadeniyawa = array();
-		$arrDivulapitiya = array();
-		$arrWalpita = array();
-
-		$bank = '';
-
-		$sql = "SELECT COUNT(*) FROM detailsofbenificiaries WHERE Relief_Amount = ? and Bank_Zonal = ? and is_deleted = 0";
-
+		$sql = "SELECT COUNT(*) as count FROM detailsofbenificiaries WHERE Relief_Amount = ? and Bank_Zonal = ? and is_deleted = 0";
 		$stmt = $this->connect()->prepare($sql);
-
-		//$bank = 'Yatigaha';
-
-		//fill later
-
-		array_push($arrBig,
-				"Yatigaha"=>$arrYatigaha,
-				"Badalgama"=>$arrBadalgama,
-				"Kongodamulla"=>$arrKongodamulla,
-				"Katuwellegama"=>$arrKatuwellegama,
-				"Welangana"=>$arrWelangana,
-				"Dunagaha"=>$arrDunagaha,
-				"Kotadeniyawa"=>$arrKotadeniyawa,
-				"Divulapitiya"=>$arrDivulapitiya,
-				"Walpita"=>$arrWalpita);
+		$stmt->execute([ $data['Relief_Amount'], $data['Bank_Zonal'] ]);
+		$fetchedData = $stmt->fetchAll();
+		return $fetchedData;
 
 	}
-	
 }
 
 ?>

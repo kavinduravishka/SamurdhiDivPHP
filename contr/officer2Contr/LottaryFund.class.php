@@ -4,6 +4,8 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\model\officer2
 
 class LottaryFund{
 
+
+//=======	Singleton   ===============
 	private function __construct(){
 		$this->LFRec  = new LFRecDB();
 	}
@@ -18,10 +20,13 @@ class LottaryFund{
         return self::$instance;
     }
 
-	public function FundSearch($NIC){
-		$this->LFRec->find($NIC);
-	}
 
+//=====================================
+    /*
+	public function FundSearch($data){
+		$this->LFRec->find($data);
+	}
+	*/
 	public function FundWrite($data){
 		$this->LFRec->write($data);
 	}

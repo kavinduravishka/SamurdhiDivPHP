@@ -24,17 +24,7 @@
     <main>
         
         
-        <?php 
-            if(!empty($errors)){
-                echo '<div class="errmsg">';
-                echo '<b>There are error(s) in your form</b><br>';
-                foreach ($errors as $error){
-                    $error=ucfirst(str_replace("_"," ",$error));
-                    echo $error .'<br>';
-                }
-                echo '</div>';
-            }
-        ?>
+        
 
         <?php echo $report_data;?>
         

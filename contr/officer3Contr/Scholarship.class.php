@@ -4,6 +4,8 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\model\officer3
 
 class Scholarship{
 
+    private static $instance = null;
+
 	private function __construct(){
 		$this->scholar=new ScholarDB();
 	}
