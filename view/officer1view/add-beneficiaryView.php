@@ -119,7 +119,7 @@
 			</p>
 			<p>
 				<label>Starting Year:</label> 
-				<input type="text" name="Starting_Year" <?php echo 'value="'.$Starting_Year.'"' ?>>
+				<input type="date" name="Starting_Year" <?php echo 'value="'.$Starting_Year.'"' ?>>
 			</p>
 			<p>
 				<label for="">&nbsp;</label>
