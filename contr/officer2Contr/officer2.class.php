@@ -7,6 +7,7 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\\reportC
 class Officer2 {
 
     private $reportfactory = new off23report();
+    private $report = null;
 
     private static $instance=null;
 
@@ -17,11 +18,18 @@ class Officer2 {
     {                                           //
         if (self::$instance == null)            //
         {                                       //
-            self::$instance = new Officer2();   //
+            self::$instance = new Officer2(); 
+                                                //
         }                                       //
                                                 //
         return self::$instance;                 //
     }                                           //
+
+    private function newReportInstance(){
+        if($this->report==null){
+            $this->report=$this->reportfactory->anOperation(1);
+        }
+    }
 
 
     public function CBOorgWrite($data){
@@ -56,10 +64,14 @@ class Officer2 {
     }
 
     public function printMFreleaseReport(){
-
+        $this->newReportInstance();
+        $data = $this->MFreleaseReport();
+        $this->report->printReport($data);
     }
 
-    public function viewMFreleasReport(){
-
+    public function getMFreleasReport(){
+        $this->newReportInstance();
+        $data = $this->MFreleaseReport();
+        $this->report->getReport($data);
     }
 }

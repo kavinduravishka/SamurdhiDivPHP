@@ -7,9 +7,10 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\\reportC
 class Officer3{
 
     private $reportfactory = new off23report();
+    private $report = null;
 
     private static $instance=null;
-    
+
 	private function __construct(){}
 
 
@@ -53,11 +54,15 @@ class Officer3{
     }
 
     public function  printSSFundReport(){
-
+        $this->newReportInstance();
+        $data = $this->SSFundReport();
+        $this->report->printReport($data);
     }
 
-    public function viewSSFundReport(){
-
+    public function getSSFundReport(){
+        $this->newReportInstance();
+        $data = $this->SSFundReport();
+        $this->report->getReport($data);
     }
 }
 ?>
