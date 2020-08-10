@@ -42,16 +42,15 @@ public function viewReport(){
         $dop=date("Y/m",time());
         $date=date("Y/m/d");
         
-
         $report_data = "";
-        $report_data.="<div style=\"margin-left:30px;\">";
-        $report_data.="<center><h3><span><u>Monthly Pay Report/ වැටුප් විස්තරය </u></span></h3></center><br>";
+        $report_data.="<div style=\"margin-left:30px\">";
+        $report_data.="<h4 style=\"text-align: center\"><span><u>Monthly Pay Report/ වැටුප් විස්තරය </u></span></h4><br>";
         $report_data.="<p style=\"margin-left: 15%;\">ප්‍රාදේශීය ලේකම් කාර්යාලය<br>දිවුලපිටිය<br>{$date}</p>";
         $report_data.="<p style=\"margin-left: 15%;\"></p>";            
         $report_data.="<p style=\"padding:5px; margin-left:15%;margin-right:auto; line-height:28px;\">නම/Name :{$name}<br>";
         $report_data.="තනතුර/Designation :{$designation}<br>";
         $report_data.="ඔබේ ඉල්ලීම පරිදි ඉදිරිපත් කිරීම සදහා {$dop} මාසයේ වැටුප් විස්තරය පහත දක්වමි.</p>";            
-        $report_data.="<div style=\"margin-left: 30px;\";><table style=\"margin-left:15%;margin-right:auto;border-spacing:10px;\">";
+        $report_data.="<div style=\"margin-left: 30px;\";><table style=\"overflow: wrap;margin-left:15%;margin-right:auto;border-spacing:10px;\">";
         $report_data.="<tr><th><u>වැටුප</u></th><th style=\"text-align:right\";><u>රු.ශත</u></th><th></th></tr>";
         $report_data.="<tr><td style=\"padding:3px\"><u>වැටුප/Earnings<u></td><td></td></tr>";
         $report_data.="<tr><td style=\"padding:3px\">ඒකාබද්ධ වැටුප /Basic Salary:</td><td style=\"text-align:right; width: 100px;\">{$basic_salary}</td></tr>";

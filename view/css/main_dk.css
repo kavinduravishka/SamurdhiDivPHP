@@ -84,7 +84,7 @@ input{
     color:black;
 }
 
-header{
+/* header{
     background: rgba(255,255,255,0.7);
     overflow: auto;
     padding: 10px;
@@ -109,10 +109,38 @@ header .loggedin{
 }
 
 header .logout_btn{
-    /*float: right;*/
+    
     position:relative;
     right:0px;
-}
+} */
+header {
+    color: #eee;
+    background: #2f323a;
+    overflow: auto;
+    padding: 15px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+  header .appname {
+    float: left;
+  }
+  header .loggedin {
+    float: right;
+  }
+  header .loggedin a {
+    margin-left: 20px;
+  }
+  
+  .logout_btn {
+    background-color: #2d78da;
+    text-decoration: none;
+    font-weight: 20px;
+    color: white;
+    padding: 5px 10px;
+  }
+
 
 .officer4_dashboard
 {

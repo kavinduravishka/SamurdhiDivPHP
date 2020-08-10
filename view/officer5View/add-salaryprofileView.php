@@ -14,14 +14,14 @@
     
     
 </head>
-<body>
+<body id="maincontainer">
     <?php 
     require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/header.inc.php");
     require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/officer4Inc/officer4_sidebar.inc.php");
     ?> 
 	
 
-    <main>
+    <main >
         <h1>Add Salary Profile</h1>
         
         <?php 
