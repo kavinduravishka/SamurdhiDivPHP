@@ -48,7 +48,7 @@ class Officer5DB extends Dbh{
             $salaryprofile_list.="<td>{$row['name']}</td>";
             $salaryprofile_list.="<td>{$row['designation']}</td>";
             $salaryprofile_list.="<td><a href=\"modify-salaryprofileView.php?emp_no={$row['emp_no']}\">Modify</a></td>";
-            $salaryprofile_list.="<td><a href=\"delete-salaryprofileInc.php?emp_no={$row['emp_no']}\" onclick=\"return confirm('Are you sure?');\">Delete</a></td>";
+            $salaryprofile_list.="<td><a href=\"../includes/officer5Inc/delete-salaryprofileInc.php?emp_no={$row['emp_no']}\" onclick=\"return confirm('Are you sure?');\">Delete</a></td>";
             $salaryprofile_list.="<td><a href=\"monthly-payreportView.php?emp_no={$row['emp_no']}\">PayReport</a></td>";
             $salaryprofile_list.="</tr>";
         }
