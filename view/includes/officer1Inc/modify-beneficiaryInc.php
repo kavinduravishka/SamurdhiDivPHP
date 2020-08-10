@@ -15,19 +15,13 @@
 	//view the user
 	if(isset($_GET['Serial_No'])){
 
-
-		// $Serial_No = $_GET['Serial_No'];
-
-		// $officer1 = new Officer1();
-		// $currentDetails = $officer1->getCurrentDetails($Serial_No);
-		// extract($currentDetails);
-		
+		$Serial_No = $_GET['Serial_No'];
+	
 	}
-
 	//when submit
 	if(isset($_POST['submit'])){
 
-		$Serial_No = $_POST['Serial_No'];
+		//$Serial_No = $_POST['Serial_No'];
 		$Bank_Zonal = $_POST['Bank_Zonal'];
 		$GN_Division = $_POST['GN_Division'];
 		$Address = $_POST['Address'];
@@ -62,11 +56,12 @@
 			// $hashed_password = sha1($password);
 
 			$officer1 = Officer1::getInstance();
-			$officer1->updateBeneficiary($Bank_Zonal,$GN_Division,$Address,$Bank_Account_No,$errors,$Serial_No);
+			$officer1->updateBeneficiary($Bank_Zonal,$GN_Division,$Address,$Bank_Account_No,$Serial_No);
 			// unset($officer1);
 		}
 
 	}
+
 
 
  ?>

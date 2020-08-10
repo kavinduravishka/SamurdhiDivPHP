@@ -53,14 +53,14 @@ private static $instance = null;
 		}
 		
 		public function updateBeneficiary($Bank_Zonal,$GN_Division,$Address,$Bank_Account_No,$Serial_No){
-			$sql = "UPDATE detailsofbenificiaries SET Bank_Zonal=? ,GN_Division=?"; 
-			$sql .= ",Address=?, Bank_Account_No=? WHERE Serial_No=?";
+			$sql = "UPDATE detailsofbenificiaries SET Bank_Zonal=? ,GN_Division=?,Address=?, Bank_Account_No=? WHERE Serial_No=?";
 			$stmt = $this->connect()->prepare($sql);
 			$stmt->execute([$Bank_Zonal,$GN_Division,$Address,$Bank_Account_No,$Serial_No]);
 			if($stmt){
-				// header('Location: http://localhost/SamurdhiDivPHP/view/officer1View/beneficiariesView.php?user_modified=true');
+				header('Location: http://localhost/SamurdhiDivPHP/view/officer1View/beneficiariesView.php?user_modified=true');
 			}else{
-				$errors[] = 'Faild to modify the record';
+				//$errors[] = 'Faild to modify the record';
+				//header('Location: http://localhost/SamurdhiDivPHP/view/officer1View/beneficiariesView.php?user_modified=true');
 			}
 
 		}

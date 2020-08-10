@@ -9,12 +9,15 @@
 //     '<html><head><meta http-equiv=Content-Type content="text/html; charset=UTF-8">' . $style . '</head><body>
 // </body>
 // </html>'
-    $a = "<div><table class=\"masterlist\"><center><h2><span><u>සමුර්ධි සහනාධාර දීමනා බැංකු උපරිම වාර්තාව </u></span></h2></center>
-		  <br><br>
-          <h3><?php echo date(\"y/m/d\") ; ?> (සහනාධාර මුදල් බැර කිරීම සඳහා)</h3>
+    $date=date("Y/m/d");
+    $a = "<div><center><h2><span><u>සමුර්ධි සහනාධාර දීමනා බැංකු උපරිම වාර්තාව </u></span></h2></center>
+          <h3>{$date}(සහනාධාර මුදල් බැර කිරීම සඳහා)</h3>
           <h4>දිස්ත්‍රික්කය :- ගම්පහ </h4>
-		  <h3>ප්‍රාදේශීය ලේකම් කාර්යාලය - දිව්ලපිටිය </h3>
-          <caption><h3>සමුර්ධි ප්‍රජාමූල බැංකුවේ නම :- යටිගහ </h3></caption>
+      <h3>ප්‍රාදේශීය ලේකම් කාර්යාලය - දිව්ලපිටිය </h3>
+      
+          <h3>සමුර්ධි ප්‍රජාමූල බැංකුවේ නම :- යටිගහ </h3>
+          <div>
+          <table>
           <tr>
             <th rowspan=\"2\">අනු අංකය </th>
             <th rowspan=\"2\">වසමේ නම </th>
@@ -29,6 +32,6 @@
             <td style=\"background-color: #848382; color:white;\">3020</td>
           </tr>
           <tr>. $count_list.</tr>
-          </table></div>";
+          </table></div></div>";
     $report->printReport($a);
   }

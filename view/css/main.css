@@ -84,16 +84,18 @@ table.masterlist {
   font-family: arial, sans-serif;
   width: 100%;
   border-collapse: collapse;
+  border: 1px solid black;
 }
+
 /*table.masterlist th{
 	background-color: #aaa;
 	text-align:left;
 }*/
 table.masterlist th,
 table.masterlist td {
-  border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
+  border: 1px solid black;
 }
 
 table.masterlist tr:nth-child(even) {
