@@ -10,7 +10,7 @@ class MPDFAdaptee{
         $mpdf->baseScript = 1;
         //$mpdf->autoVietnamese = true;
         //$mpdf->autoArabic = true;
-        $mpdf->allow_charset_conversion = true;
+        //$mpdf->allow_charset_conversion = true;
         $mpdf->autoLangToFont = true;
     //     $mpdf->charset_in = 'iso-15924';
         $mpdf->WriteHTML($data);
