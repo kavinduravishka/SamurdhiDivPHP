@@ -29,7 +29,7 @@
         <?php echo $report_data;?>
         
         
-        <form action="monthly-payreportView.php" method="post" class="letterform">
+        <form action="monthly-payreportView.php?<?php echo "emp_no=".$emp_no?>" method="post" class="letterform">
             <p>
                     <label for="">&nbsp;</label>
                     <button type="submit" name="submit">Print Report</button>
