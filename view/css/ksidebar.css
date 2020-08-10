@@ -19,7 +19,7 @@ body {
 .sidebar a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 10px;
+  font-size: 15px;
   color: #818181;
   display: block;
   transition: 0.3s;
@@ -49,7 +49,7 @@ body {
 .sidebar2layer a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 5px;
+  font-size: 15px;
   color: #818181;
   display: block;
   transition: 0.3s;
@@ -63,8 +63,8 @@ body {
   position: absolute;
   top: 0;
   right: 0px;
-  font-size: 20px;
-  margin-left: 50px;
+  font-size: 26px;
+  
 }
 
 .openbtn {
@@ -72,7 +72,7 @@ body {
   cursor: pointer;
   background-color: #111;
   color: white;
-  padding: 10px 15px;
+  padding: 10px 0px;
   border: none;
 }
 
@@ -84,7 +84,6 @@ body {
   transition: margin-left .5s;
   padding: 16px;
   margin-left: 50px;
-  
 }
 
 
@@ -92,7 +91,7 @@ body {
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 10px;}
+  .sidebar a {font-size: 18px;}
 }
 
  

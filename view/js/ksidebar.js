@@ -16,6 +16,13 @@ function openNav() {
 	}
 }
 
+function openNav2() {
+    document.getElementById("mySidebar2layer").style.width = "250px";
+    document.getElementById("mySidebar2layer").style.left = "250px";
+    document.getElementById("maincontainer").style.marginLeft = "500px";
+      
+}
+
 function closeNav() {
   	document.getElementById("mySidebar").style.width = "50px";
   	document.getElementById("maincontainer").style.marginLeft= "50px";
@@ -46,12 +53,7 @@ function transNav() {
     }
 }
 
-function openNav2() {
-  	document.getElementById("mySidebar2layer").style.width = "250px";
-    document.getElementById("mySidebar2layer").style.left = "250px";
-  	document.getElementById("maincontainer").style.marginLeft = "500px";
-    	
-}
+
 
 function selectback(idname) {
 	var ancs = document.getElementsByClassName("anc");
