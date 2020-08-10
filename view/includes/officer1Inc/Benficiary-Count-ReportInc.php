@@ -5,3 +5,6 @@
   $fac = new BCReportFactory();
   $report = $fac->anOperation($type);
   $count_list = $report->ViewReport();
+  if(isset($_POST['submit'])){
+    $report->printReport('yasindu dilshan');
+  }

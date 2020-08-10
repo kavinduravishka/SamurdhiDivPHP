@@ -41,7 +41,7 @@
           <br><br><br>
 
  
-		<form action="Benficiary-Count-ReportView-Badalgama.php" method="post">
+		<form action="Benficiary-Count-ReportView-Badalgama.php?type=2" method="post">
 			<center><button class="submit pdf-button" name="submit">Make PDF</button></center>
 		</form>
             <br><br><br>
