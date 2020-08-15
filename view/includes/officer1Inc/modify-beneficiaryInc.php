@@ -47,10 +47,10 @@
 		if(empty($errors)){
 
 			//no error found.. adding new record
-			$Bank_Zonal = $_POST['Bank_Zonal'];
-			$GN_Division = $_POST['GN_Division'];
-			$Address = $_POST['Address'];
-			$Bank_Account_No = $_POST['Bank_Account_No'];
+			// $Bank_Zonal = $_POST['Bank_Zonal'];
+			// $GN_Division = $_POST['GN_Division'];
+			// $Address = $_POST['Address'];
+			// $Bank_Account_No = $_POST['Bank_Account_No'];
 			
 			// email address is already sanitize
 			// $hashed_password = sha1($password);

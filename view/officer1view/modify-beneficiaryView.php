@@ -45,7 +45,7 @@
 			}
 
 		 ?>
-		<form action="modify-beneficiaryView.php" method="post" class ="userform">
+		<form action="modify-beneficiaryView.php?<?php echo "Serial_No=".$Serial_No;?>" method="post" class ="userform">
 			<input type="hidden" name="Serial_No" value="<?php echo $Serial_No ?>">
 			<p>
 				<label>Bank Zonal:</label>
