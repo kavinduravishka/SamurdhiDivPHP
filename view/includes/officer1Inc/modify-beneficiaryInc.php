@@ -16,6 +16,9 @@
 	if(isset($_GET['Serial_No'])){
 
 		$Serial_No = $_GET['Serial_No'];
+		$officer1 = Officer1::getInstance();
+		$req_benf = $officer1->getBeneficiary($Serial_No);
+		extract($req_benf);
 	
 	}
 	//when submit

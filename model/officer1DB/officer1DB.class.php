@@ -22,6 +22,16 @@ private static $instance = null;
     return self::$instance;
   }
 
+	  
+  	public function getBeneficiary($Serial_No){
+		$Serial_No = (int)$Serial_No;
+		$sql="SELECT * FROM detailsofbenificiaries WHERE Serial_No=?";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute([$Serial_No]);
+        $beneficiary=$stmt->fetchAll();
+
+        return $beneficiary;
+	  }
 
 
     public function loadBeneficiaries(){

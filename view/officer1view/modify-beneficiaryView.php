@@ -64,7 +64,7 @@
 
 			<p>
 				<label>G.N Division:</label>
-				<select name="GN_Division" <?php echo 'value="'.$G.N.Division.'"' ?>>
+				<select name="GN_Division" <?php echo 'value="'.$GN_Division.'"' ?>>
 					<option>41-Paranahalpe</option>
 					<option>41A-Paranahalpe</option>
 					<option>42-Halpe</option>

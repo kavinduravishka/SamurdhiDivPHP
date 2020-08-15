@@ -14,13 +14,11 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\model\officer1
   		private function __construct(){}
  
  
-        public static function getInstance()
-       {
-       		if (self::$instance == null)
-    		{
+        public static function getInstance(){
+       		if (self::$instance == null){
       			self::$instance = new Officer1();
-    		}
- 
+			}
+			
     		return self::$instance;
   		}
 
@@ -73,7 +71,29 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\model\officer1
                 return $b_list;
 			}
 			
-        
+		
+		public function getBeneficiary($Serial_No){
+
+			$Serial_No = (int)$Serial_No;
+
+			$Bank_Zonal = '';
+			$GN_Division = '';
+			$Address = '';
+			$Bank_Account_No = '';
+
+			$beneficiary =  (Officer1DB::getInstance())->getBeneficiary($Serial_No);
+
+			foreach($beneficiary as $benf){
+				$Bank_Zonal = $benf['Bank_Zonal'];
+				$GN_Division = $benf['GN_Division'];
+				$Address = $benf['Address'];
+				$Bank_Account_No = $benf['Bank_Account_No'];
+			}
+
+			return compact('Bank_Zonal','GN_Division','Address','Bank_Account_No');
+
+		}	
+		
 
         public function addBeneficiary($Divisional_Secretariat,$Bank_Zonal,$GN_Division,$GN_Code_Mapping,$Householder_Name,$Address,$NIC,$No_of_Family_Members,$Bank_Account_No,$Relief_Account,$Starting_Year){
             (Officer1DB::getInstance())->addBeneficiary($Divisional_Secretariat,$Bank_Zonal,$GN_Division,$GN_Code_Mapping,$Householder_Name,$Address,$NIC,$No_of_Family_Members,$Bank_Account_No,$Relief_Account,$Starting_Year,$errors);
