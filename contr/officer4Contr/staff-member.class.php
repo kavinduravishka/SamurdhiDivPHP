@@ -1,6 +1,6 @@
 <?php
 
-require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\model\officer4DB\staff-memberDB.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/officer4DB/staff-memberDB.class.php");
 
 class StaffMember{
 

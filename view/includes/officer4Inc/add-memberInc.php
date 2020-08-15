@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php 
-    require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer4Contr\staff-member.class.php");
+    require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer4Contr/staff-member.class.php");
 
     // if(!isset($_SESSION['user_id'])){
     //     header('Location: login.php');
