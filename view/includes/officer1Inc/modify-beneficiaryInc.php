@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php 
     //require_once("../contr/officer4Contr/officer4.class.php");
-    require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer1Contr\officer1.class.php"); 
+    require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer1Contr\beneficiary.class.php"); 
 ?>
 <?php 
 
@@ -16,8 +16,7 @@
 	if(isset($_GET['Serial_No'])){
 
 		$Serial_No = $_GET['Serial_No'];
-		$officer1 = Officer1::getInstance();
-		$req_benf = $officer1->getBeneficiary($Serial_No);
+		$req_benf = Beneficiary::getBeneficiary($Serial_No);
 		extract($req_benf);
 	
 	}
@@ -58,8 +57,8 @@
 			// email address is already sanitize
 			// $hashed_password = sha1($password);
 
-			$officer1 = Officer1::getInstance();
-			$officer1->updateBeneficiary($Bank_Zonal,$GN_Division,$Address,$Bank_Account_No,$Serial_No);
+			// $officer1 = Officer1::getInstance();
+			Beneficiary::updateBeneficiary($Bank_Zonal,$GN_Division,$Address,$Bank_Account_No,$Serial_No);
 			// unset($officer1);
 		}
 
