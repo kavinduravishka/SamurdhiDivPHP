@@ -4,9 +4,10 @@
 	<div id="header-begin"></div>
 
 	<div>
-		<a id="dashboard" class="active wsopt" href="#dashboard">Dashboard</a>
+		<a id="dashboard" class="wsopt" href="#dashboard">Dashboard</a>
   		<a id="form" class="wsopt" href="#forms">Forms</a>
-  		<a id="report" class="wsopt" href="#reports">Reports</a>
+		<a id="report" class="wsopt" href="#reports">Reports</a>
+		<a id="currenttask"><span id="currenttaskcatagory">Report</span> <span id="currenttasksep">▸</span> <span id="currenttasktask">CurrentTask some nonesendfhghsdgkh;stg;hhj;sefddhgsdhgshgdshdsggd</span></a>
 	</div>
 	
 	<div>
