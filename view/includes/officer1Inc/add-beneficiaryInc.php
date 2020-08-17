@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php 
     //require_once("../contr/officer4Contr/officer4.class.php");
-    require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer1Contr\officer1.class.php"); 
+    require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer1Contr\beneficiary.class.php"); 
 ?>
 
 <?php 
@@ -55,8 +55,8 @@
 		if(empty($errors)){
 			//no error found.. adding new record
 			
-			$officer1 = Officer1::getInstance();
-			$officer1->addBeneficiary($Divisional_Secretariat,$Bank_Zonal,$GN_Division,$GN_Code_Mapping,$Householder_Name,$Address,$NIC,$No_of_Family_Members,$Bank_Account_No,$Relief_Ammount,$Starting_Year);
+			$beneficiary = new Beneficiary($Divisional_Secretariat,$Bank_Zonal,$GN_Division,$GN_Code_Mapping,$Householder_Name,$Address,$NIC,$No_of_Family_Members,$Bank_Account_No,$Relief_Ammount,$Starting_Year);
+			$beneficiary->addBeneficiary();
 
 		}else{
             $errors[] = 'Faild to add new record';	

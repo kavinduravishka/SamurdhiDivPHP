@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php 
     //require_once("../contr/officer4Contr/officer4.class.php");
-    require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer1Contr\officer1.class.php"); 
+    require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer1Contr\beneficiary.class.php"); 
 ?>
 <?php 
 
@@ -15,19 +15,15 @@
 	//view the user
 	if(isset($_GET['Serial_No'])){
 
-
-		// $Serial_No = $_GET['Serial_No'];
-
-		// $officer1 = new Officer1();
-		// $currentDetails = $officer1->getCurrentDetails($Serial_No);
-		// extract($currentDetails);
-		
+		$Serial_No = $_GET['Serial_No'];
+		$req_benf = Beneficiary::getBeneficiary($Serial_No);
+		extract($req_benf);
+	
 	}
-
 	//when submit
 	if(isset($_POST['submit'])){
 
-		$Serial_No = $_POST['Serial_No'];
+		//$Serial_No = $_POST['Serial_No'];
 		$Bank_Zonal = $_POST['Bank_Zonal'];
 		$GN_Division = $_POST['GN_Division'];
 		$Address = $_POST['Address'];
@@ -53,20 +49,21 @@
 		if(empty($errors)){
 
 			//no error found.. adding new record
-			$Bank_Zonal = $_POST['Bank_Zonal'];
-			$GN_Division = $_POST['GN_Division'];
-			$Address = $_POST['Address'];
-			$Bank_Account_No = $_POST['Bank_Account_No'];
+			// $Bank_Zonal = $_POST['Bank_Zonal'];
+			// $GN_Division = $_POST['GN_Division'];
+			// $Address = $_POST['Address'];
+			// $Bank_Account_No = $_POST['Bank_Account_No'];
 			
 			// email address is already sanitize
 			// $hashed_password = sha1($password);
 
-			$officer1 = Officer1::getInstance();
-			$officer1->updateBeneficiary($Bank_Zonal,$GN_Division,$Address,$Bank_Account_No,$errors,$Serial_No);
+			// $officer1 = Officer1::getInstance();
+			Beneficiary::updateBeneficiary($Bank_Zonal,$GN_Division,$Address,$Bank_Account_No,$Serial_No);
 			// unset($officer1);
 		}
 
 	}
+
 
 
  ?>
