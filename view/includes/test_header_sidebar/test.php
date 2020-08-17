@@ -18,8 +18,6 @@
 <?php 
 include_once("ksidebar.inc.php");
 include_once("kheader.inc.php");
-
-
 ?> 
 
 <div id="maincontainer">
