@@ -1,8 +1,7 @@
 <?php  ?>
 
 <html>
-
-<!-- <meta name="pagedata" tab="task" type="form" title="Add member"> -->
+<meta name="pagedata" tab="task" type="form" title="Add member"> 
 
 <head>
 	<link rel="stylesheet" type="text/css" href="../css/ksidebar.css" >
