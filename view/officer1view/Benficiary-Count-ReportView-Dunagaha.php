@@ -4,9 +4,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="pagedata" tab="task" type="report" title="Report - Dunugaha">
 	<title>Benficiary Count Report Dunugaha</title>
 	
-	<link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/main.css" >
+  <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/main.css" >
+  <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/ksidebar.css" >
+  <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/kheader.css" >
+	<link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/kbody.css" >
 	<link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
@@ -17,8 +21,10 @@
 </script>
 </head>
 <body>
-<?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/header.inc.php"); ?>
-<?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/include/sidebar.inc.php"); ?>
+<script type="text/javascript" src="/SamurdhiDivPHP/view/js/ksidebar.js"></script>
+	<script type="text/javascript" src="/SamurdhiDivPHP/view/js/kheader.js"></script>
+	<?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/yheader.inc.php"); ?>
+	 <?php include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/officer1Inc/officer1_sidebarInc.php"); ?>
     <main>
       <div class="maincontainer">
       <table class="masterlist">
@@ -54,7 +60,7 @@
          
     </main>
       </div>
-      
+      <script type="text/javascript" src="/SamurdhiDivPHP/view/js/konload.js"></script>	
     </main>
     
 </body>

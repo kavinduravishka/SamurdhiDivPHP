@@ -2,18 +2,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="pagedata" tab="report" type="" title="Add Beneficiary">
 	<title>Reports</title>
 	
 	<link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/main.css">
-	<link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-    />
+	<link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/ksidebar.css" >
+    <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/kheader.css" >
+	<link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/kbody.css" >
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
 	
 </head>
 <body>
-<?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/header.inc.php"); ?>
-<?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/include/sidebar.inc.php"); ?>
+	<script type="text/javascript" src="/SamurdhiDivPHP/view/js/ksidebar.js"></script>
+	<script type="text/javascript" src="/SamurdhiDivPHP/view/js/kheader.js"></script>
+	<?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/yheader.inc.php"); ?>
+	 <?php include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/officer1Inc/officer1_sidebarInc.php"); ?>
 
  	
     <main>
@@ -32,7 +35,7 @@
 				<li><a href="Subsidy-Allowance-ReportView.php?type=11"><span>Subsidy Allowance Report</span></a></li>
     		</ul>
     	</div>
-    </main>s
-
+    </main>
+	<script type="text/javascript" src="/SamurdhiDivPHP/view/js/konload.js"></script>	
 </body>
 </html>
