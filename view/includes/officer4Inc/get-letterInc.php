@@ -10,7 +10,8 @@
 
     
     
-    if (isset($_GET['search'])){
+    if (isset($_GET['search']))
+    {
         
         //$input_data=$_GET['search'];
         $reportFac=new AppreciationLetterReportFactory();
@@ -18,11 +19,9 @@
         $report_data=$report->viewReport();
 
     
-    if(isset($_POST['submit'])){
-
-       
-        $report->printReport($report_data);
-
+        if(isset($_POST['submit']))
+        {       
+            $report->printReport($report_data);
+        }
     }
-}
 ?>
