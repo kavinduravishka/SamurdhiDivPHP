@@ -2,8 +2,9 @@
 
 //require_once("../model/officer4DB/officer4DB.class.php");
 require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\model\officer5DB\officer5DB.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer.class.php");
 
-class Officer5 {
+class Officer5 extends Officer {
 
     private static $instance = null;
 
@@ -15,6 +16,16 @@ class Officer5 {
         }
     
         return self::$instance;
+    }
+
+    protected function handleLogin($login_request){
+        if ($login_request=='officer5') {
+            header('Location: http://localhost/SamurdhiDivPHP/view/officer5View/salary-updateView.php');
+            return TRUE;
+        }
+        else {
+            return FALSE;
+        }
     }
 
     public function addSalaryProfile($emp_no, $name,$designation,$bank,$acc_no,$basic_salary,$interim_allo,$language_allo,$living_cost,$w_op,$agrahara,$stamp,$union,$other_loan,$special_advance){

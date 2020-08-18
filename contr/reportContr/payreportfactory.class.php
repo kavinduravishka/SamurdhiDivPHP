@@ -8,6 +8,20 @@ class PayReportFactory extends ReportFactory{
 
     protected function factoryMethod($type):Report{
 
-        return new PayReport();
+        switch ($type) {
+            case '51':
+                return new PayReport();
+                break;
+            
+            case '52':
+                return new BankPayReport();
+                break;
+            
+            default:
+                # code...
+                break;
+        }
+
+        
     }
 }

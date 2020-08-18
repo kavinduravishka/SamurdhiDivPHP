@@ -20,7 +20,7 @@
 
         $emp_no=$_GET['emp_no'];
         $reportFac=new PayReportFactory();
-        $report=$reportFac->anOperation(1);        
+        $report=$reportFac->anOperation('51');        
         $report_data=$report->viewReport();
         
         
