@@ -6,6 +6,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="pagedata" tab="task" type="form" title="Add member">
     <title>Add New Personal-file</title>
     
     <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/main_dk.css">
@@ -25,7 +26,7 @@
     <?php 
     
     include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/officer1Inc/officer1_sidebarInc.php");
-    include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/header.inc.php");
+    include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/dheader.inc.php");
     ?> 
 
 
