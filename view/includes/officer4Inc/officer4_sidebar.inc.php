@@ -2,11 +2,11 @@
 
 <div id="mySidebar" class="sidebar">
   <a id="menubtn" href="javascript:void(0)" class="closebtn" onclick="transLayer()" id="navclosebtn">☰</a>
-  <a class="anc" href="javascript:void(0)" onclick="layer2only(0); selectback('about');" id="about">About</a> 
-  <a class="anc" href="javascript:void(0)" onclick="layer2only(1); selectback('services');" id="services">Add Member</a>
-  <a class="anc" href="javascript:void(0)" onclick="layer2only(0); selectback('contact');" id="contact">Contact</a>
-  <a class="anc" href="javascript:void(0)" onclick="layer2only(1); selectback('clients');" id="clients">Clients</a>
-  <a class="anc" href="javascript:void(0)" onclick="layer2only(1); selectback('anything');" id="anything">(ඕන දෙයක්)</a>
+  <a class="anc" href="javascript:void(0)" onclick="layer2only(0); selectback('about');" id="about">Personal Files</a> 
+  <a class="anc" href="javascript:void(0)" onclick="layer2only(1); selectback('services');" id="services">Add Staff Member</a>
+  <a class="anc" href="javascript:void(0)" onclick="layer2only(0); selectback('contact');" id="contact">Modify Staff Member</a>
+  <a class="anc" href="javascript:void(0)" onclick="layer2only(1); selectback('clients');" id="clients">Add Appriciation Letter</a>
+  <a class="anc" href="javascript:void(0)" onclick="layer2only(1); selectback('anything');" id="anything">View Appriciation Letter</a>
  
 </div>
 
