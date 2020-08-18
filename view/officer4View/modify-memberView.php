@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="pagedata" tab="task" type="form" title="Add member">
+    <meta name="pagedata" tab="task" type="form" title="Modify Member">
     <title>Modify Personal-file</title>
     
     <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/main_dk.css">
@@ -19,7 +19,7 @@
     
     <script type="text/javascript" src="/SamurdhiDivPHP/view/js/ksidebar.js"></script>
     <script type="text/javascript" src="/SamurdhiDivPHP/view/js/kheader.js"></script>
-    <script type="text/javascript" src="/SamurdhiDivPHP/view/js/konload.js"></script>
+    
 
     <?php 
     
@@ -80,8 +80,11 @@
 
             <p>
                 <label for="">Type of the member:</label>
-                <input type="text" name="member_type" <?php echo 'value="' .$member_type.'"';?> readonly >                
-            </p>
+                <select name=member_type>
+                    <option <?php if($member_type == 'Inside Officer'){echo("selected");}?>>Inside Officer</option>
+                    <option <?php if($member_type == 'Field Officer'){echo("selected");}?>>Field Officer</option>
+                </select>
+            </p> 
             
             
             
@@ -96,5 +99,6 @@
 
 
     </main>
+    <script type="text/javascript" src="/SamurdhiDivPHP/view/js/konload.js"></script>
 </body>
 </html>

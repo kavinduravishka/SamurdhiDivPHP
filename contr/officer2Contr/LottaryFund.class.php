@@ -22,11 +22,11 @@ class LottaryFund{
 
 
 //=====================================
-    /*
+    
 	public function FundSearch($data){
-		$this->LFRec->find($data);
+		return $this->LFRec->getCount($data);
 	}
-	*/
+	
 	public function FundWrite($data){
 		$this->LFRec->write($data);
 	}
