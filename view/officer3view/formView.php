@@ -2,7 +2,28 @@
 
 <html>
 
-<meta name="pagedata" tab="form" type="form" title="Add member">
+<?php  //meta tag
+
+
+
+$titles = array(
+	"001"=>"Add  Sipdora Scholarship record", //Scholarship
+
+	"101"=>"Social Security Fund application", //Social security fund
+	"102"=>"Add family member - SSF",
+	"103"=>"Add Social Security payment"
+
+);
+
+$title = $titles[$_GET['formid']];
+
+
+echo <<<EOD
+<meta name="pagedata" tab="task" type="form" title="{$title}">
+EOD;
+
+
+?>
 
 <head>
 	<link rel="stylesheet" type="text/css" href="../css/ksidebar.css" >
