@@ -11,8 +11,8 @@
 </div>
 
 <div class="sidebar2layer" id="mySidebar2layer">
-  <a class="anc2" href="#">any Option</a> 
-  <a class="anc2" href="#">any Option</a>
-  <a class="anc2" href="#">any Option</a>
-  <a class="anc2" href="#">any Option</a>
+  <a class="anc2" href="">any Option</a> 
+  <a class="anc2" href="">any Option</a>
+  <a class="anc2" href="">any Option</a>
+  <a class="anc2" href="">any Option</a>
 </div>

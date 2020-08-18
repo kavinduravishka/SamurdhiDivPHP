@@ -5,7 +5,6 @@
   height: 50px;
   width:100%;
   position: fixed;
-  top:0;
 }
 
 .topnav .wsopt {
@@ -105,4 +104,50 @@
 #dropmenu .dropmenuoptlink:hover{
   color: black;
   background-color: #ddd;
+}
+
+
+/*=========================================================================*/
+
+.topnav #currenttask {
+  border-radius: 5px 5px 0px 0px;
+  float: left;
+  background-color: #fff;
+  color: #111;
+  text-align: center;
+  padding: 11px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top:10px;
+  transition: color  .5s , background-color .5s;
+  visibility: hidden;
+}
+
+.topnav #currenttask.active {
+  visibility: visible;
+}
+
+
+.topnav  #currenttask #currenttaskcatagory{
+  color:#888;
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  display:inline-block;
+}
+
+.topnav  #currenttask #currenttasksep{
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  display:inline-block;
+}
+
+.topnav #currenttask #currenttasktask{
+  max-width: 350px;
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  display:inline-block;
+
 }
