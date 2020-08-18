@@ -24,14 +24,13 @@
 
     <?php 
     
-    include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/officer1Inc/officer1_sidebarInc.php");
+    include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/officer4Inc/officer4_sidebar.inc.php");
     include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/header.inc.php");
     ?> 
 
 
     <main>
         
-    <h2>Add Staff-Member</h2>
         
         <?php 
             if(!empty($errors)){
