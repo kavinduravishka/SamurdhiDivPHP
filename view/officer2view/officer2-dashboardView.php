@@ -19,7 +19,7 @@
 
 <body>
 	<?php //require_once("../include/header.inc.php"); 
-	require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/header.inc.php");
+	require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/kheader.inc.php");
 	?>
 
 

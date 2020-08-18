@@ -29,7 +29,7 @@
 		<center><h1>Beneficiaries &nbsp; <span ><a href="beneficiariesView.php" style="text-decoration: none;"><i class="fas fa-sync-alt"></i></a></span></h1></center>
 		
 		
-		<div class="search-container" style='padding-bottom:20px;margin-top:200px;'>
+		<div class="search-container" style='padding-bottom:20px;'>
 			<form action="beneficiariesView.php" method="get">
 				<input type="text" name = "search" id="" placeholder="Type Full Name  or NIC and Press Enter" value="<?php echo $search; ?>">			
 			</form>
