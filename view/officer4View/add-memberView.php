@@ -31,6 +31,7 @@
 
     <main>
         
+    <h2>Add Staff-Member</h2>
         
         <?php 
             if(!empty($errors)){
