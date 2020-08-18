@@ -21,7 +21,6 @@
 	<link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/ksidebar.css" >
     <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/kheader.css" >
 	<link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/kbody.css" >
-	<!-- <link rel="stylesheet" type="text/css" href="../css/styles/navbar.css" > -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
 </head>
 <body>
@@ -29,12 +28,7 @@
 	<script type="text/javascript" src="/SamurdhiDivPHP/view/js/kheader.js"></script>
 	<?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/yheader.inc.php"); ?>
 	 <?php include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/officer1Inc/officer1_sidebarInc.php"); ?>
-	  <?php 
-    	//$navpaths=array("Dashboard"=>"officer1-dashboard.index.php");
-		//require_once("../include/navbar.inc.php");
-	?>
-	
-		
+	  
 	<main>
 		<div class="maincontainer">
 		<h1>Add New Beneficiary</h1>
