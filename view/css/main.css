@@ -72,7 +72,8 @@ header .loggedin a {
 
 main {
   width: 1000px;
-  margin: 30px auto;
+  margin-top: 60px;
+  margin-left: 200px;;
 }
 main h1 {
   margin-bottom: 20px;
@@ -123,7 +124,7 @@ form.userform button {
 }
 
 /*sidebar*/
-.sidebar {
+/* .sidebar {
   background: #2f323a;
   margin-top: 50px;
   position: fixed;
@@ -133,7 +134,7 @@ form.userform button {
   height: 100%;
   transition: 0.5s;
   transition-property: left;
-}
+} */
 /* .sidebar .profile-image {
   width: 100px;
   margin-top: 40px;
@@ -146,7 +147,7 @@ form.userform button {
   margin-top: 0;
   margin-bottom: 20px;
 } */
-.sidebar a {
+/* .sidebar a {
   color: #fff;
   display: block;
   width: 100%;
@@ -171,12 +172,12 @@ label #sidebar_btn {
   padding-left: 45px;
   cursor: pointer;
   font-size: 20px;
-  /* margin: 5px 0; */
+  /* margin: 5px 0;
   transition: 0.1s;
   transition-property: color;
-}
+} */
 
-label #sidebar_btn:hover {
+/* label #sidebar_btn:hover {
   color: #19b3d3;
 }
 
@@ -190,11 +191,11 @@ label #sidebar_btn:hover {
 #check:checked ~ .sidebar a {
   font-size: 20px;
   margin-left: 170px;
-  width: 80px;
+  width: 80px; */
 }
 
 main {
-  margin-top: 70px;
+  margin-top: 50px;
   margin-left: 230px;
   background: url(b.jpg) no-repeat;
   background-position: center;
@@ -203,13 +204,13 @@ main {
   transition: 0.5s;
 }
 
-#check:checked ~ main {
+/* #check:checked ~ main {
   margin-left: 60px;
 }
 
 #check {
   display: none;
-}
+} */
 .maincontainer {
   margin-left: 70px;
 }

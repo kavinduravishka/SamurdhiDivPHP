@@ -3,10 +3,9 @@
   background-color: #111;
   z-index: 10;
   height: 50px;
-  width:100%;
+  width: 100%;
   position: fixed;
-  top:0px;
-
+  top: 0;
 }
 
 .topnav .wsopt {
@@ -17,8 +16,8 @@
   padding: 11px 16px;
   text-decoration: none;
   font-size: 16px;
-  margin-top:10px;
-  transition: color  .5s , background-color .5s;
+  margin-top: 10px;
+  transition: color 0.5s, background-color 0.5s;
 }
 
 .topnav .wsopt:hover {
@@ -31,7 +30,7 @@
   color: #111;
 }
 
-.topnav label{
+.topnav label {
   color: #f2f2f2;
   text-align: center;
   padding: 11px 10px;
@@ -39,29 +38,28 @@
 }
 
 .userdiv {
-  float:right;
-  color:#f2f2f2;
-  height:50px;
+  float: right;
+  color: #f2f2f2;
+  height: 50px;
   padding: 17px 5px;
 }
 
-.userdiv .useroptdrop{
-  color:#f2f2f2;
+.userdiv .useroptdrop {
+  color: #f2f2f2;
   font-size: 18px;
   padding: 0;
-  margin-top:0px;
+  margin-top: 0px;
   text-decoration: none;
 }
 
-
-#header-begin{
-	height:50px;
-	width:100px ;
+#header-begin {
+  height: 50px;
+  width: 100px;
   float: left;
   transition: width 0.3s;
 }
 
-#dropmenu{
+#dropmenu {
   height: auto;
   width: 150px;
   padding: 10px;
@@ -69,20 +67,20 @@
   -ms-transform-origin: right 0;
   transform: scale(0); /* Standard syntax */
   transform-origin: right 0;
-  transition: transform .3s , -ms-transform .3s , visibility .3s;
+  transition: transform 0.3s, -ms-transform 0.3s, visibility 0.3s;
   position: fixed;
-  top:60px;
+  top: 60px;
   right: 20px;
   border: 2px #777 solid;
   visibility: hidden;
 }
 
-#dropmenu .dropmenuopt{
+#dropmenu .dropmenuopt {
   width: 150px;
-  padding:0px 0px;
+  padding: 0px 0px;
 }
 
-#dropmenu .dropmenuoptlink{
+#dropmenu .dropmenuoptlink {
   color: #111;
   background-color: white;
   text-decoration: none;
@@ -100,14 +98,13 @@
   color: #212529;
   text-align: inherit;
 
-  transition: background-color 0.3s , color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-#dropmenu .dropmenuoptlink:hover{
+#dropmenu .dropmenuoptlink:hover {
   color: black;
   background-color: #ddd;
 }
-
 
 /*=========================================================================*/
 
@@ -120,8 +117,8 @@
   padding: 11px 16px;
   text-decoration: none;
   font-size: 16px;
-  margin-top:10px;
-  transition: color  .5s , background-color .5s;
+  margin-top: 10px;
+  transition: color 0.5s, background-color 0.5s;
   visibility: hidden;
 }
 
@@ -129,27 +126,25 @@
   visibility: visible;
 }
 
-
-.topnav  #currenttask #currenttaskcatagory{
-  color:#888;
+.topnav #currenttask #currenttaskcatagory {
+  color: #888;
   overflow: hidden;
-  white-space:nowrap;
-  text-overflow:ellipsis;
-  display:inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline-block;
 }
 
-.topnav  #currenttask #currenttasksep{
+.topnav #currenttask #currenttasksep {
   overflow: hidden;
-  white-space:nowrap;
-  text-overflow:ellipsis;
-  display:inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline-block;
 }
 
-.topnav #currenttask #currenttasktask{
+.topnav #currenttask #currenttasktask {
   max-width: 350px;
   overflow: hidden;
-  white-space:nowrap;
-  text-overflow:ellipsis;
-  display:inline-block;
-
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline-block;
 }
