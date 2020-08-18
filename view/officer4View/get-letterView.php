@@ -6,7 +6,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="pagedata" tab="dash" type="form" title="Add member">
+    <meta name="pagedata" tab="task" type="report" title="View Letter">
     <title>Get Appreciation Letter View</title>
    
 
@@ -23,7 +23,7 @@
     
     <script type="text/javascript" src="/SamurdhiDivPHP/view/js/ksidebar.js"></script>
     <script type="text/javascript" src="/SamurdhiDivPHP/view/js/kheader.js"></script>
-    <script type="text/javascript" src="/SamurdhiDivPHP/view/js/konload.js"></script>
+   
 
     <?php 
     
@@ -58,5 +58,6 @@
 
 
     </main>
+    <script type="text/javascript" src="/SamurdhiDivPHP/view/js/konload.js"></script>
 </body>
 </html>
