@@ -2,14 +2,23 @@
 <table class="formtable">
     
     <!-- $Zone=''; -->
+
     <!-- $ForceNo=''; -->
+
     <!-- $Village=''; -->
+
     <!-- $GNDomain=''; -->
+
     <!-- $SSOwnershipNo=''; -->
+
     <!-- $Name=''; -->
+
     <!-- $Address=''; -->
+
     <!-- $Successer=''; -->
+
     <!-- $HomeNo=''; -->
+    
 
 </table>
 
