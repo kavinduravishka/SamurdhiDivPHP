@@ -1,9 +1,9 @@
 <?php
 
-require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer.class.php");
-require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer3Contr\SocialSF.class.php");
-require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer3Contr\Scholarship.class.php");
-require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\\reportContr\off23reportfactory.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer3Contr/SocialSF.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer3Contr/Scholarship.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/reportContr/off23reportfactory.class.php");
 
 class Officer3 extends Officer{
 
@@ -58,22 +58,22 @@ class Officer3 extends Officer{
 
     //=================   REPORTS   ==================
 
-    public function SSFundReport($data){
-        $socialsf=SocialSF::getInstance();
-        $fetcheddata=$socialsf->fundReport($data);
-        return $fetcheddata;
-    }
+    // public function SSFundReport($data){
+    //     $socialsf=SocialSF::getInstance();
+    //     $fetcheddata=$socialsf->fundReport($data);
+    //     return $fetcheddata;
+    // }
 
-    public function  printSSFundReport(){
-        $this->newReportInstance();
-        $data = $this->SSFundReport();
-        $this->report->printReport($data);
-    }
+    // public function  printSSFundReport(){
+    //     $this->newReportInstance();
+    //     $data = $this->SSFundReport();
+    //     $this->report->printReport($data);
+    // }
 
-    public function getSSFundReport(){
-        $this->newReportInstance();
-        $data = $this->SSFundReport();
-        $this->report->getReport($data);
-    }
+    // public function getSSFundReport(){
+    //     $this->newReportInstance();
+    //     $data = $this->SSFundReport();
+    //     $this->report->getReport($data);
+    // }
 }
 ?>

@@ -46,13 +46,29 @@ EOD;
 
 <body>
 
-	
-
 <?php 
 include_once("../includes/ksidebar.inc.php");
 include_once("../includes/kheader.inc.php");
 ?> 
 
+<div id="maincontainer">
+
+<?php  
+
+$includes = array(
+	"001"=>"officer3.001form.php", 
+
+	"101"=>"officer3.101form.php", 
+	"102"=>"officer3.102form.php", 
+	"103"=>"officer3.103form.php", 
+
+);
+
+include_once(realpath($_SERVER['DOCUMENT_ROOT'])."/SamurdhiDivPHP/view/includes/officer3Inc/{$includes[$_GET['formid']]}");
+
+?>
+	
+</div>
 
 	<script type="text/javascript" src="../js/ksidebar.js"></script>
 	<script type="text/javascript" src="../js/kheader.js"></script>

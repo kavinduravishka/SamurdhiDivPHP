@@ -33,7 +33,7 @@ if(isset($_POST['Submit'])){
     }else{
         echo "<script>
             alert('This benificaiarie has won a lottary ALREADY');
-            window.location.href='dashboardView.php';
+            window.location.href='selectFormView.php';
             </script>";
         exit;
     }

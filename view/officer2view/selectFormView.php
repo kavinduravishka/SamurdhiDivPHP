@@ -16,7 +16,6 @@ include_once("../includes/ksidebar.inc.php");
 include_once("../includes/kheader.inc.php");
 ?> 
 
-
 <div id="maincontainer">
 	<h3 class="tl1">Community Based Organizations</h3>
 		<a class="link" href="formView.php?formid=001">Register/Renew C.B.Organizations</a>

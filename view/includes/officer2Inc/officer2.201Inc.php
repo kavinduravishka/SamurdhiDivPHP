@@ -34,7 +34,7 @@ if(isset($_POST['Submit'])){
     $officer= Officer2::getInstance();
     $officer->MFrequestWrite($data);
 
-    header('Location: dashboardView.php');
+    header('Location: selectFormView.php');
     exit;
 }
 

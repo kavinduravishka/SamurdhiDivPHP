@@ -53,7 +53,7 @@ if(!isset($_SESSION["RegNo"]) || $_SESSION["RegNo"]==''){
         $officer= Officer2::getInstance();
         $officer->CBOmemWrite($data);
         unset($_SESSION['RegNo']);
-        header('Location: dashboardView.php');
+        header('Location: selectFormView.php');
     exit;
     }
 

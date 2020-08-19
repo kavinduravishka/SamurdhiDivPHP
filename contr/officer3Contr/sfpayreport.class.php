@@ -25,7 +25,11 @@ class sfpayreport implements Report{
 
   	private function generateReport($data){
 
-  	}
+    }
+    
+    public function viewReport(){
+      
+    }
 
 }
 
