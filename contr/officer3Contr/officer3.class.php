@@ -1,13 +1,14 @@
 <?php
 
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer.class.php");
 require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer3Contr\SocialSF.class.php");
 require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer3Contr\Scholarship.class.php");
 require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\\reportContr\off23reportfactory.class.php");
 
-class Officer3{
+class Officer3 extends Officer{
 
-    private $reportfactory = new off23report();
-    private $report = null;
+    //private $reportfactory = new off23report();
+    //private $report = null;
 
     private static $instance=null;
 
@@ -22,6 +23,16 @@ class Officer3{
         }
     
         return self::$instance;
+    }
+
+    protected function handleLogin($login_request){
+        if ($login_request=='officer3') {
+            header('Location: http://localhost/SamurdhiDivPHP/view/officer3view/officer3-dashboardView.php');
+            return TRUE;
+        }
+        else {
+            return FALSE;
+        }
     }
 
     public function ScholarWrite($data){

@@ -1,11 +1,12 @@
 <?php
 
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer.class.php");
 require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer2Contr\CBO.class.php");
 require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer2Contr\LottaryFund.class.php");
 // require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\\reportContr\off23reportfactory.class.php");
 // require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\\reportContr\\reportfactory.class.php");
 
-class Officer2 {
+class Officer2 extends Officer{
 
     // private $reportfactory = new off23report();
     // private $report = null;
@@ -24,7 +25,17 @@ class Officer2 {
         }                                       //
                                                 //
         return self::$instance;                 //
-    }                                           //
+    }   
+    
+    protected function handleLogin($login_request){
+        if ($login_request=='officer2') {
+            header('Location: http://localhost/SamurdhiDivPHP/view/officer2view/officer2-dashboardView.php');
+            return TRUE;
+        }
+        else {
+            return FALSE;
+        }
+    }
 
     private function newReportInstance(){
         if($this->report==null){
