@@ -1,6 +1,9 @@
 <?php
     require_once(__DIR__."/../../contr/login.class.php");
     require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer.class.php");
+    require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer1Contr\officer1.class.php");
+    // require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer2Contr\officer2.class.php");
+    //require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer3Contr\officer3.class.php");
     require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer4Contr\officer4.class.php");
     require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer5Contr\officer5.class.php");
     
@@ -27,9 +30,19 @@
             extract($user);
             $_SESSION['user_name']=$user_name;
 
-            $logger1=Officer5::getInstance();
-            $logger2=Officer4::getInstance();
-            $logger1->setLogger($logger2);
+            
+            $logger1=Officer1::getInstance();
+            //$logger2=Officer2::getInstance();
+            //$logger3=Officer3::getInstance();
+            $logger4=Officer4::getInstance();
+            $logger5=Officer5::getInstance();
+
+            $logger1->setLogger($logger4);
+            //$logger2->setLogger($logger3);
+            //$logger3->setLogger($logger4);
+            $logger4->setLogger($logger5);
+            //$logger5->setLogger();
+
             $login_request=$_SESSION['user_name'];
             $logger1->handleLoginRequest($login_request);
 
