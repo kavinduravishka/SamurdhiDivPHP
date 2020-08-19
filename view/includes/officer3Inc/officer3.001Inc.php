@@ -18,8 +18,6 @@ $Bank='';
 $SisurakaAcNo='';
 $PeriodID='';
 
-
-
 if(isset($_POST['Submit'])){
 
     $NIC=$_POST['NIC'];

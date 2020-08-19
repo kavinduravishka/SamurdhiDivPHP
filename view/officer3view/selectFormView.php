@@ -21,6 +21,7 @@ include_once("../includes/kheader.inc.php");
 		<a class="link" href="formView.php?formid=001">Add new Sipdora Scholarship record</a>
 	<h3 class="tl1">Social Security Fund</h3>
 		<a class="link" href="formView.php?formid=101">Fill Social Security Fund application</a><br>
+		<a class="link" href="formView.php?formid=102">Add SSF benificiary family member</a><br>
 		<a class="link" href="formView.php?formid=103">Add Social Security payment</a>
 </div>
 
