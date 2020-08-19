@@ -1,6 +1,6 @@
 <?php 
 
-require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\model\officer2DB\LFRecDB.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/officer2DB/LFRecDB.class.php");
 
 class LottaryFund{
 

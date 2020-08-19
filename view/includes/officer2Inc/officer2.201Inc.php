@@ -1,7 +1,7 @@
 
 <?php
 
-require_once(include_once(realpath($_SERVER['DOCUMENT_ROOT'])."/SamurdhiDivPHP/contr/office2Contr/officer2.class.php"));
+require_once(realpath($_SERVER['DOCUMENT_ROOT'])."/SamurdhiDivPHP/contr/officer2Contr/officer2.class.php");
 
 
 
@@ -37,12 +37,12 @@ $data=array(
    
 
 $officer= Officer2::getInstance();
-$officer.MFrequestWrite($data);
+$officer->MFrequestWrite($data);
 
 
 
 
-header('Location: CBOComityMembers.index.php');
+header('Location: dashboardView.php');
 exit;
 }
 

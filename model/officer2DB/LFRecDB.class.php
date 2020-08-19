@@ -1,5 +1,6 @@
 <?php
-require_once("../dbbase.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/dbbase.class.php");
+
 	
 class LFRecDB extends Dbbase{
 	
@@ -22,6 +23,10 @@ class LFRecDB extends Dbbase{
 		$previousRecords = $stmt->fetch();
 		return $previousRecords['prevcount'];
 	}
+
+	public function find($data){}
+
+	public function update($data){}
 
 }
 

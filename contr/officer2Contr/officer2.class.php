@@ -1,7 +1,7 @@
 <?php
 
-require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer2Contr\CBO.class.php");
-require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer2Contr\LottaryFund.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer2Contr/CBO.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer2Contr/LottaryFund.class.php");
 // require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\\reportContr\off23reportfactory.class.php");
 // require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\\reportContr\\reportfactory.class.php");
 
@@ -26,11 +26,11 @@ class Officer2 {
         return self::$instance;                 //
     }                                           //
 
-    private function newReportInstance(){
-        if($this->report==null){
-            $this->report=$this->reportfactory->anOperation(1);
-        }
-    }
+    // private function newReportInstance(){
+    //     if($this->report==null){
+    //         $this->report=$this->reportfactory->anOperation(1);
+    //     }
+    // }
 
 
     public function CBOorgWrite($data){
