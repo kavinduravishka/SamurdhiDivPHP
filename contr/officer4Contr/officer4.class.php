@@ -2,8 +2,9 @@
 
 //require_once("../model/officer4DB/officer4DB.class.php");
 require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/officer4DB/officer4DB.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer.class.php");
 
-class Officer4 {
+class Officer4 extends Officer{
 
     private static $instance = null;
 
@@ -15,6 +16,16 @@ class Officer4 {
         }
     
         return self::$instance;
+    }
+
+    protected function handleLogin($login_request){
+        if ($login_request=='officer4') {
+            header('Location: http://localhost/SamurdhiDivPHP/view/officer4View/personal-filesView.php');
+            return TRUE;
+        }
+        else {
+            return FALSE;
+        }
     }
 
     public function loadPersonalFiles() {

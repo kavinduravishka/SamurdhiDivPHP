@@ -3,19 +3,11 @@
 ?>
 
 
-<?php 
-	// checking if a user is logged in
-	// if(!isset($_SESSION['user_name'])){
-	// 	header('Location: officer1-dashboard.index.php');
-	// }
- ?>
-<!-- form validation -->
-
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
-    <meta name="pagedata" tab="dash" type="form" title="Add beneficiary">
+    <meta name="pagedata" tab="task" type="form" title="Add Beneficiary">
 	<title>Add new User</title>
 	<link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/main.css">
 	<link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/ksidebar.css" >
@@ -45,7 +37,7 @@
 				echo '</div>';
 			}
 
-		 ?>
+		?>
 		<form action="add-beneficiaryView.php" method="post" class ="userform">
 			<p>
 				<label>	Divisional Secretariat:</label>
@@ -129,6 +121,7 @@
 		</form>
 		</div>
 	</main>
+	 <script type="text/javascript" src="/SamurdhiDivPHP/view/js/konload.js"></script>
 </body>
 </html>
 

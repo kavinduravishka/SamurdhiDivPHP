@@ -25,12 +25,14 @@ class LoginDB extends Dbh{
             else{
                 
 
-                $_SESSION['user_id']=$resolved[0]['id'];
-                $_SESSION['user_name']=$resolved[0]['user_name'];
+                // $_SESSION['user_id']=$resolved[0]['id'];
+                // $_SESSION['user_name']=$resolved[0]['user_name'];
+                $user_id=$resolved[0]['id'];
+                $user_name=$resolved[0]['user_name'];
 
                 $sql2="UPDATE user SET last_login=NOW() WHERE id=? LIMIT 1";
                 $stmt2=$this->connect()->prepare($sql2);
-                $stmt2->execute([$_SESSION['user_id']]);
+                $stmt2->execute([$user_id]);
 
                 return compact('user_id','user_name');
             }

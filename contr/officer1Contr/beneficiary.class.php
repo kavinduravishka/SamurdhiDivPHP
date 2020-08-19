@@ -34,10 +34,10 @@ class Beneficiary{
 
 			$Serial_No = (int)$Serial_No;
 
-			$Bank_Zonal = '';
-			$GN_Division = '';
-			$Address = '';
-			$Bank_Account_No = '';
+			// $Bank_Zonal = '';
+			// $GN_Division = '';
+			// $Address = '';
+			// $Bank_Account_No = '';
 
 			$beneficiary =  (BeneficiaryDB::getInstance())->getBeneficiary($Serial_No);
 

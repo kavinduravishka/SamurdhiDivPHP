@@ -6,18 +6,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="pagedata" tab="task" type="form" title="Add Profile">
     <title>Add New Salary Profile</title>
     
     <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/main_dk.css">
     <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/ksidebar.css" >
-    <script type="text/javascript" src="/SamurdhiDivPHP/view/js/ksidebar.js"></script>
+    <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/kheader.css" >
+	<link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/kbody.css" >
+
+
     
     
 </head>
-<body id="maincontainer">
+<body>
+
+    <script type="text/javascript" src="/SamurdhiDivPHP/view/js/ksidebar.js"></script>
+    <script type="text/javascript" src="/SamurdhiDivPHP/view/js/kheader.js"></script>
+    
+
     <?php 
-    require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/header.inc.php");
-    require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/officer4Inc/officer4_sidebar.inc.php");
+    
+    include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/officer5Inc/officer5_sidebar.inc.php");
+    include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/dheader.inc.php");
     ?> 
 	
 
@@ -35,6 +45,24 @@
                 echo '</div>';
             }
         ?>
+
+        <script type="text/javascript">
+        function update()
+        {
+            var form = document.forms[0];
+            var sum = eval(form.basic_salary.value)
+                    + eval(form.interim_allo.value)
+                    + eval(form.language_allo.value) 
+                    + eval(form.living_cost.value)
+                    + eval(form.w_op.value)
+                    + eval(form.agrahara.value)
+                    + eval(form.stamp.value)
+                    + eval(form.union.value)
+                    + eval(form.other_loan.value)
+                    + eval(form.special_advance.value);
+            form.net_pay.value = isNaN(sum) ? "" :sum;
+        }
+        </script>
 
         <form action="add-salaryprofileView.php" method="post" class="memberform" >
 
@@ -67,51 +95,50 @@
             <p><b>Earnings</b></p>
             <p>
                 <label for="" id="sub_lbl">Basic Salary:</label>
-                <input type="int" name="basic_salary" id="nums" <?php echo 'value="' .$basic_salary.'"';?> >            
+                <input type="int" name="basic_salary" id="nums" <?php echo 'value="' .$basic_salary.'"';?> onchange="update()" >            
             </p>
             <p>
                 <label for=""id="sub_lbl">Interim Allowance:</label>
-                <input type="int" name="interim_allo" id="nums" <?php echo 'value="' .$interim_allo.'"';?> >            
+                <input type="int" name="interim_allo" id="nums" <?php echo 'value="' .$interim_allo.'"';?> onchange="update()" >            
             </p>
             <p>
                 <label for=""id="sub_lbl">Language Allownce:</label>
-                <input type="int" name="language_allo" id="nums" <?php echo 'value="' .$language_allo.'"';?> >            
+                <input type="int" name="language_allo" id="nums" <?php echo 'value="' .$language_allo.'"';?> onchange="update()">            
             </p>
             <p>
                 <label for=""id="sub_lbl">Living Cost:</label>
-                <input type="int" name="living_cost" id="nums" <?php echo 'value="' .$living_cost.'"';?> >            
+                <input type="int" name="living_cost" id="nums" <?php echo 'value="' .$living_cost.'"';?> onchange="update()">            
             </p>
             <p><b>Deductions</b></p>
             <p>
                 <label for=""id="sub_lbl">W & OP:</label>
-                <input type="int" name="w_op" id="nums" <?php echo 'value="' .$w_op.'"';?> >            
+                <input type="int" name="w_op" id="nums" <?php echo 'value="' .$w_op.'"';?> onchange="update()">            
             </p>
             <p>
                 <label for=""id="sub_lbl">Agrahara:</label>
-                <input type="int" name="agrahara" id="nums" <?php echo 'value="' .$agrahara.'"';?> >            
+                <input type="int" name="agrahara" id="nums" <?php echo 'value="' .$agrahara.'"';?> onchange="update()">            
             </p>
             <p>
                 <label for=""id="sub_lbl">Stamp value:</label>
-                <input type="int" name="stamp" id="nums" <?php echo 'value="' .$stamp.'"';?> >            
+                <input type="int" name="stamp" id="nums" <?php echo 'value="' .$stamp.'"';?> onchange="update()">            
             </p>
             <p>
                 <label for=""id="sub_lbl">Union Value:</label>
-                <input type="int" name="union" id="nums" <?php echo 'value="' .$union.'"';?> >            
+                <input type="int" name="union" id="nums" <?php echo 'value="' .$union.'"';?> onchange="update()">            
             </p>
             <p>
                 <label for=""id="sub_lbl">Other Loan:</label>
-                <input type="int" name="other_loan" id="nums" <?php echo 'value="' .$other_loan.'"';?> >            
+                <input type="int" name="other_loan" id="nums" <?php echo 'value="' .$other_loan.'"';?> onchange="update()">            
             </p>
             <p>
                 <label for=""id="sub_lbl">Special Advance:</label>
-                <input type="int" name="special_advance"  id="nums" <?php echo 'value="' .$special_advance.'"';?> >            
+                <input type="int" name="special_advance"  id="nums" <?php echo 'value="' .$special_advance.'"';?> onchange="update()">            
             </p>
             <p>
                 <label for="">Net Payment:</label>
-                <input type="int" name="net_pay" id="nums" <?php echo 'value="' .$net_pay.'"';?> >                
-                <button type="submit" name="calculate" id="cal">Calculate</button>                 
+                <input type="int" name="net_pay" id="enums" <?php echo 'value="' .$net_pay.'"';?> readonly="readonly" >                
+                <!-- <button type="submit" name="calculate" id="cal">Calculate</button>                  -->
             </p>
-
             <p>
                 <label for="">&nbsp;</label>
                 <button type="submit" name="submit">Save</button>
@@ -121,5 +148,6 @@
 
 
     </main>
+    <script type="text/javascript" src="/SamurdhiDivPHP/view/js/konload.js"></script>
 </body>
 </html>

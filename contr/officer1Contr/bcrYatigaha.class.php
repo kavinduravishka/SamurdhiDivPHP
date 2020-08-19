@@ -1,7 +1,6 @@
 <?php  require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/officer1DB/reportDB.class.php"); 
- //require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/ireport.php"); 
-  require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/reportContr/ireport.php");
-   require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/reportContr/mpdfAdaptee.class.php");
+       require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/reportContr/ireport.php");
+       require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/reportContr/mpdfAdaptee.class.php");
 
 
 class BCRYatigaha implements Report {
@@ -13,26 +12,32 @@ public function printReport($data){
 
 }
 
-public function viewReport(){
-
-  $users = (new ReportDB())->getGNDetails('41-Paranahalpe','Yatigaha');
-  $count_list = "";
-  $t_420=0;$t_1320=0;$t_1220=0;$t_2120=0;$t_3020=0;
-  $count_list .= "<tr><td>1</td><td>41 බ/පරණහල්පේ </td>";
-  $ben_420=0;$ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
-    foreach($users as $user){
+public function count($ben_420,$ben_1320,$ben_1220,$ben_2120,$ben_3020,$t_420,$t_1320,$t_1220,$t_2120,$t_3020,$users){
+   foreach($users as $user){
       if($user['Relief_Amount']==420){$ben_420+=1;$t_420+=1;}
       else if($user['Relief_Amount']==1320){$ben_1320+=1;$t_1320+=1;}
       else if($user['Relief_Amount']==1220){$ben_1220+=1;$t_1220+=1;}
       else if($user['Relief_Amount']==2120){$ben_2120+=1;$t_2120+=1;}
       else if($user['Relief_Amount']==3020){$ben_3020+=1;$t_3020+=1;}
     }
+}
+
+
+public function viewReport(){
+
+  $t_420=0;$t_1320=0;$t_1220=0;$t_2120=0;$t_3020=0;
+  $count_list = "";
+
+  $users = (new ReportDB())->getGNDetails('41-Paranahalpe','Yatigaha');
+  $count_list .= "<tr><td>1</td><td>41 බ/පරණහල්පේ </td>";
+  $ben_420=0;$ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
+   count($ben_420,$ben_1320,$ben_1220,$ben_2120,$ben_3020,$t_420,$t_1320,$t_1220,$t_2120,$t_3020,$users);
     $total1 = $ben_420+$ben_1320+$ben_1220+$ben_2120+$ben_3020;
     $count_list .= "<td>{$ben_420}</td><td>{$ben_1320}</td><td>{$ben_1220}</td><td>{$ben_2120}</td><td>{$ben_3020}</td><td>{$total1}</td></tr>";
 
 
   
-    $users = (new ReportDB())->getGNDetails('41A-Paranahalpe','Yatigaha');
+  $users = (new ReportDB())->getGNDetails('41A-Paranahalpe','Yatigaha');
   $count_list .= "<tr><td>2</td><td>41A නැ/පරණහල්පේ </td>";
   $ben_420=0;$ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
     foreach($users as $user){

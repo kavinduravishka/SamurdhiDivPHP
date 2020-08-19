@@ -1,6 +1,4 @@
 <?php
-
-//require_once("../model/dbh.class.php");
 require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\model\dbh.class.php");
 
 class Officer5DB extends Dbh{
@@ -30,7 +28,7 @@ class Officer5DB extends Dbh{
             $salary_record.="<td>{$member['name']}</td>";
             $salary_record.="<td>{$member['designation']}</td>";
             $salary_record.="<td><a href=\"modify-salaryprofileView.php?emp_no={$member['emp_no']}\">Modify</a></td>";
-            $salary_record.="<td><a href=\"delete-salaryprofileInc.php?emp_no={$member['emp_no']}\" onclick=\"return confirm('Are you sure?');\">Delete</a></td>";
+            $salary_record.="<td><a href=\"../includes/officer5Inc/delete-salaryprofileInc.php?emp_no={$member['emp_no']}\" onclick=\"return confirm('Are you sure?');\">Delete</a></td>";
             $salary_record.="<td><a href=\"monthly-payreportView.php?emp_no={$member['emp_no']}\">PayReport</a></td>";
             $salary_record.="</tr>";
         }
