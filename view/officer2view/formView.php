@@ -1,4 +1,17 @@
-<?php  ?>
+<?php  
+
+$includes = array(
+	"001"=>"officer2.001Inc.php", //CBO
+	"002"=>"officer2.002Inc.php",
+
+	"101"=>"officer2.101Inc.php", //Lotttary
+
+	"201"=>"officer2.201Inc.php" //MF record
+);
+
+include_once(realpath($_SERVER['DOCUMENT_ROOT'])."/SamurdhiDivPHP/view/includes/officer2Inc/{$includes[$_GET['formid']]}");
+
+?>
 
 <html>
 
