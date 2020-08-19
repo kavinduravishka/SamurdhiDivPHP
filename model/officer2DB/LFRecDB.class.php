@@ -13,15 +13,17 @@ class LFRecDB extends Dbbase{
 
 	}
 
-	private function getCount($NIC){
+	public function getCount($NIC){
 
 		$sql = "SELECT COUNT(NIC) AS prevcount FROM LottaryFundRecord WHERE NIC = ?";
 		$stmt = $this->connect()->prepare($sql);
 
 		$stmt->execute([$NIC]);
 
-		$previousRecords = $stmt->fetch();
-		return $previousRecords['prevcount'];
+		$previousRecords = $stmt->fetchAll();
+		//echo "<script>console.log('".$previousRecords['prevcount']."') ; </script>";
+		return $previousRecords[0]['prevcount'];
+		
 	}
 
 	public function find($data){}

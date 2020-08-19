@@ -12,11 +12,11 @@ $Address='';
 $Date='';
 
 
-if(isset($_POST['submit'])){
-  $NIC=$_POST['NIC'];
-  $Name=$_POST['Name'];
-  $Address=$_POST['Address'];
-  $Date=$_POST['Date'];
+if(isset($_POST['Submit'])){
+    $NIC=$_POST['NIC'];
+    $Name=$_POST['Name'];
+    $Address=$_POST['Address'];
+    $Date=$_POST['Date'];
 
     $data=array(
         'NIC'=>$_POST['NIC'],
@@ -31,7 +31,10 @@ if(isset($_POST['submit'])){
         header('Location: dashboardView.php');
         exit;
     }else{
-        echo "<h1>this data is already in the database</h1>";
+        echo "<script>
+            alert('This benificaiarie has won a lottary ALREADY');
+            window.location.href='dashboardView.php';
+            </script>";
         exit;
     }
   

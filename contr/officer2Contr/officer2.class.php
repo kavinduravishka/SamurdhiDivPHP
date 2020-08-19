@@ -63,7 +63,7 @@ class Officer2 extends Officer{
 
     public function LFcheckifAlready($NIC){
         $lfund=LottaryFund::getInstance();
-        return $lfund->FundSearch($data);
+        return $lfund->checkifAlready($NIC);
     }
     
     public function MFrequestWrite($data){
