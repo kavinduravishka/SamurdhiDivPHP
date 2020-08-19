@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $includes = array(
 	"001"=>"officer3.001Inc.php", //Scholar
 

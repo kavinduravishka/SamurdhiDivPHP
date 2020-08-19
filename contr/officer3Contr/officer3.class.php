@@ -24,10 +24,11 @@ class Officer3 extends Officer{
     
         return self::$instance;
     }
+    
 
     protected function handleLogin($login_request){
         if ($login_request=='officer3') {
-            header('Location: http://localhost/SamurdhiDivPHP/view/officer3view/officer3-dashboardView.php');
+            header('Location: '.realpath($_SERVER["DOCUMENT_ROOT"]).'/SamurdhiDivPHP/view/officer3view/dashboardView.php');
             return TRUE;
         }
         else {

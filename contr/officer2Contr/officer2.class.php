@@ -30,7 +30,7 @@ class Officer2 extends Officer{
     
     protected function handleLogin($login_request){
         if ($login_request=='officer2') {
-            header('Location: http://localhost/SamurdhiDivPHP/view/officer2view/dashboardView.php');
+            header('Location: '.realpath($_SERVER["DOCUMENT_ROOT"]).'/SamurdhiDivPHP/view/officer2view/dashboardView.php');
             return TRUE;
         }
         else {

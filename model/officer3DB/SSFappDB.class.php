@@ -4,7 +4,7 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/dbbase.c
 class SSFappDB extends Dbbase{
 
 	public function write($data){
-		$sql = "INSERT INTO SSFundApplicants(District, DivSec, Zone,  ForceNo, Village, NDomain, SSOwnershipNo, Name,  Address, Successer, HomeNo, Banned ) values (?,?,?,?,?,?,?,?,?,?,?,?)";
+		$sql = "INSERT INTO SSFundApplicants(District, DivSec, Zone,  ForceNo, Village, GNDomain, SSOwnershipNo, Name,  Address, Successer, HomeNo, Banned ) values (?,?,?,?,?,?,?,?,?,?,?,?)";
 		$stmt = $this->connect()->prepare($sql);
 		$stmt->execute([
 			$data['District'],  
@@ -12,7 +12,7 @@ class SSFappDB extends Dbbase{
 			$data['Zone'],  
 			$data['ForceNo'],
 			$data['Village'],
-			$data['NDomain'],
+			$data['GNDomain'],
 			$data['SSOwnershipNo'],
 			$data['Name'],
 			$data['Address'],

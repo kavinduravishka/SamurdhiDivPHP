@@ -14,7 +14,10 @@ $Address='';
 $Successer='';
 $HomeNo='';
 
-if(isset($_POST['Submit'])){
+if(!isset($_SESSION['OwnershipNo'])){
+    $_SESSION['OwnershipNo']=$_POST['SSOwnershipNo'];
+}
+if(isset($_POST['SubmitNext']) || isset($_POST['SubmitFinish'])){
 
     $Zone=$_POST['Zone'];
     $ForceNo=$_POST['ForceNo'];
@@ -25,6 +28,8 @@ if(isset($_POST['Submit'])){
     $Address=$_POST['Address'];
     $Successer=$_POST['Successer'];
     $HomeNo=$_POST['HomeNo'];
+
+    $Banned='0';
 
 
     $data=array(
@@ -38,13 +43,19 @@ if(isset($_POST['Submit'])){
         'Name'=>$_POST['Name'],
         'Address'=>$_POST['Address'],
         'Successer'=>$_POST['Successer'],
-        'HomeNo'=>$_POST['HomeNo']
+        'HomeNo'=>$_POST['HomeNo'],
+        'Banned'=>$Banned
     );
 
     $officer= Officer3::getInstance();
     $officer->SSFappWrite($data);
 
-    header('Location: selectFormView.php');
+
+    if(isset($_POST['SubmitFinish'])){
+        header('Location: selectFormView.php');
+    }else if(isset($_POST['SubmitNext'])){
+        header('Location: formView.php?formid=102');
+    }
     exit;
 
 }

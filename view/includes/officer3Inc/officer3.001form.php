@@ -81,7 +81,7 @@
     <tr>
         <td class="fieldname">Address</td>
 
-        <td><input type="text" required class="forminput" name="Address" value=""></td>
+        <td><textarea type="text" required class="forminput" name="Address" value=""></textarea></td>
     </tr>
 
     <!-- $Bank=''; -->
