@@ -1,6 +1,5 @@
 <?php
-require_once("../dbbase.class.php");
-
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/dbbase.class.php");
 class SSFundREP extends Dbbase{
 	
 	public function find($data){
@@ -10,6 +9,10 @@ class SSFundREP extends Dbbase{
 		$fetchedData = $stmt->fetchAll();
 		return $fetchedData;		
 	}
+
+	public function write($data){}
+
+	public function update($data){}
 	
 	
 }

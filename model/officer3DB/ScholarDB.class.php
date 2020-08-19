@@ -1,5 +1,5 @@
 <?php
-require_once("../dbbase.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/dbbase.class.php");
 	
 class ScholarDB extends Dbbase{
 
@@ -24,6 +24,10 @@ class ScholarDB extends Dbbase{
 		]);
 		   
 	}
+
+	public function find($data){}
+
+	public function update($data){}
 	
 }
 

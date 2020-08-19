@@ -19,7 +19,7 @@ include_once(realpath($_SERVER['DOCUMENT_ROOT'])."/SamurdhiDivPHP/view/includes/
 
 
 $titles = array(
-	"001"=>"Add  Sipdora Scholarship record", //Scholarship
+	"001"=>"Add Sipdora Scholarship record", //Scholarship
 
 	"101"=>"Social Security Fund application", //Social security fund
 	"102"=>"Add family member - SSF",
@@ -52,10 +52,6 @@ EOD;
 include_once("../includes/ksidebar.inc.php");
 include_once("../includes/kheader.inc.php");
 ?> 
-
-<div id="maincontainer">
-	<h1>Contents</h1>
-</div>
 
 
 	<script type="text/javascript" src="../js/ksidebar.js"></script>

@@ -1,5 +1,5 @@
 <?php
-require_once("../dbbase.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/dbbase.class.php");
 	
 class MFRelREP extends Dbbase{
 
@@ -12,6 +12,12 @@ class MFRelREP extends Dbbase{
 		return $fetchedData;
 
 	}
+
+	public function  update($data){}
+
+	public function  write($data){}
+	
 }
+
 
 ?>

@@ -1,5 +1,5 @@
 <?php
-require_once("../dbbase.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/dbbase.class.php");
 
 class SSFfamDB extends Dbbase{
 
@@ -20,6 +20,9 @@ class SSFfamDB extends Dbbase{
 			]);
 	}
 	
+	public function find($data){}
+
+	public function update($data){}
 	
 }
 
