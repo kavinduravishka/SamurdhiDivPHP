@@ -5,7 +5,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 class MPDFAdaptee{
     public function createPDF($data){
         
-        $mpdf = new \Mpdf\Mpdf(['tempDir' => __DIR__ . '/custom/temp/dir/path']);
+        $mpdf = new \Mpdf\Mpdf(['tempDir' => __DIR__ . '/custome/temp/dir/path']);
         $mpdf->autoScriptToLang = true;
         $mpdf->baseScript = 1;
         //$mpdf->autoVietnamese = true;

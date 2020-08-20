@@ -78,41 +78,6 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\model\officer1
                 return $b_list;
 			}
 			
-		
-		// public function getBeneficiary($Serial_No){
-
-		// 	$Serial_No = (int)$Serial_No;
-
-		// 	$Bank_Zonal = '';
-		// 	$GN_Division = '';
-		// 	$Address = '';
-		// 	$Bank_Account_No = '';
-
-		// 	$beneficiary =  (Officer1DB::getInstance())->getBeneficiary($Serial_No);
-
-		// 	foreach($beneficiary as $benf){
-		// 		$Bank_Zonal = $benf['Bank_Zonal'];
-		// 		$GN_Division = $benf['GN_Division'];
-		// 		$Address = $benf['Address'];
-		// 		$Bank_Account_No = $benf['Bank_Account_No'];
-		// 	}
-
-		// 	return compact('Bank_Zonal','GN_Division','Address','Bank_Account_No');
-
-		// }	
-		
-
-        // public function addBeneficiary($Divisional_Secretariat,$Bank_Zonal,$GN_Division,$GN_Code_Mapping,$Householder_Name,$Address,$NIC,$No_of_Family_Members,$Bank_Account_No,$Relief_Account,$Starting_Year){
-        //     (Officer1DB::getInstance())->addBeneficiary($Divisional_Secretariat,$Bank_Zonal,$GN_Division,$GN_Code_Mapping,$Householder_Name,$Address,$NIC,$No_of_Family_Members,$Bank_Account_No,$Relief_Account,$Starting_Year,$errors);
-        // }
-
-        // public function updateBeneficiary($Bank_Zonal,$GN_Division,$Address,$Bank_Account_No,$Serial_No){
-        //     (Officer1DB::getInstance())->updateBeneficiary($Bank_Zonal,$GN_Division,$Address,$Bank_Account_No,$Serial_No);
-        // }
-
-        // public function deleteBeneficiary($Serial_No){
-        //     (Officer1DB::getInstance())->deleteBeneficiary($Serial_No);
-        // }
     }
 
 
