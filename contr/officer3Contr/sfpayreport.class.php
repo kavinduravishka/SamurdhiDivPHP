@@ -7,21 +7,18 @@ class sfpayreport implements Report{
 
   	private  $reportstuff=null;
 
-    public function printReport($data){
-        $this->reportstuff = $this->getReport($data);
-
-        $this->reportstuff="<html>".$this->reportstuff."</html>";
+    public function printReport($reportstuff){
+        //$this->reportstuff = $this->getReport($data);
+        //$this->reportstuff="<html>".$this->reportstuff."</html>";
         
         $adaptee = new MPDFAdaptee();
-        $adaptee->createPDF($this->reportstuff);
+        $adaptee->createPDF($reportstuff);
     }
-
 
   	public function getReport($data){
   		  $stuff= $this->generateReport($data);
   		  return $stuff;
   	}
-
 
   	private function generateReport($data){
         $stuff="";
@@ -51,14 +48,11 @@ EOD;
         <td>{$row['Reason']}</td>
     </tr>";
 
-
         }
         $stuff.="</table>";
 
         return $stuff;
     }
-
-    
     
     public function viewReport(){
       
