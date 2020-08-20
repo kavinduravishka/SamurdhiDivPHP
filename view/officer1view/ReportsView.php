@@ -19,9 +19,9 @@
 	 <?php include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/officer1Inc/officer1_sidebarInc.php"); ?>
 
  	
-    <main>
-    	<div class="maincontainer">
-    		<ul>
+    <main class="mainReport">
+    	<div class="maincontainer ">
+    		<ul class = "ReportView">
     			<li><a href="Benficiary-Count-ReportView-Yatigaha.php?type=1"><span>Benificiary Count Report - Yatigaha</span></a></li>
 				<li><a href="Benficiary-Count-ReportView-Badalgama.php?type=2"><span>Benificiary Count Report - Badalgama</span></a></li>
 				<li><a href="Benficiary-Count-ReportView-Divulapitiya.php?type=3"><span>Benificiary Count Report - Divulapitiya</span></a></li>

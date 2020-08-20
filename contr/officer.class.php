@@ -3,7 +3,7 @@
 
 abstract class Officer{
 
-    protected ?Officer $m_logger=null;
+    protected  $m_logger=null;
 
     public function setLogger(Officer $logger = null){
         $this->m_logger = $logger;
