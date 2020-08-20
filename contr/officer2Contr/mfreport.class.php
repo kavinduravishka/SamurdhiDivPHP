@@ -29,7 +29,11 @@ class mfreport implements Report{
 
   	private function generateReport($data){
   		
-  	}
+	  }
+	  
+	public function viewReport(){
+		
+	}
 
 }
 

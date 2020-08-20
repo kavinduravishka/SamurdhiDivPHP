@@ -1,12 +1,9 @@
 <?php
 
-//require_once("../model/officer4DB/officer4DB.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer.class.php");
 require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\model\officer1DB\officer1DB.class.php");
-?>
 
-<?php 
-    
-    class Officer1{
+    class Officer1 extends Officer{
 
 		private static $instance = null;
   
@@ -20,7 +17,17 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\model\officer1
 			}
 			
     		return self::$instance;
-  		}
+		  }
+		  
+		protected function handleLogin($login_request){
+			if ($login_request=='officer1') {
+				header('Location: http://localhost/SamurdhiDivPHP/view/officer1View/beneficiariesView.php');
+				return TRUE;
+			}
+			else {
+				return FALSE;
+			}
+		}
 
         public function loadBeneficiaries(){
             $beneficiaries = (Officer1DB::getInstance())->loadBeneficiaries();

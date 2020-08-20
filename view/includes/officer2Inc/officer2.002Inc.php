@@ -1,7 +1,9 @@
 <?php 
 
-require_once(include_once(realpath($_SERVER['DOCUMENT_ROOT'])."/SamurdhiDivPHP/contr/office2Contr/officer2.class.php"));
+//Add new CBO commity member
 
+require_once(realpath($_SERVER['DOCUMENT_ROOT'])."/SamurdhiDivPHP/contr/officer2Contr/officer2.class.php");
+  $RegNo='';
   $Post='';
   $Name='';
   $Address='';
@@ -14,10 +16,10 @@ if(!isset($_SESSION["RegNo"]) || $_SESSION["RegNo"]==''){
     exit;
 }else{
 
-    $RegNo=$_SESSION['RegNo'];
+    $CBORegNo=$_SESSION['RegNo'];
 
 
-    require_once("../classes/cbo.class.php");
+    //require_once("../classes/cbo.class.php");
 
     $Post=$_POST['Post'];
     $Name=$_POST['Name'];
@@ -26,6 +28,7 @@ if(!isset($_SESSION["RegNo"]) || $_SESSION["RegNo"]==''){
     $NIC=$_POST['NIC'];
 
     $data = array(
+        'CBORegNo'=>$CBORegNo,
         'Post'=>$Post,
         'Name'=>$Name,
         'Address'=>$Address,
@@ -33,8 +36,7 @@ if(!isset($_SESSION["RegNo"]) || $_SESSION["RegNo"]==''){
         'NIC'=>$NIC
     );
 
-    $officer= Officer2::getInstance();
-    $officer.CBOmemWrite($data);
+    
   
   //$CBOmember= new CBOrg();
   //$CBOmember->setCBOMember($RegNo, $Name, $Address, $Post, $Telephone, $NIC);
@@ -42,12 +44,16 @@ if(!isset($_SESSION["RegNo"]) || $_SESSION["RegNo"]==''){
 
     if(isset($_POST['SubmitNext'])){
 
+        $officer= Officer2::getInstance();
+        $officer->CBOmemWrite($data);
         header('Location: formView.php?formid=002');
         exit;
     }
     elseif(isset($_POST['SubmitFinish'])){
+        $officer= Officer2::getInstance();
+        $officer->CBOmemWrite($data);
         unset($_SESSION['RegNo']);
-        header('Location: dashboardView.php');
+        header('Location: selectFormView.php');
     exit;
     }
 

@@ -1,7 +1,7 @@
 <?php
 
-require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\model\officer2DB\MFRelREP.class.php");
-require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\model\officer2DB\MFReqDB.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/officer2DB/MFRelREP.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/officer2DB/MFReqDB.class.php");
 
 class MandatoryFund{
 
@@ -38,8 +38,8 @@ class MandatoryFund{
         $arrBig = array();
 
 
-        array_push($arrBig,
-                "Yatigaha"=>array(),
+        $arrBig=array_merge($arrBig,
+                array("Yatigaha"=>array(),
                 "Badalgama"=>array(),
                 "Kongodamulla"=>array(),
                 "Katuwellegama"=>array(),
@@ -47,11 +47,8 @@ class MandatoryFund{
                 "Dunagaha"=>array(),
                 "Kotadeniyawa"=>array(),
                 "Divulapitiya"=>array(),
-                "Walpita"=>array()
+                "Walpita"=>array())
             );
-
-
-
 
         foreach ($arrBig as $name => $detailes) {
 
@@ -65,8 +62,6 @@ class MandatoryFund{
             $data = array();
 
             $data['Bank_Zonal'] = $bankName;
-
-
             
             foreach ($ra3500 as $key=>$relAmount) {
                 $data['Relief_Amount'] = $relAmount;
@@ -75,8 +70,6 @@ class MandatoryFund{
             }
             $arrBig[$bankName]['3500'] = $count3500;
 
-
-
             foreach ($ra2500 as $relAmount) {
                 $data['Relief_Amount'] = $relAmount;
                 $count = $this->MFRelease->find($data);
@@ -84,16 +77,12 @@ class MandatoryFund{
             }
             $arrBig[$bankName]['2500'] = $count2500;
 
-
-
             foreach ($ra1500 as $relAmount) {
                 $data['Relief_Amount'] = $relAmount;
                 $count = $this->MFRelease->find($data);
                 $count1500 += $count['count'];
             }
             $arrBig[$bankName]['1500'] = $count1500;
-
-
 
             foreach ($ra420 as $relAmount) {
                 $data['Relief_Amount'] = $relAmount;
@@ -107,11 +96,6 @@ class MandatoryFund{
         return $arrBig;
     	//$this->MFRelease->find($data);
     }
-
-
-
-
-
 
 
     public function RequestWrite($data){

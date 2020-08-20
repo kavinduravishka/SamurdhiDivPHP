@@ -1,6 +1,8 @@
 <?php
-require_once("../dbbase.class.php");
-	
+//require_once("../dbbase.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/dbbase.class.php");
+
+
 class CBOmemDB extends Dbbase{
 	
 	//public function  write($CBORegNo, $Name, $Address, $Post, $Telephone, $NIC){
@@ -18,11 +20,11 @@ class CBOmemDB extends Dbbase{
 		]);
 	}
 
-	public function find(){
+	public function find($data){
 
 	}
 
-	public function update(){
+	public function update($data){
 		
 	}
 }

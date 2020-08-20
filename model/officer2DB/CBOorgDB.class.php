@@ -1,6 +1,8 @@
 <?php
-require_once("../dbbase.class.php");
-	
+//require_once("../dbbase.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/dbbase.class.php");
+
+
 class CBOorgDB extends Dbbase{
 	
 	
@@ -12,7 +14,7 @@ class CBOorgDB extends Dbbase{
 		//$DistrictSec="Gampaha";
 		//$DistSecNo="12";
 
-		$sql = "INSERT INTO CommunityBasedOrganizations(RegNo, Name, Address, Telephone, EMail, Village, GNDomain, Zone, DivisionalSec, DistrictSec, NoOfMemPrev, NoOfMemNew, AnnualMeetingDate, BankName, AccountNo, AccountOpenDate, Balance) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		$sql = "INSERT INTO CommunityBasedOrganizations(RegNo, Name, Address, Telephone, EMail, Village, GNDomain, Zone, DivisionalSec, DistrictSec, NoOfMemPrev, NoOfMemNew, AnnualMeetingDate, BankName, AccountNo, AccountOpenDate, Balance,RenewedDate) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		$stmt = $this->connect()->prepare($sql);
 
 
@@ -33,9 +35,14 @@ class CBOorgDB extends Dbbase{
 			$data['BankName'], 
 			$data['AccountNo'], 
 			$data['AccountOpenDate'], 
-			$data['Balance']
+			$data['Balance'],
+			$data['RenewedDate']
 		]);
 	}
+
+	public function update($data){}
+
+	public function find($data){}
 	
 }
 

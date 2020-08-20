@@ -1,10 +1,10 @@
 <?php 
 
-require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\model\officer2DB\LFRecDB.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/officer2DB/LFRecDB.class.php");
 
 class LottaryFund{
 
-
+	private static $instance=null;
 //=======	Singleton   ===============
 	private function __construct(){
 		$this->LFRec  = new LFRecDB();
@@ -23,7 +23,7 @@ class LottaryFund{
 
 //=====================================
     
-	public function FundSearch($data){
+	public function checkifAlready($data){
 		return $this->LFRec->getCount($data);
 	}
 	

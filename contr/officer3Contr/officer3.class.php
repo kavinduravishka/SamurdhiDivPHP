@@ -1,13 +1,14 @@
 <?php
 
-require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer3Contr\SocialSF.class.php");
-require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer3Contr\Scholarship.class.php");
-require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\\reportContr\off23reportfactory.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer3Contr/SocialSF.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer3Contr/Scholarship.class.php");
 
-class Officer3{
 
-    private $reportfactory = new off23report();
-    private $report = null;
+class Officer3 extends Officer{
+
+    //private $reportfactory = new off23report();
+    //private $report = null;
 
     private static $instance=null;
 
@@ -22,6 +23,17 @@ class Officer3{
         }
     
         return self::$instance;
+    }
+    
+
+    protected function handleLogin($login_request){
+        if ($login_request=='officer3') {
+            header('Location: '.realpath($_SERVER["DOCUMENT_ROOT"]).'/SamurdhiDivPHP/view/officer3view/dashboardView.php');
+            return TRUE;
+        }
+        else {
+            return FALSE;
+        }
     }
 
     public function ScholarWrite($data){
@@ -47,22 +59,22 @@ class Officer3{
 
     //=================   REPORTS   ==================
 
-    public function SSFundReport($data){
-        $socialsf=SocialSF::getInstance();
-        $fetcheddata=$socialsf->fundReport($data);
-        return $fetcheddata;
-    }
+    // public function SSFundReport($data){
+    //     $socialsf=SocialSF::getInstance();
+    //     $fetcheddata=$socialsf->fundReport($data);
+    //     return $fetcheddata;
+    // }
 
-    public function  printSSFundReport(){
-        $this->newReportInstance();
-        $data = $this->SSFundReport();
-        $this->report->printReport($data);
-    }
+    // public function  printSSFundReport(){
+    //     $this->newReportInstance();
+    //     $data = $this->SSFundReport();
+    //     $this->report->printReport($data);
+    // }
 
-    public function getSSFundReport(){
-        $this->newReportInstance();
-        $data = $this->SSFundReport();
-        $this->report->getReport($data);
-    }
+    // public function getSSFundReport(){
+    //     $this->newReportInstance();
+    //     $data = $this->SSFundReport();
+    //     $this->report->getReport($data);
+    // }
 }
 ?>

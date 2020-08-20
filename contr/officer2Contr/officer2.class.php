@@ -1,11 +1,13 @@
 <?php
 
-require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer2Contr\CBO.class.php");
-require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer2Contr\LottaryFund.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer2Contr/CBO.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer2Contr/LottaryFund.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer2Contr/MandatoryFund.class.php");
 // require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\\reportContr\off23reportfactory.class.php");
 // require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\\reportContr\\reportfactory.class.php");
 
-class Officer2 {
+class Officer2 extends Officer{
 
     // private $reportfactory = new off23report();
     // private $report = null;
@@ -24,13 +26,23 @@ class Officer2 {
         }                                       //
                                                 //
         return self::$instance;                 //
-    }                                           //
-
-    private function newReportInstance(){
-        if($this->report==null){
-            $this->report=$this->reportfactory->anOperation(1);
+    }   
+    
+    protected function handleLogin($login_request){
+        if ($login_request=='officer2') {
+            header('Location: '.realpath($_SERVER["DOCUMENT_ROOT"]).'/SamurdhiDivPHP/view/officer2view/dashboardView.php');
+            return TRUE;
+        }
+        else {
+            return FALSE;
         }
     }
+
+    // private function newReportInstance(){
+    //     if($this->report==null){
+    //         $this->report=$this->reportfactory->anOperation(1);
+    //     }
+    // }
 
 
     public function CBOorgWrite($data){
@@ -52,7 +64,7 @@ class Officer2 {
 
     public function LFcheckifAlready($NIC){
         $lfund=LottaryFund::getInstance();
-        return $lfund->FundSearch($data);
+        return $lfund->checkifAlready($NIC);
     }
     
     public function MFrequestWrite($data){

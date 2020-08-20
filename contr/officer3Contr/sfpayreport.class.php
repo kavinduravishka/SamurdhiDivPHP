@@ -8,10 +8,10 @@ class sfpayreport implements Report{
   	private  $reportstuff=null;
 
     public function printReport($data){
-        if($this->reportstuff==null){
-            $this->reportstuff = $this->getReport($data);
-        }
+        $this->reportstuff = $this->getReport($data);
 
+        $this->reportstuff="<html>".$this->reportstuff."</html>";
+        
         $adaptee = new MPDFAdaptee();
         $adaptee->createPDF($this->reportstuff);
     }
@@ -24,8 +24,45 @@ class sfpayreport implements Report{
 
 
   	private function generateReport($data){
+        $stuff="";
 
-  	}
+        $stuff.=<<<EOD
+    <table>
+    <tr>
+        <th>Date</th>
+        <th>Beneficiary No</th>
+        <th>Name</th>
+        <th>Amount</th>
+        <th>Assured by</th>
+        <th>GNDivison</th>
+        <th>Reason</th>
+    </tr>
+EOD;
+
+        foreach($data as $row){
+            $stuff.=<<<EOD
+    <tr>
+        <td>{$row['Date']}</td>
+        <td>{$row['BeneficiaryNo']}</td>
+        <td>{$row['BenifName']}</td>
+        <td>{$row['Amount']}</td>
+        <td>{$row['NameAssured']}</td>
+        <td>{$row['GNDiv']}</td>
+        <td>{$row['Reason']}</td>
+    </tr>
+EOD;
+
+        }
+        $stuff.="</table>";
+
+        return $stuff;
+    }
+
+    
+    
+    public function viewReport(){
+      
+    }
 
 }
 

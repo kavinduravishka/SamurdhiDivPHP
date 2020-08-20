@@ -6,22 +6,24 @@
  ?>
 
 <html>
+
+<meta name="pagedata" tab="dash">
 <head>
 	<title>Dashboard</title>
 
-	<link rel="stylesheet" type="text/css" href="../css/main_dk.css">
-	
-
-	<link rel="stylesheet" type="text/css" href="../css/officer23dash.css" >
+	<link rel="stylesheet" type="text/css" href="../css/ksidebar.css" >
+	<link rel="stylesheet" type="text/css" href="../css/kheader.css" >
+	<link rel="stylesheet" type="text/css" href="../css/kbody.css" >
 
 
 </head>
 
 <body>
-	<?php //require_once("../include/header.inc.php"); 
-	require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/header.inc.php");
-	?>
-
+	
+<?php 
+include_once("../includes/ksidebar.inc.php");
+include_once("../includes/kheader.inc.php");
+?> 
 
 	<main >
 		<div class="maindev" >
@@ -51,10 +53,11 @@
 			</div>
 			</div>
 
-			
-
-			
-
 		</div>
 	</main>
+
+	<script type="text/javascript" src="../js/ksidebar.js"></script>
+	<script type="text/javascript" src="../js/kheader.js"></script>
+	<script type="text/javascript" src="../js/konload.js"></script>
 </body>
+</html>
