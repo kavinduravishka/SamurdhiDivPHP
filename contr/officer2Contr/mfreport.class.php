@@ -5,16 +5,16 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/reportCo
 
 class mfreport implements Report{
 
-	private  $reportstuff=null;
-	private  $prevdata = array();
+	// private  $reportstuff=null;
+	// private  $prevdata = array();
 
-	public function printReport($data){
-		if($data!=$this->prevdata){
-			$this->getReport($data);
-		}
+	public function printReport($reportstuff){
+		// if($data!=$this->prevdata){
+		// 	$this->getReport($data);
+		// }
 
 	  	$adaptee = new MPDFAdaptee();
-	  	$adaptee->createPDF($this->reportstuff);
+	  	$adaptee->createPDF($reportstuff);
   	}
 
 
@@ -28,8 +28,9 @@ class mfreport implements Report{
 
 
   	private function generateReport($data){
+		  
   		
-	  }
+	}
 	  
 	public function viewReport(){
 		

@@ -1,14 +1,14 @@
 <?php
 
 require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/reportContr/off23reportfactory.class.php");
-require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer3Contr/SocialSF.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer2Contr/MandatoryFund.class.php");
 
 $reportfactory = new off23report();
 $reportContent ="";
 
-$ssfreport = $reportfactory->anOperation(2);
+$mfreport = $reportfactory->anOperation(1);
 
-$socialsf=SocialSF::getInstance();
+$manfund=MandatoryFund::getInstance();
 
 if(isset($_POST['Show']) || isset($_POST['Print'])){
     $data=array(
@@ -16,16 +16,16 @@ if(isset($_POST['Show']) || isset($_POST['Print'])){
         'month'=>$_POST['month']
     );
 
-    $fetcheddata=$socialsf->fundReport($data);
+    $fetcheddata=$manfund->ReleaseReport($data);
 
 }
 
 if(isset($_POST['Show'])){
-    $reportContent= $ssfreport->getReport($fetcheddata);
+    $reportContent= $mfreport->getReport($fetcheddata);
     $_SESSION['reportContent'] = $reportContent;
 
 }else if(isset($_POST['Print'])){
-    $ssfreport->printReport($_SESSION['reportContent']);
+    $mfreport->printReport($_SESSION['reportContent']);
 
 }
 
