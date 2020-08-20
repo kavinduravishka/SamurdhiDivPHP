@@ -7,6 +7,9 @@ class SSFundREP extends Dbbase{
 		$stmt = $this->connect()->prepare($sql);
 		$stmt->execute([ $data['year'], $data['month'] ]);
 		$fetchedData = $stmt->fetchAll();
+		echo $fetchedData;
+		echo '
+		';
 		return $fetchedData;		
 	}
 
