@@ -40,8 +40,8 @@ class sfpayreport implements Report{
 EOD;
 
         foreach($data as $row){
-            $stuff.=<<<EOD
-    <tr>
+            $stuff.=
+    "<tr>
         <td>{$row['Date']}</td>
         <td>{$row['BeneficiaryNo']}</td>
         <td>{$row['BenifName']}</td>
@@ -49,8 +49,8 @@ EOD;
         <td>{$row['NameAssured']}</td>
         <td>{$row['GNDiv']}</td>
         <td>{$row['Reason']}</td>
-    </tr>
-EOD;
+    </tr>";
+
 
         }
         $stuff.="</table>";
