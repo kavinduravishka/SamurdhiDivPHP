@@ -22,10 +22,6 @@
 
     <script type="text/javascript" src="/SamurdhiDivPHP/view/js/ksidebar.js"></script>
     <script type="text/javascript" src="/SamurdhiDivPHP/view/js/kheader.js"></script>
-<<<<<<< HEAD
-=======
-    
->>>>>>> d4f73475620167d643c5c5428062998ef4560ca9
 
     <?php 
     
@@ -101,10 +97,6 @@
 
 
     </main>
-<<<<<<< HEAD
      <script type="text/javascript" src="/SamurdhiDivPHP/view/js/konload.js"></script>
-=======
-    <script type="text/javascript" src="/SamurdhiDivPHP/view/js/konload.js"></script>
->>>>>>> d4f73475620167d643c5c5428062998ef4560ca9
 </body>
 </html>
