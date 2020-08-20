@@ -27,7 +27,7 @@ public function viewReport(){
 
   $t_420=0;$t_1320=0;$t_1220=0;$t_2120=0;$t_3020=0;
   $count_list = "";
-
+  
   $users = (new ReportDB())->getGNDetails('41-Paranahalpe','Yatigaha');
   $count_list .= "<tr><td>1</td><td>41 බ/පරණහල්පේ </td>";
   $ben_420=0;$ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
