@@ -7,21 +7,18 @@ class sfpayreport implements Report{
 
   	private  $reportstuff=null;
 
-    public function printReport($data){
-        $this->reportstuff = $this->getReport($data);
-
-        $this->reportstuff="<html>".$this->reportstuff."</html>";
+    public function printReport($reportstuff){
+        //$this->reportstuff = $this->getReport($data);
+        //$this->reportstuff="<html>".$this->reportstuff."</html>";
         
         $adaptee = new MPDFAdaptee();
-        $adaptee->createPDF($this->reportstuff);
+        $adaptee->createPDF($reportstuff);
     }
-
 
   	public function getReport($data){
   		  $stuff= $this->generateReport($data);
   		  return $stuff;
   	}
-
 
   	private function generateReport($data){
         $stuff="";
@@ -40,8 +37,8 @@ class sfpayreport implements Report{
 EOD;
 
         foreach($data as $row){
-            $stuff.=<<<EOD
-    <tr>
+            $stuff.=
+    "<tr>
         <td>{$row['Date']}</td>
         <td>{$row['BeneficiaryNo']}</td>
         <td>{$row['BenifName']}</td>
@@ -49,16 +46,13 @@ EOD;
         <td>{$row['NameAssured']}</td>
         <td>{$row['GNDiv']}</td>
         <td>{$row['Reason']}</td>
-    </tr>
-EOD;
+    </tr>";
 
         }
         $stuff.="</table>";
 
         return $stuff;
     }
-
-    
     
     public function viewReport(){
       

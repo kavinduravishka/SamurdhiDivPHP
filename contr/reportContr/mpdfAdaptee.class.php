@@ -12,8 +12,8 @@ class MPDFAdaptee{
         //$mpdf->autoArabic = true;
         //$mpdf->allow_charset_conversion = true;
         $mpdf->autoLangToFont = true;
-    //     $mpdf->charset_in = 'iso-15924';
-        $mpdf->WriteHTML($data,2);
+        //$mpdf->charset_in = 'iso-15924';
+        $mpdf->WriteHTML($data);
         $mpdf->Output('report.pdf','D'); //D for download
     }
 }
