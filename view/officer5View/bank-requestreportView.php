@@ -1,13 +1,13 @@
 <?php   
-    include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/officer5Inc/bank-payreportInc.php");
+    include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/officer5Inc/bank-requestreportInc.php");
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="pagedata" tab="task" type="report" title="View Bank Payreport">
-    <title>Monthly Bank Pay Report</title>
+    <meta name="pagedata" tab="task" type="report" title="Pay Request Letter">
+    <title>Monthly Bank Specific Pay Report</title>
    
     <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/main_dk.css">
     <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/ksidebar.css" >
@@ -32,7 +32,7 @@
         <?php echo $report_data;?>
         
         
-        <form action="bank-payreportView.php" method="post" class="letterform">
+        <form action="bank-requestreportView.php?<?php echo "bank=".$bank?>" method="post" class="letterform">
             <p>
                     <label for="">&nbsp;</label>
                     <button type="submit" name="submit">Print Report</button>

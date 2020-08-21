@@ -378,6 +378,8 @@ main h2{
     background: rgb(0, 0, 0);
     cursor: pointer;
     border-radius: 10px;
+    justify-content: center;
+
 }
 
 .letterform button:hover
