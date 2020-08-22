@@ -43,7 +43,7 @@ public function printReport($data){
       $count_list = "";
       for($i=0; $i<15; $i++){
         $index = $i+1;
-        $users = (new ReportDB())->getGNDetails($gn_divisions[$i],'Yatigaha');
+        $users = (new ReportDB())->getGNDetails($gn_divisions[$i],'Dunagaha');
         $count_list .= "<tr><td>".$index."</td><td>".$gn_divisions_sinhala[$i]."</td>";
         $count_list .= $this->countList($users);
       }

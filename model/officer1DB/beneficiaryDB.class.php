@@ -33,7 +33,7 @@ class BeneficiaryDB extends Dbh{
 			$stmt = $this->connect()->prepare($sql);
 			$stmt->execute([$Divisional_Secretariat,$Bank_Zonal,$GN_Division,$GN_Code_Mapping,$Householder_Name,$Address,$NIC,$No_of_Family_Members,$Bank_Account_No,$Relief_Account,$Starting_Year,0]);
 			if($stmt){
-				header('Location: http://localhost/SamurdhiDivPHP/view/officer1View/beneficiariesView.php?beneficiary_added=true');
+				header('Location: /SamurdhiDivPHP/view/officer1View/beneficiariesView.php?beneficiary_added=true');
 			}else{
 				$errors[] = 'Faild to add the record';
 			}
@@ -44,7 +44,7 @@ class BeneficiaryDB extends Dbh{
 			$stmt = $this->connect()->prepare($sql);
 			$stmt->execute([$Bank_Zonal,$GN_Division,$Address,$Bank_Account_No,$Serial_No]);
 			if($stmt){
-				header('Location: http://localhost/SamurdhiDivPHP/view/officer1View/beneficiariesView.php?user_modified=true');
+				header('Location: /SamurdhiDivPHP/view/officer1View/beneficiariesView.php?user_modified=true');
 			}else{
 				//$errors[] = 'Faild to modify the record';
 				//header('Location: http://localhost/SamurdhiDivPHP/view/officer1View/beneficiariesView.php?user_modified=true');
@@ -59,9 +59,9 @@ class BeneficiaryDB extends Dbh{
 			$stmt->execute([1,$Serial_No]);
 			if($stmt){
 				//user deleted
-				header('Location: http://localhost/SamurdhiDivPHP/view/officer1View/beneficiariesView.php?msg=beneficiary_deleted');
+				header('Location: /SamurdhiDivPHP/view/officer1View/beneficiariesView.php?msg=beneficiary_deleted');
 			}else{
-				header('Location: http://localhost/SamurdhiDivPHP/view/officer1View/beneficiariesView.php?err=delete_failed');
+				header('Location: /SamurdhiDivPHP/view/officer1View/beneficiariesView.php?err=delete_failed');
 			}
 		}
 

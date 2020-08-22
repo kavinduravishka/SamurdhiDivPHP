@@ -2,37 +2,34 @@
   require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/reportContr/bcreportfactory.class.php");
   require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/reportContr/reportfactory.class.php");
   $type = $_GET['type'];
+  $bank_zonals_array = array('','යටිගහ','බඩල්ගම','දිවුලපිටිය','දුනගහ','කටුවැල්ගම','කෝන්ගොඩමුල්ල','කොටදෙනියාව','වල්පිට','වෙලඟන');
   $fac = new BCReportFactory();
   $report = $fac->anOperation($type);
   $count_list = $report->ViewReport();
   if(isset($_POST['submit'])){
-//     '<html><head><meta http-equiv=Content-Type content="text/html; charset=UTF-8">' . $style . '</head><body>
-// </body>
-// </html>'
     $date=date("Y/m/d");
     $a = "<style>
-    table.masterlist {
-    font-family: arial, sans-serif;
-    width: 100%;
-    border-collapse: collapse;
-    border: 1px solid black;
-    }
-    table.masterlist th,
-    table.masterlist td {
-    text-align: left;
-    padding: 3px;
-    border: 1px solid black;
-    }
-
-    table.masterlist tr:nth-child(even) {
-    background-color: #dddddd;
-    }</style>";
+            table.masterlist {
+              font-family: arial, sans-serif;
+              width: 100%;
+              border-collapse: collapse;
+              border: 1px solid black;
+            }
+            table.masterlist th,table.masterlist td {
+              text-align: left;
+              padding: 3px;
+              border: 1px solid black;
+            }
+            table.masterlist tr:nth-child(even) {
+              background-color: #dddddd;
+              }
+          </style>";
     $a .= "<div class=\"maincontainer\"><center><h2><span><u>සමුර්ධි සහනාධාර දීමනා බැංකු උපරිම වාර්තාව </u></span></h2></center>
           <h3>{$date}(සහනාධාර මුදල් බැර කිරීම සඳහා)</h3>
           <h4>දිස්ත්‍රික්කය :- ගම්පහ </h4>
-      <h3>ප්‍රාදේශීය ලේකම් කාර්යාලය - දිව්ලපිටිය </h3>
+          <h3>ප්‍රාදේශීය ලේකම් කාර්යාලය - දිව්ලපිටිය </h3>
       
-          <h3>සමුර්ධි ප්‍රජාමූල බැංකුවේ නම :- යටිගහ </h3>
+          <caption><h3>සමුර්ධි ප්‍රජාමූල බැංකුවේ නම :- {$bank_zonals_array[$type]}</h3></caption>
           <div>
           <table class=\"masterlist\">
           <tr>
