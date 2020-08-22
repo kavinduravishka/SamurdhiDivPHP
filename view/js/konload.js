@@ -47,5 +47,25 @@ function headeronload(){
 
 headeronload();
 
+function inputSize(x){
+    var inputs= document.getElementsByClassName("forminput");
+    for(var i=0;i<inputs.length;i++){
+        console.log(inputs[i].tagName);
+        if(inputs[i].tagName=="INPUT"){
+            inputs[i].setAttribute("size",x);
+        }
+        if(inputs[i].tagName=="TEXTAREA"){
+            inputs[i].setAttribute("cols",x);
+            inputs[i].setAttribute("rows",6);
+            inputs[i].style.resize='none';
+        }
+        if(inputs[i].tagName=="SELECT"){
+            inputs[i].style.width="150px";
+        }
+    }
+}
+
+inputSize(70);
+
 //document.getElementById("MyElement").classList.add('MyClass');
 //document.getElementById("MyElement").classList.remove('MyClass');

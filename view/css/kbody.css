@@ -3,3 +3,24 @@ body {
 	/*font-family: 'Courier New', Courier, monospace;*/
 	font-family: "Poppins",sans-serif;
 } 
+
+.formtable {
+	/*border:1px solid black;*/
+	border-collapse: collapse;
+	padding:5px;
+	margin-left: 70px;
+	margin-top: 50px;
+}
+
+.formtable td,th{
+	padding-right:5px;
+	padding-top: 20px;
+}
+
+/* .formtable input{
+	size:50;
+} */
+/* 
+.formtable .forminput{
+	padding:5px;
+} */
