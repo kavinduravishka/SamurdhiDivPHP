@@ -53,7 +53,7 @@
           <br><br><br>
 
  
-		<form action="Benficiary-Count-ReportView-Yatigaha.php" method="post">
+		<form action="Benficiary-Count-ReportView-Yatigaha.php?type=4" method="post">
 			<center><button class="submit pdf-button" name="submit">Make PDF</button></center>
 		</form>
     <br><br><br><br>

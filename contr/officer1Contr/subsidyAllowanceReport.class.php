@@ -13,150 +13,211 @@ public function printReport($data){
 
 }
 
-public function viewReport(){
 
-  $users = (new ReportDB())->getZonalDetails('Yatigaha');
+private $t_420=0;
+private $t_1320=0;
+private $t_1220=0;
+private $t_2120=0;
+private $t_3020=0;
+
+
+private $ttben_1320=0;
+private $ttben_1220=0;
+private $ttben_2120=0;
+private $ttben_3020=0;
+
+private $cArray = array();
+
+public function countList($users,$i){
   $count_list = "";
-  $count_list .= "<tr><td>1</td><td>යටිගහ</td>";
-    $t_1320=0;$t_1220=0;$t_2120=0;$t_3020=0;
-    $ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
-    $ttben_1320=0;$ttben_1220=0;$ttben_2120=0;$ttben_3020=0;
+   $ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
     foreach($users as $user){
-      if($user['Relief_Amount']==1320){$ben_1320+=1;$t_1320+=1;}
-      else if($user['Relief_Amount']==1220){$ben_1220+=1;$t_1220+=1;}
-      else if($user['Relief_Amount']==2120){$ben_2120+=1;$t_2120+=1;}
-      else if($user['Relief_Amount']==3020){$ben_3020+=1;$t_3020+=1;}
+      if($user['Relief_Amount']==1320){$ben_1320+=1;$this->t_1320+=1;}
+      else if($user['Relief_Amount']==1220){$ben_1220+=1;$this->t_1220+=1;}
+      else if($user['Relief_Amount']==2120){$ben_2120+=1;$this->t_2120+=1;}
+      else if($user['Relief_Amount']==3020){$ben_3020+=1;$this->t_3020+=1;}
     }
     $tben_1320=$ben_1320*1320;$tben_1220=$ben_1220*1220;$tben_2120=$ben_2120*2120;$tben_3020=$ben_3020*3020;
-      $ttben_1320+=$tben_1320;$ttben_1220+=$tben_1220;$ttben_2120+=$tben_2120;$ttben_3020+=$tben_3020;
-    $total1 = $tben_1320+$tben_1220+$tben_2120+$tben_3020;
+    $this->ttben_1320+=$tben_1320;$this->ttben_1220+=$tben_1220;$this->ttben_2120+=$tben_2120;$this->ttben_3020+=$tben_3020;
+    $total1 = $tben_1320+$tben_1220+$ben_2120+$tben_3020;
+    $this->cArray[$i];
+     $count_list .= "<td>{$ben_1320}</td><td>{$tben_1320}</td><td>{$ben_1220}</td><td>{$tben_1220}</td><td>{$ben_2120}</td><td>{$tben_2120}</td><td>{$ben_3020}</td><td>{$tben_3020}</td><td>{$total1}</td></tr>";
+      $this->cArray[-1] = $count_list;
+    return $this->cArray;
+    
+}
 
-    $count_list .= "<td>{$ben_1320}</td><td>{$tben_1320}</td><td>{$ben_1220}</td><td>{$tben_1220}</td><td>{$ben_2120}</td><td>{$tben_2120}</td><td>{$ben_3020}</td><td>{$tben_3020}</td><td>{$total1}</td></tr>";
+
+
+  public function viewReport(){
+    
+      $bank_zonals = array('Yatigaha','Badalgama','Divulapitiya','Dunugaha','Katuwelgama','Koongodamulla','Kotadeniyawa','Walpita','Welangana');
+      $bank_zonals_sinhala = array('යටිගහ','බඩල්ගම','දිවුලපිටිය','දුනගහ','කටුවැල්ගම','කෝන්ගොඩමුල්ල','කොටදෙනියාව','වල්පිට','වෙලඟන');
+      
+      $count_list = "";
+      for($i=0; $i<9; $i++){
+        $index = $i+1;
+        $users = (new ReportDB())->getZonalDetails($bank_zonals[$i]);
+        $count_list .= "<tr><td>".$index."</td><td>".$bank_zonals_sinhala[$i]."</td>";
+        $cArray = $this->countList($users,$i);
+        $count_list .= $cArray[-1];
+      }
+
+      $tt =  $cArray[0]+ $cArray[1]+ $cArray[2]+ $cArray[3]+ $cArray[4]+ $cArray[5]+ $cArray[6]+ $cArray[7]+ $cArray[8];
+      $count_list .="<tr><td></td><td>එකතුව</td><td>{$t_1320}</td><td>{$ttben_1320}</td><td>{$t_1220}</td><td>{$ttben_1220}</td><td>{$t_2120}</td><td>{$ttben_2120}</td><td>{$t_3020}</td><td>{$ttben_3020}</td><td>{$tt}</td></tr>";
+
+  }
+ 
+
+
+
+
+
+
+// public function viewReport(){
+
+//   $users = (new ReportDB())->getZonalDetails('Yatigaha');
+//   $count_list = "";
+//   $count_list .= "<tr><td>1</td><td>යටිගහ</td>";
+//     $t_1320=0;$t_1220=0;$t_2120=0;$t_3020=0;
+//      $ttben_1320=0;$ttben_1220=0;$ttben_2120=0;$ttben_3020=0;
+//     $ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
+//     foreach($users as $user){
+//       if($user['Relief_Amount']==1320){$ben_1320+=1;$t_1320+=1;}
+//       else if($user['Relief_Amount']==1220){$ben_1220+=1;$t_1220+=1;}
+//       else if($user['Relief_Amount']==2120){$ben_2120+=1;$t_2120+=1;}
+//       else if($user['Relief_Amount']==3020){$ben_3020+=1;$t_3020+=1;}
+//     }
+//     $tben_1320=$ben_1320*1320;$tben_1220=$ben_1220*1220;$tben_2120=$ben_2120*2120;$tben_3020=$ben_3020*3020;
+//       $ttben_1320+=$tben_1320;$ttben_1220+=$tben_1220;$ttben_2120+=$tben_2120;$ttben_3020+=$tben_3020;
+//     $total1 = $tben_1320+$tben_1220+$tben_2120+$tben_3020;
+
+//     $count_list .= "<td>{$ben_1320}</td><td>{$tben_1320}</td><td>{$ben_1220}</td><td>{$tben_1220}</td><td>{$ben_2120}</td><td>{$tben_2120}</td><td>{$ben_3020}</td><td>{$tben_3020}</td><td>{$total1}</td></tr>";
 
 
   
-    $users = (new ReportDB())->getZonalDetails('Badalgama');
-  $count_list .= "<tr><td>2</td><td> බඩල්ගම</td>";
-    $ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
-    foreach($users as $user){
-      if($user['Relief_Amount']==1320){$ben_1320+=1;$t_1320+=1;}
-      else if($user['Relief_Amount']==1220){$ben_1220+=1;$t_1220+=1;}
-      else if($user['Relief_Amount']==2120){$ben_2120+=1;$t_2120+=1;}
-      else if($user['Relief_Amount']==3020){$ben_3020+=1;$t_3020+=1;}
-    }
-    $tben_1320=$ben_1320*1320;$tben_1220=$ben_1220*1220;$tben_2120=$ben_2120*2120;$tben_3020=$ben_3020*3020;
-    $total2 = $tben_1320+$tben_1220+$tben_2120+$tben_3020;
-    $ttben_1320+=$tben_1320;$ttben_1220+=$tben_1220;$ttben_2120+=$tben_2120;$ttben_3020+=$tben_3020;
-    $count_list .= "<td>{$ben_1320}</td><td>{$tben_1320}</td><td>{$ben_1220}</td><td>{$tben_1220}</td><td>{$ben_2120}</td><td>{$tben_2120}</td><td>{$ben_3020}</td><td>{$tben_3020}</td><td>{$total2}</td></tr>";
+//     $users = (new ReportDB())->getZonalDetails('Badalgama');
+//   $count_list .= "<tr><td>2</td><td> බඩල්ගම</td>";
+//     $ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
+//     foreach($users as $user){
+//       if($user['Relief_Amount']==1320){$ben_1320+=1;$t_1320+=1;}
+//       else if($user['Relief_Amount']==1220){$ben_1220+=1;$t_1220+=1;}
+//       else if($user['Relief_Amount']==2120){$ben_2120+=1;$t_2120+=1;}
+//       else if($user['Relief_Amount']==3020){$ben_3020+=1;$t_3020+=1;}
+//     }
+//     $tben_1320=$ben_1320*1320;$tben_1220=$ben_1220*1220;$tben_2120=$ben_2120*2120;$tben_3020=$ben_3020*3020;
+//     $total2 = $tben_1320+$tben_1220+$tben_2120+$tben_3020;
+//     $ttben_1320+=$tben_1320;$ttben_1220+=$tben_1220;$ttben_2120+=$tben_2120;$ttben_3020+=$tben_3020;
+//     $count_list .= "<td>{$ben_1320}</td><td>{$tben_1320}</td><td>{$ben_1220}</td><td>{$tben_1220}</td><td>{$ben_2120}</td><td>{$tben_2120}</td><td>{$ben_3020}</td><td>{$tben_3020}</td><td>{$total2}</td></tr>";
 
-  $users = (new ReportDB())->getZonalDetails('Divulapitiya');
-  $count_list .= "<tr><td>3</td><td> දිවුලපිටිය</td>";
-    $ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
-    foreach($users as $user){
-      if($user['Relief_Amount']==1320){$ben_1320+=1;$t_1320+=1;}
-      else if($user['Relief_Amount']==1220){$ben_1220+=1;$t_1220+=1;}
-      else if($user['Relief_Amount']==2120){$ben_2120+=1;$t_2120+=1;}
-      else if($user['Relief_Amount']==3020){$ben_3020+=1;$t_3020+=1;}
-    }
-    $tben_1320=$ben_1320*1320;$tben_1220=$ben_1220*1220;$tben_2120=$ben_2120*2120;$tben_3020=$ben_3020*3020;
-    $total3 = $tben_1320+$tben_1220+$tben_2120+$tben_3020;
-    $ttben_1320+=$tben_1320;$ttben_1220+=$tben_1220;$ttben_2120+=$tben_2120;$ttben_3020+=$tben_3020;
-    $count_list .= "<td>{$ben_1320}</td><td>{$tben_1320}</td><td>{$ben_1220}</td><td>{$tben_1220}</td><td>{$ben_2120}</td><td>{$tben_2120}</td><td>{$ben_3020}</td><td>{$tben_3020}</td><td>{$total3}</td></tr>";
+//   $users = (new ReportDB())->getZonalDetails('Divulapitiya');
+//   $count_list .= "<tr><td>3</td><td> දිවුලපිටිය</td>";
+//     $ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
+//     foreach($users as $user){
+//       if($user['Relief_Amount']==1320){$ben_1320+=1;$t_1320+=1;}
+//       else if($user['Relief_Amount']==1220){$ben_1220+=1;$t_1220+=1;}
+//       else if($user['Relief_Amount']==2120){$ben_2120+=1;$t_2120+=1;}
+//       else if($user['Relief_Amount']==3020){$ben_3020+=1;$t_3020+=1;}
+//     }
+//     $tben_1320=$ben_1320*1320;$tben_1220=$ben_1220*1220;$tben_2120=$ben_2120*2120;$tben_3020=$ben_3020*3020;
+//     $total3 = $tben_1320+$tben_1220+$tben_2120+$tben_3020;
+//     $ttben_1320+=$tben_1320;$ttben_1220+=$tben_1220;$ttben_2120+=$tben_2120;$ttben_3020+=$tben_3020;
+//     $count_list .= "<td>{$ben_1320}</td><td>{$tben_1320}</td><td>{$ben_1220}</td><td>{$tben_1220}</td><td>{$ben_2120}</td><td>{$tben_2120}</td><td>{$ben_3020}</td><td>{$tben_3020}</td><td>{$total3}</td></tr>";
 
     
-  $users = (new ReportDB())->getZonalDetails('Dunugaha');
-  $count_list .= "<tr><td>4</td><td>දුනගහ</td>";
-    $ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
-    foreach($users as $user){
-      if($user['Relief_Amount']==1320){$ben_1320+=1;$t_1320+=1;}
-      else if($user['Relief_Amount']==1220){$ben_1220+=1;$t_1220+=1;}
-      else if($user['Relief_Amount']==2120){$ben_2120+=1;$t_2120+=1;}
-      else if($user['Relief_Amount']==3020){$ben_3020+=1;$t_3020+=1;}
-    }
-    $tben_1320=$ben_1320*1320;$tben_1220=$ben_1220*1220;$tben_2120=$ben_2120*2120;$tben_3020=$ben_3020*3020;
-    $total4 = $tben_1320+$tben_1220+$tben_2120+$tben_3020;
-    $ttben_1320+=$tben_1320;$ttben_1220+=$tben_1220;$ttben_2120+=$tben_2120;$ttben_3020+=$tben_3020;
-    $count_list .= "<td>{$ben_1320}</td><td>{$tben_1320}</td><td>{$ben_1220}</td><td>{$tben_1220}</td><td>{$ben_2120}</td><td>{$tben_2120}</td><td>{$ben_3020}</td><td>{$tben_3020}</td><td>{$total4}</td></tr>";
+//   $users = (new ReportDB())->getZonalDetails('Dunugaha');
+//   $count_list .= "<tr><td>4</td><td>දුනගහ</td>";
+//     $ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
+//     foreach($users as $user){
+//       if($user['Relief_Amount']==1320){$ben_1320+=1;$t_1320+=1;}
+//       else if($user['Relief_Amount']==1220){$ben_1220+=1;$t_1220+=1;}
+//       else if($user['Relief_Amount']==2120){$ben_2120+=1;$t_2120+=1;}
+//       else if($user['Relief_Amount']==3020){$ben_3020+=1;$t_3020+=1;}
+//     }
+//     $tben_1320=$ben_1320*1320;$tben_1220=$ben_1220*1220;$tben_2120=$ben_2120*2120;$tben_3020=$ben_3020*3020;
+//     $total4 = $tben_1320+$tben_1220+$tben_2120+$tben_3020;
+//     $ttben_1320+=$tben_1320;$ttben_1220+=$tben_1220;$ttben_2120+=$tben_2120;$ttben_3020+=$tben_3020;
+//     $count_list .= "<td>{$ben_1320}</td><td>{$tben_1320}</td><td>{$ben_1220}</td><td>{$tben_1220}</td><td>{$ben_2120}</td><td>{$tben_2120}</td><td>{$ben_3020}</td><td>{$tben_3020}</td><td>{$total4}</td></tr>";
 
 
-    $users = (new ReportDB())->getZonalDetails('Katuwelgama');
-  $count_list .= "<tr><td>5</td><td>කටුවැල්ගම</td>";
-    $ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
-    foreach($users as $user){
-      if($user['Relief_Amount']==1320){$ben_1320+=1;$t_1320+=1;}
-      else if($user['Relief_Amount']==1220){$ben_1220+=1;$t_1220+=1;}
-      else if($user['Relief_Amount']==2120){$ben_2120+=1;$t_2120+=1;}
-      else if($user['Relief_Amount']==3020){$ben_3020+=1;$t_3020+=1;}
-    }
-    $tben_1320=$ben_1320*1320;$tben_1220=$ben_1220*1220;$tben_2120=$ben_2120*2120;$tben_3020=$ben_3020*3020;
-    $total5 = $tben_1320+$tben_1220+$tben_2120+$tben_3020;
-    $ttben_1320+=$tben_1320;$ttben_1220+=$tben_1220;$ttben_2120+=$tben_2120;$ttben_3020+=$tben_3020;
-    $count_list .= "<td>{$ben_1320}</td><td>{$tben_1320}</td><td>{$ben_1220}</td><td>{$tben_1220}</td><td>{$ben_2120}</td><td>{$tben_2120}</td><td>{$ben_3020}</td><td>{$tben_3020}</td><td>{$total5}</td></tr>";
+//     $users = (new ReportDB())->getZonalDetails('Katuwelgama');
+//   $count_list .= "<tr><td>5</td><td>කටුවැල්ගම</td>";
+//     $ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
+//     foreach($users as $user){
+//       if($user['Relief_Amount']==1320){$ben_1320+=1;$t_1320+=1;}
+//       else if($user['Relief_Amount']==1220){$ben_1220+=1;$t_1220+=1;}
+//       else if($user['Relief_Amount']==2120){$ben_2120+=1;$t_2120+=1;}
+//       else if($user['Relief_Amount']==3020){$ben_3020+=1;$t_3020+=1;}
+//     }
+//     $tben_1320=$ben_1320*1320;$tben_1220=$ben_1220*1220;$tben_2120=$ben_2120*2120;$tben_3020=$ben_3020*3020;
+//     $total5 = $tben_1320+$tben_1220+$tben_2120+$tben_3020;
+//     $ttben_1320+=$tben_1320;$ttben_1220+=$tben_1220;$ttben_2120+=$tben_2120;$ttben_3020+=$tben_3020;
+//     $count_list .= "<td>{$ben_1320}</td><td>{$tben_1320}</td><td>{$ben_1220}</td><td>{$tben_1220}</td><td>{$ben_2120}</td><td>{$tben_2120}</td><td>{$ben_3020}</td><td>{$tben_3020}</td><td>{$total5}</td></tr>";
 
-    $users = (new ReportDB())->getZonalDetails('Koongodamulla');
-  $count_list .= "<tr><td>6</td><td>කෝන්ගොඩමුල්ල</td>";
-    $ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
-    foreach($users as $user){
-      if($user['Relief_Amount']==1320){$ben_1320+=1;$t_1320+=1;}
-      else if($user['Relief_Amount']==1220){$ben_1220+=1;$t_1220+=1;}
-      else if($user['Relief_Amount']==2120){$ben_2120+=1;$t_2120+=1;}
-      else if($user['Relief_Amount']==3020){$ben_3020+=1;$t_3020+=1;}
-    }
-    $tben_1320=$ben_1320*1320;$tben_1220=$ben_1220*1220;$tben_2120=$ben_2120*2120;$tben_3020=$ben_3020*3020;
-    $total6 = $tben_1320+$tben_1220+$tben_2120+$tben_3020;
-    $ttben_1320+=$tben_1320;$ttben_1220+=$tben_1220;$ttben_2120+=$tben_2120;$ttben_3020+=$tben_3020;
-    $count_list .= "<td>{$ben_1320}</td><td>{$tben_1320}</td><td>{$ben_1220}</td><td>{$tben_1220}</td><td>{$ben_2120}</td><td>{$tben_2120}</td><td>{$ben_3020}</td><td>{$tben_3020}</td><td>{$total6}</td></tr>";
+//     $users = (new ReportDB())->getZonalDetails('Koongodamulla');
+//   $count_list .= "<tr><td>6</td><td>කෝන්ගොඩමුල්ල</td>";
+//     $ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
+//     foreach($users as $user){
+//       if($user['Relief_Amount']==1320){$ben_1320+=1;$t_1320+=1;}
+//       else if($user['Relief_Amount']==1220){$ben_1220+=1;$t_1220+=1;}
+//       else if($user['Relief_Amount']==2120){$ben_2120+=1;$t_2120+=1;}
+//       else if($user['Relief_Amount']==3020){$ben_3020+=1;$t_3020+=1;}
+//     }
+//     $tben_1320=$ben_1320*1320;$tben_1220=$ben_1220*1220;$tben_2120=$ben_2120*2120;$tben_3020=$ben_3020*3020;
+//     $total6 = $tben_1320+$tben_1220+$tben_2120+$tben_3020;
+//     $ttben_1320+=$tben_1320;$ttben_1220+=$tben_1220;$ttben_2120+=$tben_2120;$ttben_3020+=$tben_3020;
+//     $count_list .= "<td>{$ben_1320}</td><td>{$tben_1320}</td><td>{$ben_1220}</td><td>{$tben_1220}</td><td>{$ben_2120}</td><td>{$tben_2120}</td><td>{$ben_3020}</td><td>{$tben_3020}</td><td>{$total6}</td></tr>";
 
-    $users = (new ReportDB())->getZonalDetails('Kotadeniyawa');
-  $count_list .= "<tr><td>7</td><td>කොටදෙනියාව </td>";
-    $ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
-    foreach($users as $user){
-      if($user['Relief_Amount']==1320){$ben_1320+=1;$t_1320+=1;}
-      else if($user['Relief_Amount']==1220){$ben_1220+=1;$t_1220+=1;}
-      else if($user['Relief_Amount']==2120){$ben_2120+=1;$t_2120+=1;}
-      else if($user['Relief_Amount']==3020){$ben_3020+=1;$t_3020+=1;}
-    }
-    $tben_1320=$ben_1320*1320;$tben_1220=$ben_1220*1220;$tben_2120=$ben_2120*2120;$tben_3020=$ben_3020*3020;
-    $total7 = $tben_1320+$tben_1220+$tben_2120+$tben_3020;
-    $ttben_1320+=$tben_1320;$ttben_1220+=$tben_1220;$ttben_2120+=$tben_2120;$ttben_3020+=$tben_3020;
-    $count_list .= "<td>{$ben_1320}</td><td>{$tben_1320}</td><td>{$ben_1220}</td><td>{$tben_1220}</td><td>{$ben_2120}</td><td>{$tben_2120}</td><td>{$ben_3020}</td><td>{$tben_3020}</td><td>{$total7}</td></tr>";
+//     $users = (new ReportDB())->getZonalDetails('Kotadeniyawa');
+//   $count_list .= "<tr><td>7</td><td>කොටදෙනියාව </td>";
+//     $ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
+//     foreach($users as $user){
+//       if($user['Relief_Amount']==1320){$ben_1320+=1;$t_1320+=1;}
+//       else if($user['Relief_Amount']==1220){$ben_1220+=1;$t_1220+=1;}
+//       else if($user['Relief_Amount']==2120){$ben_2120+=1;$t_2120+=1;}
+//       else if($user['Relief_Amount']==3020){$ben_3020+=1;$t_3020+=1;}
+//     }
+//     $tben_1320=$ben_1320*1320;$tben_1220=$ben_1220*1220;$tben_2120=$ben_2120*2120;$tben_3020=$ben_3020*3020;
+//     $total7 = $tben_1320+$tben_1220+$tben_2120+$tben_3020;
+//     $ttben_1320+=$tben_1320;$ttben_1220+=$tben_1220;$ttben_2120+=$tben_2120;$ttben_3020+=$tben_3020;
+//     $count_list .= "<td>{$ben_1320}</td><td>{$tben_1320}</td><td>{$ben_1220}</td><td>{$tben_1220}</td><td>{$ben_2120}</td><td>{$tben_2120}</td><td>{$ben_3020}</td><td>{$tben_3020}</td><td>{$total7}</td></tr>";
 
-    $users = (new ReportDB())->getZonalDetails('Walpita');
-  $count_list .= "<tr><td>8</td><td>වල්පිට</td>";
-    $ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
-    foreach($users as $user){
-      if($user['Relief_Amount']==1320){$ben_1320+=1;$t_1320+=1;}
-      else if($user['Relief_Amount']==1220){$ben_1220+=1;$t_1220+=1;}
-      else if($user['Relief_Amount']==2120){$ben_2120+=1;$t_2120+=1;}
-      else if($user['Relief_Amount']==3020){$ben_3020+=1;$t_3020+=1;}
-    }
-    $tben_1320=$ben_1320*1320;$tben_1220=$ben_1220*1220;$tben_2120=$ben_2120*2120;$tben_3020=$ben_3020*3020;
-    $total8 = $tben_1320+$tben_1220+$tben_2120+$tben_3020;
-    $ttben_1320+=$tben_1320;$ttben_1220+=$tben_1220;$ttben_2120+=$tben_2120;$ttben_3020+=$tben_3020;
-    $count_list .= "<td>{$ben_1320}</td><td>{$tben_1320}</td><td>{$ben_1220}</td><td>{$tben_1220}</td><td>{$ben_2120}</td><td>{$tben_2120}</td><td>{$ben_3020}</td><td>{$tben_3020}</td><td>{$total8}</td></tr>";
+//     $users = (new ReportDB())->getZonalDetails('Walpita');
+//   $count_list .= "<tr><td>8</td><td>වල්පිට</td>";
+//     $ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
+//     foreach($users as $user){
+//       if($user['Relief_Amount']==1320){$ben_1320+=1;$t_1320+=1;}
+//       else if($user['Relief_Amount']==1220){$ben_1220+=1;$t_1220+=1;}
+//       else if($user['Relief_Amount']==2120){$ben_2120+=1;$t_2120+=1;}
+//       else if($user['Relief_Amount']==3020){$ben_3020+=1;$t_3020+=1;}
+//     }
+//     $tben_1320=$ben_1320*1320;$tben_1220=$ben_1220*1220;$tben_2120=$ben_2120*2120;$tben_3020=$ben_3020*3020;
+//     $total8 = $tben_1320+$tben_1220+$tben_2120+$tben_3020;
+//     $ttben_1320+=$tben_1320;$ttben_1220+=$tben_1220;$ttben_2120+=$tben_2120;$ttben_3020+=$tben_3020;
+//     $count_list .= "<td>{$ben_1320}</td><td>{$tben_1320}</td><td>{$ben_1220}</td><td>{$tben_1220}</td><td>{$ben_2120}</td><td>{$tben_2120}</td><td>{$ben_3020}</td><td>{$tben_3020}</td><td>{$total8}</td></tr>";
 
-    $users = (new ReportDB())->getZonalDetails('Welangana');
-  $count_list .= "<tr><td>9</td><td>වෙලඟන</td>";
-    $ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
-    foreach($users as $user){
-      if($user['Relief_Amount']==1320){$ben_1320+=1;$t_1320+=1;}
-      else if($user['Relief_Amount']==1220){$ben_1220+=1;$t_1220+=1;}
-      else if($user['Relief_Amount']==2120){$ben_2120+=1;$t_2120+=1;}
-      else if($user['Relief_Amount']==3020){$ben_3020+=1;$t_3020+=1;}
-    }
-    $tben_1320=$ben_1320*1320;$tben_1220=$ben_1220*1220;$tben_2120=$ben_2120*2120;$tben_3020=$ben_3020*3020;
-    $total9 = $tben_1320+$tben_1220+$tben_2120+$tben_3020;
-    $ttben_1320+=$tben_1320;$ttben_1220+=$tben_1220;$ttben_2120+=$tben_2120;$ttben_3020+=$tben_3020;
-    $count_list .= "<td>{$ben_1320}</td><td>{$tben_1320}</td><td>{$ben_1220}</td><td>{$tben_1220}</td><td>{$ben_2120}</td><td>{$tben_2120}</td><td>{$ben_3020}</td><td>{$tben_3020}</td><td>{$total9}</td></tr>";
+//     $users = (new ReportDB())->getZonalDetails('Welangana');
+//   $count_list .= "<tr><td>9</td><td>වෙලඟන</td>";
+//     $ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
+//     foreach($users as $user){
+//       if($user['Relief_Amount']==1320){$ben_1320+=1;$t_1320+=1;}
+//       else if($user['Relief_Amount']==1220){$ben_1220+=1;$t_1220+=1;}
+//       else if($user['Relief_Amount']==2120){$ben_2120+=1;$t_2120+=1;}
+//       else if($user['Relief_Amount']==3020){$ben_3020+=1;$t_3020+=1;}
+//     }
+//     $tben_1320=$ben_1320*1320;$tben_1220=$ben_1220*1220;$tben_2120=$ben_2120*2120;$tben_3020=$ben_3020*3020;
+//     $total9 = $tben_1320+$tben_1220+$tben_2120+$tben_3020;
+//     $ttben_1320+=$tben_1320;$ttben_1220+=$tben_1220;$ttben_2120+=$tben_2120;$ttben_3020+=$tben_3020;
+//     $count_list .= "<td>{$ben_1320}</td><td>{$tben_1320}</td><td>{$ben_1220}</td><td>{$tben_1220}</td><td>{$ben_2120}</td><td>{$tben_2120}</td><td>{$ben_3020}</td><td>{$tben_3020}</td><td>{$total9}</td></tr>";
 
-    $tt = $total1+$total2+$total3+$total4+$total5+$total6+$total7+$total8+$total9;
-  $count_list .="<tr><td></td><td>එකතුව</td><td>{$t_1320}</td><td>{$ttben_1320}</td><td>{$t_1220}</td><td>{$ttben_1220}</td><td>{$t_2120}</td><td>{$ttben_2120}</td><td>{$t_3020}</td><td>{$ttben_3020}</td><td>{$tt}</td></tr>";
+//     $tt = $total1+$total2+$total3+$total4+$total5+$total6+$total7+$total8+$total9;
+//   $count_list .="<tr><td></td><td>එකතුව</td><td>{$t_1320}</td><td>{$ttben_1320}</td><td>{$t_1220}</td><td>{$ttben_1220}</td><td>{$t_2120}</td><td>{$ttben_2120}</td><td>{$t_3020}</td><td>{$ttben_3020}</td><td>{$tt}</td></tr>";
 
 
-    // return array($count_list,$total1,$total2,$total3,$total4,$total5,$total6,$total7,$total8,$total9,$total10,$total11,$total12,$total13,$total14,$total15);
-    return $count_list;
+//     // return array($count_list,$total1,$total2,$total3,$total4,$total5,$total6,$total7,$total8,$total9,$total10,$total11,$total12,$total13,$total14,$total15);
+//     return $count_list;
 
-  }
+//   }
  
 }
 

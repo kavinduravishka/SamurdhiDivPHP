@@ -53,7 +53,7 @@
           <br><br><br>
 
  
-		<form action="Benficiary-Count-ReportView-Divulapitiya.php" method="post">
+		<form action="Benficiary-Count-ReportView-Divulapitiya.php?type=3" method="post">
 			<center><button class="submit pdf-button" name="submit">Make PDF</button></center>
 		</form>
     <br><br><br><br>

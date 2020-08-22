@@ -43,8 +43,9 @@ public function viewReport(){
   
   $count_list = "";
   for($i=0; $i<15; $i++){
-    $users = (new ReportDB())->getGNDetails($gn_divisions[$i],'Badalgama');
-    $count_list .= "<tr><td>1</td><td>".$gn_divisions_sinhala[$i]."</td>";
+    $index = $i+1;
+    $users = (new ReportDB())->getGNDetails($gn_divisions[$i],'Yatigaha');
+    $count_list .= "<tr><td>".$index."</td><td>".$gn_divisions_sinhala[$i]."</td>";
     $count_list .= $this->countList($users);
   }
 
