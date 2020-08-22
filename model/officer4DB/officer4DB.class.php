@@ -1,7 +1,7 @@
 <?php
 
 //require_once("../model/dbh.class.php");
-require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\model\dbh.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/dbh.class.php");
 
 class Officer4DB extends Dbh{
 
