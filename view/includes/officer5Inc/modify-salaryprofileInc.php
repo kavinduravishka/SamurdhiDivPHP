@@ -4,7 +4,7 @@
 ?>
 <?php 
 
-    if(!isset($_SESSION['user_id']) && $_SESSION['user_id']!=5){
+    if($_SESSION['user_id']!=5){
         header('Location: /SamurdhiDivPHP/view/loginView.php');
     }
     

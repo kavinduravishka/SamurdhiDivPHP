@@ -4,7 +4,7 @@
     require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer4Contr/appreciation_letter_report.class.php");
     require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/reportContr/appLetterfactory.class.php");
 
-    if(!isset($_SESSION['user_id']) && $_SESSION['user_id']!=4){
+    if($_SESSION['user_id']!=4){
         header('Location: /SamurdhiDivPHP/view/loginView.php');
     }
 
