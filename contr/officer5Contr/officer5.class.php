@@ -19,7 +19,7 @@ class Officer5 extends Officer {
     }
 
     protected function handleLogin($login_request){
-        if ($login_request=='officer5') {
+        if ($login_request==5) {
             header('Location: http://localhost/SamurdhiDivPHP/view/officer5View/salary-updateView.php');
             return TRUE;
         }
