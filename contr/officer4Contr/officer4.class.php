@@ -18,13 +18,13 @@ class Officer4 extends Officer{
         return self::$instance;
     }
 
-    protected function handleLogin($login_request){
-        if ($login_request==1) {
+    protected function handleLogin($request){
+        if ($request==1) {
             header('Location: http://localhost/SamurdhiDivPHP/view/officer4View/personal-filesView.php');
-            return FALSE;
+            exit;
         }
         else {
-            return TRUE;
+             $this->m_logger->handleLogin($request);
         }
     }
 

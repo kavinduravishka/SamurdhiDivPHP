@@ -28,13 +28,13 @@ class Officer2 extends Officer{
         return self::$instance;                 //
     }   
     
-    protected function handleLogin($login_request){
-        if ($login_request==3) {
+    protected function handleLogin($request){
+        if ($request==3) {
             header('Location: http://localhost/SamurdhiDivPHP/view/officer2view/dashboardView.php');
-            return TRUE;
+            exit;
         }
         else {
-            return FALSE;
+             $this->m_logger->handleLogin($request);
         }
     }
 

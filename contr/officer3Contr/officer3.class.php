@@ -26,14 +26,13 @@ class Officer3 extends Officer{
     }
     
 
-    protected function handleLogin($login_request){
-        if ($login_request==4) {
+    protected function handleLogin($request){
+        if ($request==4) {
             header('Location: /SamurdhiDivPHP/view/officer3view/dashboardView.php');
-            return TRUE;
+            exit;
         }
-        else {
-            
-            return FALSE;
+        else {            
+             $this->m_logger->handleLogin($request);
         }
     }
 
