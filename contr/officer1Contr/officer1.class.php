@@ -25,6 +25,7 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/officer1
 				return TRUE;
 			}
 			else {
+				echo "<script> console.log('passed through officer1'); </script>";
 				return FALSE;
 			}
 		}
