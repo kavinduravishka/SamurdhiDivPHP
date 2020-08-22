@@ -13,7 +13,7 @@
 	<div>
 		<div style="width:20px ;height:50px ; float:right"></div>
 		<div class="userdiv" id="div_useroptions"> <a id="div_useroptbtn" class="useroptdrop" href="javascript:void(0)" onclick="dropmenushow();">&#9660</a> </div>
-		<div class="userdiv" id="div_username"><label id="labelusername">UserName</label></div>
+		<div class="userdiv" id="div_username"><label id="labelusername"><?php echo $_SESSION['user_name']; ?></label></div>
 	</div>
 
 
@@ -21,7 +21,7 @@
  
 
 <div id="dropmenu">
-		<div class="dropmenuopt"><a class="dropmenuoptlink" id="dmo_usrname" href="">UserName</a></div>
+		<div class="dropmenuopt"><a class="dropmenuoptlink" id="dmo_usrname" href=""><?php echo $_SESSION['user_name']; ?></a></div>
 		<div class="dropmenuopt"><a class="dropmenuoptlink" id="dmo_profile" href="/SamurdhiDivPHP/view/userProfileView.php">Profile</a></div>
 		<!-- <div class="dropmenuopt"><a class="dropmenuoptlink" id="dmo_files" href="">Files</a></div> -->
 		<div class="dropmenuopt"><a class="dropmenuoptlink" id="logout" href="/SamurdhiDivPHP/view/includes/logoutInc.php">LogOut</a></div>
