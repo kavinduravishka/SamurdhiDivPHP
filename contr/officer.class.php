@@ -21,12 +21,16 @@ abstract class Officer{
 
         $processed = $this->handleLogin($request);
 
+<<<<<<< HEAD
+        if (!$processed && $this->m_logger != null) {
+=======
         if (! $processed && $this->m_logger != null) {
+>>>>>>> ea4f159beeeaf7e979841c3f679f8ce1f40958d3
             $this->m_logger->handleLogin($request);
         }        
     }
 
-    abstract protected function handleLogin(String $request);
+    abstract protected function handleLogin( $request);
 
 
     public static function authenticateUser($user_name, $password){
@@ -52,6 +56,7 @@ abstract class Officer{
             $_SESSION['user_id']=LoginDB::authenticateUser($user_name,$hashed_password);
             $login_request=$_SESSION['user_id'];
             $logger1->handleLoginRequest($login_request);
+            
         }
         else{
             $errors[]='Invalid UserName/ Password';
