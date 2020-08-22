@@ -19,14 +19,13 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/officer1
     		return self::$instance;
 		  }
 	
-		protected function handleLogin($login_request){
-			if ($login_request==2) {
+		protected function handleLogin($request){
+			if ($request==2) {
 				header('Location: /SamurdhiDivPHP/view/officer1view/beneficiariesView.php');
 				return TRUE;
 			}
 			else {
-				echo "<script> console.log('passed through officer1'); </script>";
-				return FALSE;
+				 $this->m_logger->handleLogin($request);
 			}
 		}
 
