@@ -22,7 +22,7 @@ public function printReport($data){
     $count_list = "";
     $ben_420=0;$ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
     foreach($users as $user){
-        if($user['Relief_Amount']==420){$ben_420+=1;$t_420+=1;}
+        if($user['Relief_Amount']==420){$ben_420+=1;$this->t_420+=1;}
         else if($user['Relief_Amount']==1320){$ben_1320+=1;$this->t_1320+=1;}
         else if($user['Relief_Amount']==1220){$ben_1220+=1;$this->t_1220+=1;}
         else if($user['Relief_Amount']==2120){$ben_2120+=1;$this->t_2120+=1;}
