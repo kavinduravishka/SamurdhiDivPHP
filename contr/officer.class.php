@@ -17,16 +17,20 @@ abstract class Officer{
         $this->m_logger = $logger;
     }
 
-    final public function handleLoginRequest(String $request){
+    final public function handleLoginRequest($request){
 
         $processed = $this->handleLogin($request);
 
-        if (! $processed && $this->m_logger !== null) {
+<<<<<<< HEAD
+        if (!$processed && $this->m_logger != null) {
+=======
+        if (! $processed && $this->m_logger != null) {
+>>>>>>> ea4f159beeeaf7e979841c3f679f8ce1f40958d3
             $this->m_logger->handleLogin($request);
         }        
     }
 
-    abstract protected function handleLogin(String $request);
+    abstract protected function handleLogin( $request);
 
 
     public static function authenticateUser($user_name, $password){
@@ -39,16 +43,20 @@ abstract class Officer{
         $logger4=Officer4::getInstance();
         $logger5=Officer5::getInstance();
 
-        $logger1->setNextLogger($logger2);
+        $logger1->setNextLogger($logger4);
         $logger2->setNextLogger($logger3);
         $logger3->setNextLogger($logger4);
         $logger4->setNextLogger($logger5);
         //$logger5->setLogger();
 
-        if(LoginDB::authenticateUser($user_name,$hashed_password)){
+        //$_SESSION['user_id'];
+
+        if((LoginDB::authenticateUser($user_name,$hashed_password))!=null){
             $_SESSION['user_name']=$user_name;
-            $login_request=$_SESSION['user_name'];
+            $_SESSION['user_id']=LoginDB::authenticateUser($user_name,$hashed_password);
+            $login_request=$_SESSION['user_id'];
             $logger1->handleLoginRequest($login_request);
+            
         }
         else{
             $errors[]='Invalid UserName/ Password';
@@ -64,6 +72,31 @@ abstract class Officer{
 
         session_destroy();
         header('Location: http://localhost/SamurdhiDivPHP/view/loginView.php?logout=yes');
+    }
+
+
+    public static function getUserDetails($user_id){
+        $user_name='';
+        $first_name='';
+        $last_name='';
+        $email='';
+
+        
+        $users=LoginDB::getUser($user_id);
+        foreach($users as $user){
+        $user_name=$user['user_name'];
+        $first_name=$user['first_name'];
+        $last_name=$user['last_name'];
+        $email=$user['email'];
+        }
+        return compact('user_name','first_name','last_name','email');
+
+    }
+
+    public static function updateUserDetails($user_name, $first_name , $last_name , $email,$user_id){
+        LoginDB::updateUser($user_name, $first_name , $last_name , $email,$user_id);
+        //header('Location: http://localhost/SamurdhiDivPHP/view/officer4View/personal-filesView.php?member_modified=true');
+
     }
     
     
