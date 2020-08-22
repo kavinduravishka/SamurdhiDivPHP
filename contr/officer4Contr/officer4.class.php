@@ -19,7 +19,7 @@ class Officer4 extends Officer{
     }
 
     protected function handleLogin($login_request){
-        if ($login_request=='officer4') {
+        if ($login_request==1) {
             header('Location: http://localhost/SamurdhiDivPHP/view/officer4View/personal-filesView.php');
             return FALSE;
         }

@@ -12,9 +12,12 @@ class LoginDB extends Dbh{
             $resolved=$stmt1->fetchAll();
 
             if(!$resolved){
-                return FALSE;
+                
+                //return FALSE;
+                return null;
             }
             else{
+                
                 $user_id=$resolved[0]['id'];
                 $user_name=$resolved[0]['user_name'];
 
@@ -22,14 +25,37 @@ class LoginDB extends Dbh{
                 $stmt2=(new Dbh())->connect()->prepare($sql2);
                 $stmt2->execute([$user_id]);
 
-                return TRUE;
+                //return TRUE;
+                return $user_id;
             }
                                 
         }
         catch(PDOException $e) {
-            return FALSE;
+            return null;
         }
-    }   
+    }
+    
+    
+    public static function getUser($user_id){
+        $sql="SELECT * FROM user WHERE id=? LIMIT 1";
+        $db_con=new Dbh();
+        $stmt=$db_con->connect()->prepare($sql);
+        $stmt->execute([$user_id]);
+        $users=$stmt->fetchAll();
+        return $users;
+    }
+
+
+    public function updateUser($user_name, $first_name , $last_name , $email,$user_id){
+        $sql="UPDATE user SET user_name=?,first_name=?,last_name=?,email=? WHERE id=?";
+        $db_con=new Dbh();
+        $stmt=$db_con->connect()->prepare($sql);
+        $stmt->execute([$user_name, $first_name , $last_name , $email,$user_id]);
+        
+
+    }
+
+
 }
 
 
