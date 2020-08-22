@@ -10,14 +10,31 @@
 // </body>
 // </html>'
     $date=date("Y/m/d");
-    $a = "<div><center><h2><span><u>සමුර්ධි සහනාධාර දීමනා බැංකු උපරිම වාර්තාව </u></span></h2></center>
+    $a = "<style>
+    table.masterlist {
+    font-family: arial, sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+    }
+    table.masterlist th,
+    table.masterlist td {
+    text-align: left;
+    padding: 3px;
+    border: 1px solid black;
+    }
+
+    table.masterlist tr:nth-child(even) {
+    background-color: #dddddd;
+    }</style>";
+    $a .= "<div class=\"maincontainer\"><center><h2><span><u>සමුර්ධි සහනාධාර දීමනා බැංකු උපරිම වාර්තාව </u></span></h2></center>
           <h3>{$date}(සහනාධාර මුදල් බැර කිරීම සඳහා)</h3>
           <h4>දිස්ත්‍රික්කය :- ගම්පහ </h4>
       <h3>ප්‍රාදේශීය ලේකම් කාර්යාලය - දිව්ලපිටිය </h3>
       
           <h3>සමුර්ධි ප්‍රජාමූල බැංකුවේ නම :- යටිගහ </h3>
           <div>
-          <table>
+          <table class=\"masterlist\">
           <tr>
             <th rowspan=\"2\">අනු අංකය </th>
             <th rowspan=\"2\">වසමේ නම </th>
@@ -32,6 +49,18 @@
             <td style=\"background-color: #848382; color:white;\">3020</td>
           </tr>
           <tr>. $count_list.</tr>
-          </table></div></div>";
+          </table></div>
+          <p>ඉහත විස්තරය නිවැරදි බව සහතික කරමි.</p>
+          <p>සකස් කළේ :- ...................................</p>
+          <p>විෂය භාර කළමනාකරණ සහකාර </p>
+          <p>වසම් උපරිමය අනුව විස්තරය නිවැරදි බවට සහතික කරමි.</p>
+          <p>පරීක්ෂා කළේ :- ................................</p>
+          <p>සමුර්ධි මුඋලස්ථාන කළමනාකරු.</p>
+          <p>ඉහත තොරතුරු නිවැරදි බවට සහතික කරමි.</p>
+          <p>............................................</p>
+          <p>රාදේශීය ලේකම්,</p>
+          <p>දිවුලපිටිය.</p>
+          </div>";
     $report->printReport($a);
   }
+
