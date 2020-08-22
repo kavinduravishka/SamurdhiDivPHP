@@ -1,12 +1,10 @@
 <?php session_start(); ?>
 <?php 
     require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer4Contr\staff-member.class.php");
-?>
-<?php 
-
-if(!isset($_SESSION['user_id'])){
-    header('Location: /SamurdhiDivPHP/view/loginView.php');
-}
+    
+    if(!isset($_SESSION['user_id']) && $_SESSION['user_id']!=4){
+        header('Location: /SamurdhiDivPHP/view/loginView.php');
+    }
     
     
 
