@@ -20,7 +20,7 @@ class Officer4 extends Officer{
 
     protected function handleLogin($request){
         if ($request==1) {
-            header('Location: http://localhost/SamurdhiDivPHP/view/officer4View/personal-filesView.php');
+            header('Location: /SamurdhiDivPHP/view/officer4View/personal-filesView.php');
             exit;
         }
         else {
@@ -45,14 +45,13 @@ class Officer4 extends Officer{
     public function addLetterRecord($name,$date,$particulars,$punishment,$ref){
         $nic=$this->findNIC($name);
         (Officer4DB::getInstance())->addLetterRecord($nic,$name,$date,$particulars,$punishment,$ref);
-        header('Location: http://localhost/SamurdhiDivPHP/view/officer4View/personal-filesView.php?letter_record_added=true');
+        header('Location: /SamurdhiDivPHP/view/officer4View/personal-filesView.php?letter_record_added=true');
     }
 
     public function getAppLetterRecord($input_data){
         
         $records=(Officer4DB::getInstance())->getAppLetterRecord($input_data);
         return $records;
-        //header('Location: http://localhost/SamurdhiDivPHP/view/officer4View/personal-filesView.php?letter_record_added=true');
     }
 
     public function findNIC($name){
