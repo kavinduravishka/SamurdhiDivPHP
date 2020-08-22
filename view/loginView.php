@@ -14,7 +14,7 @@ include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/
 <head>
     <meta charset="UTF-8">
     <title>Log In - Samurdhi Division</title>
-    
+    <link rel="shortcut icon" href="/SamurdhiDivPHP/view/images/favicon.ico">
     <link rel="stylesheet" href="/SamurdhiDivPHP/view/css/main_dk.css">
     
     
