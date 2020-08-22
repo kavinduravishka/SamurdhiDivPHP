@@ -2,10 +2,7 @@
 <?php 
     require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer4Contr/staff-member.class.php");
 
-    if(!isset($_SESSION['user_id'])){
-        header('Location: /SamurdhiDivPHP/view/loginView.php');
-    }
-    
+  
     $errors=array();
 
     $nic_number='';

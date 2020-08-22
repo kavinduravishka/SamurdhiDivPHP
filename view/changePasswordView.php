@@ -59,7 +59,7 @@
             <p>
                 <label for="">New Password:</label>
                 <input type='password' id='password' >&nbsp;<br>
-                <input style="margin-left: 250px;width:20px;height:20px"; type='checkbox' id='toggle' value='0' onchange='togglePassword(this);'>&nbsp; <span id='toggleText'>Show</span>
+                <input style="margin-left: 250px;width:20px;height:20px";  name="password" type='checkbox' id='toggle' value='0' onchange='togglePassword(this);'>&nbsp; <span id='toggleText'>Show</span>
                         
             </p>
             

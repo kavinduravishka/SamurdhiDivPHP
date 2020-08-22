@@ -1,4 +1,8 @@
-<?php session_start(); 
+<?php session_start();
+  if($_SESSION['user_id']!=1){
+        header('Location: /SamurdhiDivPHP/view/loginView.php');
+    }
+    
   require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/reportContr/bcreportfactory.class.php");
   require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/reportContr/reportfactory.class.php");
   $type = $_GET['type'];
