@@ -1,4 +1,7 @@
-<?php  ?>
+<?php  
+
+session_start();
+?>
 
 <?php 
 include_once(realpath($_SERVER['DOCUMENT_ROOT'])."/SamurdhiDivPHP/view/includes/officer3Inc/officer3.SSFrepInc.php");

@@ -8,8 +8,6 @@ class sfpayreport implements Report{
   	private  $reportstuff=null;
 
     public function printReport($reportstuff){
-        //$this->reportstuff = $this->getReport($data);
-        //$this->reportstuff="<html>".$this->reportstuff."</html>";
         
         $adaptee = new MPDFAdaptee();
         $adaptee->createPDF($reportstuff);
@@ -24,6 +22,13 @@ class sfpayreport implements Report{
         $stuff="";
 
         $stuff.=<<<EOD
+    	<style>
+		  	table,td,th{
+			border:1px solid black;
+			border-collapse: collapse;
+			padding:5px;
+			}
+		</style>
     <table>
     <tr>
         <th>Date</th>

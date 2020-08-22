@@ -1,5 +1,5 @@
 <?php   
-    include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/officer5Inc/monthly-payreportInc.php");
+    include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/officer5Inc/bank-payreportInc.php");
 ?>
 
 <!DOCTYPE html>

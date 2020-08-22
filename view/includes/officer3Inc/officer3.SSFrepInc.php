@@ -22,12 +22,9 @@ if(isset($_POST['Show']) || isset($_POST['Print'])){
 
 if(isset($_POST['Show'])){
     $reportContent= $ssfreport->getReport($fetcheddata);
-    echo "<h1>".gettype($reportContent)."</h1>";
-    $ssfreport->printReport($reportContent);
     $_SESSION['reportContent'] = $reportContent;
 
 }else if(isset($_POST['Print'])){
-    echo gettype($_SESSION['reportContent']);
     $ssfreport->printReport($_SESSION['reportContent']);
 
 }

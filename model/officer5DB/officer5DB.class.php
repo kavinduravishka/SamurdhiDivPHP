@@ -92,6 +92,22 @@ class Officer5DB extends Dbh{
         $stmt->execute(['1',$emp_no]);
 
     }
+
+    public function getBankReportDetails(){
+        $sql="SELECT * FROM salarydetails WHERE is_deleted=0";
+        $stmt=$this->connect()->query($sql); 
+        $salary_records=$stmt->fetchAll();
+        return $salary_records;
+    }
+
+    public function getBankAccountDetails($bank){
+        $sql="SELECT * FROM salarydetails WHERE (is_deleted=0 AND bank=?)";
+        $db_con=new Dbh();
+        $stmt=$db_con->connect()->prepare($sql);
+        $stmt->execute([$bank]);
+        $salary_records=$stmt->fetchAll();
+        return $salary_records;
+    }
     
 
 

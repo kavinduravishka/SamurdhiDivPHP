@@ -62,39 +62,41 @@ class MandatoryFund{
             $data = array();
 
             $data['Bank_Zonal'] = $bankName;
+
+            $arrBig[$bankName]['bankname'] = $bankName;
+            
             
             foreach ($ra3500 as $key=>$relAmount) {
                 $data['Relief_Amount'] = $relAmount;
                 $count = $this->MFRelease->find($data);
-                $count3500 += $count['count'];
+                $count3500 += intval($count[0]['count']);
             }
             $arrBig[$bankName]['3500'] = $count3500;
 
             foreach ($ra2500 as $relAmount) {
                 $data['Relief_Amount'] = $relAmount;
                 $count = $this->MFRelease->find($data);
-                $count2500 += $count['count'];
+                $count2500 += intval($count[0]['count']);
             }
             $arrBig[$bankName]['2500'] = $count2500;
 
             foreach ($ra1500 as $relAmount) {
                 $data['Relief_Amount'] = $relAmount;
                 $count = $this->MFRelease->find($data);
-                $count1500 += $count['count'];
+                $count1500 +=intval($count[0]['count']);
             }
             $arrBig[$bankName]['1500'] = $count1500;
 
             foreach ($ra420 as $relAmount) {
                 $data['Relief_Amount'] = $relAmount;
                 $count = $this->MFRelease->find($data);
-                $count420 += $count['count'];
+                $count420 += intval($count[0]['count']);
             }
             $arrBig[$bankName]['420'] = $count420;
             
         }
 
         return $arrBig;
-    	//$this->MFRelease->find($data);
     }
 
 
