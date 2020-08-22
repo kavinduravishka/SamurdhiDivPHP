@@ -21,11 +21,7 @@ abstract class Officer{
 
         $processed = $this->handleLogin($request);
 
-<<<<<<< HEAD
-        if (!$processed && $this->m_logger != null) {
-=======
         if (! $processed && $this->m_logger != null) {
->>>>>>> ea4f159beeeaf7e979841c3f679f8ce1f40958d3
             $this->m_logger->handleLogin($request);
         }        
     }
