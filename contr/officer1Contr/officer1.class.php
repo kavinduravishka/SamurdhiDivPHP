@@ -18,7 +18,7 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/officer1
 			
     		return self::$instance;
 		  }
-		  
+	
 		protected function handleLogin($login_request){
 			if ($login_request=='officer1') {
 				header('Location: http://localhost/SamurdhiDivPHP/view/officer1View/beneficiariesView.php');
