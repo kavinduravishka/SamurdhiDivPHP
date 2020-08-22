@@ -28,7 +28,11 @@ class Officer3 extends Officer{
 
     protected function handleLogin($login_request){
         if ($login_request==4) {
+<<<<<<< HEAD
             header('Location: http://localhost/SamurdhiDivPHP/view/officer3view/dashboardView.php');
+=======
+            header('Location: /SamurdhiDivPHP/view/officer3view/dashboardView.php');
+>>>>>>> 9d3fad6a37ec13b013e876d37d3f3eb1136088bc
             return TRUE;
         }
         else {

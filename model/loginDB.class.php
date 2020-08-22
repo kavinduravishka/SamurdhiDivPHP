@@ -46,13 +46,19 @@ class LoginDB extends Dbh{
     }
 
 
-    public function updateUser($user_name, $first_name , $last_name , $email,$user_id){
+    public static function updateUser($user_name, $first_name , $last_name , $email,$user_id){
         $sql="UPDATE user SET user_name=?,first_name=?,last_name=?,email=? WHERE id=?";
         $db_con=new Dbh();
         $stmt=$db_con->connect()->prepare($sql);
         $stmt->execute([$user_name, $first_name , $last_name , $email,$user_id]);
-        
+    }
 
+
+    public static function changePassword($hashed_password,$user_id){
+        $query="UPDATE user SET password=? WHERE id=? LIMIT 1";
+        $db_con=new Dbh();
+        $stmt=$db_con->connect()->prepare($query);
+        $stmt->execute([$hashed_password,$user_id]);
     }
 
 

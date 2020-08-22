@@ -1,5 +1,5 @@
 <?php   
-        include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/userProfileInc.php");
+        include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/changePasswordInc.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/kheader.css" >
 	<link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/kbody.css" >
 
+
     
 </head>
 <body>
@@ -24,11 +25,11 @@
     <?php 
     
     //include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/officer4Inc/officer4_sidebar.inc.php");
-    include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/yheader.inc.php");
+    include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/dheader.inc.php");
     ?> 
 
     <main>
-        <h1>User Profile</h1>
+        <h1 style="margin-left: -200px;";>User Profile</h1>
         
         <?php 
             if(!empty($errors)){
@@ -42,29 +43,23 @@
             }
         ?>
 
-
-        <form action="userProfileView.php" method="post" class="memberform" >
-            
-            <!-- <input type="hidden" name="user_id" value="<?php //echo $_SESSION['user_id']; ?>"> -->
-            <p>
-                <label for="">User Name:</label>
-                <input type="text" name="user_name" <?php echo 'value="' .$user_name.'"';?> >            
-            </p>
+        <form action="changePasswordView.php" method="post" class="memberform" >
             <p>
                 <label for="">First Name:</label>
-                <input type="text" name="first_name" <?php echo 'value="' .$first_name.'"';?>>            
+                <input type="text" name="first_name" <?php echo 'value="' .$first_name.'"';?> disabled>            
             </p>
             <p>
                 <label for="">Last Name:</label>
-                <input type="text" name="last_name" <?php echo 'value="' .$last_name.'"';?> >            
+                <input type="text" name="last_name" <?php echo 'value="' .$last_name.'"';?> disabled>            
             </p>
             <p>
                 <label for="">Email Address:</label>
-                <input type="email" name="email" <?php echo 'value="' .$email.'"';?> >            
+                <input type="email" name="email" <?php echo 'value="' .$email.'"';?> disabled>            
             </p>
             <p>
-                <label for="">Password:</label>
-                <span>*********</span> | <a href="/SamurdhiDivPHP/view/changePasswordView.php?user_id=<?php echo $_SESSION['user_id']; ?>">Change Password</a>
+                <label for="">New Password:</label>
+                <input type='password' id='password' >&nbsp;<br>
+                <input style="margin-left: 250px;width:20px;height:20px"; type='checkbox' id='toggle' value='0' onchange='togglePassword(this);'>&nbsp; <span id='toggleText'>Show</span>
                         
             </p>
             
@@ -80,5 +75,18 @@
 
     </main>
     <script type="text/javascript" src="/SamurdhiDivPHP/view/js/konload.js"></script>
+    
+    <script type="text/javascript"> 
+        function togglePassword(el){
+            var checked = el.checked;
+            if(checked){
+                document.getElementById("password").type = 'text';
+                document.getElementById("toggleText").textContent= "Hide";
+            }else{
+                document.getElementById("password").type = 'password';
+                document.getElementById("toggleText").textContent= "Show";
+            }
+        }    
+    </script>
 </body>
 </html>

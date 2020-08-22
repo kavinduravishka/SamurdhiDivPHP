@@ -21,7 +21,7 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/officer1
 	
 		protected function handleLogin($login_request){
 			if ($login_request==2) {
-				header('Location: http://localhost/SamurdhiDivPHP/view/officer1View/beneficiariesView.php');
+				header('Location: /SamurdhiDivPHP/view/officer1view/beneficiariesView.php');
 				return TRUE;
 			}
 			else {

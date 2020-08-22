@@ -1,6 +1,6 @@
 <?php session_start(); 
 
-    require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer.class.php");
+    require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer.class.php");
 
 
     // if(!isset($_SESSION['user_id'])){
@@ -14,6 +14,7 @@
     $first_name='';
     $last_name='';
     $email='';
+    $password='';
 
 
     if(isset($_SESSION['user_id'])){
@@ -30,14 +31,11 @@
 
     if(isset($_POST['submit'])){
 
-        $user_name=$_POST['user_name'];
-        $_SESSION['user_name']=$user_name;      
-        $first_name=$_POST['first_name'];
-        $last_name=$_POST['last_name'];
-        $email=$_POST['email'];
+        
+        $password=$_POST['password'];
       
         if(empty($errors)){
-            Officer::updateUserDetails($user_name, $first_name , $last_name , $email,$user_id);
+            Officer::changePassword($password,$user_id);
         }
         else{
             $errors[]='Failed to modify the entry.';

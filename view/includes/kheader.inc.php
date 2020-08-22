@@ -22,7 +22,7 @@
 
 <div id="dropmenu">
 		<div class="dropmenuopt"><a class="dropmenuoptlink" id="dmo_usrname" href="">UserName</a></div>
-		<div class="dropmenuopt"><a class="dropmenuoptlink" id="dmo_profile" href="">Profile</a></div>
-		<div class="dropmenuopt"><a class="dropmenuoptlink" id="dmo_files" href="">Files</a></div>
+		<div class="dropmenuopt"><a class="dropmenuoptlink" id="dmo_profile" href="/SamurdhiDivPHP/view/userProfileView.php">Profile</a></div>
+		<!-- <div class="dropmenuopt"><a class="dropmenuoptlink" id="dmo_files" href="">Files</a></div> -->
 		<div class="dropmenuopt"><a class="dropmenuoptlink" id="logout" href="/SamurdhiDivPHP/view/includes/logoutInc.php">LogOut</a></div>
 </div>
