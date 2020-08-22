@@ -29,7 +29,7 @@ class Officer2 extends Officer{
     }   
     
     protected function handleLogin($request){
-        if ($request==3) {
+        if ($request==2) {
             header('Location: /SamurdhiDivPHP/view/officer2view/dashboardView.php');
             exit;
         }
