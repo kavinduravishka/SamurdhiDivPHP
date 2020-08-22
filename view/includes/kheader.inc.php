@@ -4,9 +4,9 @@
 	<div id="header-begin"></div>
 
 	<div>
-		<a id="dashboard" class="wsopt" href="">Dashboard</a>
-  		<a id="form" class="wsopt" href="">Forms</a>
-		<a id="report" class="wsopt" href="">Reports</a>
+		<a id="dashboard" class="wsopt" href="dashboardView.php">Dashboard</a>
+  		<a id="form" class="wsopt" href="selectFormView.php">Forms</a>
+		<a id="report" class="wsopt" href="selectReportView.php">Reports</a>
 		<a id="currenttask"><span id="currenttaskcatagory">Report</span> <span id="currenttasksep">▸</span> <span id="currenttasktask">CurrentTask some nonesendfhghsdgkh;stg;hhj;sefddhgsdhgshgdshdsggd</span></a>
 	</div>
 	
@@ -24,5 +24,5 @@
 		<div class="dropmenuopt"><a class="dropmenuoptlink" id="dmo_usrname" href="">UserName</a></div>
 		<div class="dropmenuopt"><a class="dropmenuoptlink" id="dmo_profile" href="">Profile</a></div>
 		<div class="dropmenuopt"><a class="dropmenuoptlink" id="dmo_files" href="">Files</a></div>
-		<div class="dropmenuopt"><a class="dropmenuoptlink" id="logout" href="">LogOut</a></div>
+		<div class="dropmenuopt"><a class="dropmenuoptlink" id="logout" href="/SamurdhiDivPHP/view/includes/logoutInc.php">LogOut</a></div>
 </div>
