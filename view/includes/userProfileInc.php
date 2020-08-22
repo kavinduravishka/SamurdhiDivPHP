@@ -1,6 +1,6 @@
 <?php session_start(); 
 
-    require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer.class.php");
+    require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer.class.php");
 
 
     // if(!isset($_SESSION['user_id'])){
