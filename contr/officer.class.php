@@ -11,22 +11,43 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer5
 
 abstract class Officer{
 
-    protected  $m_logger=null;                                          //Chain Of Reponsibility    
+    // protected  $m_logger=null;                                          //Chain Of Reponsibility    
 
-    public function setNextLogger(Officer $logger){                      
-        $this->m_logger = $logger;
+    // public function setNextLogger($logger){                      
+    //     $this->m_logger = $logger;
+    //     //return $logger;
+    // }
+
+    // final public function handleLoginRequest($request){
+
+    //     $processed = $this->handleLogin($request);
+
+    //     if (! $processed && $this->m_logger != null) {
+    //         ($this->m_logger)->handleLogin($request);
+    //     }        
+    // }
+
+    // abstract protected function handleLogin( $request);
+
+    private $nextHandler;
+
+    public function setNext(Handler $handler): Handler
+    {
+        $this->nextHandler = $handler;
+        // Returning a handler from here will let us link handlers in a
+        // convenient way like this:
+        // $monkey->setNext($squirrel)->setNext($dog);
+        return $handler;
     }
 
-    final public function handleLoginRequest($request){
+    public function handle($request)
+    {
+        if ($this->nextHandler) {
+            return $this->nextHandler->handle($request);
+        }
 
-        $processed = $this->handleLogin($request);
-
-        if (! $processed && $this->m_logger != null) {
-            $this->m_logger->handleLogin($request);
-        }        
+        return null;
     }
-
-    abstract protected function handleLogin( $request);
 
 
     public static function authenticateUser($user_name, $password){
@@ -39,10 +60,10 @@ abstract class Officer{
         $logger4=Officer4::getInstance();
         $logger5=Officer5::getInstance();
 
-        $logger1->setNextLogger($logger4);
-        $logger2->setNextLogger($logger3);
-        $logger3->setNextLogger($logger4);
-        $logger4->setNextLogger($logger5);
+        $logger1->setNextLogger($logger2)->setNextLogger($logger3)->setNextLogger($logger4)>setNextLogger($logger5);
+        // $logger2->setNextLogger($logger3);
+        // $logger3->setNextLogger($logger4);
+        // $logger4->setNextLogger($logger5);
         //$logger5->setLogger();
 
         //$_SESSION['user_id'];

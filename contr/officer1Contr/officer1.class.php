@@ -19,15 +19,26 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/officer1
     		return self::$instance;
 		  }
 	
-		protected function handleLogin($login_request){
-			if ($login_request==2) {
-				header('Location: /SamurdhiDivPHP/view/officer1view/beneficiariesView.php');
-				return TRUE;
+		// protected function handleLogin($login_request){
+		// 	if ($login_request==2) {
+		// 		header('Location: /SamurdhiDivPHP/view/officer1view/beneficiariesView.php');
+		// 		return TRUE;
+		// 	}
+		// 	else {
+				
+		// 		return FALSE;
+		// 	}
+		// }
+
+		public function handle($request){
+        if ($request==2) {
+					header('Location: /SamurdhiDivPHP/view/officer1view/beneficiariesView.php');
+					//return TRUE;
 			}
-			else {
-				return FALSE;
-			}
+		else {			
+			return parent::handle($request);
 		}
+    	}
 
         public function loadBeneficiaries(){
             $beneficiaries = (Officer1DB::getInstance())->loadBeneficiaries();
