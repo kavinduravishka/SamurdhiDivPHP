@@ -21,7 +21,7 @@ class Officer4 extends Officer{
     protected function handleLogin($request){
         if ($request==1) {
             header('Location: http://localhost/SamurdhiDivPHP/view/officer4View/personal-filesView.php');
-            return FALSE;
+            exit;
         }
         else {
              $this->m_logger->handleLogin($request);

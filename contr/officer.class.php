@@ -13,7 +13,7 @@ abstract class Officer{
 
     protected  $m_logger=null;                                          //Chain Of Reponsibility    
 
-    public function setNextLogger($logger){                      
+    public function setNextLogger(Officer $logger){                      
         $this->m_logger = $logger;
     }
 

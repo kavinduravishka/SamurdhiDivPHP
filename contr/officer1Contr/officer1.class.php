@@ -22,12 +22,13 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/officer1
 		protected function handleLogin($request){
 			if ($request==2) {
 				header('Location: /SamurdhiDivPHP/view/officer1view/beneficiariesView.php');
-				return TRUE;
+				exit;
 			}
 			else {
-				 $this->m_logger->handleLogin($request);
+				$this->m_logger->handleLogin($request);
 			}
-		}
+		
+    	}
 
         public function loadBeneficiaries(){
             $beneficiaries = (Officer1DB::getInstance())->loadBeneficiaries();

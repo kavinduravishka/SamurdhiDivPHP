@@ -21,7 +21,7 @@ class Officer5 extends Officer {
     protected function handleLogin($request){
         if ($request==5) {
             header('Location: http://localhost/SamurdhiDivPHP/view/officer5View/salary-updateView.php');
-            return TRUE;
+            exit;
         }
         else {
              $this->m_logger->handleLogin($request);

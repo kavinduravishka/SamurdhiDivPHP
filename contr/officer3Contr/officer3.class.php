@@ -24,14 +24,14 @@ class Officer3 extends Officer{
     
         return self::$instance;
     }
-    
+
 
     protected function handleLogin($login_request){
         if ($login_request==4) {
             header('Location: /SamurdhiDivPHP/view/officer3view/dashboardView.php');
+            exit;
         }
-        else {
-            
+        else {            
              $this->m_logger->handleLogin($request);
         }
     }
