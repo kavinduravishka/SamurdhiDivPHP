@@ -61,7 +61,7 @@
           <br><br><br>
 
  
-		<form action="Subsidy-Allowance-ReportView.php" method="post">
+		<form action="Subsidy-Allowance-ReportView.php?type=11" method="post">
 			<center><button class="submit pdf-button" name="submit">Make PDF</button></center>
 		</form>
     <br><br><br><br>

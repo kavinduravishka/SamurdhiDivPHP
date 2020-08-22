@@ -211,7 +211,8 @@ main {
   display: none;
 } */
 .maincontainer {
-  margin-left: 70px;
+  margin-left: 45px;
+  margin-bottom: 20px;
 }
 
 .pdf-button {

@@ -24,7 +24,7 @@ public function countList($users){
   $count_list = "";
    $ben_420=0;$ben_1320=0;$ben_1220=0;$ben_2120=0;$ben_3020=0;
    foreach($users as $user){
-      if($user['Relief_Amount']==420){$ben_420+=1;$t_420+=1;}
+      if($user['Relief_Amount']==420){$ben_420+=1;$this->t_420+=1;}
       else if($user['Relief_Amount']==1320){$ben_1320+=1;$this->t_1320+=1;}
       else if($user['Relief_Amount']==1220){$ben_1220+=1;$this->t_1220+=1;}
       else if($user['Relief_Amount']==2120){$ben_2120+=1;$this->t_2120+=1;}
@@ -43,8 +43,9 @@ public function viewReport(){
   
   $count_list = "";
   for($i=0; $i<15; $i++){
-    $users = (new ReportDB())->getGNDetails($gn_divisions[$i],'Badalgama');
-    $count_list .= "<tr><td>1</td><td>".$gn_divisions_sinhala[$i]."</td>";
+    $index = $i+1;
+    $users = (new ReportDB())->getGNDetails($gn_divisions[$i],'Yatigaha');
+    $count_list .= "<tr><td>".$index."</td><td>".$gn_divisions_sinhala[$i]."</td>";
     $count_list .= $this->countList($users);
   }
 

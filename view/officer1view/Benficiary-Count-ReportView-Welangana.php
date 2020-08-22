@@ -54,7 +54,7 @@
           <br><br><br>
 
  
-		<form action="Benficiary-Count-ReportView-Welangana.php" method="post">
+		<form action="Benficiary-Count-ReportView-Welangana.php?type=9" method="post">
 			<center><button class="submit pdf-button" name="submit">Make PDF</button></center>
 		</form>
     <br><br><br><br>
