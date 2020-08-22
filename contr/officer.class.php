@@ -13,17 +13,12 @@ abstract class Officer{
 
     protected  $m_logger=null;                                          //Chain Of Reponsibility    
 
-    public function setNextLogger(Officer $logger){                      
+    public function setNextLogger($logger){                      
         $this->m_logger = $logger;
     }
 
     final public function handleLoginRequest($request){
-
-        $processed = $this->handleLogin($request);
-
-        if (! $processed && $this->m_logger != null) {
-            $this->m_logger->handleLogin($request);
-        }        
+        $this->handleLogin($request);
     }
 
     abstract protected function handleLogin( $request);
@@ -39,7 +34,7 @@ abstract class Officer{
         $logger4=Officer4::getInstance();
         $logger5=Officer5::getInstance();
 
-        $logger1->setNextLogger($logger4);
+        $logger1->setNextLogger($logger2);
         $logger2->setNextLogger($logger3);
         $logger3->setNextLogger($logger4);
         $logger4->setNextLogger($logger5);

@@ -18,13 +18,13 @@ class Officer5 extends Officer {
         return self::$instance;
     }
 
-    protected function handleLogin($login_request){
-        if ($login_request==5) {
+    protected function handleLogin($request){
+        if ($request==5) {
             header('Location: http://localhost/SamurdhiDivPHP/view/officer5View/salary-updateView.php');
             return TRUE;
         }
         else {
-            return FALSE;
+             $this->m_logger->handleLogin($request);
         }
     }
 
