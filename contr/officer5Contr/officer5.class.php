@@ -20,7 +20,7 @@ class Officer5 extends Officer {
 
     protected function handleLogin($request){
         if ($request==5) {
-            header('Location: http://localhost/SamurdhiDivPHP/view/officer5View/salary-updateView.php');
+            header('Location:/SamurdhiDivPHP/view/officer5View/salary-updateView.php');
             exit;
         }
         else {
@@ -31,7 +31,7 @@ class Officer5 extends Officer {
     public function addSalaryProfile($emp_no, $name,$designation,$bank,$acc_no,$basic_salary,$interim_allo,$language_allo,$living_cost,$w_op,$agrahara,$stamp,$union,$other_loan,$special_advance){
         $net_pay=$basic_salary+$interim_allo+$living_cost+$language_allo-$w_op-$agrahara-$stamp-$union-$other_loan-$special_advance;
         (Officer5DB::getInstance())->addSalaryProfile($emp_no, $name,$designation,$bank,$acc_no,$basic_salary,$interim_allo,$language_allo,$living_cost,$w_op,$agrahara,$stamp,$union,$other_loan,$special_advance,$net_pay);
-        header('Location: http://localhost/SamurdhiDivPHP/view/officer5View/salary-updateView.php?salary_profile_added=true');
+        header('Location: /SamurdhiDivPHP/view/officer5View/salary-updateView.php?salary_profile_added=true');
 
     }
 
@@ -51,7 +51,7 @@ class Officer5 extends Officer {
     public function addIncrement($nic_number,$salary,$increment){
         $new_salary=$salary+$increment;
         (Officer5DB::getInstance())->addIncrement($nic_number,$new_salary,$increment);
-        header('Location: http://localhost/SamurdhiDivPHP/view/officer5View/salary-updateView.php?salary_modified=true');
+        header('Location: /SamurdhiDivPHP/view/officer5View/salary-updateView.php?salary_modified=true');
 
 
     }
@@ -105,7 +105,7 @@ class Officer5 extends Officer {
     public function modifySalaryProfile($emp_no, $name,$designation,$bank,$acc_no,$basic_salary,$interim_allo,$language_allo,$living_cost,$w_op,$agrahara,$stamp,$union,$other_loan,$special_advance){
         $net_pay=$basic_salary+$interim_allo+$living_cost+$language_allo-$w_op-$agrahara-$stamp-$union-$other_loan-$special_advance;
         (Officer5DB::getInstance())->modifySalaryProfile($emp_no, $name,$designation,$bank,$acc_no,$basic_salary,$interim_allo,$language_allo,$living_cost,$w_op,$agrahara,$stamp,$union,$other_loan,$special_advance,$net_pay);
-        header('Location: http://localhost/SamurdhiDivPHP/view/officer5View/salary-updateView.php?salary_profile_modified=true');
+        header('Location: /SamurdhiDivPHP/view/officer5View/salary-updateView.php?salary_profile_modified=true');
     }
 
     public static function removeSalaryProfile($emp_no){
