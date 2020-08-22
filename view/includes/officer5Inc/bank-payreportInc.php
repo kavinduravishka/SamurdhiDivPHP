@@ -1,4 +1,7 @@
 <?php session_start();
+    if(!isset($_SESSION['user_id'])){
+        header('Location: /SamurdhiDivPHP/view/loginView.php');
+    }
 
     require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer5Contr\payreport.class.php");
     require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\\reportContr\\reportfactory.class.php");
