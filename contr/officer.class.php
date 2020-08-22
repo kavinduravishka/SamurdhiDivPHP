@@ -62,7 +62,7 @@ abstract class Officer{
         }
 
         session_destroy();
-        header('Location: http://localhost/SamurdhiDivPHP/view/loginView.php?logout=yes');
+        header('Location: /SamurdhiDivPHP/view/loginView.php?logout=yes');
     }
 
 
@@ -87,14 +87,14 @@ abstract class Officer{
     public static function updateUserDetails($user_name, $first_name , $last_name , $email,$user_id){
 
         $dashboards=array(
-            1=>'officer4View/personal-filesView.php',
-            2=>'officer1View/beneficiariesView.php',
-            3=>'officer2view/dashboardView.php',
-            4=>'officer3view/dashboardView.php',
+            4=>'officer4View/personal-filesView.php',
+            1=>'officer1View/beneficiariesView.php',
+            2=>'officer2view/dashboardView.php',
+            3=>'officer3view/dashboardView.php',
             5=>'officer5View/salary-updateView.php',
         );
         $header_dashboard=$dashboards[ $_SESSION['user_id'] ];
-        $header_tag="Location:http://localhost/SamurdhiDivPHP/view/".$header_dashboard."?user_modified=true";
+        $header_tag="Location:/SamurdhiDivPHP/view/".$header_dashboard."?user_modified=true";
 
         LoginDB::updateUser($user_name, $first_name , $last_name , $email,$user_id);
         header($header_tag);
@@ -103,7 +103,7 @@ abstract class Officer{
     public static function changePassword($password,$user_id){
         $hashed_password=sha1($password);
         LoginDB::changePassword($hashed_password,$user_id);
-        header('Location: http://localhost/SamurdhiDivPHP/view/userProfileView.php/?pwd_modified=true');
+        header('Location: /SamurdhiDivPHP/view/userProfileView.php/?pwd_modified=true');
     }
     
     

@@ -4,9 +4,9 @@
 ?>
 <?php 
 
-    // if(!isset($_SESSION['user_id'])){
-    //     header('Location: login.php');
-    // }
+    if($_SESSION['user_id']!=5){
+        header('Location: /SamurdhiDivPHP/view/loginView.php');
+    }
     
     $errors=array();
 

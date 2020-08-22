@@ -2,7 +2,7 @@
 <?php 
     require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer5Contr\officer5.class.php");
 
-    if(!isset($_SESSION['user_id'])){
+    if($_SESSION['user_id']!=5){
         header('Location: /SamurdhiDivPHP/view/loginView.php');
     }
 

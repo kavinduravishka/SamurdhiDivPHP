@@ -4,6 +4,10 @@
     require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\\reportContr\\reportfactory.class.php");
     require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\\reportContr\payreportfactory.class.php");
 
+    if($_SESSION['user_id']!=5){
+        header('Location: /SamurdhiDivPHP/view/loginView.php');
+    }
+
     $report_data="";
 
 
