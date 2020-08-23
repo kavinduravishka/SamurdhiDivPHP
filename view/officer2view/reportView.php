@@ -4,6 +4,13 @@ session_start();
 ?>
 
 <?php 
+
+require_once("../includes/islogged.inc.php");
+checklogged("2");
+
+?>
+
+<?php 
 include_once(realpath($_SERVER['DOCUMENT_ROOT'])."/SamurdhiDivPHP/view/includes/officer2Inc/officer2.MFrepInc.php");
 ?>
 

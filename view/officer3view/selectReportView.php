@@ -1,3 +1,16 @@
+<?php
+
+session_start();
+
+?>
+
+<?php 
+
+require_once("../includes/islogged.inc.php");
+checklogged("3");
+
+?>
+
 </html>
 
 <meta name="pagedata" tab="report">

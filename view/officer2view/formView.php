@@ -2,6 +2,17 @@
 
 session_start();
 
+?>
+
+<?php 
+
+require_once("../includes/islogged.inc.php");
+checklogged("2");
+
+?>
+
+<?php
+
 $includes = array(
 	"001"=>"officer2.001Inc.php", //CBO
 	"002"=>"officer2.002Inc.php",

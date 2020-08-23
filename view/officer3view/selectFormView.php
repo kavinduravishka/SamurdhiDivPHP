@@ -1,3 +1,11 @@
+<?php 
+session_start();
+
+require_once("../includes/islogged.inc.php");
+checklogged("3");
+?>
+
+
 </html>
 
 <meta name="pagedata" tab="form"> 
@@ -10,10 +18,10 @@
 
 <body>
 
-<?php 
+<?php
 include_once("../includes/officer3Inc/3ksidebar.inc.php");//include_once("../includes/ksidebar.inc.php");
 include_once("../includes/kheader.inc.php");
-?> 
+?>
 
 
 <div id="maincontainer">

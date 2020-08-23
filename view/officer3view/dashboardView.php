@@ -1,4 +1,13 @@
-<?php session_start(); ?>
+<?php 
+session_start(); 
+?>
+
+<?php 
+
+require_once("../includes/islogged.inc.php");
+checklogged("3");
+
+?>
 
 
 <?php //require_once("../include/islogged.inc.php");

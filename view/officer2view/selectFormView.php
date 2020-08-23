@@ -1,4 +1,13 @@
-</html>
+<?php 
+
+session_start();
+
+require_once("../includes/islogged.inc.php");
+checklogged("2");
+
+?><
+	
+/html>
 
 <meta name="pagedata" tab="form">
 

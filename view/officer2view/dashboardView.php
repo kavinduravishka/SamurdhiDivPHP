@@ -1,9 +1,12 @@
 <?php session_start(); ?>
 
 
-<?php //require_once("../include/islogged.inc.php");
-    //checklogged("officer2");
- ?>
+<?php 
+
+require_once("../includes/islogged.inc.php");
+checklogged("2");
+
+?>
 
 <html>
 
