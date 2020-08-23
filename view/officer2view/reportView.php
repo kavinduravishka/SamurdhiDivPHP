@@ -35,12 +35,13 @@ include_once("../includes/kheader.inc.php");
 
 <div id="maincontainer">
 <form action="reportView.php" method="post">
-<!-- 
-<label>year</label> <input name="year" type="number" value="">
-<label>month</label> <input name="month" type="number" value=""><br> -->
 
-<input type="submit" name="Show" value="show">
-<input type="submit" name="Print" value="print">
+<table class="tblsub">
+	<tr>
+		<td><input type="submit" name="Show" value="Show"></td>
+		<td><input type="submit" name="Print" value="Print"></td>
+	</tr>
+</table>
 </form>
 </div>
 

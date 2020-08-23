@@ -25,19 +25,28 @@ class mfreport implements Report{
 
 		  $stuff.='
 		<style>
-		  	table,td,th{
-			border:1px solid black;
-			border-collapse: collapse;
-			padding:5px;
+		  	.reporttbl td{
+				border:1px solid black;
+				border-collapse: collapse;
+				padding:5px;
 			}
 
-			table{
+			.reporttbl th{
+				border:1px solid black;
+				border-collapse: collapse;
+				padding:5px;
+				background-color:#ccc;
+			}
+
+			.reporttbl{
                 margin-left:auto;
-                margin-right:auto;
+				margin-right:auto;
+				border:1px solid black;
+				border-collapse: collapse;
+				padding:5px;
             }
 		</style>
-<table>
-<thead>
+<table class="reporttbl">
   <tr>
     <th rowspan="3">Serial<br>No<br></th>
     <th rowspan="3">Samurdhi<br>CB bank</th>
@@ -61,8 +70,8 @@ class mfreport implements Report{
     <td>300</td>
     <td></td>
   </tr>
-</thead>
-<tbody>';
+
+';
 
 
 		$sum420=0;
@@ -137,8 +146,7 @@ class mfreport implements Report{
 			</tr>";
 
 
-		$stuff.='</tbody>
-			</table>';
+		$stuff.='</table>';
 		  
 		return $stuff;
 	}

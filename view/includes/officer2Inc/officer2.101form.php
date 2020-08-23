@@ -28,7 +28,7 @@
         </tr>
     </table>
 
-    <table>
+<table class="tblsub">
     <tr>
         <td><input type="submit" value="Submit" name="Submit"></td>
     </tr>

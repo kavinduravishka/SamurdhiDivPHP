@@ -19,9 +19,16 @@ body {
 	margin-top: 50px;
 }
 
-.formtable td,th{
+.formtable th{
 	padding-right:5px;
 	padding-top: 20px;
+	font-size: 15px;
+}
+
+.formtable td{
+	padding-right:5px;
+	padding-top: 20px;
+	font-size: 15px;
 }
 
 .dashtable {
@@ -30,15 +37,32 @@ body {
 	padding:5px;
 	margin-left: 70px;
 	margin-top: 50px;
+	transition:1s;
 }
 
-.dashtable td,th{
+.dashtable td{
 	border:1px solid black;
 	padding-right:5px;
-	padding-top: 20px;
+	padding-top: 15px;
 	text-align: center;
 	padding-left:5px;
-	padding-right: 5px;
+}
+
+.dashtable th{
+	border:1px solid black;
+	padding-right:5px;
+	padding-top: 15px;
+	text-align: center;
+	padding-left:5px;
+}
+
+
+.dashtable th{
+	background-color: rgba(134, 134, 134, 0.548);
+}
+
+.dashtable:hover{
+	background-color: rgb(221, 221, 221);
 }
 
 div .tl1{
@@ -69,9 +93,37 @@ div .link:hover{
 	color:blue;
 	font-size: 20px;
 	/* margin-left: 175px; */
-
 }
-/* 
+
+
+button {
+	width: 100%;
+	padding: 5px;
+	box-sizing: border-box;
+	background-color: gray;
+  }
+  
+.tblsub td{
+	padding:10px;
+	border:none;
+	border-collapse: collapse;
+	padding:5px;
+}
+
+.tblsub th{
+	padding:10px;
+	border:none;
+	border-collapse: collapse;
+	padding:5px;
+}
+
+.tblsub{
+	margin-left:200px;
+	border:none;
+	margin-right:none;
+}
+
+  /* 
 div  .link:visited{
 	color:#555;
 } */
