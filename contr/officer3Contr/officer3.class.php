@@ -9,8 +9,6 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/officer3
 
 class Officer3 extends Officer{
 
-    //private $reportfactory = new off23report();
-    //private $report = null;
 
     private static $instance=null;
 
