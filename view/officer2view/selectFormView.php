@@ -12,7 +12,7 @@
 <body>
 
 <?php 
-include_once("../includes/ksidebar.inc.php");
+include_once("../includes/officer2Inc/2ksidebar.inc.php");//include_once("../includes/ksidebar.inc.php");
 include_once("../includes/kheader.inc.php");
 ?> 
 
@@ -27,8 +27,8 @@ include_once("../includes/kheader.inc.php");
 
 
 <script type="text/javascript" src="../js/ksidebar.js"></script>
-	<script type="text/javascript" src="../js/kheader.js"></script>
-	<script type="text/javascript" src="../js/konload.js"></script>
+<script type="text/javascript" src="../js/kheader.js"></script>
+<script type="text/javascript" src="../js/konload.js"></script>
 </body>
 
 </html>

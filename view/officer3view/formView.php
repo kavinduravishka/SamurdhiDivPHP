@@ -49,7 +49,7 @@ EOD;
 <body>
 
 <?php 
-include_once("../includes/ksidebar.inc.php");
+include_once("../includes/officer3Inc/3ksidebar.inc.php");//include_once("../includes/ksidebar.inc.php");
 include_once("../includes/kheader.inc.php");
 ?> 
 

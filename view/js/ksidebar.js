@@ -92,7 +92,7 @@ function transLayer() {
 		l1closed=1;
 		l2closed=1;
 	}
-	conslog();
+	//conslog();
 }
 
 function layer2only(open){
@@ -107,7 +107,8 @@ function layer2only(open){
 
 		l2closed=1;
 	}
-	conslog();
+	//conslog();
+	return true;
 }
 
 

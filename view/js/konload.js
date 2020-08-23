@@ -50,7 +50,7 @@ headeronload();
 function inputSize(x){
     var inputs= document.getElementsByClassName("forminput");
     for(var i=0;i<inputs.length;i++){
-        console.log(inputs[i].tagName);
+        //console.log(inputs[i].tagName);
         if(inputs[i].tagName=="INPUT"){
             inputs[i].setAttribute("size",x);
         }

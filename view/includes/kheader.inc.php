@@ -7,7 +7,7 @@
 		<a id="dashboard" class="wsopt" href="dashboardView.php">Dashboard</a>
   		<a id="form" class="wsopt" href="selectFormView.php">Forms</a>
 		<a id="report" class="wsopt" href="selectReportView.php">Reports</a>
-		<a id="currenttask"><span id="currenttaskcatagory">Report</span> <span id="currenttasksep">▸</span> <span id="currenttasktask">CurrentTask some nonesendfhghsdgkh;stg;hhj;sefddhgsdhgshgdshdsggd</span></a>
+		<a id="currenttask"><span id="currenttaskcatagory">Report</span> <span id="currenttasksep">▸</span> <span id="currenttasktask"></span></a>
 	</div>
 	
 	<div>

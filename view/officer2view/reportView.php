@@ -21,7 +21,7 @@ include_once(realpath($_SERVER['DOCUMENT_ROOT'])."/SamurdhiDivPHP/view/includes/
 <body>	
 
 <?php 
-include_once("../includes/ksidebar.inc.php");
+include_once("../includes/officer2Inc/2ksidebar.inc.php");//include_once("../includes/ksidebar.inc.php");
 include_once("../includes/kheader.inc.php");
 ?> 
 
