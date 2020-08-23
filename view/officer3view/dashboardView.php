@@ -23,13 +23,11 @@
 include_once("../includes/officer3Inc/3ksidebar.inc.php");
 include_once("../includes/kheader.inc.php");
 ?> 
-
-	<div class="maincontainer" >
-
+	<div id="maincontainer" >
 		
-
-	</div>
-
+		<?php include_once("../includes/officer3Inc/dashInc.php"); ?>
+	
+		</div>
 
 	<script type="text/javascript" src="../js/ksidebar.js"></script>
 	<script type="text/javascript" src="../js/kheader.js"></script>

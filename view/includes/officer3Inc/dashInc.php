@@ -6,24 +6,45 @@
 <?php
 
     $officer3 = Officer3::getInstance();
+
+    $q='';
     
     if(isset($_GET['q'])){
         $q=$_GET['q'];
-
-        if($q=="ssf"){
-
-        }else if($q=="ssffam"){
-
-        }else if($q=="ssfpay"){
-
-        }else if($q=="schol"){
-
-        }else{
-
-        }
-    }else{
-        
     }
+    
+    
+    if($q=="schol"){
+        echo "<h3 class=\"tl1\">Sipdora Scholarship</h3>";
+        echo $officer3->loadScholar();
+    }else if($q=="ssf"){
+        echo "<h3 class=\"tl1\">Social Security Fund</h3>";
+        echo $officer3->loadSSFapp();
+    }else if($q=="ssffam"){
+        echo "<h3 class=\"tl1\">SSF Family Members</h3>";
+        echo $officer3->loadSSFmem();
+    }else if($q=="ssfpay"){
+        echo "<h3 class=\"tl1\">Mandatory Savings Fund</h3>";
+        echo $officer3->loadSSFpay();
+    }else{
+    echo "<a href=\"dashboardView.php?q=schol\">";
+        echo "<h3 class=\"tl1\">Sipdora Scholarship</h3>";
+        echo $officer3->loadScholar();
+    echo "</a>";
+    echo "<a href=\"dashboardView.php?q=ssf\">";
+        echo "<h3 class=\"tl1\">Social Security Fund</h3>";
+        echo $officer3->loadSSFapp();
+    echo "</a>";
+    echo "<a href=\"dashboardView.php?q=ssffam\">";
+        echo "<h3 class=\"tl1\">SSF Family Members</h3>";
+        echo $officer3->loadSSFmem();
+    echo "</a>";
+    echo "<a href=\"dashboardView.php?q=ssfpay\">";
+        echo "<h3 class=\"tl1\">Mandatory Savings Fund</h3>";
+        echo $officer3->loadSSFpay();
+    echo "</a>";
+    }
+
 		
 
 ?>

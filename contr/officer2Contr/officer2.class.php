@@ -128,9 +128,8 @@ EDO;
                 <th>NIC</th>
             </tr>
 EOD;
-            echo "<script>console.log('".sizeof($cbomem)."'); </script>";
+            
         foreach ($cbomems as $cbomem) {
-            echo "<script>console.log('".$cbomem['Name']."'); </script>";
             $cbomemlist.=<<<EDO
             <tr>
                 <td>{$cbomem['CBORegNo']}</td>
