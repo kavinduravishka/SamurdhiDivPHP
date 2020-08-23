@@ -30,6 +30,11 @@ class mfreport implements Report{
 			border-collapse: collapse;
 			padding:5px;
 			}
+
+			table{
+                margin-left:auto;
+                margin-right:auto;
+            }
 		</style>
 <table>
 <thead>

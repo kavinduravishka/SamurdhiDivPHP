@@ -24,9 +24,9 @@ include_once("../includes/officer2Inc/2ksidebar.inc.php");
 include_once("../includes/kheader.inc.php");
 ?> 
 
-	<div class="maincontainer" >
+	<div id="maincontainer" >
 		
-
+	<?php include_once("../includes/officer2Inc/dashInc.php"); ?>
 
 	</div>
 

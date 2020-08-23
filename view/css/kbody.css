@@ -4,6 +4,13 @@ body {
 	font-family: "Poppins",sans-serif;
 } 
 
+#maincontainer a{
+	text-decoration:none;
+} 
+
+#maincontainer{
+	padding-bottom: 50px;
+}
 .formtable {
 	/*border:1px solid black;*/
 	border-collapse: collapse;
@@ -17,11 +24,29 @@ body {
 	padding-top: 20px;
 }
 
+.dashtable {
+	border:1px solid black;
+	border-collapse: collapse;
+	padding:5px;
+	margin-left: 70px;
+	margin-top: 50px;
+}
+
+.dashtable td,th{
+	border:1px solid black;
+	padding-right:5px;
+	padding-top: 20px;
+	text-align: center;
+	padding-left:5px;
+	padding-right: 5px;
+}
+
 div .tl1{
 	font-size: 40px;
 	transition: color 0.1s;
 	padding:10px;
 	margin-bottom: 20px;
+	color:black;
 }
 
 div .tl1:hover{

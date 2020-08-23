@@ -22,13 +22,13 @@
 
 <script>
 
- let innerCBO ='<a class="anc2" href="">View</a>\
+ let innerCBO ='<a class="anc2" href="dashboardView.php?q=cbo">View</a>\
 <a class="anc2" href="formView.php?formid=001">Add new record</a>';
 
- let innerLottary ='<a class="anc2" href="">View</a>\
+ let innerLottary ='<a class="anc2" href="dashboardView.php?q=lott">View</a>\
 <a class="anc2" href="formView.php?formid=101">Add new record</a>';
 
- let innerMF ='<a class="anc2" href="">View</a>\
+ let innerMF ='<a class="anc2" href="dashboardView.php?q=mandf">View</a>\
 <a class="anc2" href="formView.php?formid=201">New fund request</a>\
 <a class="anc2" href="reportView.php">Get monthly report</a>';
 

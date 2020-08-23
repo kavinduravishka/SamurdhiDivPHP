@@ -4,6 +4,8 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer.
 require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer3Contr/SocialSF.class.php");
 require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer3Contr/Scholarship.class.php");
 
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/officer3DB/officer3DB.class.php");
+
 
 class Officer3 extends Officer{
 
@@ -57,24 +59,39 @@ class Officer3 extends Officer{
     }
 
 
-    //=================   REPORTS   ==================
+    //=================   DASHBOARD   ==================
 
-    // public function SSFundReport($data){
-    //     $socialsf=SocialSF::getInstance();
-    //     $fetcheddata=$socialsf->fundReport($data);
-    //     return $fetcheddata;
-    // }
+    public function loadCBOmem(){
+        $cbomems = (Officer2DB::getInstance())->loadCBOmem();
+        $cbomemlist =<<<EOD
+        <table class="dashtable">
+            <tr>
+                <th>CBORegNo</th>
+                <th>Name</th>
+                <th>Post</th>
+                <th>Address</th>
+                <th>Telephone</th>
+                <th>NIC</th>
+            </tr>
+EOD;
+        foreach ($cbomems as $cbomem) {
+            $cbomemlist.=<<<EDO
+            <tr>
+                <td>{$cbomem['CBORegNo']}</td>
+                <td>{$cbomem['Name']}</td>
+                <td>{$cbomem['Post']}</td>
+                <td>{$cbomem['Address']}</td>
+                <td>{$cbomem['Telephone']}</td>
+                <td>{$cbomem['NIC']}</td>
+            </tr>
+EDO;
+        }
+    
+        $cbomemlist.="</table>";
+    
+        return $cbomemlist;
+    }
 
-    // public function  printSSFundReport(){
-    //     $this->newReportInstance();
-    //     $data = $this->SSFundReport();
-    //     $this->report->printReport($data);
-    // }
-
-    // public function getSSFundReport(){
-    //     $this->newReportInstance();
-    //     $data = $this->SSFundReport();
-    //     $this->report->getReport($data);
-    // }
 }
+
 ?>
