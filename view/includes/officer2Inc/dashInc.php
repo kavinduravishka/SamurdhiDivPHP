@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+
 <?php 
         require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer2Contr/officer2.class.php");      
 ?>
