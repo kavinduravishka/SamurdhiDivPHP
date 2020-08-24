@@ -60,21 +60,19 @@
             <p>
                 <label for="">Old Password:</label>
                 <input type='password' name="old_password" id='password'  >&nbsp;
-                <i style="cursor: pointer"; class="far fa-eye" id="togglePassword(1)"></i>
-                <!-- <input style="margin-left: 250px;width:20px;height:20px"; type='checkbox' id='toggle' value='0' onchange='togglePassword(this);'>&nbsp; 
-                <span id='toggleText'>Show</span> -->
+                <i style="cursor: pointer"; class="far fa-eye" id="togglePassword"></i>
                         
             </p>
             <p>
                 <label for="">New Password:</label>
-                <input type='password' name="new_password" id='password2'  >&nbsp;
-                <i style="cursor: pointer"; class="far fa-eye" id="togglePassword(2)"></i>
+                <input type='password' name="new_password" id='password'  >&nbsp;
+                <i style="cursor: pointer"; class="far fa-eye" id="togglePassword"></i>
                         
             </p>
             <p>
                 <label for="">Retype New Password:</label>
-                <input type='password' name="re_new_password" id='password3'  >&nbsp;
-                <i style="cursor: pointer"; class="far fa-eye" id="togglePassword(3)"></i>
+                <input type='password' name="re_new_password" id='password'  >&nbsp;
+                <i style="cursor: pointer"; class="far fa-eye" id="togglePassword"></i>
                         
             </p>
             
@@ -90,23 +88,9 @@
 
     </main>
     <script type="text/javascript" src="/SamurdhiDivPHP/view/js/konload.js"></script>
-    
-    <!-- <script type="text/javascript"> 
-        function togglePassword(el){
-            var checked = el.checked;
-            if(checked){
-                document.getElementById("password").type = 'text';
-                document.getElementById("toggleText").textContent= "Hide";
-            }else{
-                document.getElementById("password").type = 'password';
-                document.getElementById("toggleText").textContent= "Show";
-            }
-        }    
-    </script> -->
-
     <script>
-        const togglePassword = document.querySelector(#togglePassword(var num));
-        const password = document.querySelector(#password);
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#password');
         togglePassword.addEventListener('click', function (e) {
             // toggle the type attribute
             const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
