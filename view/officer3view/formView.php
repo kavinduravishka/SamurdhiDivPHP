@@ -2,6 +2,17 @@
 
 session_start();
 
+?>
+
+<?php 
+
+require_once("../includes/islogged.inc.php");
+checklogged("3");
+
+?>
+
+<?php
+
 $includes = array(
 	"001"=>"officer3.001Inc.php", //Scholar
 
@@ -13,6 +24,8 @@ $includes = array(
 include_once(realpath($_SERVER['DOCUMENT_ROOT'])."/SamurdhiDivPHP/view/includes/officer3Inc/{$includes[$_GET['formid']]}");
 
 ?>
+
+
 
 <html>
 
@@ -49,7 +62,7 @@ EOD;
 <body>
 
 <?php 
-include_once("../includes/ksidebar.inc.php");
+include_once("../includes/officer3Inc/3ksidebar.inc.php");//include_once("../includes/ksidebar.inc.php");
 include_once("../includes/kheader.inc.php");
 ?> 
 

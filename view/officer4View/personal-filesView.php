@@ -8,7 +8,8 @@
     <meta charset="UTF-8">
     <meta name="pagedata" tab="dash" type="form" title="Add member">
     <title>Officer4-dashboard</title>
-    
+
+    <link rel="shortcut icon" href="/SamurdhiDivPHP/view/images/favicon.ico">    
     <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/main_dk.css">
     <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/ksidebar.css" >
     <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/kheader.css" >

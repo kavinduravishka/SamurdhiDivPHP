@@ -4,11 +4,11 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer.
 require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer3Contr/SocialSF.class.php");
 require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer3Contr/Scholarship.class.php");
 
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/officer3DB/officer3DB.class.php");
+
 
 class Officer3 extends Officer{
 
-    //private $reportfactory = new off23report();
-    //private $report = null;
 
     private static $instance=null;
 
@@ -57,24 +57,167 @@ class Officer3 extends Officer{
     }
 
 
-    //=================   REPORTS   ==================
+    //=================   DASHBOARD   ==================
 
-    // public function SSFundReport($data){
-    //     $socialsf=SocialSF::getInstance();
-    //     $fetcheddata=$socialsf->fundReport($data);
-    //     return $fetcheddata;
-    // }
+    public function loadScholar(){
+        $fetched = (Officer3DB::getInstance())->loadScholar();
+        $fetchlist =<<<EOD
+        <table class="dashtable">
+            <tr>
+                <th>Name</th>
+                <th>NIC</th>
+                <th>Gender</th>
+                <th>Ethnicity</th>
+                <th>Guardian</th>
+                <th>SpeciallyAbled</th>
+                <th>Stream</th>
+                <th>School</th>
+                <th>Address</th>
+                <th>Bank</th>
+                <th>SisurakaAcNo</th>
+                <th>PeriodID</th>
+            </tr>
+EOD;
+        foreach ($fetched as $row) {
+            $fetchlist.=<<<EDO
+            <tr>
+                <td>{$row['Name']}</td>
+                <td>{$row['NIC']}</td>
+                <td>{$row['Gender']}</td>
+                <td>{$row['Ethnicity']}</td>
+                <td>{$row['Guardian']}</td>
+                <td>{$row['SpeciallyAbled']}</td>
+                <td>{$row['Stream']}</td>
+                <td>{$row['School']}</td>
+                <td>{$row['Address']}</td>
+                <td>{$row['Bank']}</td>
+                <td>{$row['SisurakaAcNo']}</td>
+                <td>{$row['PeriodID']}</td>
+            </tr>
+EDO;
+        }
+    
+        $fetchlist.="</table>";
+    
+        return $fetchlist;
+    }
 
-    // public function  printSSFundReport(){
-    //     $this->newReportInstance();
-    //     $data = $this->SSFundReport();
-    //     $this->report->printReport($data);
-    // }
+//==========================================================================
 
-    // public function getSSFundReport(){
-    //     $this->newReportInstance();
-    //     $data = $this->SSFundReport();
-    //     $this->report->getReport($data);
-    // }
+    public function loadSSFapp(){
+        $fetched = (Officer3DB::getInstance())->loadSSFapp();
+        $fetchlist =<<<EOD
+        <table class="dashtable">
+            <tr>
+               <th>Zone</th>
+               <th>ForceNo</th>
+               <th>Village</th>
+               <th>GN Domain</th>
+               <th>SS Ownership No</th>
+               <th>Name</th>
+               <th>Address</th>
+               <th>Successer</th>
+               <th>Home No</th>
+               <th>Banned</th>
+            </tr>
+EOD;
+        foreach ($fetched as $row) {
+            $fetchlist.=<<<EDO
+            <tr>
+                <td>{$row['Zone']}</td>
+                <td>{$row['ForceNo']}</td>
+                <td>{$row['Village']}</td>
+                <td>{$row['GNDomain']}</td>
+                <td>{$row['SSOwnershipNo']}</td>
+                <td>{$row['Name']}</td>
+                <td>{$row['Address']}</td>
+                <td>{$row['Successer']}</td>
+                <td>{$row['HomeNo']}</td>
+                <td>{$row['Banned']}</td>
+            </tr>
+EDO;
+        }
+    
+        $fetchlist.="</table>";
+    
+        return $fetchlist;
+    }
+
+//==========================================================================
+
+    public function loadSSFmem(){
+        $fetched = (Officer3DB::getInstance())->loadSSFmem();
+        $fetchlist =<<<EOD
+        <table class="dashtable">
+            <tr>
+                <th>OwnershipNo</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>MaritialState</th>
+                <th>BDay</th>
+                <th>Age</th>
+                <th>RelToBenif</th>
+                <th>Profession</th>
+                <th>NIC</th>
+                <th>Dead</th>
+            </tr>
+EOD;
+        foreach ($fetched as $row) {
+            $fetchlist.=<<<EDO
+            <tr>
+                <td>{$row['OwnershipNo']}</td>
+                <td>{$row['Name']}</td>
+                <td>{$row['Gender']}</td>
+                <td>{$row['MaritialState']}</td>
+                <td>{$row['BDay']}</td>
+                <td>{$row['Age']}</td>
+                <td>{$row['RelToBenif']}</td>
+                <td>{$row['Profession']}</td>
+                <td>{$row['NIC']}</td>
+                <td>{$row['Dead']}</td>
+            </tr>
+EDO;
+        }
+    
+        $fetchlist.="</table>";
+    
+        return $fetchlist;
+    }
+
+//==========================================================================
+    public function loadSSFpay(){
+        $fetched = (Officer3DB::getInstance())->loadSSFpay();
+        $fetchlist =<<<EOD
+        <table class="dashtable">
+            <tr>
+                <th>Date</th>
+                <th>Beneficiary No</th>
+                <th>Benificiary Name</th>
+                <th>Amount</th>
+                <th>Assured by</th>
+                <th>GN Domain</th>
+                <th>Reason</th>
+            </tr>
+EOD;
+        foreach ($fetched as $row) {
+            $fetchlist.=<<<EDO
+            <tr>
+                <td>{$row['Date']}</td>
+                <td>{$row['BeneficiaryNo']}</td>
+                <td>{$row['BenifName']}</td>
+                <td>{$row['Amount']}</td>
+                <td>{$row['NameAssured']}</td>
+                <td>{$row['GNDiv']}</td>
+                <td>{$row['Reason']}</td>
+            </tr>
+EDO;
+        }
+    
+        $fetchlist.="</table>";
+    
+        return $fetchlist;
+    }
+
 }
+
 ?>

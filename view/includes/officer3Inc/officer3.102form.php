@@ -93,7 +93,7 @@ if(isset($_SESSION['OwnershipNo'])){
 
 </table>
 
-<table>
+<table class="tblsub">
     <tr>
         <td><input type="submit" value="Submit and finish" name="SubmitFinish"></td>
         <td><input type="submit" value="Submit and add new family member" name="SubmitNext"></td>
