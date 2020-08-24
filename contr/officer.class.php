@@ -75,10 +75,10 @@ abstract class Officer{
         
         $users=LoginDB::getUser($user_id);
         foreach($users as $user){
-        $user_name=$user['user_name'];
-        $first_name=$user['first_name'];
-        $last_name=$user['last_name'];
-        $email=$user['email'];
+            $user_name=$user['user_name'];
+            $first_name=$user['first_name'];
+            $last_name=$user['last_name'];
+            $email=$user['email'];
         }
         return compact('user_name','first_name','last_name','email');
 
@@ -104,6 +104,13 @@ abstract class Officer{
         $hashed_password=sha1($password);
         LoginDB::changePassword($hashed_password,$user_id);
         header('Location: /SamurdhiDivPHP/view/userProfileView.php/?pwd_modified=true');
+    }
+
+
+    public static function checkChangePassword($user_id,$password){
+        $hashedInputPwd=sha1($password);
+        $result=LoginDB::checkChangePassword($user_id,$hashedInputPwd);
+        return $result;
     }
     
     

@@ -57,10 +57,22 @@
                 <input type="email" name="email" <?php echo 'value="' .$email.'"';?> disabled>            
             </p>
             <p>
+                <label for="">Old Password:</label>
+                <input type='password' name="old_password" id='password'  >&nbsp;<br>
+                <!-- <input style="margin-left: 250px;width:20px;height:20px"; type='checkbox' id='toggle' value='0' onchange='togglePassword(this);'>&nbsp; <span id='toggleText'>Show</span>
+                         -->
+            </p>
+            <p>
                 <label for="">New Password:</label>
-                <input type='password' name="password" id='password'  >&nbsp;<br>
-                <input style="margin-left: 250px;width:20px;height:20px"; type='checkbox' id='toggle' value='0' onchange='togglePassword(this);'>&nbsp; <span id='toggleText'>Show</span>
-                        
+                <input type='password' name="new_password" id='password'  >&nbsp;<br>
+                <!-- <input style="margin-left: 250px;width:20px;height:20px"; type='checkbox' id='toggle' value='0' onchange='togglePassword(this);'>&nbsp; <span id='toggleText'>Show</span>
+                         -->
+            </p>
+            <p>
+                <label for="">Retype New Password:</label>
+                <input type='password' name="re_new_password" id='password'  >&nbsp;<br>
+                <!-- <input style="margin-left: 250px;width:20px;height:20px"; type='checkbox' id='toggle' value='0' onchange='togglePassword(this);'>&nbsp; <span id='toggleText'>Show</span>
+                         -->
             </p>
             
             <p>
