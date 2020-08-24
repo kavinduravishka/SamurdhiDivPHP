@@ -43,7 +43,7 @@
                 Officer::changePassword($new_password,$user_id);
             }
             else{
-                $errors[]='Passwords does not match.';
+                $errors[]='Passwords do not match.';
             }
         }
         else{
