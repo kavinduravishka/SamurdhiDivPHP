@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/ksidebar.css" >
     <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/kheader.css" >
 	<link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/kbody.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
 
     
@@ -57,9 +58,21 @@
                 <input type="email" name="email" <?php echo 'value="' .$email.'"';?> disabled>            
             </p>
             <p>
+                <label for="">Old Password:</label>
+                <input type='password' name="old_password" id='password'  >&nbsp;
+                <i style="cursor: pointer"; class="far fa-eye" id="togglePassword"></i>
+                        
+            </p>
+            <p>
                 <label for="">New Password:</label>
-                <input type='password' name="password" id='password'  >&nbsp;<br>
-                <input style="margin-left: 250px;width:20px;height:20px"; type='checkbox' id='toggle' value='0' onchange='togglePassword(this);'>&nbsp; <span id='toggleText'>Show</span>
+                <input type='password' name="new_password" id='password'  >&nbsp;
+                <i style="cursor: pointer"; class="far fa-eye" id="togglePassword"></i>
+                        
+            </p>
+            <p>
+                <label for="">Retype New Password:</label>
+                <input type='password' name="re_new_password" id='password'  >&nbsp;
+                <i style="cursor: pointer"; class="far fa-eye" id="togglePassword"></i>
                         
             </p>
             
@@ -75,18 +88,16 @@
 
     </main>
     <script type="text/javascript" src="/SamurdhiDivPHP/view/js/konload.js"></script>
-    
-    <script type="text/javascript"> 
-        function togglePassword(el){
-            var checked = el.checked;
-            if(checked){
-                document.getElementById("password").type = 'text';
-                document.getElementById("toggleText").textContent= "Hide";
-            }else{
-                document.getElementById("password").type = 'password';
-                document.getElementById("toggleText").textContent= "Show";
-            }
-        }    
+    <script>
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#password');
+        togglePassword.addEventListener('click', function (e) {
+            // toggle the type attribute
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            // toggle the eye slash icon
+            this.classList.toggle('fa-eye-slash');
+        });
     </script>
 </body>
 </html>

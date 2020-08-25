@@ -14,7 +14,9 @@
     $first_name='';
     $last_name='';
     $email='';
-    $password='';
+    $old_password='';
+    $new_password='';
+    $re_new_password='';
 
 
     if(isset($_SESSION['user_id'])){
@@ -32,13 +34,20 @@
     if(isset($_POST['submit'])){
 
         
-        $password=$_POST['password'];
-      
+        $old_password=$_POST['old_password'];
+        $new_password=$_POST['new_password'];
+        $re_new_password=$_POST['re_new_password'];
+             
         if(empty($errors)){
-            Officer::changePassword($password,$user_id);
+            if( (Officer::checkChangePassword($user_id,$old_password))  and ($new_password===$re_new_password) ){
+                Officer::changePassword($new_password,$user_id);
+            }
+            else{
+                $errors[]='Passwords do not match.';
+            }
         }
         else{
-            $errors[]='Failed to modify the entry.';
+            $errors[]='Failed to change the password.';
         }            
              
             
