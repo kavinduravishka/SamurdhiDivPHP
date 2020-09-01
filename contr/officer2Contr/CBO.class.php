@@ -28,5 +28,9 @@ class CBO{
 	public function MemWrite($data){
 		$this->CBOmem->write($data);
 	}
+
+	public function selectMem($data){
+		$this->CBOmem->find($data);
+	}
 }
 ?>

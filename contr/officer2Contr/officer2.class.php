@@ -8,6 +8,7 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer2
 // require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\\reportContr\\reportfactory.class.php");
 
 require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/officer2DB/officer2DB.class.php");
+require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/officer2DB/CBOmemDB.class.php");
 
 
 class Officer2 extends Officer{
@@ -104,6 +105,7 @@ EOD;
                 <td>{$cbo['AnnualMeetingDate']}</td>
                 <td>{$cbo['BankName']}</td>
                 <td>{$cbo['RenewedDate']}</td>
+                <td><a href="#">Commity members</a></td>
             </tr>
 EDO;
         }
@@ -115,8 +117,8 @@ EDO;
 
 //=====================================================================
 
-    public function loadCBOmem(){
-        $cbomems = (Officer2DB::getInstance())->loadCBOmem();
+    public function selectCBOmem($regno){
+        $cbomems = (Officer2DB::getInstance())->selectCBOmem($regno);
         $cbomemlist =<<<EOD
         <table class="dashtable">
             <tr>
@@ -146,6 +148,8 @@ EDO;
 
         return $cbomemlist;
     }
+
+
 
 //=====================================================================
 
