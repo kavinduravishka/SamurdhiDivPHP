@@ -8,7 +8,7 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer2
 // require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\\reportContr\\reportfactory.class.php");
 
 require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/officer2DB/officer2DB.class.php");
-require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/officer2DB/CBOmemDB.class.php");
+//require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/officer2DB/CBOmemDB.class.php");
 
 
 class Officer2 extends Officer{
@@ -89,6 +89,7 @@ class Officer2 extends Officer{
                 <th>Annual Meeting Date</th>
                 <th>Bank Name</th>
                 <th>Renewed Date</th>
+                <th></th>
             </tr>
 EOD;
         foreach ($cbos as $cbo) {
@@ -105,7 +106,7 @@ EOD;
                 <td>{$cbo['AnnualMeetingDate']}</td>
                 <td>{$cbo['BankName']}</td>
                 <td>{$cbo['RenewedDate']}</td>
-                <td><a href="#">Commity members</a></td>
+                <td><a href="dashboardView.php?q=cbomem&cboregno={$cbo['RegNo']}">Commity members</a></td>
             </tr>
 EDO;
         }
@@ -117,8 +118,8 @@ EDO;
 
 //=====================================================================
 
-    public function selectCBOmem($regno){
-        $cbomems = (Officer2DB::getInstance())->selectCBOmem($regno);
+    public function loadCBOmem(){
+        $cbomems = (Officer2DB::getInstance())->loadCBOmem();
         $cbomemlist =<<<EOD
         <table class="dashtable">
             <tr>
@@ -148,6 +149,39 @@ EDO;
 
         return $cbomemlist;
     }
+
+    public function selectCBOmem($regno){
+        $cbomems = (CBO::getInstance())->selectmem(array("CBORegNo"=>$regno));
+        $cbomemlist =<<<EOD
+        <table class="dashtable">
+            <tr>
+                <th>CBORegNo</th>
+                <th>Name</th>
+                <th>Post</th>
+                <th>Address</th>
+                <th>Telephone</th>
+                <th>NIC</th>
+            </tr>
+EOD;
+            
+        foreach ($cbomems as $cbomem) {
+            $cbomemlist.=<<<EDO
+            <tr>
+                <td>{$cbomem['CBORegNo']}</td>
+                <td>{$cbomem['Name']}</td>
+                <td>{$cbomem['Post']}</td>
+                <td>{$cbomem['Address']}</td>
+                <td>{$cbomem['Telephone']}</td>
+                <td>{$cbomem['NIC']}</td>
+            </tr>
+EDO;
+        }
+
+        $cbomemlist.="</table>";
+
+        return $cbomemlist;
+    }
+
 
 
 

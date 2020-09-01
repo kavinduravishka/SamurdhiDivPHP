@@ -21,12 +21,21 @@ class CBOmemDB extends Dbbase{
 	}
 
 	public function find($data){
-
+		$sql = "SELECT * FROM CBOMemberDetailes WHERE CBORegNo = \"{$data["CBORegNo"]}\" and Deleted=0 AND Expired=0";
+		$stmt = $this->connect()->query($sql);
+		$mems = $stmt->fetchAll();
+		return $mems;
 	}
 
 	public function update($data){
 		
 	}
+
+	public function deleteOldmem($data){
+		$sql = "UPDATE CBOMemberDetailes SET Deleted=1 , Expired=1 WHERE CBORegNo=\"{$data['CBORegNo']}\"";
+		$stmt = $this->connect()->exec($sql);
+	}
+
 }
 
 ?>
