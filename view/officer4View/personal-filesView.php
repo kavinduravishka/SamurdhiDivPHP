@@ -13,7 +13,8 @@
     <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/main_dk.css">
     <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/ksidebar.css" >
     <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/kheader.css" >
-	<link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/kbody.css" >
+    <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/kbody.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
     
 </head>
@@ -31,7 +32,8 @@
 	
 	
 	<main >
-    <h1>Personal Files<span><a href="personal-filesView.php">| Refresh</a> </span></h1>
+    <h1>Personal Files&nbsp; <span ><a href="personal-filesView.php" style="text-decoration: none;"><i class="fas fa-sync-alt"></i></a></span></h1>
+    
 
     <div class="search">
         <form action="personal-filesView.php" method="get">

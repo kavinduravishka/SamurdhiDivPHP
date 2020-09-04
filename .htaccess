@@ -1,7 +1,10 @@
 RewriteEngine On
 
-RewriteRule ^login$ index.php [NC,L]
+#RewriteCond %{REQUEST_FILENAME} |-d
+#RewriteCond %{REQUEST_FILENAME} |-f
+#RewriteCond $1 !^(contr|view|model)
 
+#RewriteRule ^(.+) index.php/$1 [L]
 
-Options +Indexes
+Options -Indexes
 
