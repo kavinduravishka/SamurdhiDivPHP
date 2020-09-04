@@ -40,6 +40,13 @@ class Officer3DB extends Dbh{
         return $ssffammem;
     }
 
+    public function selectSSFmem($ssfownno){
+        $sql = "SELECT * FROM SSFAppFamMem WHERE Deleted=0 AND OwnershipNo=\"{$ssfownno}\" ORDER BY OwnershipNo";
+        $stmt = $this->connect()->query($sql);
+        $ssffammem=$stmt->fetchAll();
+        return $ssffammem;
+    }
+
     public function loadSSFpay(){
         $sql = "SELECT * FROM SSFundPayments WHERE Expired=0 ORDER BY SerialNo";
         $stmt = $this->connect()->query($sql);

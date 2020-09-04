@@ -119,6 +119,7 @@ EDO;
                <th>Successer</th>
                <th>Home No</th>
                <th>Banned</th>
+               <th>Family members</th>
             </tr>
 EOD;
         foreach ($fetched as $row) {
@@ -134,6 +135,7 @@ EOD;
                 <td>{$row['Successer']}</td>
                 <td>{$row['HomeNo']}</td>
                 <td>{$row['Banned']}</td>
+                <td><a href="dashboardView.php?q=ssffam&ssfownno={$row['SSOwnershipNo']}">Family members</a></td>
             </tr>
 EDO;
         }
@@ -184,6 +186,48 @@ EDO;
         return $fetchlist;
     }
 
+
+
+
+    public  function selectSSFmem($ssfownno){
+        $fetched = (Officer3DB::getInstance())->selectSSFmem($ssfownno);
+        $fetchlist =<<<EOD
+        <table class="dashtable">
+            <tr>
+                <th>SSF Ownership No</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Maritial State</th>
+                <th>Birth Day</th>
+                <th>Age</th>
+                <th>Relativeness to the benificiary</th>
+                <th>Profession</th>
+                <th>NIC</th>
+                <th>Dead</th>
+            </tr>
+EOD;
+        foreach ($fetched as $row) {
+            $fetchlist.=<<<EDO
+            <tr>
+                <td>{$row['OwnershipNo']}</td>
+                <td>{$row['Name']}</td>
+                <td>{$row['Gender']}</td>
+                <td>{$row['MaritialState']}</td>
+                <td>{$row['BDay']}</td>
+                <td>{$row['Age']}</td>
+                <td>{$row['RelToBenif']}</td>
+                <td>{$row['Profession']}</td>
+                <td>{$row['NIC']}</td>
+                <td>{$row['Dead']}</td>
+
+            </tr>
+EDO;
+        }
+    
+        $fetchlist.="</table>";
+    
+        return $fetchlist;
+    }
 //==========================================================================
     public function loadSSFpay(){
         $fetched = (Officer3DB::getInstance())->loadSSFpay();

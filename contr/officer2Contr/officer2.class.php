@@ -89,7 +89,7 @@ class Officer2 extends Officer{
                 <th>Annual Meeting Date</th>
                 <th>Bank Name</th>
                 <th>Renewed Date</th>
-                <th></th>
+                <th>Commity members</th>
             </tr>
 EOD;
         foreach ($cbos as $cbo) {
