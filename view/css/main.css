@@ -95,7 +95,7 @@ table.masterlist {
 table.masterlist th,
 table.masterlist td {
   text-align: left;
-  padding: 8px;
+  padding: 5px;
   border: 1px solid black;
 }
 
@@ -211,7 +211,7 @@ main {
   display: none;
 } */
 .maincontainer {
-  margin-left: 45px;
+  margin-left: 85px;
   margin-bottom: 20px;
 }
 

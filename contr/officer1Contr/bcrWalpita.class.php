@@ -36,11 +36,11 @@ public function printReport($data){
 
   public function viewReport(){
     
-      $gn_divisions = array('41-Paranahalpe','41A-Paranahalpe','42-Halpe','42A-Nariyamulla','42B-Gurullagama','43-Pahala-Kithulwala','43A-Ihala-Kithulwala','43B-Uthuru-Kithulwala','44-Waththemulla','44A-Ihala-Kithulgala','44B-Pahala-Kithulgala','45-Kuligedara','46-Pahala-Madithiyawala','46A-Pahala-Madithiyawala','47-Hangawaththa');
-      $gn_divisions_sinhala = array('41 බ/පරණහල්පේ','41A නැ/පරණහල්පේ','42 හල්පේ','42A නරියමුල්ල','42B ගුරුගල්ලගම','43 පහල කිතුල්වල','43A ඉහල කිතුල්වල','43B උතුරු කිතුල්වල','44 වත්තෙමුල්ල','44A ඉහල කලුඅග්ගල','44B පහල කලුඅග්ගල','45 කුලී ගෙදර','46 පහල මඩිතියවල','46A පහල මඩිතියවල','47 හඟවත්ත');
+      $gn_divisions = array('Agalegedara','Waradala','Heeralugedara','Walpita','Kudagammana','Rassapana','Badalgalla-West','Parana-Handiya','Balagalla-East','Ullapola-East','Ullapola-West');
+      $gn_divisions_sinhala = array('අගලේගෙදර','වරදල','හීරලුගෙදර','වල්පිට','කුඩාගම්මාන','රස්සපාන','බලගල්ල බටහිර','පරණ හන්දිය','බලගල්ල නැගෙනහිර','උල්ලපොල නැගෙනහිර','උල්ලපොල බටහිර');
       
       $count_list = "";
-     for($i=0; $i<15; $i++){
+     for($i=0; $i<count($gn_divisions); $i++){
         $index = $i+1;
         $users = (new ReportDB())->getGNDetails($gn_divisions[$i],'Walpita');
         $count_list .= "<tr><td>".$index."</td><td>".$gn_divisions_sinhala[$i]."</td>";

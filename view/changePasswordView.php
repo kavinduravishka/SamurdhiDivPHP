@@ -30,7 +30,7 @@
     ?> 
 
     <main>
-        <h1 style="margin-left: -200px;";>User Profile</h1>
+        <h1 style="margin-left: -200px;">User Profile</h1>
         
         <?php 
             if(!empty($errors)){
@@ -59,20 +59,20 @@
             </p>
             <p>
                 <label for="">Old Password:</label>
-                <input type='password' name="old_password" id='password'  >&nbsp;
-                <i style="cursor: pointer"; class="far fa-eye" id="togglePassword"></i>
+                <input type='password' name="old_password" id='password1'  >&nbsp;
+                <i style="cursor: pointer" class="far fa-eye" id="togglePassword1" onclick="ToggleFunc('togglePassword1','password1')"></i>
                         
             </p>
             <p>
                 <label for="">New Password:</label>
-                <input type='password' name="new_password" id='password'  >&nbsp;
-                <i style="cursor: pointer"; class="far fa-eye" id="togglePassword"></i>
+                <input type='password' name="new_password" id='password2'  >&nbsp;
+                <i style="cursor: pointer" class="far fa-eye" id="togglePassword2" onclick="ToggleFunc('togglePassword2','password2')"></i>
                         
             </p>
             <p>
                 <label for="">Retype New Password:</label>
-                <input type='password' name="re_new_password" id='password'  >&nbsp;
-                <i style="cursor: pointer"; class="far fa-eye" id="togglePassword"></i>
+                <input type='password' name="re_new_password" id='password3'  >&nbsp;
+                <i style="cursor: pointer" class="far fa-eye" id="togglePassword3" onclick="ToggleFunc('togglePassword3','password3')"></i>
                         
             </p>
             
@@ -89,15 +89,15 @@
     </main>
     <script type="text/javascript" src="/SamurdhiDivPHP/view/js/konload.js"></script>
     <script>
-        const togglePassword = document.querySelector('#togglePassword');
-        const password = document.querySelector('#password');
-        togglePassword.addEventListener('click', function (e) {
-            // toggle the type attribute
-            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-            password.setAttribute('type', type);
-            // toggle the eye slash icon
-            this.classList.toggle('fa-eye-slash');
-        });
+
+    function ToggleFunc(tp,p){
+        const togglePassword = document.getElementById(tp);
+        const password = document.getElementById(p);
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+        this.classList.toggle('fa-eye-slash');
+    }
+        
     </script>
 </body>
 </html>

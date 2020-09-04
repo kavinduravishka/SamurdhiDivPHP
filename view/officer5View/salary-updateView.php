@@ -12,13 +12,15 @@
     <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/main_dk.css">
     <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/ksidebar.css" >
     <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/kheader.css" >
-	<link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/kbody.css" >   
+    <link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/kbody.css" >   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
 
 <body>
 
     <script type="text/javascript" src="/SamurdhiDivPHP/view/js/ksidebar.js"></script>
     <script type="text/javascript" src="/SamurdhiDivPHP/view/js/kheader.js"></script>
+   
     
 
     <?php 
@@ -29,7 +31,8 @@
 	
 	
 	<main >
-    <h1>Salary Records<span><a href="salary-updateView.php">| Refresh</a> </span></h1>
+    <h1>Salary Records&nbsp; <span ><a href="salary-updateView.php" style="text-decoration: none;"><i class="fas fa-sync-alt"></i></a></span></h1>
+    
 
     <div class="search">
         <form action="salary-updateView.php" method="get">

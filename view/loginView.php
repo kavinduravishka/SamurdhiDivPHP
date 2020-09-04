@@ -1,6 +1,4 @@
 <?php 
-//include("../view/includes/loginInc.php")
-//include_once("../view/includes/loginInc.php");
 
 session_start();
 
@@ -25,20 +23,9 @@ include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/
         <form action="/SamurdhiDivPHP/view/loginView.php" method="post">
             
                 <img class="login-logo" src="/SamurdhiDivPHP/view/images/logo-h.png">
-                <!-- <legend><h1>Log In</h1></legend> -->
-                <legend><h2>Samurdhi Division</h2></legend>
+                <h2 class="login-title">Samurdhi Division </h2>
 
-                <?php 
-                    if( isset($errors) && !empty($errors) ){
-                        echo '<p class="error">Invalid Username / Password</p>';
-                    }
-                ?>
-
-                <?php 
-                    if(isset($_GET['logout'])){
-                        echo '<p class="info">You have successfully logged out from the system</p>';
-                    }
-                ?>                
+                           
 
                 <!-- <p>
                     UserName:
@@ -54,6 +41,18 @@ include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/
 
                 
                 <input type="submit" name="submit" value="Log In">
+
+                <?php 
+                    if( isset($errors) && !empty($errors) || isset($_GET['login']) =="failed"){
+                        echo '<p class="error">Invalid Username / Password</p>';
+                    }
+
+                    
+                
+                    if(isset($_GET['logout'])){
+                        echo '<p class="info">You have successfully logged out from the system</p>';
+                    }
+                ?>     
 
             
             

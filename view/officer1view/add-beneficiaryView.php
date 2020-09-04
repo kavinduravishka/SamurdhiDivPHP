@@ -41,13 +41,12 @@
 		<form action="add-beneficiaryView.php" method="post" class ="userform">
 			<p>
 				<label>	Divisional Secretariat:</label>
-				<input type="text" name="Divisional_Secretariat" <?php echo 'value="'.$Divisional_Secretariat.'"' ?>>
+				<input type="text" name="Divisional_Secretariat">
 			</p>
 
 			<p>
 				<label>Bank Zonal:</label>
-				<!-- <input type="text" name="Bank_Zonal" <?php echo 'value="'.$Bank_Zonal.'"' ?>> -->
-				<select name="Bank_Zonal" <?php echo 'value="'.$Bank_Zonal.'"' ?>>
+				<select name="Bank_Zonal"  onchange="myFunction(this.value)">
 					<option>Yatigaha</option>
 					<option>Badalgama</option>
 					<option>Koongodamulla</option>
@@ -61,8 +60,7 @@
 			</p>
 			<p>
 				<label>G.N Division:</label>
-				<!-- <input type="text" name="GN_Division" <?php echo 'value="'.$GN_Division.'"' ?>> -->
-				<select name="GN_Division" <?php echo 'value="'.$GN_Division.'"' ?>>
+				<select name="GN_Division" id="GN_Division">
 					<option>41-Paranahalpe</option>
 					<option>41A-Paranahalpe</option>
 					<option>42-Halpe</option>
@@ -82,36 +80,36 @@
 			</p>
 			<p>
 				<label>G.N Code Mapping:</label> 
-				<input type="text" name="GN_Code_Mapping" <?php echo 'value="'.$GN_Code_Mapping.'"' ?>>
+				<input type="text" name="GN_Code_Mapping">
 			</p>
 			<p>
 				<label>Householder Name:</label> 
-				<input type="text" name="Householder_Name" <?php echo 'value="'.$Householder_Name.'"' ?>>
+				<input type="text" name="Householder_Name">
 			</p>
 			
 			<p>
 				<label>Address:</label> 
-				<input type="text" name="Address" <?php echo 'value="'.$Address.'"' ?>>
+				<input type="text" name="Address">
 			</p>
 			<p>
 				<label>NIC:</label> 
-				<input type="text" name="NIC" <?php echo 'value="'.$NIC.'"' ?>>
+				<input type="text" name="NIC">
 			</p>
 			<p>
 				<label>No.of Family Members:</label> 
-				<input type="text" name="No_of_Family_Members" <?php echo 'value="'.$No_of_Family_Members.'"' ?>>
+				<input type="text" name="No_of_Family_Members">
 			</p>
 			<p>
 				<label>Bank Account No:</label> 
-				<input type="text" name="Bank_Account_No" <?php echo 'value="'.$Bank_Account_No.'"' ?>>
+				<input type="text" name="Bank_Account_No">
 			</p>
 			<p>
 				<label>Relief Ammount:</label> 
-				<input type="text" name="Relief_Ammount" <?php echo 'value="'.$Relief_Ammount.'"' ?>>
+				<input type="text" name="Relief_Ammount">
 			</p>
 			<p>
 				<label>Starting Year:</label> 
-				<input type="date" name="Starting_Year" <?php echo 'value="'.$Starting_Year.'"' ?>>
+				<input type="date" name="Starting_Year">
 			</p>
 			<p>
 				<label for="">&nbsp;</label>
@@ -122,6 +120,69 @@
 		</div>
 	</main>
 	 <script type="text/javascript" src="/SamurdhiDivPHP/view/js/konload.js"></script>
+	 <script>
+	 	function myFunction(value) {
+			var Yatigaha = ['41-Paranahalpe','41A-Paranahalpe','42A-Nariyamulla','42B-Gurullagama','43-Pahala-Kithulwala','43A-Ihala-Kithulwala','43B-Uthuru-Kithulwala','44-Waththemulla','44A-Ihala-Kithulgala','44B-Pahala-Kithulgala','45-Kuligedara','46-Pahala-Madithiyawala','46A-Pahala-Madithiyawala','47-Hangawaththa'];
+
+			var Badalgama = ['Akaragama-East','Akaragama-West','Akaragama-North','Godigamuwa-West','Godigamuwa-East','Balawala','Badalgama','Delpakadawara','Sirigapathawatta','Pethigoda','Alugolla','Katukenda'];
+
+			var Koongodamulla = ['Ambalayaya','Pahala-Madampella','East-Kaluwarippuwa-North','Koongodamulla-North','Koongodamulla-West','Koongodamulla-South','Bolagala','Koongodamulla-East','Ihala-Madampella-North','Otharawadiya','East-Kaluwarippuwa-South','Miriswatta'];
+
+			var Katuwelgama = ['Kadawala North','Kadwala','Dagonna-North','Dagonna-East','Halgahawelawatta','Katuwelgama-North','Kadawala-South','Aluthepola-West','Thotillagahawatta','Katuwelgama-South','Palugahawela','Dagonna-South'];
+
+			var Welangana = ['Lihiniyagammana','Ihala-Madampella-West','Iahala-Madampella-East','Ihalagama','Kehelella-South','Kehelella-North','Dewagura','Wekada','Kalumada','Welangana','Polhena','Mellwagedara'];
+
+			var Dunagaha = ['Thammita','Palliyapitiya-West','Induragara-North','Induragara-South','Batepola','Doongaha-South','Doonagaha','Doonagaha','Palliyapitiya-East','Hunumulla','Urapana','Kelepitimulla','Sayakkaramulla','Henpitagedara','Hapuwalana-South'];
+
+			var Kotadeniyawa = ['Kotadeniyawa','Erabadda','Diyagampala','Koradaminna','Divuldeniya','Paragoda-North','Poragoda-South','Moragalkanda','Nawana-West','Hettimulla','Halloluwa','Kelegedara','Nawana-East','Polwatta'];
+
+			var Divulapitiya = ['Hapugahagama','Barawavila','Pinnakele','Pinnakele-South','Bomugammana-North','Bomugammana-South','Pinnalanda','Divulapitiya','Wewagedara','Horagasmulla'];
+
+			var Walpita = ['Agalegedara','Waradala','Heeralugedara','Walpita','Kudagammana','Rassapana','Badalgalla-West','Parana-Handiya','Badagalla-West','Parana-Handiya','Balagalla-East','Ullapola-East','Ullapola-East','Ullapola-West'];
+
+			var a;
+			switch(value){
+				case "Yatigaha":
+					a = Yatigaha;
+					break;
+				case "Badalgama":
+					a = Badalgama;
+					break;
+				case "Koongodamulla":
+					a = Koongodamulla;
+					break;
+				case "Katuwelgama":
+					a = Katuwelgama;
+					break;
+				case "Welangana":
+					a = Welangana;
+					break;
+				case "Dunagaha":
+					a = Dunagaha;
+					break;
+				case "Kotadeniyawa":
+					a = Kotadeniyawa;
+					break;
+				case "Divulapitiya":
+					a = Divulapitiya;
+					break;
+				case "Walpita":
+					a = Walpita;
+					break
+			}
+
+			var gn = document.getElementById("GN_Division");
+			gn.options.length = 0;
+
+			for(let i=0; i<a.length; i++){
+				var x = document.createElement("OPTION");
+				x.setAttribute("value", "volvocar");
+				var t = document.createTextNode(a[i]);
+				x.appendChild(t);
+				gn.appendChild(x);
+			}
+		}
+	 </script>
 </body>
 </html>
 
