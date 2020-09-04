@@ -27,6 +27,7 @@ abstract class Officer{
     public static function authenticateUser($user_name, $password){
 
         $hashed_password = sha1($password);
+        $errors=array();
             
         $logger1=Officer1::getInstance();
         $logger2=Officer2::getInstance();
@@ -51,6 +52,7 @@ abstract class Officer{
         }
         else{
             $errors[]='Invalid UserName/ Password';
+            header('Location: /SamurdhiDivPHP/view/loginView.php?login=failed');
         }
     }
 

@@ -43,9 +43,11 @@ include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/
                 <input type="submit" name="submit" value="Log In">
 
                 <?php 
-                    if( isset($errors) && !empty($errors) ){
+                    if( isset($errors) && !empty($errors) || isset($_GET['login']) =="failed"){
                         echo '<p class="error">Invalid Username / Password</p>';
                     }
+
+                    
                 
                     if(isset($_GET['logout'])){
                         echo '<p class="info">You have successfully logged out from the system</p>';

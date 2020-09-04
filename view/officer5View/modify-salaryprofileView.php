@@ -69,7 +69,7 @@
             <input type="hidden" name="emp_no" value="<?php echo $emp_no; ?>">
             <p>
                 <label for="">Emp No:</label>
-                <input type="text" name="emp_no" id="nums" <?php echo 'value="' .$emp_no.'"';?>>            
+                <input type="text" name="emp_no" id="nums" <?php echo 'value="' .$emp_no.'"';?> disabled>            
             </p>
             <p>
                 <label for="">Name:</label>
