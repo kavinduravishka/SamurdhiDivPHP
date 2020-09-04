@@ -24,8 +24,9 @@ include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/
 
         <form action="/SamurdhiDivPHP/view/loginView.php" method="post">
             
-                
-                <legend><h1>Log In</h1></legend>
+                <img class="login-logo" src="/SamurdhiDivPHP/view/images/logo-h.png">
+                <!-- <legend><h1>Log In</h1></legend> -->
+                <legend><h2>Samurdhi Division</h2></legend>
 
                 <?php 
                     if( isset($errors) && !empty($errors) ){
@@ -39,15 +40,15 @@ include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/
                     }
                 ?>                
 
-                <p>
+                <!-- <p>
                     UserName:
-                </p>
+                </p> -->
                 <input type="text" name="user_name" id="" placeholder="User Name">
                 
 
-                <p>
+                <!-- <p>
                     Password:
-                </p>
+                </p> -->
                 <input type="password" name="password" id="" placeholder="Password">
                 
 
