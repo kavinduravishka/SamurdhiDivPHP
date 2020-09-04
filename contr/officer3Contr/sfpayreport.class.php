@@ -19,6 +19,12 @@ class sfpayreport implements Report{
   	}
 
   	private function generateReport($data){
+
+        
+        //$dat = DateTime::createFromFormat("Y-m-d",$data[0]['Date']);
+        //$dt = $dat->format("Y-m");
+
+        $dt = date('Y-m', strtotime($data[0]['Date']));
         $stuff="";
 
         $stuff.=<<<EOD
@@ -33,16 +39,18 @@ class sfpayreport implements Report{
                 margin-left:auto;
                 margin-right:auto;
             }
-		</style>
+        </style>
+        <h3 style="text-align:center">සමෘද්ධි සමාජ ආරක්ෂණ අරමුදල  - මාසික වාර්තාව</h3>
+        <p style="margin-left:15%">{$dt} මාසය</p>
     <table>
     <tr>
-        <th>Date</th>
-        <th>Beneficiary No</th>
-        <th>Name</th>
-        <th>Amount</th>
-        <th>Assured by</th>
-        <th>GNDivison</th>
-        <th>Reason</th>
+        <th>දිනය</th>
+        <th>ප්‍රථිලාභී අංකය</th>
+        <th>නම</th>
+        <th>මුදල</th>
+        <th>අනුමත කල අය</th>
+        <th>ග්‍රාම නිලධාරී වසම</th>
+        <th>හේතුව</th>
     </tr>
 EOD;
 

@@ -21,6 +21,7 @@ class mfreport implements Report{
 
 
   	private function generateReport($data){
+		  $dt = date('Y-m', strtotime('first day of last month'));
 		  $stuff="";
 
 		  $stuff.='
@@ -46,11 +47,15 @@ class mfreport implements Report{
 				padding:5px;
             }
 		</style>
+		<h3 style="text-align:center">සමෘද්ධි සහනාධාර දීමනා - අනිවාර්ය ඉතිරි කිරීම්</h3>
+
+<p style="margin-left:15%">ප්‍රාදේශීය ලේඛම් කාර්යාලය : - දිවුලපිටිය<br>'.
+$dt .' මාසය</p>
 <table class="reporttbl">
   <tr>
-    <th rowspan="3">Serial<br>No<br></th>
-    <th rowspan="3">Samurdhi<br>CB bank</th>
-    <th colspan="9">benificiaries</th>
+    <th rowspan="3">අනු<br>අංකය<br></th>
+    <th rowspan="3">සමෘද්ධි ප්‍රජා මූල බැංකුව</th>
+    <th colspan="9">අදාල දීමනා වර්ගයට අයත් ප්‍රථිලාභීන් ගණන</th>
   </tr>
   <tr>
     <td colspan="2">420</td>
@@ -147,6 +152,13 @@ class mfreport implements Report{
 
 
 		$stuff.='</table>';
+
+		$stuff.=' <p style="margin-left:15%">සකස් කලේ :-.........................................<br>
+විෂය භාර කලමනාකරණ සහකාර :-...............................................<br>
+වසම් උපරිමය අනුව ඉහත විස්තරය නිවැරදි බව සහතික කරමි<br>
+පරීක්ෂා කලේ :-..........................................................<br>
+සමෘද්ධි මූලස්ථාන කළමනාකරු :-....................................................<br>
+</p>';
 		  
 		return $stuff;
 	}
