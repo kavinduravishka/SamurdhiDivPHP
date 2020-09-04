@@ -41,7 +41,7 @@ public function printReport($data){
       $gn_divisions_sinhala = array('කඩවල උතුර','කඩවල','දාගොන්න උතුර','දාගොන්න නැගෙනහිර','හල්ගහවෙලවත්ත','කටුවෙලේගම උතුර','කඩවල දකුණ','අලුත්පොල බටහිර','තොටිල්ලගහවත්ත','කටුවෙලේගම දකුණ',' පලුගහවෙල','ගොන්න දකුණ');
       
       $count_list = "";
-      for($i=0; $i<15; $i++){
+      for($i=0; $i<count($gn_divisions); $i++){
         $index = $i+1;
         $users = (new ReportDB())->getGNDetails($gn_divisions[$i],'Katuwelgama');
         $count_list .= "<tr><td>".$index."</td><td>".$gn_divisions_sinhala[$i]."</td>";

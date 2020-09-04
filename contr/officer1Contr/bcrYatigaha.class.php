@@ -42,7 +42,7 @@ public function viewReport(){
 
   
   $count_list = "";
-  for($i=0; $i<15; $i++){
+  for($i=0; $i<count($gn_divisions); $i++){
     $index = $i+1;
     $users = (new ReportDB())->getGNDetails($gn_divisions[$i],'Yatigaha');
     $count_list .= "<tr><td>".$index."</td><td>".$gn_divisions_sinhala[$i]."</td>";

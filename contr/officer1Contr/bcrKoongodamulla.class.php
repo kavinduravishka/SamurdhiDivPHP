@@ -40,7 +40,7 @@ public function printReport($data){
       $gn_divisions_sinhala = array('අම්බලයාය','පහල මඩම්පෙල්ල','නැගෙනහිර කලුවරිප්පුව උතුර','කෝනගොඩමුල්ල උතුර ','කෝනගොඩමුල්ල බටහිර','කෝනගොඩමුල්ල දකුණ','බොලගොල','කෝනගොඩමුල්ල නැගෙනහිර','ඉහල මාදම්පෙල්ල උතුර','ඔනරවාඩිය','නැගෙනහිර කලුවරිප්පුව දකුණ','මිරිස්වත්ත');
       
       $count_list = "";
-      for($i=0; $i<15; $i++){
+      for($i=0; $i<count($gn_divisions); $i++){
         $index = $i+1;
         $users = (new ReportDB())->getGNDetails($gn_divisions[$i],'Koongodamulla');
         $count_list .= "<tr><td>".$index."</td><td>".$gn_divisions_sinhala[$i]."</td>";

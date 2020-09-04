@@ -134,11 +134,11 @@
 
 			var Dunagaha = ['Thammita','Palliyapitiya-West','Induragara-North','Induragara-South','Batepola','Doongaha-South','Doonagaha','Doonagaha','Palliyapitiya-East','Hunumulla','Urapana','Kelepitimulla','Sayakkaramulla','Henpitagedara','Hapuwalana-South'];
 
-			var Kotadeniyawa = ['Kotadeniyawa','Erabadda','Diyagampala','Koradaminna','Divuldeniya','Paragoda-North','Poragoda-South','Moragalkanda','Nawana-West','Hettimulla','Halloluwa','Kelegedara','Nawana-East','Polwatta'];4
+			var Kotadeniyawa = ['Kotadeniyawa','Erabadda','Diyagampala','Koradaminna','Divuldeniya','Paragoda-North','Poragoda-South','Moragalkanda','Nawana-West','Hettimulla','Halloluwa','Kelegedara','Nawana-East','Polwatta'];
 
 			var Divulapitiya = ['Hapugahagama','Barawavila','Pinnakele','Pinnakele-South','Bomugammana-North','Bomugammana-South','Pinnalanda','Divulapitiya','Wewagedara','Horagasmulla'];
 
-			var Walpita = ['Agalegedara','Waradala','Heeralugedara','Walpita','Kudagammana','Rassapana','Badalgalla-West','Parana-Handiya','Badalgalla-West','Parana-Handiya','Balagalla-East','Ullapola-East','Ullapola-East','Ullapola-West'];
+			var Walpita = ['Agalegedara','Waradala','Heeralugedara','Walpita','Kudagammana','Rassapana','Badalgalla-West','Parana-Handiya','Badagalla-West','Parana-Handiya','Balagalla-East','Ullapola-East','Ullapola-East','Ullapola-West'];
 
 			var a;
 			switch(value){
