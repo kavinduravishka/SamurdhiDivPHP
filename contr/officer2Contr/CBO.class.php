@@ -22,11 +22,22 @@ class CBO{
     }
 
 	public function OrgWrite($data){
-		$this->CBOorg->write($data);
+		try{
+			$this->CBOorg->write($data);
+		}catch(PDOException $exception){
+			if(strpos($exception->getMessage(),"Duplicate entry")!==false){
+				$this->CBOorg->update($data);
+				$this->CBOmem->deleteOldmem(array("CBORegNo"=>$data['RegNo']));
+			}
+		}
 	}
 
 	public function MemWrite($data){
 		$this->CBOmem->write($data);
+	}
+
+	public function selectMem($data){
+		return $this->CBOmem->find($data);
 	}
 }
 ?>

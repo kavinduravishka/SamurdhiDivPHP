@@ -7,6 +7,7 @@
   
   
 }
+
 body{
     margin: 0;
     padding: 0;
@@ -19,14 +20,30 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 350px;
-    height: 500px;
+    width: 400px;
+    height: 600px;
     padding: 80px 40px;
     box-sizing: border-box;
     background: rgba(0,0,0,.3);
-    border-radius: 10px;
+    border-radius: 30px;
     transform: translate(-50%,-50%);
 }
+
+.login-logo{
+    width: 370px;
+    border-radius: 30px;
+    position: relative;
+    top:-25px;
+    left: -25px;
+    
+}
+
+.login-title{
+    
+    text-align: center;
+    color: rgb(235, 211, 0);
+}
+
 
 h1{
     margin: 0;
@@ -39,12 +56,16 @@ p.error{
     background: red;
     color: white;
     padding: 10px;
+    border-radius: 10px;
+    text-align: center;
 }
 
 p.info{
     background: green;
     color: white;
     padding: 10px;
+    border-radius: 10px;
+    text-align: center;
 }
 
 input{
@@ -62,6 +83,7 @@ input{
     height: 40px;
     color: #fff;
     font-size: 16px;
+    text-align: center;
 
 }
 
@@ -84,62 +106,14 @@ input{
     color:black;
 }
 
-/* header{
-    background: rgba(255,255,255,0.7);
-    overflow: auto;
-    padding: 10px;
-    width: 100%;
-    top:0px;
-    position:fixed;
-    z-index: 999;
 
+.logout_btn {
+background-color: #2d78da;
+text-decoration: none;
+font-weight: 20px;
+color: white;
+padding: 5px 10px;
 }
-
-header .appname{
-    float: left;
-    width:150;
-    height: 20
-    border-radius: 10px;
-}
-
-header .loggedin{
-    float: right;
-     position:relative;
-    right:50px;
-}
-
-header .logout_btn{
-    
-    position:relative;
-    right:0px;
-} */
-header {
-    color: #eee;
-    background: #2f323a;
-    overflow: auto;
-    padding: 15px;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-  }
-  header .appname {
-    float: left;
-  }
-  header .loggedin {
-    float: right;
-  }
-  header .loggedin a {
-    margin-left: 20px;
-  }
-  
-  .logout_btn {
-    background-color: #2d78da;
-    text-decoration: none;
-    font-weight: 20px;
-    color: white;
-    padding: 5px 10px;
-  }
 
 
 .officer4_dashboard
@@ -164,11 +138,6 @@ header {
     border-radius: 10px;
 }
 
-/* main{
-    width: 1000px;
-    margin: 30px auto;
-
-} */
 
 main {
   margin-top: 70px;
