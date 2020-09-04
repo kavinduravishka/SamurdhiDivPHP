@@ -69,13 +69,13 @@ class Officer3 extends Officer{
                 <th>Gender</th>
                 <th>Ethnicity</th>
                 <th>Guardian</th>
-                <th>SpeciallyAbled</th>
+                <th>Specially abled</th>
                 <th>Stream</th>
                 <th>School</th>
                 <th>Address</th>
                 <th>Bank</th>
-                <th>SisurakaAcNo</th>
-                <th>PeriodID</th>
+                <th>Sisuraka Account No</th>
+                <th>Period</th>
             </tr>
 EOD;
         foreach ($fetched as $row) {
@@ -110,10 +110,10 @@ EDO;
         <table class="dashtable">
             <tr>
                <th>Zone</th>
-               <th>ForceNo</th>
+               <th>Force No</th>
                <th>Village</th>
                <th>GN Domain</th>
-               <th>SS Ownership No</th>
+               <th>SSF Ownership No</th>
                <th>Name</th>
                <th>Address</th>
                <th>Successer</th>
@@ -150,13 +150,13 @@ EDO;
         $fetchlist =<<<EOD
         <table class="dashtable">
             <tr>
-                <th>OwnershipNo</th>
+                <th>SSF Ownership No</th>
                 <th>Name</th>
                 <th>Gender</th>
-                <th>MaritialState</th>
-                <th>BDay</th>
+                <th>Maritial State</th>
+                <th>Birth Day</th>
                 <th>Age</th>
-                <th>RelToBenif</th>
+                <th>Relativeness to the benificiary</th>
                 <th>Profession</th>
                 <th>NIC</th>
                 <th>Dead</th>
@@ -192,8 +192,8 @@ EDO;
             <tr>
                 <th>Date</th>
                 <th>Beneficiary No</th>
-                <th>Benificiary Name</th>
-                <th>Amount</th>
+                <th>Benificiary's Name</th>
+                <th>Amount of  money</th>
                 <th>Assured by</th>
                 <th>GN Domain</th>
                 <th>Reason</th>

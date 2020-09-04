@@ -78,7 +78,7 @@ class Officer2 extends Officer{
         $cbolist =<<<EOD
         <table class="dashtable">
             <tr>
-                <th>RegNo</th>
+                <th>Register No</th>
                 <th>Name</th>
                 <th>Address</th>
                 <th>Telephone</th>
@@ -123,7 +123,7 @@ EDO;
         $cbomemlist =<<<EOD
         <table class="dashtable">
             <tr>
-                <th>CBORegNo</th>
+                <th>CBO Register No</th>
                 <th>Name</th>
                 <th>Post</th>
                 <th>Address</th>
@@ -155,7 +155,7 @@ EDO;
         $cbomemlist =<<<EOD
         <table class="dashtable">
             <tr>
-                <th>CBORegNo</th>
+                <th>CBO Register No</th>
                 <th>Name</th>
                 <th>Post</th>
                 <th>Address</th>
@@ -194,7 +194,7 @@ EDO;
             <tr>
                 <th>Date</th>
                 <th>GN Domain</th>
-                <th>Beneficiary Name</th>
+                <th>Beneficiary's Name</th>
                 <th>Approved By</th>
                 <th>Approved Date</th>
                 <th>Approved Bank</th>

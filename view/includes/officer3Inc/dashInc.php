@@ -35,10 +35,10 @@
         echo "<h3 class=\"tl1\">Social Security Fund</h3>";
         echo $officer3->loadSSFapp();
     echo "</a>";
-    echo "<a href=\"dashboardView.php?q=ssffam\">";
-        echo "<h3 class=\"tl1\">SSF Family Members</h3>";
-        echo $officer3->loadSSFmem();
-    echo "</a>";
+    // echo "<a href=\"dashboardView.php?q=ssffam\">";
+    //     echo "<h3 class=\"tl1\">SSF Family Members</h3>";
+    //     echo $officer3->loadSSFmem();
+    // echo "</a>";
     echo "<a href=\"dashboardView.php?q=ssfpay\">";
         echo "<h3 class=\"tl1\">Mandatory Savings Fund</h3>";
         echo $officer3->loadSSFpay();

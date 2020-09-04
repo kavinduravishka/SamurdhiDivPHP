@@ -38,9 +38,9 @@
             echo "<h3 class=\"tl1\">Community Based Organizations</h3>";
             echo $officer2->loadCBO();
         echo "</a>";
-        echo "<a href=\"dashboardView.php?q=cbomem\">";
-            echo "<h3 class=\"tl1\">CBO Members</h3>";
-            echo $officer2->loadCBOmem();
+        // echo "<a href=\"dashboardView.php?q=cbomem\">";
+        //     echo "<h3 class=\"tl1\">CBO Members</h3>";
+        //     echo $officer2->loadCBOmem();
         echo "</a>";
         echo "<a href=\"dashboardView.php?q=lott\">";
             echo "<h3 class=\"tl1\">Lottary Fund</h3>";
