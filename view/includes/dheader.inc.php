@@ -5,8 +5,8 @@
 
 	<div>
 		<a id="dashboard" class="wsopt" href="">Dashboard</a>
-  		<a id="form" class="wsopt" href="">Forms</a>
-		<a id="report" class="wsopt" href="">Reports</a>
+  		<!-- <a id="form" class="wsopt" href="">Forms</a>
+		<a id="report" class="wsopt" href="">Reports</a> -->
 		<a id="currenttask"><span id="currenttaskcatagory">Report</span> <span id="currenttasksep">▸</span> <span id="currenttasktask">CurrentTask some nonesendfhghsdgkh;stg;hhj;sefddhgsdhgshgdshdsggd</span></a>
 	</div>
 	

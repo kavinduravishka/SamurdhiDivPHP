@@ -20,7 +20,7 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 400px;
+    width: 500px;
     height: 600px;
     padding: 80px 40px;
     box-sizing: border-box;
@@ -30,11 +30,10 @@ body{
 }
 
 .login-logo{
-    width: 370px;
-    border-radius: 30px;
+    width: 500px;
     position: relative;
     top:-25px;
-    left: -25px;
+    left: -40px;
     
 }
 

@@ -46,9 +46,7 @@ include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/
                     if( isset($errors) && !empty($errors) ){
                         echo '<p class="error">Invalid Username / Password</p>';
                     }
-                ?>
-
-                <?php 
+                
                     if(isset($_GET['logout'])){
                         echo '<p class="info">You have successfully logged out from the system</p>';
                     }

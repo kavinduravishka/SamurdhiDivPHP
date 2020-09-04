@@ -30,7 +30,7 @@
     ?> 
 
     <main>
-        <h1 style="margin-left: -200px;";>User Profile</h1>
+        <h1 style="margin-left: -200px;">User Profile</h1>
         
         <?php 
             if(!empty($errors)){
@@ -60,19 +60,19 @@
             <p>
                 <label for="">Old Password:</label>
                 <input type='password' name="old_password" id='password'  >&nbsp;
-                <i style="cursor: pointer"; class="far fa-eye" id="togglePassword"></i>
+                <i style="cursor: pointer" class="far fa-eye" id="togglePassword" onclick="ToggleFunc()"></i>
                         
             </p>
             <p>
                 <label for="">New Password:</label>
                 <input type='password' name="new_password" id='password'  >&nbsp;
-                <i style="cursor: pointer"; class="far fa-eye" id="togglePassword"></i>
+                <i style="cursor: pointer" class="far fa-eye" id="togglePassword" onclick="ToggleFunc()"></i>
                         
             </p>
             <p>
                 <label for="">Retype New Password:</label>
                 <input type='password' name="re_new_password" id='password'  >&nbsp;
-                <i style="cursor: pointer"; class="far fa-eye" id="togglePassword"></i>
+                <i style="cursor: pointer" class="far fa-eye" id="togglePassword" onclick="ToggleFunc()"></i>
                         
             </p>
             
@@ -89,6 +89,8 @@
     </main>
     <script type="text/javascript" src="/SamurdhiDivPHP/view/js/konload.js"></script>
     <script>
+
+    function ToggleFunc(){
         const togglePassword = document.querySelector('#togglePassword');
         const password = document.querySelector('#password');
         togglePassword.addEventListener('click', function (e) {
@@ -98,6 +100,8 @@
             // toggle the eye slash icon
             this.classList.toggle('fa-eye-slash');
         });
+    }
+        
     </script>
 </body>
 </html>
