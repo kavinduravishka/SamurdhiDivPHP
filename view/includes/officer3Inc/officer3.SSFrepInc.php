@@ -25,6 +25,10 @@ if(isset($_POST['Show'])){
     $_SESSION['reportContent'] = $reportContent;
 
 }else if(isset($_POST['Print'])){
+    if(!isset($_SESSION['reportContent'])){
+        $reportContent= $ssfreport->getReport($fetcheddata);
+        $_SESSION['reportContent'] = $reportContent;
+    }
     $ssfreport->printReport($_SESSION['reportContent']);
 
 }
