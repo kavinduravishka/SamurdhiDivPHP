@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteRule ^login$ index.php [NC,L]
+
+
+Options +Indexes
+
