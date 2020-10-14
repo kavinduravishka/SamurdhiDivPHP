@@ -21,20 +21,24 @@ if(!isset($_SESSION["RegNo"]) || $_SESSION["RegNo"]==''){
 
     //require_once("../classes/cbo.class.php");
 
-    $Post=$_POST['Post'];
-    $Name=$_POST['Name'];
-    $Address=$_POST['Address'];
-    $Telephone=$_POST['Telephone'];
-    $NIC=$_POST['NIC'];
+    if(isset($_POST['SubmitNext']) || isset($_POST['SubmitFinish'])){
 
-    $data = array(
-        'CBORegNo'=>$CBORegNo,
-        'Post'=>$Post,
-        'Name'=>$Name,
-        'Address'=>$Address,
-        'Telephone'=>$Telephone,
-        'NIC'=>$NIC
-    );
+        $Post=$_POST['Post'];
+        $Name=$_POST['Name'];
+        $Address=$_POST['Address'];
+        $Telephone=$_POST['Telephone'];
+        $NIC=$_POST['NIC'];
+
+        $data = array(
+            'CBORegNo'=>$CBORegNo,
+            'Post'=>$Post,
+            'Name'=>$Name,
+            'Address'=>$Address,
+            'Telephone'=>$Telephone,
+            'NIC'=>$NIC
+        );
+
+    }
 
     
   
