@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 04, 2020 at 08:12 PM
+-- Generation Time: Sep 28, 2020 at 08:19 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.4
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `samurdhidivision`
 --
+CREATE DATABASE IF NOT EXISTS `samurdhidivision` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `samurdhidivision`;
 
 -- --------------------------------------------------------
 
@@ -27,6 +29,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `appreciationletter`
 --
 
+DROP TABLE IF EXISTS `appreciationletter`;
 CREATE TABLE `appreciationletter` (
   `letter_index` int(11) NOT NULL,
   `nic` varchar(12) NOT NULL,
@@ -52,6 +55,7 @@ INSERT INTO `appreciationletter` (`letter_index`, `nic`, `name`, `date`, `partic
 -- Table structure for table `cbomemberdetailes`
 --
 
+DROP TABLE IF EXISTS `cbomemberdetailes`;
 CREATE TABLE `cbomemberdetailes` (
   `SerialNo` int(11) NOT NULL,
   `Deleted` tinyint(1) NOT NULL DEFAULT 0,
@@ -64,12 +68,23 @@ CREATE TABLE `cbomemberdetailes` (
   `Telephone` varchar(12) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `cbomemberdetailes`
+--
+
+INSERT INTO `cbomemberdetailes` (`SerialNo`, `Deleted`, `Expired`, `NIC`, `CBORegNo`, `Name`, `Address`, `Post`, `Telephone`) VALUES
+(4, 0, 0, '8723423444v', '111114CBO123', 'A.S.K.Priyanakra', '43/4,\r\nBatapotha,\r\nUdugampola', 'President', '0334344242'),
+(5, 0, 0, '6524244343v', '111114CBO123', 'E.M.Munasunghe', '43/3,\r\nYtigaha', 'Vice president', '0364234234'),
+(6, 0, 0, '674553525v', '111114CBO123', 'D.K.M.S.Dasanayaka', 'Kotadeniyawa,\r\nMirigama,\r\nGampaha', 'Secratary', '0333425552'),
+(7, 0, 0, '5452255252v', '111114CBO123', 'tw3t345325', '543,435,\r\nGampaha', 'Vice secratary', '0334232224');
+
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `communitybasedorganizations`
 --
 
+DROP TABLE IF EXISTS `communitybasedorganizations`;
 CREATE TABLE `communitybasedorganizations` (
   `ID` int(11) NOT NULL,
   `Expired` tinyint(1) NOT NULL DEFAULT 0,
@@ -98,7 +113,7 @@ CREATE TABLE `communitybasedorganizations` (
 --
 
 INSERT INTO `communitybasedorganizations` (`ID`, `Expired`, `RegNo`, `Name`, `Address`, `Telephone`, `EMail`, `Village`, `GNDomain`, `Zone`, `DivisionalSec`, `DistrictSec`, `NoOfMemPrev`, `NoOfMemNew`, `AnnualMeetingDate`, `BankName`, `AccountNo`, `AccountOpenDate`, `Balance`, `RenewedDate`) VALUES
-(7, 0, '1234', 'abcd', 'abcd', '1234567890', 'sdf@gmail.com', 'abcd', 'abcd', 'abcd', 'Divulapitiya', 'Gampaha', 2, 1, '2020-08-12', 'abcd', '1234567', '2020-08-20', '1234567', '2020-08-19');
+(8, 0, '111114CBO123', 'Yatigha CBO', 'yatigaha,\r\nDivulapitiya', '0334434324', 'yatigahacbo@mail.com', 'yatigaha', 'yatigaha', 'yatigaha', 'Divulapitiya', 'Gampaha', 42, 42, '2020-09-23', 'Yatigah', '43524662344', '2020-09-17', '54252', '2020-09-28');
 
 -- --------------------------------------------------------
 
@@ -106,6 +121,7 @@ INSERT INTO `communitybasedorganizations` (`ID`, `Expired`, `RegNo`, `Name`, `Ad
 -- Table structure for table `detailsofbenificiaries`
 --
 
+DROP TABLE IF EXISTS `detailsofbenificiaries`;
 CREATE TABLE `detailsofbenificiaries` (
   `Serial_No` int(11) NOT NULL,
   `Divisional_Secretariat` varchar(100) NOT NULL,
@@ -144,6 +160,7 @@ INSERT INTO `detailsofbenificiaries` (`Serial_No`, `Divisional_Secretariat`, `Ba
 -- Table structure for table `lottaryfundrecord`
 --
 
+DROP TABLE IF EXISTS `lottaryfundrecord`;
 CREATE TABLE `lottaryfundrecord` (
   `ID` int(11) NOT NULL,
   `NIC` varchar(13) NOT NULL,
@@ -157,7 +174,11 @@ CREATE TABLE `lottaryfundrecord` (
 --
 
 INSERT INTO `lottaryfundrecord` (`ID`, `NIC`, `Name`, `Address`, `Date`) VALUES
-(10, '1234567890', 'sdfg', 'asdf', '2020-08-19');
+(11, '987654321V', 'A.A.K.R.Adhikari', '111/3,\r\nThihariya,\r\nKalagedihena', '2020-09-01'),
+(12, '7852254542v', 'Yasindu Dilshan', '34/2,\r\nBatapotha,\r\nUdugampola', '2020-08-30'),
+(13, '6534546223v', 'Danuka Sandaruwan', '121/12,\r\nHorana,\r\nColombo', '2020-09-16'),
+(14, '5625554545v', 'A.B.C.D.Silva', '33/23,\r\nYakkkala,\r\nGampaha', '2020-09-01'),
+(15, '976562545v', 'K.G.M.Dhanushka', '434/4,\r\nPaththalagedara,\r\nVeyangoda', '2020-08-03');
 
 -- --------------------------------------------------------
 
@@ -165,6 +186,7 @@ INSERT INTO `lottaryfundrecord` (`ID`, `NIC`, `Name`, `Address`, `Date`) VALUES
 -- Table structure for table `mandatoryfundrequests`
 --
 
+DROP TABLE IF EXISTS `mandatoryfundrequests`;
 CREATE TABLE `mandatoryfundrequests` (
   `SerialNo` int(11) NOT NULL,
   `Deleted` tinyint(1) NOT NULL DEFAULT 0,
@@ -181,7 +203,10 @@ CREATE TABLE `mandatoryfundrequests` (
 --
 
 INSERT INTO `mandatoryfundrequests` (`SerialNo`, `Deleted`, `Date`, `GNDomain`, `BenefName`, `AcceptedBy`, `AppDate`, `AppBank`) VALUES
-(1234, 0, '2020-08-04', '1234', '12', 'asdf', '2020-08-18', 'asdf');
+(1234, 0, '2020-08-04', '1234', '12', 'asdf', '2020-08-18', 'asdf'),
+(3, 0, '2020-09-16', '1234', 'A.M.G.Kelum', 'A.M.Gunathilaka', '2020-08-02', 'Divulapitiya'),
+(23, 0, '2020-09-30', '5422', 'S.D.Gamlath', 'A.M.Gunathilaka', '2020-10-27', 'Dunagaha'),
+(42, 0, '2020-09-25', 'Dunagaha', 'R.K.Kumbukewela', 'G.M.Aththayake', '2020-09-17', 'Divulapitiya');
 
 -- --------------------------------------------------------
 
@@ -189,6 +214,7 @@ INSERT INTO `mandatoryfundrequests` (`SerialNo`, `Deleted`, `Date`, `GNDomain`, 
 -- Table structure for table `personalfile`
 --
 
+DROP TABLE IF EXISTS `personalfile`;
 CREATE TABLE `personalfile` (
   `member_id` int(11) NOT NULL,
   `nic_number` varchar(12) NOT NULL,
@@ -239,6 +265,7 @@ INSERT INTO `personalfile` (`member_id`, `nic_number`, `name`, `designation`, `s
 -- Table structure for table `salarydetails`
 --
 
+DROP TABLE IF EXISTS `salarydetails`;
 CREATE TABLE `salarydetails` (
   `emp_no` int(5) NOT NULL,
   `name` varchar(100) NOT NULL,
@@ -278,6 +305,7 @@ INSERT INTO `salarydetails` (`emp_no`, `name`, `designation`, `bank`, `acc_no`, 
 -- Table structure for table `sipdorascholarship`
 --
 
+DROP TABLE IF EXISTS `sipdorascholarship`;
 CREATE TABLE `sipdorascholarship` (
   `ID` int(11) NOT NULL,
   `Deleted` tinyint(1) NOT NULL DEFAULT 0,
@@ -308,6 +336,7 @@ INSERT INTO `sipdorascholarship` (`ID`, `Deleted`, `NIC`, `Name`, `Gender`, `Eth
 -- Table structure for table `ssfappfammem`
 --
 
+DROP TABLE IF EXISTS `ssfappfammem`;
 CREATE TABLE `ssfappfammem` (
   `OwnershipNo` varchar(40) NOT NULL,
   `Deleted` tinyint(1) NOT NULL DEFAULT 0,
@@ -336,6 +365,7 @@ INSERT INTO `ssfappfammem` (`OwnershipNo`, `Deleted`, `Name`, `Gender`, `Maritia
 -- Table structure for table `ssfundapplicants`
 --
 
+DROP TABLE IF EXISTS `ssfundapplicants`;
 CREATE TABLE `ssfundapplicants` (
   `SerialNo` int(11) NOT NULL,
   `District` varchar(10) NOT NULL DEFAULT 'Gampaha',
@@ -366,6 +396,7 @@ INSERT INTO `ssfundapplicants` (`SerialNo`, `District`, `DivSec`, `Zone`, `Force
 -- Table structure for table `ssfundpayments`
 --
 
+DROP TABLE IF EXISTS `ssfundpayments`;
 CREATE TABLE `ssfundpayments` (
   `SerialNo` int(11) NOT NULL,
   `Date` date NOT NULL,
@@ -391,6 +422,7 @@ INSERT INTO `ssfundpayments` (`SerialNo`, `Date`, `BeneficiaryNo`, `BenifName`, 
 -- Table structure for table `user`
 --
 
+DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
   `user_name` varchar(100) NOT NULL,
@@ -408,9 +440,9 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `user_name`, `first_name`, `last_name`, `email`, `password`, `last_login`, `is_deleted`) VALUES
 (1, 'officer1', 'Yasindu', 'Dilshan', 'officer1@gmail.com', '37fa265330ad83eaa879efb1e2db6380896cf639', '2020-09-04 23:07:24', 0),
-(2, 'officer2', 'Yasindu', 'Dilshan', 'officer2@gmail.com', '37fa265330ad83eaa879efb1e2db6380896cf639', '2020-09-04 23:07:14', 0),
-(3, 'officer3', '', '', 'officer3@gmail.com', '37fa265330ad83eaa879efb1e2db6380896cf639', '2020-09-04 15:50:00', 0),
-(4, 'officer4', 'Kavinda', 'Dasanayake', 'officer4@gmail.com', 'a9993e364706816aba3e25717850c26c9cd0d89d', '2020-09-04 15:57:56', 0),
+(2, 'officer2', 'Yasindu', 'Dilshan', 'officer2@gmail.com', '37fa265330ad83eaa879efb1e2db6380896cf639', '2020-09-28 22:28:58', 0),
+(3, 'officer3', '', '', 'officer3@gmail.com', '37fa265330ad83eaa879efb1e2db6380896cf639', '2020-09-28 22:27:03', 0),
+(4, 'officer4', 'Kavinda', 'Dasanayake', 'officer4@gmail.com', 'a9993e364706816aba3e25717850c26c9cd0d89d', '2020-09-28 22:22:04', 0),
 (5, 'officer5', 'Dulaj', 'Dasanayake', 'officer5@gmail.com', '37fa265330ad83eaa879efb1e2db6380896cf639', '2020-09-04 23:11:09', 0);
 
 --
@@ -499,13 +531,13 @@ ALTER TABLE `appreciationletter`
 -- AUTO_INCREMENT for table `cbomemberdetailes`
 --
 ALTER TABLE `cbomemberdetailes`
-  MODIFY `SerialNo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `SerialNo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `communitybasedorganizations`
 --
 ALTER TABLE `communitybasedorganizations`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `detailsofbenificiaries`
@@ -517,7 +549,7 @@ ALTER TABLE `detailsofbenificiaries`
 -- AUTO_INCREMENT for table `lottaryfundrecord`
 --
 ALTER TABLE `lottaryfundrecord`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `personalfile`

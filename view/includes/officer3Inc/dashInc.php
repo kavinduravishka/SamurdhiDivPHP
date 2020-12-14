@@ -31,7 +31,7 @@
             echo $officer3->loadSSFmem();
         }
     }else if($q=="ssfpay"){
-        echo "<h3 class=\"tl1\">Mandatory Savings Fund</h3>";
+        echo "<h3 class=\"tl1\">Social Security Fund payments</h3>";
         echo $officer3->loadSSFpay();
     }else{
     echo "<a href=\"dashboardView.php?q=schol\">";
@@ -47,7 +47,7 @@
     //     echo $officer3->loadSSFmem();
     // echo "</a>";
     echo "<a href=\"dashboardView.php?q=ssfpay\">";
-        echo "<h3 class=\"tl1\">Mandatory Savings Fund</h3>";
+        echo "<h3 class=\"tl1\">Social Security Fund payments</h3>";
         echo $officer3->loadSSFpay();
     echo "</a>";
     }
