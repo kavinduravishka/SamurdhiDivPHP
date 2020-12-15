@@ -4,7 +4,7 @@
  	private $host = "localhost";
  	private $user = "SDBUser";
  	private $pwd = "us3rDo3s3ntli3";
-	private $dbName = "SamurdhiDivision";
+	private $dbName = "samurdhidivision";
 
  	protected function connect(){
  		$dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbName;

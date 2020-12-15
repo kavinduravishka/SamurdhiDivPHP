@@ -23,19 +23,15 @@ include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/
         <form action="/SamurdhiDivPHP/view/loginView.php" method="post">
             
                 <img class="login-logo" src="/SamurdhiDivPHP/view/images/logo-h.png">
-                <h2 class="login-title">Samurdhi Division </h2>
+                <h2 class="login-title">Samurdhi Division</h2>
 
                            
 
-                <!-- <p>
-                    UserName:
-                </p> -->
+                <!-- <p>UserName:</p> -->
                 <input type="text" name="user_name" id="" placeholder="User Name">
                 
 
-                <!-- <p>
-                    Password:
-                </p> -->
+                <!-- <p>Password:</p> -->
                 <input type="password" name="password" id="" placeholder="Password">
                 
 
