@@ -6,7 +6,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+
 	<meta name="pagedata" tab="dash" type="" title="Add Beneficiary">
+
 	<title>Samurdhi Division</title>
 	<link rel="shortcut icon" href="../images/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="/SamurdhiDivPHP/view/css/main.css">
@@ -32,7 +35,7 @@
 		
 		<div class="search-container" style='padding-bottom:20px;'>
 			<form action="beneficiariesView.php" method="get">
-				<input type="text" name = "search" id="" placeholder="Type Full Name  or NIC and Press Enter" value="<?php echo $search; ?>">			
+				<input type="text" name = "search" id="" placeholder="Type Full Name  or NIC and Press Enter" value="<?php echo $search; ?>" >			
 			</form>
 		</div>
 	
@@ -42,6 +45,7 @@
 				echo $beneficiaryList;
 			 ?>
 		</table>
+	
 		</div>
 	</main>
 	 <script type="text/javascript" src="/SamurdhiDivPHP/view/js/konload.js"></script>	

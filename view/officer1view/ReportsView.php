@@ -1,4 +1,9 @@
-<?php  session_start();?>
+<?php  session_start();
+	
+	if($_SESSION['user_id']!=1){
+        header('Location: /SamurdhiDivPHP/view/loginView.php');
+    }
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +24,7 @@
 	 <?php include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/officer1Inc/officer1_sidebarInc.php"); ?>
 
  	
-    <main class="mainReport">
+    <main class="mainReport" >
     	<div class="maincontainer ">
     		<ul class = "ReportView">
     			<li><a href="Benficiary-Count-ReportView-Yatigaha.php?type=1"><span>Benificiary Count Report - Yatigaha</span></a></li>
@@ -32,7 +37,7 @@
 				<li><a href="Benficiary-Count-ReportView-Walpita.php?type=8"><span>Benificiary Count Report - Walpita</span></a></li>
 				<li><a href="Benficiary-Count-ReportView-Welangana.php?type=9"><span>Benificiary Count Report - Welangana</span></a></li>
 				<li><a href="All-Beneficiary-Count-ReportView.php?type=10"><span>All Benificiary Count Report</span></a></li>
-				<li><a href="Subsidy-Allowance-ReportView.php?type=11"><span>Subsidy Allowance Report</span></a></li>
+				<!-- <li><a href="Subsidy-Allowance-ReportView.php?type=11"><span>Subsidy Allowance Report</span></a></li> -->
     		</ul>
     	</div>
     </main>
