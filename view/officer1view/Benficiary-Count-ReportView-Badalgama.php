@@ -22,7 +22,7 @@
     <main>
         <div class="maincontainer">
             <table class="masterlist">
-                 <center><h2><span><u>සමුර්ධි සහනාධාර දීමනා බැංකු උපරිම වාර්තාව </u></span></h2></center>
+          <center><h2><span><u>සමුර්ධි සහනාධාර දීමනා බැංකු උපරිම වාර්තාව </u></span></h2></center>
 		  <br><br>
           <h3><?php echo date("y/m/d") ; ?> (සහනාධාර මුදල් බැර කිරීම සඳහා)</h3>
           <h4>දිස්ත්‍රික්කය :- ගම්පහ </h4>

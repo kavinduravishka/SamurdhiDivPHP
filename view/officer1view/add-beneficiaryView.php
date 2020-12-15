@@ -18,7 +18,7 @@
 <body>
 	<script type="text/javascript" src="/SamurdhiDivPHP/view/js/ksidebar.js"></script>
 	<script type="text/javascript" src="/SamurdhiDivPHP/view/js/kheader.js"></script>
-	<?php require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/yheader.inc.php"); ?>
+	<?php include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/yheader.inc.php"); ?>
 	 <?php include_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/view/includes/officer1Inc/officer1_sidebarInc.php"); ?>
 	  
 	<main>
@@ -41,7 +41,7 @@
 		<form action="add-beneficiaryView.php" method="post" class ="userform">
 			<p>
 				<label>	Divisional Secretariat:</label>
-				<input type="text" name="Divisional_Secretariat">
+				<input type="text" name="Divisional_Secretariat" value="Divulapitiya">
 			</p>
 
 			<p>
@@ -80,36 +80,42 @@
 			</p>
 			<p>
 				<label>G.N Code Mapping:</label> 
-				<input type="text" name="GN_Code_Mapping">
+				<input type="text" name="GN_Code_Mapping" placeholder="xx-xx-xx" required>
 			</p>
 			<p>
 				<label>Householder Name:</label> 
-				<input type="text" name="Householder_Name">
+				<input type="text" name="Householder_Name" required>
 			</p>
 			
 			<p>
 				<label>Address:</label> 
-				<input type="text" name="Address">
+				<input type="text" name="Address" required>
 			</p>
 			<p>
 				<label>NIC:</label> 
-				<input type="text" name="NIC">
+				<input type="text" name="NIC" maxlength="12" required>
 			</p>
 			<p>
 				<label>No.of Family Members:</label> 
-				<input type="text" name="No_of_Family_Members">
+				<input type="number" min="1" name="No_of_Family_Members" required>
 			</p>
 			<p>
 				<label>Bank Account No:</label> 
-				<input type="text" name="Bank_Account_No">
+				<input type="text" name="Bank_Account_No" placeholder="xxx-xxx-xxx" required>
 			</p>
 			<p>
 				<label>Relief Ammount:</label> 
-				<input type="text" name="Relief_Ammount">
+				<select name="Relief_Ammount">
+					<option>420</option>
+					<option>1320</option>
+					<option>1220</option>
+					<option>2120</option>
+					<option>3020</option>
+				</select>
 			</p>
 			<p>
 				<label>Starting Year:</label> 
-				<input type="date" name="Starting_Year">
+				<input type="date" name="Starting_Year" required>
 			</p>
 			<p>
 				<label for="">&nbsp;</label>
@@ -176,12 +182,13 @@
 
 			for(let i=0; i<a.length; i++){
 				var x = document.createElement("OPTION");
-				x.setAttribute("value", "volvocar");
+				//x.setAttribute("value", "volvocar");
 				var t = document.createTextNode(a[i]);
 				x.appendChild(t);
 				gn.appendChild(x);
 			}
 		}
+
 	 </script>
 </body>
 </html>

@@ -12,7 +12,9 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer1
 require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer1Contr/bcrWalpita.class.php");
 require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer1Contr/bcrWelangana.class.php");
 require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer1Contr/bcrAll.class.php");
-require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/contr/officer1Contr/subsidyAllowanceReport.class.php");
+
+
+//Concrete Factory
 class BCReportFactory extends ReportFactory{
 
     protected function factoryMethod($type):Report{
@@ -50,9 +52,7 @@ class BCReportFactory extends ReportFactory{
             case 10:
                 return new AllBCReport();
                 break;
-            case 11:
-                return new SubsidyAllowanceReport();
-                break;
+        
 
         }
     }

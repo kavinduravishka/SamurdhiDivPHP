@@ -8,12 +8,7 @@ if($_SESSION['user_id']!=1){
     require_once(realpath($_SERVER["DOCUMENT_ROOT"])."\SamurdhiDivPHP\contr\officer1Contr\beneficiary.class.php"); 
 ?>
 
-<?php 
-	//checking if a user is logged in
-	// if(!isset($_SESSION['user_id'])){
-	// 	header('Location: home-officer1.index.php');
-	// }
- ?>
+
 
 <?php 
 	if(isset($_GET['Serial_No'])){

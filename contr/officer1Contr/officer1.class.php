@@ -35,7 +35,7 @@ require_once(realpath($_SERVER["DOCUMENT_ROOT"])."/SamurdhiDivPHP/model/officer1
             $user_list = "";
 			foreach ($beneficiaries as $beneficiary) {
 				$user_list .= "<tr>";
-					$user_list .= "<td>{$beneficiary['Serial_No']}</td>";
+					$user_list .= "<td >{$beneficiary['Serial_No']}</td>";
 					$user_list .= "<td>{$beneficiary['Divisional_Secretariat']}</td>";
 					$user_list .= "<td>{$beneficiary['Bank_Zonal']}</td>";
 					$user_list .= "<td>{$beneficiary['GN_Division']}</td>";
