@@ -42,13 +42,36 @@ if(isset($_POST['SubmitNext']) || isset($_POST['SubmitFinish'])){
     );
 
     $officer= Officer3::getInstance();
-    $officer->SSFfamWrite($data);
+    //$officer->SSFfamWrite($data);
 
-    if(isset($_POST['SubmitFinish'])){
-        header('Location: selectFormView.php');
-    }else if(isset($_POST['SubmitNext'])){
-        header('Location: formView.php?formid=102');
+    $fammemcount = $officer->SSFamcheckifAlready(array('OwnershipNo' => $data['OwnershipNo'], 'Name'=>$data['Name'],'BDay'=>$data['BDay']));
+    //echo "fam mem ccount " ;
+    //echo  $fammemcount;
+
+
+    if($fammemcount==0){
+        //echo " fam mem count ";
+        //echo $fammemcount;
+
+        $officer->SSFfamWrite($data);
+
+        if(isset($_POST['SubmitFinish'])){
+            header('Location: selectFormView.php');
+        }else if(isset($_POST['SubmitNext'])){
+            header('Location: formView.php?formid=102');
+        }
+        exit;
+
+
+    }else{
+        echo "<script>
+            alert('This family member is already in the database');
+            window.location.href='selectFormView.php';
+            </script>";
+        exit;
     }
-    exit;
+  
+
+    
 }
 

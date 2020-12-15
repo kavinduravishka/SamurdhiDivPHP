@@ -36,6 +36,10 @@ class SocialSF{
         $this->ssffam->write($data);
     }
 
+    public function SSFamcheckifAlready($data){
+        return $this->ssffam->getCount($data);
+    }
+
     public function payWrite($data){
         $this->ssfpay->write($data);
     }
