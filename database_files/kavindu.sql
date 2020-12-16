@@ -123,7 +123,7 @@ CREATE TABLE `MandatoryFundRequests` (
 
 LOCK TABLES `MandatoryFundRequests` WRITE;
 /*!40000 ALTER TABLE `MandatoryFundRequests` DISABLE KEYS */;
-INSERT INTO `MandatoryFundRequests` VALUES (24,0,'2020-11-05','yatigaha','kavindu','Yasindu','2020-11-18','yatigaha'),(25,0,'2020-11-11','Welangana','Roneth','Yasindu','2020-11-20','Welangana'),(28,0,'2020-11-15','Kotadeniyawa','Chamindu','Yasindu','2020-11-26','Kotadeniyawa'),(28,0,'2020-11-18','Divulapitiya','Sagara','Yasindu','2020-11-29','Divulapitiya');
+INSERT INTO `MandatoryFundRequests` VALUES (21,0,'2020-11-05','Yatigaha','Kavindu','Yasindu','2020-11-18','Yatigaha'),(22,0,'2020-11-11','Welangana','Roneth','Yasindu','2020-11-20','Welangana'),(27,0,'2020-11-14','Yatigaha','Lakshan','Yasindu','2020-11-29','Yatigaha'),(18,0,'2020-11-02','Yatigaha','Ruwan','Yasindu','2020-11-17','Yatigaha'),(21,0,'2020-11-18','Yatigaha','Charitha','Yasindu','2020-11-24','Yatigaha'),(28,0,'2020-11-15','Kotadeniyawa','Chamindu','Yasindu','2020-11-26','Kotadeniyawa'),(28,0,'2020-11-18','Divulapitiya','Sagara','Yasindu','2020-11-29','Divulapitiya');
 /*!40000 ALTER TABLE `MandatoryFundRequests` ENABLE KEYS */;
 UNLOCK TABLES;
 
