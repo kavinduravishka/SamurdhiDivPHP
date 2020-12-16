@@ -5,13 +5,13 @@
         <tr>
             <td class="fieldname">NIC number</td>
 
-            <td><input type="text" required class="forminput" name="NIC" value=""></td>
+            <td><input type="text" required class="forminput" name="NIC" value="" minlength="10" maxlength="12" ></td>
         </tr>
             <!-- $Name=''; -->
         <tr>
             <td class="fieldname">Name</td>
 
-            <td><input type="text" required class="forminput" name="Name" value=""></td>
+            <td><input type="text" required class="forminput" name="Name" value="" maxlength="200"></td>
         </tr>
             <!-- $Address=''; -->
         <tr>

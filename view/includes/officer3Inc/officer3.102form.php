@@ -14,14 +14,14 @@ if(isset($_SESSION['OwnershipNo'])){
     <tr>
         <td class="fieldname">SSF Ownership No</td>
 
-        <td><input type="text" required class="forminput" name="OwnershipNo" value="<?php echo $owno; ?>"></td>
+        <td><input type="text" required class="forminput" name="OwnershipNo" value="<?php echo $owno; ?>" maxlength="15"></td>
     </tr>
 
 <!-- $Name=''; -->
     <tr>
         <td class="fieldname">Name</td>
 
-        <td><input type="text" required class="forminput" name="Name" value=""></td>
+        <td><input type="text" required class="forminput" name="Name" value="" maxlength="200"></td>
     </tr>
 
 <!-- $Gender=''; -->
@@ -56,28 +56,28 @@ if(isset($_SESSION['OwnershipNo'])){
     <tr>
         <td class="fieldname">Age</td>
 
-        <td><input type="number" required class="forminput" name="Age" value=""></td>
+        <td><input type="number" required class="forminput" name="Age" value="" max="100"></td>
     </tr>
 
 <!-- $RelToBenif=''; -->
     <tr>
         <td class="fieldname">Relationship to the beneficiarie</td>
 
-        <td><input type="text" required class="forminput" name="RelToBenif" value=""></td>
+        <td><input type="text" required class="forminput" name="RelToBenif" value="" maxlength="15"></td>
     </tr>
 
 <!-- $Profession=''; -->
     <tr>   
         <td class="fieldname">Profession</td>
 
-        <td><input type="text" required class="forminput" name="Profession" value=""></td>
+        <td><input type="text"  class="forminput" name="Profession" value="" maxlength="20"></td>
     </tr>
 
 <!-- $NIC=''; -->
     <tr>
         <td class="fieldname">NIC</td>
 
-        <td><input type="text" class="forminput" name="NIC" value=""></td>
+        <td><input type="text" class="forminput" name="NIC" value="" maxlength="12" minlength="10"></td>
     </tr>
 
 <!-- $Dead=''; -->

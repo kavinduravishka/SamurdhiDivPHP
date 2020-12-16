@@ -5,14 +5,14 @@
     <tr>
         <td class="fieldname">NIC number</td>
 
-        <td><input type="text" required class="forminput" name="NIC" value=""></td>
+        <td><input type="text" required class="forminput" name="NIC" value="" maxlength="12" minlength="10"></td>
     </tr>
 
     <!-- $Name=''; -->
     <tr>
         <td class="fieldname">Name</td>
 
-        <td><input type="text" required class="forminput" name="Name" value=""></td>
+        <td><input type="text" required class="forminput" name="Name" value="" maxlength="200"></td>
     </tr>
 
     <!-- $Gender=''; -->
@@ -42,7 +42,7 @@
     <tr>
         <td class="fieldname">Guardian</td>
 
-        <td><input type="text" required class="forminput" name="Guardian" value=""></td>
+        <td><input type="text" required class="forminput" name="Guardian" value="" maxlength="200"></td>
     </tr>
 
     <!-- $SpeciallyAbled=''; -->
@@ -74,7 +74,7 @@
     <tr>
         <td class="fieldname">School</td>
 
-        <td><input type="text" required class="forminput" name="School" value=""></td>
+        <td><input type="text" required class="forminput" name="School" value="" maxlength="15"></td>
     </tr>
 
     <!-- $Address=''; -->
@@ -88,14 +88,14 @@
     <tr>
         <td class="fieldname">Bank</td>
 
-        <td><input type="text" required class="forminput" name="Bank" value=""></td>
+        <td><input type="text" required class="forminput" name="Bank" value="" maxlength="15"></td>
     </tr>
 
     <!-- $SisurakaAcNo=''; -->
     <tr>
         <td class="fieldname">Sisuraka account number</td>
 
-        <td><input type="text" required class="forminput" name="SisurakaAcNo" value=""></td>
+        <td><input type="text" required class="forminput" name="SisurakaAcNo" value="" maxlength="15"></td>
     </tr>
 
     <!-- $PeriodID=''; -->

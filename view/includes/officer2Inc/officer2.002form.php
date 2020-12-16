@@ -10,7 +10,7 @@
     <tr>
         <td class="fieldname">CBO Registor number</td>
 
-        <td><input type="text" required class="forminput" name="CBORegNo" value="<?php echo $_SESSION['RegNo']; ?>"></td>
+        <td><input type="text" required class="forminput" name="CBORegNo" value="<?php echo $_SESSION['RegNo']; ?>" maxlength="12" minlength="12"></td>
     </tr>
 
         <!-- 'Post'=>$Post, -->
@@ -32,7 +32,7 @@
     <tr>
         <td class="fieldname">Name</td>
 
-        <td><input type="text" required class="forminput" name="Name" value=""></td>
+        <td><input type="text" required class="forminput" name="Name" value="" maxlength="200"></td>
     </tr>
 
         <!-- 'Address'=>$Address, -->
@@ -46,14 +46,14 @@
     <tr>
         <td class="fieldname">Telephone</td>
 
-        <td><input type="telephone" required class="forminput" name="Telephone" value=""></td>
+        <td><input type="telephone" required class="forminput" name="Telephone" value="" maxlength="12" minlength="10"></td>
     </tr>
 
         <!-- 'NIC'=>$NIC -->
     <tr>
         <td class="fieldname">NIC number</td>
 
-        <td><input type="text" required class="forminput" name="NIC" value=""></td>
+        <td><input type="text" required class="forminput" name="NIC" value="" maxlength="12" minlength="10"></td>
     </tr>
 
 </table>
