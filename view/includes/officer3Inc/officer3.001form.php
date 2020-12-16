@@ -74,7 +74,7 @@
     <tr>
         <td class="fieldname">School</td>
 
-        <td><input type="text" required class="forminput" name="School" value="" maxlength="15"></td>
+        <td><input type="text" required class="forminput" name="School" value="" maxlength="50"></td>
     </tr>
 
     <!-- $Address=''; -->
@@ -88,7 +88,7 @@
     <tr>
         <td class="fieldname">Bank</td>
 
-        <td><input type="text" required class="forminput" name="Bank" value="" maxlength="15"></td>
+        <td><input type="text" required class="forminput" name="Bank" value="" maxlength="30"></td>
     </tr>
 
     <!-- $SisurakaAcNo=''; -->
