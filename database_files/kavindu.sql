@@ -6,16 +6,16 @@ CREATE TABLE `CBOMemberDetailes` (
   `SerialNo` int NOT NULL AUTO_INCREMENT,
   `Deleted` tinyint(1) NOT NULL DEFAULT '0',
   `Expired` tinyint(1) NOT NULL DEFAULT '0',
-  `NIC` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `NIC` varchar(15) NOT NULL,
   `CBORegNo` char(12) NOT NULL,
-  `Name` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Name` varchar(300) NOT NULL,
   `Address` text NOT NULL,
   `Post` enum('President','Vice president','Secratary','Vice secratary','Treasurer','Internal auditor','Member') NOT NULL,
-  `Telephone` varchar(12) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `Telephone` varchar(12) DEFAULT NULL,
   UNIQUE KEY `SerialNo_UNIQUE` (`SerialNo`),
   KEY `fk_CboRegno_regno_idx` (`CBORegNo`),
   CONSTRAINT `fk_CboRegno_regno` FOREIGN KEY (`CBORegNo`) REFERENCES `CommunityBasedOrganizations` (`RegNo`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -58,7 +58,7 @@ CREATE TABLE `CommunityBasedOrganizations` (
   `RenewedDate` date NOT NULL,
   PRIMARY KEY (`RegNo`),
   UNIQUE KEY `SerialNo_UNIQUE` (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -85,7 +85,7 @@ CREATE TABLE `LottaryFundRecord` (
   `Address` text,
   `Date` date NOT NULL,
   UNIQUE KEY `SerialNo_UNIQUE` (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -114,7 +114,7 @@ CREATE TABLE `MandatoryFundRequests` (
   `AcceptedBy` text NOT NULL,
   `AppDate` date NOT NULL,
   `AppBank` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -147,7 +147,7 @@ CREATE TABLE `SSFAppFamMem` (
   `NIC` varchar(15) DEFAULT NULL,
   `Dead` tinyint(1) NOT NULL DEFAULT '0',
   UNIQUE KEY `OwnershipNo` (`OwnershipNo`,`Name`(10),`BDay`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -184,7 +184,7 @@ CREATE TABLE `SSFundApplicants` (
   `Deleted` tinyint(1) NOT NULL DEFAULT '0',
   UNIQUE KEY `SerialNo_UNIQUE` (`SerialNo`),
   UNIQUE KEY `SSOwnershipNo_UNIQUE` (`SSOwnershipNo`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -215,7 +215,7 @@ CREATE TABLE `SSFundPayments` (
   `Reason` enum('Death','Birth','Marrige','Hospitalization','Scholarship') NOT NULL,
   `Expired` tinyint(1) NOT NULL DEFAULT '0',
   UNIQUE KEY `SerialNo_UNIQUE` (`SerialNo`)
-) ENGINE=InnoDB AUTO_INCREMENT=103 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -238,7 +238,7 @@ DROP TABLE IF EXISTS `SipdoraScholarship`;
 CREATE TABLE `SipdoraScholarship` (
   `ID` int NOT NULL AUTO_INCREMENT,
   `Deleted` tinyint(1) NOT NULL DEFAULT '0',
-  `NIC` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `NIC` varchar(15) NOT NULL,
   `Name` varchar(300) NOT NULL,
   `Gender` enum('Male','Female','Other') NOT NULL,
   `Ethnicity` enum('Sinhala','Tamil','Muslim','Burger') NOT NULL,
@@ -251,7 +251,7 @@ CREATE TABLE `SipdoraScholarship` (
   `SisurakaAcNo` varchar(10) NOT NULL,
   `PeriodID` int NOT NULL,
   UNIQUE KEY `ID_UNIQUE` (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -279,7 +279,7 @@ CREATE TABLE `Support_SipdoraScholar_Period` (
   `To` varchar(4) NOT NULL,
   PRIMARY KEY (`PeriodID`),
   UNIQUE KEY `ID_UNIQUE` (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -290,8 +290,3 @@ LOCK TABLES `Support_SipdoraScholar_Period` WRITE;
 /*!40000 ALTER TABLE `Support_SipdoraScholar_Period` DISABLE KEYS */;
 /*!40000 ALTER TABLE `Support_SipdoraScholar_Period` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `appreciationletter`
---
-
