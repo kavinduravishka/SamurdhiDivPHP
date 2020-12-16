@@ -42,7 +42,7 @@
     <tr>
         <td class="fieldname">Telephone</td>
 
-        <td><input type="telephone" required class="forminput" name="Telephone" value=""></td>
+        <td><input type="telephone" required class="forminput" name="Telephone" minlength="10" maxlength="10" value=""></td>
     </tr>
 
     <tr>
