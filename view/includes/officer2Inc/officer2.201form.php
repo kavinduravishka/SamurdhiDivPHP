@@ -11,7 +11,7 @@
         <tr>
             <td class="fieldname">Date</td>
 
-            <td><input type="date" required class="forminput" name="Date" value=""></td>
+            <td><input type="date" required class="forminput" name="Date" max=<?php echo date('Y-m-d'); ?> value=""></td>
         </tr>
      
         <!-- $GNDomain=''; -->
