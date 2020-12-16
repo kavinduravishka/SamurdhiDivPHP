@@ -47,6 +47,14 @@
             }
         }
 
+        $max_len_fields=array('emp_no'=>5);
+
+        foreach ($max_len_fields as $field=>$max_len){
+            if(strlen(trim($_POST[$field]))>$max_len){
+                $errors[]=$field .' must be less than ' .$max_len .'characters';
+            }
+        }
+
         if(empty($errors)){
             $officer= Officer5::getInstance();
             $net_pay=$officer->calculateNetPayment($basic_salary,$interim_allo,$language_allo,$living_cost,$w_op,$agrahara,$stamp,$union,$other_loan,$special_advance);

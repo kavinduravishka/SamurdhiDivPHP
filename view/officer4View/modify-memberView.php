@@ -63,11 +63,11 @@
             </p>
             <p>
                 <label for="">Date of Appointment:</label>
-                <input type="date" name="date_appointed" <?php echo 'value="' .$date_appointed.'"';?> >            
+                <input type="date" name="date_appointed" max="<?php echo date("Y-m-d"); ?>" <?php echo 'value="' .$date_appointed.'"';?> >            
             </p>
             <p>
                 <label for="">Date of Birth:</label>
-                <input type="date" name="date_of_birth" <?php echo 'value="' .$date_of_birth.'"';?> >            
+                <input type="date" name="date_of_birth" max="<?php echo date("Y-m-d"); ?>" <?php echo 'value="' .$date_of_birth.'"';?> >            
             </p>
             <p>
                 <label for="">Date of Pension:</label>
