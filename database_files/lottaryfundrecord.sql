@@ -41,14 +41,14 @@ CREATE TABLE `lottaryfundrecord` (
 
 INSERT INTO `lottaryfundrecord` (`ID`, `NIC`, `Name`, `Address`, `Date`) VALUES
 (1, '983173412v', 'Kavindu', '123/7, Divulapitiya', '2020-08-01'),
-(2, '974561234v', 'Dulaj', '434/5, Divulapitiya', '2020-08-01'),
-(3, '987645123v', 'Yasindu', '244/5, Batapotha', '2020-08-01'),
-(4, '987654321v', 'Kavindu', '234/4, Naivala', '2020-08-03'),
-(5, '984567413v', 'Ravindu', '230/4, Naivala', '2020-08-10'),
-(6, '984565127v', 'Sagara', '343/5, Naivala', '2020-07-30'),
-(7, '982132654v', 'Lakshan', '122/4, Divulapitiya', '2020-08-14'),
-(8, '983265871v', 'Ruwan', '555/7, Divulapitiya', '2020-08-21'),
-(9, '986591628v', 'Akila', '220/5, Batapotha', '2020-08-14');
+(2, '974561234v', 'Dulaj', '434/5, Divulapitiya', '2020-08-08'),
+(3, '987645123v', 'Yasindu', '244/5, Batapotha', '2020-08-15'),
+(4, '987654321v', 'Kavindu', '234/4, Naivala', '2020-08-22'),
+(5, '984567413v', 'Ravindu', '230/4, Naivala', '2020-08-28'),
+(6, '984565127v', 'Sagara', '343/5, Naivala', '2020-07-23'),
+(7, '982132654v', 'Lakshan', '122/4, Divulapitiya', '2020-07-16'),
+(8, '983265871v', 'Ruwan', '555/7, Divulapitiya', '2020-07-09'),
+(9, '986591628v', 'Akila', '220/5, Batapotha', '2020-09-05');
 
 --
 -- Indexes for dumped tables
