@@ -45,6 +45,8 @@
             }
         ?>
 
+        
+
         <form action="add-memberView.php" method="post" class="memberform" >
             <p>
                 <label for="">NIC Number:</label>
@@ -64,15 +66,15 @@
             </p>
             <p>
                 <label for="">Date of Appointment:</label>
-                <input type="date" name="date_appointed" <?php echo 'value="' .$date_appointed.'"';?> >            
+                <input type="date" id="doa" name="date_appointed" max="<?php echo date("Y-m-d"); ?>" <?php echo 'value="' .$date_appointed.'"';?> >            
             </p>
             <p>
                 <label for="">Date of Birth:</label>
-                <input type="date" name="date_of_birth" <?php echo 'value="' .$date_of_birth.'"';?> >            
+                <input type="date" id="dob" name="date_of_birth" max="<?php echo date("Y-m-d"); ?>" <?php echo 'value="' .$date_of_birth.'"';?> >            
             </p>
             <p>
                 <label for="">Date of Pension:</label>
-                <input type="date" name="date_of_pension" <?php echo 'value="' .$date_of_pension.'"';?> >            
+                <input type="date" id="dop" name="date_of_pension" <?php echo 'value="' .$date_of_pension.'"';?> >            
             </p>
             <p>
                 <label for="">No. of W & OP:</label>
@@ -90,7 +92,7 @@
             
             <p>
                 <label for="">&nbsp;</label>
-                <button type="submit" name="submit">Save</button>
+                <button type="submit" name="submit" onclick="compareDates()">Save</button>
                           
             </p>
         </form>
@@ -98,5 +100,19 @@
 
     </main>
      <script type="text/javascript" src="/SamurdhiDivPHP/view/js/konload.js"></script>
+     <script>
+        function compareDates() {
+            var doa = document.getElementById('doa').textContent;
+            var dop = document.getElementById('dop').textContent;
+            var dob = document.getElementById('dob').textContent;
+            
+            var doA = new Date(doa).getTime();
+            var doP = new Date(dop).getTime();
+            var doB = new Date(dob).getTime();
+
+            //Return the result of the comparison
+            return doA < doP ;
+        }
+    </script>
 </body>
 </html>

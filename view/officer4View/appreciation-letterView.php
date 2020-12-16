@@ -68,7 +68,7 @@
                 </tr>
 
                 <tr>
-                    <td><input type="date" name="date"></td>
+                    <td><input type="date" name="date" max="<?php echo date("Y-m-d"); ?>"></td>
                     <td><input type="text" name="particulars"?></td>
                     <td><input type="text" name="punishment"?></td>
                     <td><input type="text" name="ref"?></td>

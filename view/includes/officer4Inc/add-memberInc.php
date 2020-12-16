@@ -38,7 +38,7 @@
             }
         }
 
-        $max_len_fields=array('name'=>100,'designation'=>100,'service'=>50,'w_op_number'=>7);
+        $max_len_fields=array('nic_number'=>12,'name'=>100,'designation'=>100,'service'=>50,'w_op_number'=>7);
 
         foreach ($max_len_fields as $field=>$max_len){
             if(strlen(trim($_POST[$field]))>$max_len){
