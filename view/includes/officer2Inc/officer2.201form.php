@@ -39,7 +39,7 @@
         <tr>
             <td class="fieldname">Accepted data</td>
 
-            <td><input type="date" required class="forminput" name="AppDate" value=""></td>
+            <td><input type="date" required class="forminput" name="AppDate" max=<?php echo date('Y-m-d'); ?> value=""></td>
         </tr>
       
         <!-- $AppBank=''; -->

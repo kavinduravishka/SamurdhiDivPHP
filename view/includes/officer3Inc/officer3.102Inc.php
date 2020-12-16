@@ -42,17 +42,13 @@ if(isset($_POST['SubmitNext']) || isset($_POST['SubmitFinish'])){
     );
 
     $officer= Officer3::getInstance();
-    //$officer->SSFfamWrite($data);
+    
+
+    
 
     $fammemcount = $officer->SSFamcheckifAlready(array('OwnershipNo' => $data['OwnershipNo'], 'Name'=>$data['Name'],'BDay'=>$data['BDay']));
-    //echo "fam mem ccount " ;
-    //echo  $fammemcount;
-
 
     if($fammemcount==0){
-        //echo " fam mem count ";
-        //echo $fammemcount;
-
         $officer->SSFfamWrite($data);
 
         if(isset($_POST['SubmitFinish'])){
