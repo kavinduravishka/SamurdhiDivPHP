@@ -22,15 +22,15 @@
 <form action="formView.php?formid=001" method="post">
 <table class="formtable">
     <tr>
-        <td class="fieldname">Registor number</td>
+        <td class="fieldname">Register number</td>
 
-        <td><input type="text" required class="forminput" name="RegNo" value=""></td>
+        <td><input type="text" required class="forminput" name="RegNo" value="" maxlength="12" minlength="12"></td>
     </tr>
 
     <tr>
         <td class="fieldname">Name</td>
 
-        <td><input type="text" required class="forminput" name="Name" value=""></td>
+        <td><input type="text" required class="forminput" name="Name" value="" maxlength="200"></td>
     </tr>
 
     <tr>
@@ -42,31 +42,32 @@
     <tr>
         <td class="fieldname">Telephone</td>
 
-        <td><input type="telephone" required class="forminput" name="Telephone" minlength="10" maxlength="10" value=""></td>
+        <td><input type="telephone" required class="forminput" name="Telephone" value="" maxlength="12" minlength="10"></td>
+
     </tr>
 
     <tr>
         <td class="fieldname">Email</td>
 
-        <td><input type="email" required class="forminput" name="EMail" value=""></td>
+        <td><input type="email" required class="forminput" name="EMail" value="" maxlength="50"></td>
     </tr>
 
     <tr>
         <td class="fieldname">Village</td>
 
-        <td><input type="text" required class="forminput" name="Village" value=""></td>
+        <td><input type="text" required class="forminput" name="Village" value="" maxlength="15"></td>
     </tr>
 
     <tr>
         <td class="fieldname">Grama Niladhari domain</td>
 
-        <td><input type="text" required class="forminput" name="GNDomain" value=""></td>
+        <td><input type="text" required class="forminput" name="GNDomain" value="" maxlength="15"></td>
     </tr>
 
     <tr>
         <td class="fieldname">Zone</td>
 
-        <td><input type="text" required class="forminput" name="Zone" value=""></td>
+        <td><input type="text" required class="forminput" name="Zone" value="" maxlength="15"></td>
     </tr>
 
     <tr>
@@ -90,13 +91,13 @@
     <tr>
         <td class="fieldname">Bank NAme</td>
 
-        <td><input type="text" required class="forminput" name="BankName" value=""></td>
+        <td><input type="text" required class="forminput" name="BankName" value="" maxlength="20"></td>
     </tr>
 
     <tr>
         <td class="fieldname">Account Number</td>
 
-        <td><input type="text" required class="forminput" name="AccountNo" value=""></td>
+        <td><input type="text" required class="forminput" name="AccountNo" value="" maxlength="15"></td>
     </tr>
 
     <tr>

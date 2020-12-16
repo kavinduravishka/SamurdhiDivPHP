@@ -13,14 +13,14 @@
     <tr>
         <td class="fieldname">Beneficiary No</td>
 
-        <td><input type="texnumbert" required class="forminput" name="BeneficiaryNo" value=""></td>
+        <td><input type="texnumbert" required class="forminput" name="BeneficiaryNo" value="" maxlength="15"></td>
     </tr>
         
         <!-- $BenifName=''; -->
     <tr>
         <td class="fieldname">Beneficiary name</td>
 
-        <td><input type="text" required class="forminput" name="BenifName" value=""></td>
+        <td><input type="text" required class="forminput" name="BenifName" value="" maxlength="200"></td>
     </tr>
         
         <!-- $Amount=''; -->
@@ -34,14 +34,14 @@
     <tr>
         <td class="fieldname">Assured By</td>
 
-        <td><input type="text" required class="forminput" name="NameAssured" value=""></td>
+        <td><input type="text" required class="forminput" name="NameAssured" value="" maxlength="30"></td>
     </tr>
         
         <!-- $GNDiv=''; -->
     <tr>
         <td class="fieldname">gramaniladhari Division</td>
 
-        <td><input type="text" required class="forminput" name="GNDiv" value=""></td>
+        <td><input type="text" required class="forminput" name="GNDiv" value="" maxlength="20"></td>
     </tr>
         
         <!-- $Reason=''; -->
