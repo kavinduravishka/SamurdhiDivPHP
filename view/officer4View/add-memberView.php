@@ -50,7 +50,7 @@
         <form action="add-memberView.php" method="post" class="memberform" >
             <p>
                 <label for="">NIC Number:</label>
-                <input type="text" name="nic_number" <?php echo 'value="' .$nic_number.'"';?>>            
+                <input type="text" name="nic_number" minlength="10" maxlength="12" <?php echo 'value="' .$nic_number.'"';?>>            
             </p>
             <p>
                 <label for="">Name:</label>
@@ -78,7 +78,7 @@
             </p>
             <p>
                 <label for="">No. of W & OP:</label>
-                <input type="text" name="w_op_number" <?php echo 'value="' .$w_op_number.'"';?> >            
+                <input type="text" name="w_op_number" minlength="7" maxlength="7" <?php echo 'value="' .$w_op_number.'"';?> >            
             </p>
 
             <p>
