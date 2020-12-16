@@ -49,7 +49,7 @@ if(isset($_SESSION['OwnershipNo'])){
     <tr>
         <td class="fieldname">Birth day</td>
 
-        <td><input type="date" required class="forminput" name="BDay" value=""></td>
+        <td><input type="date" required class="forminput" name="BDay" max=<?php echo date('Y-m-d'); ?> value=""></td>
     </tr>
 
 <!-- $Age=''; -->
