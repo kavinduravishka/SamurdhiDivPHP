@@ -204,18 +204,38 @@ EDO;
             </tr>
 EOD;
         foreach ($fetched as $row) {
+
+            $maritialstate='';
+
+            switch ($row['MaritialState']){
+                case 0:
+                    $maritialstate="Unmarried";
+                    break;
+                case 1:
+                    $maritialstate="Married";
+                    break;
+            }
+
+            $dead='';
+
+            if($row['Dead']==0){
+                $dead="No";
+            }else{
+                $dead="Yes";
+            }
+
             $fetchlist.=<<<EDO
             <tr>
                 <td>{$row['OwnershipNo']}</td>
                 <td>{$row['Name']}</td>
                 <td>{$row['Gender']}</td>
-                <td>{$row['MaritialState']}</td>
+                <td>{$maritialstate}</td>
                 <td>{$row['BDay']}</td>
                 <td>{$row['Age']}</td>
                 <td>{$row['RelToBenif']}</td>
                 <td>{$row['Profession']}</td>
                 <td>{$row['NIC']}</td>
-                <td>{$row['Dead']}</td>
+                <td>{$dead}</td>
             </tr>
 EDO;
         }
