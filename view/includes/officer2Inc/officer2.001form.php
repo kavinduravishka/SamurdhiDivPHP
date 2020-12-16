@@ -84,7 +84,7 @@
     <tr>
         <td class="fieldname">Annual meeting Date</td>
 
-        <td><input type="date" required class="forminput" name="AnnualMeetingDate" value=""></td>
+        <td><input type="date" required class="forminput" name="AnnualMeetingDate" max=<?php echo date('Y-m-d'); ?> value=""></td>
     </tr>
 
     <tr>
@@ -102,7 +102,7 @@
     <tr>
         <td class="fieldname">Account open date</td>
 
-        <td><input type="date" required class="forminput" name="AccountOpenDate" value=""></td>
+        <td><input type="date" required class="forminput" name="AccountOpenDate" max=<?php echo date('Y-m-d'); ?> value=""></td>
     </tr>
 
     <tr>
