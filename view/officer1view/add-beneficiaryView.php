@@ -115,7 +115,7 @@
 			</p>
 			<p>
 				<label>Starting Year:</label> 
-				<input type="date" name="Starting_Year" required>
+				<input type="date" name="Starting_Year" max="<?php echo date("Y-m-d"); ?>"required>
 			</p>
 			<p>
 				<label for="">&nbsp;</label>
