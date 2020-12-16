@@ -114,7 +114,7 @@
     <tr>
         <td class="fieldname">Renewed date</td>
 
-        <td><input type="date" required class="forminput" name="RenewedDate" value="<?php echo date("Y-m-d"); ?>"></td>
+        <td><input type="date" required class="forminput" name="RenewedDate" max=<?php echo date('Y-m-d'); ?> value="<?php echo date("Y-m-d"); ?>"></td>
     </tr>
 
 </table>
