@@ -96,48 +96,48 @@
             <p><b>Earnings</b></p>
             <p>
                 <label for="" id="sub_lbl">Basic Salary:</label>
-                <input type="number" placeholder="1.00" step="0.01" name="basic_salary" id="nums" <?php echo 'value="' .$basic_salary.'"';?> onchange="update()" >            
+                <input type="number" step="0.01" name="basic_salary" id="nums" <?php echo 'value="' .$basic_salary.'"';?> onchange="update()" >            
             </p>
             <p>
                 <label for=""id="sub_lbl">Interim Allowance:</label>
-                <input type="number" placeholder="1.00" step="0.01" name="interim_allo" id="nums" <?php echo 'value="' .$interim_allo.'"';?> onchange="update()" >            
+                <input type="number"  step="0.01" name="interim_allo" id="nums" <?php echo 'value="' .$interim_allo.'"';?> onchange="update()" >            
             </p>
             <p>
                 <label for=""id="sub_lbl">Language Allownce:</label>
-                <input type="number" placeholder="1.00" step="0.01" name="language_allo" id="nums" <?php echo 'value="' .$language_allo.'"';?> onchange="update()">            
+                <input type="number"  step="0.01" name="language_allo" id="nums" <?php echo 'value="' .$language_allo.'"';?> onchange="update()">            
             </p>
             <p>
                 <label for=""id="sub_lbl">Living Cost:</label>
-                <input type="number" placeholder="1.00" step="0.01" name="living_cost" id="nums" <?php echo 'value="' .$living_cost.'"';?> onchange="update()">            
+                <input type="number" step="0.01" name="living_cost" id="nums" <?php echo 'value="' .$living_cost.'"';?> onchange="update()">            
             </p>
             <p><b>Deductions</b></p>
             <p>
                 <label for=""id="sub_lbl">W & OP:</label>
-                <input type="number" placeholder="1.00" step="0.01" name="w_op" id="nums" <?php echo 'value="' .$w_op.'"';?> onchange="update()">            
+                <input type="number" step="0.01" name="w_op" id="nums" <?php echo 'value="' .$w_op.'"';?> onchange="update()">            
             </p>
             <p>
                 <label for=""id="sub_lbl">Agrahara:</label>
-                <input type="number" placeholder="1.00" step="0.01" name="agrahara" id="nums" <?php echo 'value="' .$agrahara.'"';?> onchange="update()">            
+                <input type="number" step="0.01" name="agrahara" id="nums" <?php echo 'value="' .$agrahara.'"';?> onchange="update()">            
             </p>
             <p>
                 <label for=""id="sub_lbl">Stamp value:</label>
-                <input type="number" placeholder="1.00" step="0.01" name="stamp" id="nums" <?php echo 'value="' .$stamp.'"';?> onchange="update()">            
+                <input type="number" step="0.01" name="stamp" id="nums" <?php echo 'value="' .$stamp.'"';?> onchange="update()">            
             </p>
             <p>
                 <label for=""id="sub_lbl">Union Value:</label>
-                <input type="number" placeholder="1.00" step="0.01" name="union" id="nums" <?php echo 'value="' .$union.'"';?> onchange="update()">            
+                <input type="number" step="0.01" name="union" id="nums" <?php echo 'value="' .$union.'"';?> onchange="update()">            
             </p>
             <p>
                 <label for=""id="sub_lbl">Other Loan:</label>
-                <input type="number" placeholder="1.00" step="0.01" name="other_loan" id="nums" <?php echo 'value="' .$other_loan.'"';?> onchange="update()">            
+                <input type="number" step="0.01" name="other_loan" id="nums" <?php echo 'value="' .$other_loan.'"';?> onchange="update()">            
             </p>
             <p>
                 <label for=""id="sub_lbl">Special Advance:</label>
-                <input type="number" placeholder="1.00" step="0.01" name="special_advance"  id="nums" <?php echo 'value="' .$special_advance.'"';?> onchange="update()">            
+                <input type="number" step="0.01" name="special_advance"  id="nums" <?php echo 'value="' .$special_advance.'"';?> onchange="update()">            
             </p>
             <p>
                 <label for="">Net Payment:</label>
-                <input type="number" placeholder="1.00" step="0.01" name="net_pay" id="enums" <?php echo 'value="' .$net_pay.'"';?> readonly="readonly" >                
+                <input type="number" step="0.01" name="net_pay" id="enums" <?php echo 'value="' .$net_pay.'"';?> readonly="readonly" >                
                 <!-- <button type="submit" name="calculate" id="cal">Calculate</button>                  -->
             </p>
             <p>
