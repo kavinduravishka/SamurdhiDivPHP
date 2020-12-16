@@ -19,11 +19,24 @@ class SSFfamDB extends Dbbase{
 				 $data['Dead']
 			]);
 	}
-	
+
 	public function find($data){}
 
 	public function update($data){}
 	
+	public function getCount($data){
+		$sql = "SELECT COUNT(*) AS prevcount FROM SSFAppFamMem WHERE OwnershipNo = ? and Name= ? and BDay = ?";
+		$stmt = $this->connect()->prepare($sql);
+
+		$stmt->execute([$data['OwnershipNo'],
+						$data['Name'],
+						$data['BDay']
+						]);
+
+		$previousRecords = $stmt->fetchAll();
+
+		return $previousRecords[0]['prevcount'];
+	}
 }
 
 ?>

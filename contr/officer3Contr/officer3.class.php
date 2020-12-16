@@ -51,6 +51,12 @@ class Officer3 extends Officer{
         $socialsf->famWrite($data);
     }
 
+
+    public function SSFamcheckifAlready($data){
+        $socialsf=SocialSF::getInstance();
+        return $socialsf->SSFamcheckifAlready($data);
+    }
+
     public function SSFpayWrite($data){
         $socialsf=SocialSF::getInstance();
         $socialsf->payWrite($data);

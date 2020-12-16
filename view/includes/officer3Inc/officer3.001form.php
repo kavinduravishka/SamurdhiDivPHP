@@ -57,7 +57,7 @@
 
     <!-- $Stream=''; -->
     <tr>
-        <td class="fieldname">Gender</td>
+        <td class="fieldname">Stream</td>
 
         <td><select type="text" required class="forminput" name="Stream" value="">
             <option value="Biology">Biology</option>
