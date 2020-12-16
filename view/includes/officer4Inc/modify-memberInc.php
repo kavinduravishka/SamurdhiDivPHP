@@ -84,6 +84,14 @@
                 $errors[]=$field .' must be less than ' .$max_len .'characters';
             }
         }
+
+        $min_len_fields=array('nic_number'=>10,'w_op_number'=>7);
+
+        foreach ($min_len_fields as $field=>$min_len){
+            if(strlen(trim($_POST[$field]))<$min_len){
+                $errors[]=$field .' must be greater than or equal ' .$min_len .'characters';
+            }
+        }
       
         if(empty($errors)){
             $sMember=new StaffMember($nic_number,$name,$designation,$service,$date_appointed,$date_of_birth,$date_of_pension,$w_op_number,$member_type);

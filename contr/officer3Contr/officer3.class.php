@@ -85,6 +85,39 @@ class Officer3 extends Officer{
             </tr>
 EOD;
         foreach ($fetched as $row) {
+
+            $period='';
+
+            switch ($row['PeriodID']){
+                case 1:
+                    $period="2018-2020";
+                    break;
+                case 2:
+                    $period="2019-2021";
+                    break;
+                case 3:
+                    $period="2020-2022";
+                    break;
+                case 4:
+                    $period="2021-2023";
+                    break;
+                case 5:
+                    $period="2022-2024";
+                    break;
+                case 6:
+                    $period="2023-2025";
+                    break;
+                case 7:
+                    $period="2024-2026";
+                    break;
+                case 8:
+                    $period="2025-2027";
+                    break;
+                case 9:
+                    $period="2026-2028";
+                    break;
+            }
+            
             $fetchlist.=<<<EDO
             <tr>
                 <td>{$row['Name']}</td>
@@ -98,7 +131,7 @@ EOD;
                 <td>{$row['Address']}</td>
                 <td>{$row['Bank']}</td>
                 <td>{$row['SisurakaAcNo']}</td>
-                <td>{$row['PeriodID']}</td>
+                <td>{$period}</td>
             </tr>
 EDO;
         }
@@ -171,18 +204,38 @@ EDO;
             </tr>
 EOD;
         foreach ($fetched as $row) {
+
+            $maritialstate='';
+
+            switch ($row['MaritialState']){
+                case 0:
+                    $maritialstate="Unmarried"; 
+                    break;
+                case 1:
+                    $maritialstate="Married";
+                    break;
+            }
+
+            $dead='';
+
+            if($row['Dead']==0){
+                $dead="No";
+            }else{
+                $dead="Yes";
+            }
+
             $fetchlist.=<<<EDO
             <tr>
                 <td>{$row['OwnershipNo']}</td>
                 <td>{$row['Name']}</td>
                 <td>{$row['Gender']}</td>
-                <td>{$row['MaritialState']}</td>
+                <td>{$maritialstate}</td>
                 <td>{$row['BDay']}</td>
                 <td>{$row['Age']}</td>
                 <td>{$row['RelToBenif']}</td>
                 <td>{$row['Profession']}</td>
                 <td>{$row['NIC']}</td>
-                <td>{$row['Dead']}</td>
+                <td>{$dead}</td>
             </tr>
 EDO;
         }
@@ -213,18 +266,39 @@ EDO;
             </tr>
 EOD;
         foreach ($fetched as $row) {
+
+            $maritialstate='';
+
+            switch ($row['MaritialState']){
+                case 0:
+                    $maritialstate="Unmarried"; 
+                    break;
+                case 1:
+                    $maritialstate="Married";
+                    break;
+            }
+
+            $dead='';
+
+            if($row['Dead']==0){
+                $dead="No";
+            }else{
+                $dead="Yes";
+            }
+
+
             $fetchlist.=<<<EDO
             <tr>
                 <td>{$row['OwnershipNo']}</td>
                 <td>{$row['Name']}</td>
                 <td>{$row['Gender']}</td>
-                <td>{$row['MaritialState']}</td>
+                <td>{$maritialstate}</td>
                 <td>{$row['BDay']}</td>
                 <td>{$row['Age']}</td>
                 <td>{$row['RelToBenif']}</td>
                 <td>{$row['Profession']}</td>
                 <td>{$row['NIC']}</td>
-                <td>{$row['Dead']}</td>
+                <td>{$dead}</td>
 
             </tr>
 EDO;
