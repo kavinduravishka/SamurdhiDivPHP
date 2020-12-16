@@ -123,7 +123,7 @@ CREATE TABLE `MandatoryFundRequests` (
 
 LOCK TABLES `MandatoryFundRequests` WRITE;
 /*!40000 ALTER TABLE `MandatoryFundRequests` DISABLE KEYS */;
-INSERT INTO `MandatoryFundRequests` VALUES (24,0,'2020-08-07','yatigaha','kavindu','Yasindu','2020-08-21','yatigaha');
+INSERT INTO `MandatoryFundRequests` VALUES (24,0,'2020-11-05','yatigaha','kavindu','Yasindu','2020-11-18','yatigaha'),(25,0,'2020-11-11','Welangana','Roneth','Yasindu','2020-11-20','Welangana'),(28,0,'2020-11-15','Kotadeniyawa','Chamindu','Yasindu','2020-11-26','Kotadeniyawa'),(28,0,'2020-11-18','Divulapitiya','Sagara','Yasindu','2020-11-29','Divulapitiya');
 /*!40000 ALTER TABLE `MandatoryFundRequests` ENABLE KEYS */;
 UNLOCK TABLES;
 
