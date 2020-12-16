@@ -46,8 +46,8 @@ include_once("../includes/kheader.inc.php");
 
 <table class="tblsub">
 	<tr>
-		<td><label>year</label> <input name="year" type="number" value="" required></td>
-		<td><label>month</label> <input name="month" type="number" value="" required></td>
+		<td><label>year</label> <input name="year" type="number" value="<?php echo $_POST['year'] ?>" required></td>
+		<td><label>month</label> <input name="month" type="number" value="<?php echo $_POST['month'] ?>" required></td>
 	</tr>
 </table>
 
