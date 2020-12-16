@@ -93,7 +93,7 @@
 			</p>
 			<p>
 				<label>NIC:</label> 
-				<input type="text" name="NIC" maxlength="12" required>
+				<input type="text" name="NIC" minlength="10" maxlength="12" required>
 			</p>
 			<p>
 				<label>No.of Family Members:</label> 

@@ -46,7 +46,9 @@
     <tr>
         <td class="fieldname">Telephone</td>
 
+
         <td><input type="telephone" required class="forminput" name="Telephone" value="" maxlength="12" minlength="10"></td>
+
     </tr>
 
         <!-- 'NIC'=>$NIC -->
@@ -54,6 +56,7 @@
         <td class="fieldname">NIC number</td>
 
         <td><input type="text" required class="forminput" name="NIC" value="" maxlength="12" minlength="10"></td>
+
     </tr>
 
 </table>

@@ -6,6 +6,7 @@
             <td class="fieldname">NIC number</td>
 
             <td><input type="text" required class="forminput" name="NIC" value="" minlength="10" maxlength="12" ></td>
+
         </tr>
             <!-- $Name=''; -->
         <tr>

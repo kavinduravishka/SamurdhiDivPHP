@@ -43,6 +43,7 @@
         <td class="fieldname">Telephone</td>
 
         <td><input type="telephone" required class="forminput" name="Telephone" value="" maxlength="12" minlength="10"></td>
+
     </tr>
 
     <tr>
