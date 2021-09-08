@@ -1,0 +1,15 @@
+
+user interface files;
+
+
+    * only html, css, js included files  -> save  inside relavent officerView folder
+        Ex: Add Beneficiary form with html elements save inside 'officer1View' = "add-beneficiary.view.php"
+
+"includes" folder;
+    * common including ; headers, sidebars, navigation bars inside -> directly save
+        Ex: "header.inc.php"
+
+    * for icludes based on officer -> save on relavent officerInc folder
+        Ex: $_POST() of a Add Beneficiary save inside 'officer1Inc' = "beneficiary.inc.php"
+
+

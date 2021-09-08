@@ -1,0 +1,42 @@
+
+
+td {
+  padding: 10px 10px;
+}
+
+textarea {
+  resize: none;
+}
+
+input {
+  padding: 10px 0px;
+}
+
+
+.tooltiptext {
+  visibility: hidden;
+  position : relative;
+  left : 20px;
+  top: 0px;
+  background-color: rgba(255,0,0,0.8);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px 10px;
+  
+  z-index: 1;
+  
+  opacity: 1;
+}
+  
+
+.tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%; /* To the left of the tooltip */
+  margin-top: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent rgba(255,0,0,0.8) transparent transparent;
+}

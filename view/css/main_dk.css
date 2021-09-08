@@ -1,0 +1,361 @@
+.loginpage {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-size: cover;
+  background-image: url(../images/1.jpg);
+  
+  
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-size: cover;
+    
+}
+
+.login{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 600px;
+    padding: 80px 40px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,.3);
+    border-radius: 30px;
+    transform: translate(-50%,-50%);
+}
+
+.login-logo{
+    width: 500px;
+    position: relative;
+    top:-25px;
+    left: -40px;
+    
+}
+
+.login-title{
+    
+    text-align: center;
+    color: rgb(235, 211, 0);
+}
+
+
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    color: black;
+    text-align: center;
+}
+
+p.error{
+    background: red;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+p.info{
+    background: green;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+.login input[type="text"],
+.login input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+
+}
+
+.login input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 35px;
+    color:#fff;
+    font-size: 16px;
+    background: rgb(3, 3, 3);
+    cursor: pointer;
+    border-radius: 10px;
+
+}
+
+.login input[type="submit"]:hover
+{
+    background: #ffffff;
+    color:black;
+}
+
+
+.logout_btn {
+background-color: #2d78da;
+text-decoration: none;
+font-weight: 20px;
+color: white;
+padding: 5px 10px;
+}
+
+
+.officer4_dashboard
+{
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    right: 50%
+}
+
+.officer4_dashboard input[type="submit"]
+
+{
+    border: none;
+    outline: none;
+    width: 300px;
+    height: 35px;
+    color:#fff;
+    font-size: 16px;
+    background: rgb(61, 42, 6);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+
+main {
+  margin-top: 70px;
+  margin-left: 230px;
+  background: url(b.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  transition: 0.5s;
+    
+}
+
+main h1 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+main h1 span {
+  font-size: 20px;
+}
+
+.search input{
+  width: 900px;
+  height: 15px;
+  padding: 4px;
+}
+
+.personalfile_list {
+  width: 130%;
+  margin-left: -50%;
+  margin-right: -30%;
+  border-collapse: collapse;
+  
+  font-family: arial, sans-serif;
+  width: 100%;
+}
+
+.personalfile_list th {
+  background: #aaa;
+  text-align: center;
+}
+
+.personalfile_list th,
+.personalfile_list td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.personalfile_list td:hover {
+  background-color: #f5f5f5;
+}
+
+.memberform label
+{
+    width: 20%;
+    float: left;
+    padding: 1px;
+}
+
+.memberform input
+{
+    width: 45%;
+    padding: 3px;
+}
+
+.memberform input[type="date"]
+{
+    width: 15%;
+}
+
+
+.memberform button
+{
+    border: none;
+    outline: none;
+    height: 35px;
+    width: 300px;
+    color:#fff;
+    font-size: 16px;
+    background: rgb(0, 0, 0);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.memberform select{
+    width: 21%;
+    padding: 3px;
+}
+
+#cal{
+    height: 30px;
+    width: 100px;
+}
+
+#nums{
+    width: 10%;
+}
+
+
+#enums{
+    width: 10%;
+    margin-left: 149px;
+}
+
+#sub_lbl{
+    margin-left: 20px;
+    margin-right: 5px;
+    width: 30%;
+}
+
+.memberform button:hover
+{
+    background: #838377;
+    color: #262626;
+}
+
+div.errmsg{
+    color: red;
+}
+
+
+.personalfile_list th, .personalfile_list td{
+    
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;    
+}
+.personalfile_list th{
+    background: #aaa;
+    text-align: center;     
+}
+
+
+.personalfile_list td:hover 
+{
+    background-color:#f5f5f5;
+}
+
+main {
+  margin-top: 70px;
+  margin-left: 230px;
+  margin-right: 50px;
+  background: url(b.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  transition: 0.5s;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.maincontainer{
+    padding: 20px;
+    margin-left: 90px;
+    margin-right: -110px;
+}
+
+
+main h2{
+    text-align: center;
+}
+
+.letterform label
+{
+    width: 20%;
+    float: left;
+    padding: 1px;
+}
+
+.letterform input
+{
+    width: 100%;
+    height: 400px;
+    padding: 3px;
+}
+
+.letterform input[type="date"]
+{
+    width: 100%;
+    height: 100%;
+    margin-top: -237px;
+    
+}
+
+.Mname input{    
+    width: 45%;
+    height: 27px;
+}
+
+.Mname label{    
+    width: 9%;
+}
+
+
+
+
+.letterform button
+{
+    border: none;
+    outline: none;
+    height: 35px;
+    width: 300px;
+    color:#fff;
+    font-size: 16px;
+    background: rgb(0, 0, 0);
+    cursor: pointer;
+    border-radius: 10px;
+    justify-content: center;
+
+}
+
+.letterform button:hover
+{
+    background: #838377;
+    color: #262626;
+}
+
+
+
+

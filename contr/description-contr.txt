@@ -1,0 +1,13 @@
+Objects are created inside view/includes files 
+    > that details(data) are pointed to the methods inside contr classes 
+        > these methods points to ths database classes to get/ save data to/from database.
+
+
+Ex: 
+1. view/includes/officer1View/add-beneficiary.view.php  --->  click 'save'  --->
+
+2. view/includes/officer1Inc/beneficiary.inc.php --> $_POST('save') ---> create beneficiary object ---> call addBeneficiary methods
+
+3. contr/officer1Contr/beneficiary.class.php  ---> define addBeneficiary() method here --> it calls DB file method
+
+4. model/officer1DB/beneficiaryDB.class.php ---> DB file method is here --> it executes the query 
